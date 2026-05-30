@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #2f332d;
+  background: #fbf7ee;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(127, 155, 119, 0.18), transparent 26rem),
+    linear-gradient(145deg, #fbf7ee 0%, #f5ecdd 100%);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+@layer components {
+  .control-shell {
+    @apply flex h-11 min-w-0 items-center gap-2 rounded-2xl border border-sage-100 bg-white/80 px-3 shadow-row;
+  }
+
+  .control-select {
+    @apply min-w-0 flex-1 appearance-none bg-transparent text-sm font-semibold capitalize text-ink outline-none disabled:cursor-default;
+  }
+
+  .category-tab {
+    @apply h-11 shrink-0 rounded-2xl border border-white/80 bg-white/75 px-4 text-sm font-semibold text-ink/60 shadow-row transition hover:-translate-y-0.5 hover:text-ink focus:outline-none focus:ring-4 focus:ring-sage-100;
+  }
+
+  .category-tab-active {
+    @apply border-sage-500 bg-sage-500 text-white hover:text-white;
+  }
+
+  .section-shell {
+    @apply min-w-0 rounded-[1.45rem] border border-white/70 bg-white/70 p-3.5 shadow-row sm:p-4;
+  }
+
+  .item-row {
+    @apply flex min-h-[5.35rem] items-center gap-3 rounded-[1.15rem] border border-linen/80 bg-white/90 p-3 shadow-row;
+  }
+
+  .produce-icon {
+    @apply h-12 w-12 shrink-0 drop-shadow-sm;
+  }
+
+  .season-badge {
+    @apply inline-flex h-7 items-center rounded-full px-3 text-xs font-bold;
+  }
+
+  .badge-in-season {
+    @apply bg-sage-100 text-sage-700;
+  }
+
+  .badge-soon {
+    @apply bg-amber-100 text-amber-800;
+  }
+
+  .badge-out {
+    @apply bg-red-100 text-terracotta;
+  }
+
+  .empty-state {
+    @apply flex min-h-52 flex-col items-center justify-center gap-3 rounded-[1.15rem] border border-dashed border-sage-100 bg-white/60 text-sm font-semibold text-ink/40;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

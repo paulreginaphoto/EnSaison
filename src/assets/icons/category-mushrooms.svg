@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Champignons">
+  <circle cx="24" cy="24" r="22" fill="#efe0cc"/>
+  <path d="M11 24c1-10 10-16 22-14 8 2 12 7 12 14-8 5-25 6-34 0Z" fill="#b98565"/>
+  <path d="M21 25h11l3 15H18l3-15Z" fill="#fbf7ee"/>
+</svg>

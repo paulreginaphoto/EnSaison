@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Légumes">
+  <circle cx="24" cy="24" r="22" fill="#dce9d7"/>
+  <path d="M15 29c2-10 12-17 23-15 1 12-7 21-18 21-4 0-6-2-5-6Z" fill="#7f9b77"/>
+  <path d="M20 32c5-6 10-10 18-15" fill="none" stroke="#526b4f" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

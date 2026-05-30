@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="De Saison">
+  <rect width="96" height="96" rx="26" fill="#fbf7ee"/>
+  <circle cx="48" cy="50" r="29" fill="#dce9d7"/>
+  <path d="M31 53c0-16 12-25 25-22 11 3 18 13 15 25-4 15-18 24-31 18-6-3-9-10-9-21Z" fill="#c46f5f"/>
+  <path d="M43 32c2-10 9-16 20-15 0 12-7 18-20 18Z" fill="#7f9b77"/>
+</svg>

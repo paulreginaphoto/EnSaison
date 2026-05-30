@@ -158,6 +158,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"],
   },
+  BE: {
+    labels: {
+      fr: "Belgique: calendrier Vlaanderen/VLAM par mois pour fruits et legumes disponibles; utile comme reference belge, pas une prevision meteo ou magasin.",
+      en: "Belgium: Vlaanderen/VLAM month-by-month calendar for available fruit and vegetables; useful as a Belgian reference, not a weather or shop forecast.",
+      es: "Belgica: calendario mensual Vlaanderen/VLAM de frutas y verduras disponibles; util como referencia belga, no como prevision meteorologica o de tienda.",
+      de: "Belgien: Vlaanderen/VLAM-Monatskalender fur verfugbares Obst und Gemuse; nutzlich als belgische Referenz, nicht als Wetter- oder Ladenprognose.",
+      it: "Belgio: calendario mensile Vlaanderen/VLAM per frutta e verdura disponibili; utile come riferimento belga, non come previsione meteo o di negozio.",
+      pt: "Belgica: calendario mensal Vlaanderen/VLAM de frutas e legumes disponiveis; util como referencia belga, nao como previsao meteorologica ou de loja.",
+    },
+    sourceIds: ["belgium-vlaanderen-vlam-season-calendar"],
+  },
   BR: {
     labels: {
       fr: "Bresil: donnees indicatives; les references CEAGESP refletent surtout un signal de marche de Sao Paulo, pas tout le pays.",

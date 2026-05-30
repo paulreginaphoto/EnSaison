@@ -95,7 +95,8 @@ The app now supports:
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
 - country overrides for 42 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, United States, Canada, Australia, India, Brazil and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
-- Germany, Spain and the Netherlands keep their European seasonal months but now include country-specific reference links, still marked indicative until transcribed item by item;
+- Germany and the Netherlands keep their European seasonal months but now include country-specific reference links, still marked indicative until transcribed item by item;
+- Spain has source-backed MAPA month-by-month overrides for 46 fruit and vegetable items already present in the catalogue, using higher commercialization as in-season and lower commercialization as soon/near season;
 - the United Kingdom has source-backed BDA month-by-month overrides for 46 produce items already present in the catalogue;
 - Italy has source-backed CREA month-by-month overrides for the catalogue items that directly match the CREA calendar;
 - France keeps 57 source-backed produce entries from the French Ministry of Agriculture, and Switzerland keeps 57 source-backed produce entries from the Swiss Federal Office for Agriculture.

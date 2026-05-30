@@ -715,6 +715,106 @@ const italySeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["c
   pastèque: { months: [7, 8, 9], nearMonths: [6, 10] },
 };
 
+const spainFruitSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  abricot: { months: [5, 6, 7, 8], nearMonths: [4, 9] },
+  avocat: { months: [1, 2, 3, 4, 11, 12], nearMonths: [5, 10] },
+  banane: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonMode: "year-round",
+  },
+  cerise: { months: [5, 6, 7], nearMonths: [4, 8] },
+  citron: { months: [1, 2, 3, 4, 5, 11, 12], nearMonths: [6, 10] },
+  coing: { months: [8, 9], nearMonths: [7, 10] },
+  figue: { months: [7, 8, 9], nearMonths: [6, 10] },
+  fraise: { months: [1, 2, 3, 4, 5], nearMonths: [] },
+  framboise: { months: [1, 2, 3, 4, 10, 11, 12], nearMonths: [] },
+  kiwi: { months: [1, 2, 3, 10, 11, 12], nearMonths: [4, 9] },
+  mangue: { months: [8, 9, 10, 11], nearMonths: [7] },
+  melon: { months: [6, 7, 8], nearMonths: [5, 9] },
+  nectarine: { months: [5, 6, 7, 8, 9], nearMonths: [4, 10] },
+  orange: { months: [1, 2, 3, 4, 5, 11, 12], nearMonths: [6, 10] },
+  pastèque: { months: [6, 7, 8], nearMonths: [5, 9] },
+  peche: { months: [5, 6, 7, 8, 9], nearMonths: [4, 10] },
+  poire: { months: [1, 2, 3, 7, 8, 9, 10, 11, 12], nearMonths: [4, 6] },
+  pomme: { months: [1, 2, 3, 9, 10, 11, 12], nearMonths: [4] },
+  prune: { months: [6, 7, 8], nearMonths: [5, 9] },
+  raisin: { months: [9, 10, 11, 12], nearMonths: [8] },
+};
+
+const spainVegetableSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  ail: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonMode: "year-round",
+  },
+  artichaut: { months: [1, 2, 3, 4, 5, 12], nearMonths: [6, 10, 11] },
+  asperge: { months: [3, 4, 5, 6, 9], nearMonths: [] },
+  aubergine: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonMode: "year-round",
+  },
+  betterave: { months: [8, 9, 10], nearMonths: [7, 11, 12] },
+  blette: { months: [1, 2, 3, 4, 5, 8, 9, 10, 11, 12], nearMonths: [6, 7] },
+  brocoli: { months: [1, 2, 3, 4, 5, 6, 10, 11, 12], nearMonths: [9] },
+  carotte: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonMode: "year-round",
+  },
+  "céleri-branche": { months: [1, 2, 3, 11, 12], nearMonths: [4] },
+  "chou-blanc": { months: [1, 2, 3, 9, 10, 11, 12], nearMonths: [4, 5, 6, 7, 8] },
+  "chou-fleur": { months: [1, 2, 3, 4, 9, 10, 11, 12], nearMonths: [5, 6] },
+  "chou-rouge": { months: [1, 2, 10, 11, 12], nearMonths: [3] },
+  concombre: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonMode: "year-round",
+  },
+  courge: { months: [1, 2, 3, 9, 10, 11, 12], nearMonths: [4, 5, 6, 7, 8] },
+  courgette: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonMode: "year-round",
+  },
+  endive: { months: [9, 10, 11], nearMonths: [1, 12] },
+  "épinard": { months: [1, 2, 3, 4, 5, 6, 10, 11, 12], nearMonths: [9] },
+  "haricot-vert": { months: [8, 9, 10], nearMonths: [7, 11, 12] },
+  laitue: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonMode: "year-round",
+  },
+  navet: { months: [10, 11, 12], nearMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9] },
+  oignon: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonMode: "year-round",
+  },
+  "petit-pois": { months: [5, 6], nearMonths: [1, 2, 3, 4, 7] },
+  poireau: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonMode: "year-round",
+  },
+  poivron: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonMode: "year-round",
+  },
+  radis: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonMode: "year-round",
+  },
+  tomate: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonMode: "year-round",
+  },
+};
+
 const europeanCountryReferenceSourceIds: Record<string, string[]> = {
   DE: ["germany-bzfe-season-calendar"],
   ES: ["spain-mapa-fruit-calendar", "spain-mapa-vegetable-calendar"],
@@ -791,6 +891,22 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.IT = {
       ...italySeasonOverrides[item.id],
       sourceIds: ["italy-crea-seasonal-produce"],
+      confidence: "source",
+    };
+  }
+
+  if (spainFruitSeasonOverrides[item.id]) {
+    countries.ES = {
+      ...spainFruitSeasonOverrides[item.id],
+      sourceIds: ["spain-mapa-fruit-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (spainVegetableSeasonOverrides[item.id]) {
+    countries.ES = {
+      ...spainVegetableSeasonOverrides[item.id],
+      sourceIds: ["spain-mapa-vegetable-calendar"],
       confidence: "source",
     };
   }

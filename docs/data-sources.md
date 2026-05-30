@@ -34,6 +34,27 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Australian Government Healthy Aussie Produce  
   https://www.health.gov.au/our-work/healthy-aussie-produce
 
+- Swiss Federal Office for Agriculture seasonal fruit and vegetable table
+  https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf
+
+- Foodland Ontario availability guide
+  https://www.ontario.ca/foodland/page/availability-guide
+
+- Seasonal Food Guide Australia
+  https://seasonalfoodguide.com/
+
+- CEAGESP seasonality purchasing tables
+  https://ceagesp.gov.br/sala-imprensa/sazonalidade-de-compras/
+
+- APEDA fresh fruits and vegetables overview
+  https://apeda.gov.in/FreshFruitsAndVegetables
+
+- India Department of Agriculture harvesting season of major vegetables
+  https://desagri.gov.in/en/document-report/6-harvesting-season-of-major-vegetables/
+
+- India National Horticulture Board litchi availability note
+  https://www.nhb.gov.in/model-project-reports/Horticulture%20Crops/Litchi/Litchi1.htm
+
 ## What The App Can Say Safely
 
 - Seasonal availability varies by exact location, altitude, growing conditions, weather, storage, greenhouse use and import habits.
@@ -52,9 +73,9 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 165 food entries after the second worldwide expansion pass;
+- 175 food entries after the third worldwide expansion pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides started for France and Japan, including Japan MAFF seasonal produce and seafood entries.
+- country overrides for France, Switzerland, United States, Canada, Australia, India, Brazil and Japan, with confidence kept lower when a source is regional rather than fully national.
 
 Run `npm run audit:data` to regenerate `docs/data-coverage-report.md`. The audit counts countries, food entries, categories, source references, country overrides, confidence levels and missing aliases so the remaining worldwide coverage gap stays visible.
 

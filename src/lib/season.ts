@@ -61,6 +61,7 @@ const tropicalAlways = new Set([
   "mangue",
   "ananas",
   "papaye",
+  "goyave",
   "plantain",
   "citron vert",
   "noix de coco",

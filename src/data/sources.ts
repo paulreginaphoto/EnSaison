@@ -39,6 +39,34 @@ export const dataSources = {
     label: "Australian Government Healthy Aussie Produce",
     url: "https://www.health.gov.au/our-work/healthy-aussie-produce",
   },
+  "swiss-blw-season-table": {
+    label: "Swiss Federal Office for Agriculture seasonal fruit and vegetable table",
+    url: "https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf",
+  },
+  "foodland-ontario-availability": {
+    label: "Foodland Ontario availability guide",
+    url: "https://www.ontario.ca/foodland/page/availability-guide",
+  },
+  "seasonal-food-guide-australia": {
+    label: "Seasonal Food Guide Australia",
+    url: "https://seasonalfoodguide.com/",
+  },
+  "brazil-ceagesp-seasonality": {
+    label: "CEAGESP seasonality purchasing tables",
+    url: "https://ceagesp.gov.br/sala-imprensa/sazonalidade-de-compras/",
+  },
+  "india-apeda-produce": {
+    label: "APEDA fresh fruits and vegetables overview",
+    url: "https://apeda.gov.in/FreshFruitsAndVegetables",
+  },
+  "india-desagri-vegetable-harvest": {
+    label: "India Department of Agriculture harvesting season of major vegetables",
+    url: "https://desagri.gov.in/en/document-report/6-harvesting-season-of-major-vegetables/",
+  },
+  "india-nhb-litchi": {
+    label: "India National Horticulture Board litchi availability note",
+    url: "https://www.nhb.gov.in/model-project-reports/Horticulture%20Crops/Litchi/Litchi1.htm",
+  },
 } as const;
 
 export type DataSourceId = keyof typeof dataSources;

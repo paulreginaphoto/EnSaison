@@ -121,6 +121,16 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "manioc", name: "Manioc", names: { en: "Cassava", es: "Yuca", de: "Maniok", it: "Manioca", pt: "Mandioca" }, category: "tuber", icon: "vegetable-root", months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l’année", sourceIds: ["fao-crop-calendar"], confidence: "model" },
   { id: "igname", name: "Igname", names: { en: "Yam", es: "Ñame", de: "Yamswurzel", it: "Igname", pt: "Inhame" }, category: "tuber", icon: "vegetable-root", months: [9, 10, 11, 12, 1, 2], nearMonths: [8, 3], seasonLabel: "sept. – févr.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
   { id: "taro", name: "Taro", names: { en: "Taro", es: "Taro", de: "Taro", it: "Taro", pt: "Taro" }, category: "tuber", icon: "vegetable-root", months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l’année", sourceIds: ["fao-crop-calendar"], confidence: "model" },
+  { id: "banane", name: "Banane", names: { en: "Banana", es: "Banana", de: "Banane", it: "Banana", pt: "Banana" }, category: "fruit", icon: "fruit-round", months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l’année", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
+  { id: "orange", name: "Orange", names: { en: "Orange", es: "Naranja", de: "Orange", it: "Arancia", pt: "Laranja" }, category: "fruit", icon: "fruit-round", months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "nov. – mars", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
+  { id: "citron", name: "Citron", names: { en: "Lemon", es: "Limón", de: "Zitrone", it: "Limone", pt: "Limão" }, category: "fruit", icon: "fruit-round", months: [11, 12, 1, 2, 3, 4], nearMonths: [10, 5], seasonLabel: "nov. – avr.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "avocat", name: "Avocat", names: { en: "Avocado", es: "Aguacate", de: "Avocado", it: "Avocado", pt: "Abacate" }, category: "fruit", icon: "fruit-round", months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept.", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
+  { id: "ananas", name: "Ananas", names: { en: "Pineapple", es: "Piña", de: "Ananas", it: "Ananas", pt: "Abacaxi" }, category: "fruit", icon: "fruit-round", months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l’année", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "mangue", name: "Mangue", names: { en: "Mango", es: "Mango", de: "Mango", it: "Mango", pt: "Manga" }, category: "fruit", icon: "fruit-stone", months: [4, 5, 6, 7], nearMonths: [3, 8], seasonLabel: "avr. – juil.", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
+  { id: "goyave", name: "Goyave", names: { en: "Guava", es: "Guayaba", de: "Guave", it: "Guava", pt: "Goiaba" }, category: "fruit", icon: "fruit-round", months: [7, 8, 9, 11, 12, 1, 2], nearMonths: [6, 10, 3], seasonLabel: "juil. – sept., nov. – févr.", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
+  { id: "papaye", name: "Papaye", names: { en: "Papaya", es: "Papaya", de: "Papaya", it: "Papaya", pt: "Mamão" }, category: "fruit", icon: "fruit-round", months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l’année", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
+  { id: "litchi", name: "Litchi", names: { en: "Lychee", es: "Lichi", de: "Litschi", it: "Litchi", pt: "Lichia" }, category: "fruit", icon: "fruit-berry", months: [5, 6], nearMonths: [4, 7], seasonLabel: "mai – juin", sourceIds: ["india-nhb-litchi", "fao-crop-calendar"], confidence: "source" },
+  { id: "gombo", name: "Gombo", names: { en: "Okra", es: "Quimbombó", de: "Okra", it: "Gombo", pt: "Quiabo" }, category: "vegetable", icon: "vegetable-stem", months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct.", sourceIds: ["fao-crop-calendar", "india-desagri-vegetable-harvest"], confidence: "indicative" },
   { id: "échalote", name: "Échalote", names: { en: "Shallot", es: "Chalota", de: "Schalotte", it: "Scalogno", pt: "Chalota" }, category: "allium", icon: "vegetable-bulb", months: [7, 8, 9, 10, 11, 12, 1, 2, 3], nearMonths: [6, 4], seasonLabel: "juil. – mars", sourceIds: ["usda-snaped"], confidence: "indicative" },
   { id: "ciboule", name: "Ciboule", names: { en: "Scallion", es: "Cebolleta", de: "Frühlingszwiebel", it: "Cipollotto", pt: "Cebolinha" }, category: "allium", icon: "vegetable-stem", months: [4, 5, 6, 7, 8, 9, 10], nearMonths: [3, 11], seasonLabel: "avr. – oct.", sourceIds: ["usda-snaped"], confidence: "indicative" },
   { id: "ciboulette", name: "Ciboulette", names: { en: "Chives", es: "Cebollino", de: "Schnittlauch", it: "Erba cipollina", pt: "Cebolinho" }, category: "allium", icon: "vegetable-leaf", months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept.", sourceIds: ["usda-snaped"], confidence: "indicative" },
@@ -177,74 +187,139 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
 const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   radis: {
     FR: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["france-agriculture"], confidence: "source" },
+    CH: { months: [4, 5, 6, 7, 8, 9, 10], nearMonths: [3, 11], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
+    CA: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
   },
   asperge: {
+    CH: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
+    US: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["usda-snaped"], confidence: "source" },
+    CA: { months: [5, 6], nearMonths: [4, 7], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    AU: { months: [9, 10, 11], nearMonths: [8, 12], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   "céleri-branche": {
+    CH: { months: [6, 7, 8, 9, 10, 11], nearMonths: [5, 12], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
+    CA: { months: [7, 8, 9, 10], nearMonths: [6, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
     JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   oignon: {
+    CH: { months: [1, 2, 3, 4, 7, 8, 9, 10, 11, 12], nearMonths: [5, 6], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    BR: { months: [7, 8, 9, 10, 11, 12], nearMonths: [6, 1], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: { months: [10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [9, 6], sourceIds: ["india-apeda-produce", "india-desagri-vegetable-harvest"], confidence: "indicative" },
     JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   ail: {
+    CH: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["swiss-blw-season-table"], confidence: "source" },
+    CA: { months: [1, 2, 3, 4, 7, 8, 9, 10, 11, 12], nearMonths: [5, 6], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    BR: { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   "pomme-de-terre": {
+    CH: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["swiss-blw-season-table"], confidence: "source" },
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], sourceIds: ["india-apeda-produce", "india-desagri-vegetable-harvest"], confidence: "indicative" },
     JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   aubergine: {
+    AU: { months: [12, 1, 2, 3, 4], nearMonths: [11, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   poivron: {
+    AU: { months: [12, 1, 2, 3, 4], nearMonths: [11, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   concombre: {
+    CH: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    AU: { months: [11, 12, 1, 2, 3, 4], nearMonths: [10, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   tomate: {
+    US: { months: [6, 7, 8, 9], nearMonths: [5, 10], sourceIds: ["usda-snaped"], confidence: "source" },
+    CA: { months: [7, 8, 9, 10], nearMonths: [6, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    AU: { months: [12, 1, 2, 3, 4], nearMonths: [11, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: { months: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12], nearMonths: [5], sourceIds: ["india-apeda-produce", "india-desagri-vegetable-harvest"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   "maïs-doux": {
+    US: { months: [6, 7, 8, 9], nearMonths: [5, 10], sourceIds: ["usda-snaped"], confidence: "source" },
+    CA: { months: [8, 9, 10], nearMonths: [7, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    AU: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   carotte: {
+    CA: { months: [1, 2, 3, 4, 7, 8, 9, 10, 11, 12], nearMonths: [5, 6], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   pastèque: {
+    AU: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    BR: { months: [9, 10, 11, 12, 1, 2, 3, 4], nearMonths: [8, 5], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   melon: {
+    CH: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
+    AU: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   peche: {
+    AU: { months: [12, 1, 2], nearMonths: [11, 3], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    BR: { months: [11, 12, 1], nearMonths: [10, 2], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   prune: {
+    AU: { months: [12, 1, 2], nearMonths: [11, 3], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   brocoli: {
+    CH: { months: [5, 6, 7, 8, 9, 10, 11], nearMonths: [4, 12], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
+    US: { months: [10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [9, 6], sourceIds: ["usda-snaped"], confidence: "source" },
+    CA: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    AU: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   "chou-fleur": {
+    CH: { months: [5, 6, 7, 8, 9, 10, 11], nearMonths: [4, 12], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
+    CA: { months: [6, 7, 8, 9, 10, 11], nearMonths: [5, 12], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   courge: {
+    US: { months: [9, 10, 11], nearMonths: [8, 12], sourceIds: ["usda-snaped"], confidence: "source" },
+    CA: { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    AU: { months: [3, 4, 5, 6, 7, 8], nearMonths: [2, 9], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   pomme: {
+    CH: { months: [9, 10, 11, 12, 1, 2, 3, 4], nearMonths: [8, 5], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
+    US: { months: [9, 10, 11], nearMonths: [8, 12], sourceIds: ["usda-snaped"], confidence: "source" },
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    AU: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   poire: {
+    CA: { months: [12, 1, 2, 8, 9, 10, 11], nearMonths: [7, 3], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    AU: { months: [3, 4, 5], nearMonths: [2, 6], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   raisin: {
+    AU: { months: [1, 2, 3, 4], nearMonths: [12, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    BR: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: { months: [1, 2, 3, 4], nearMonths: [12, 5], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   fraise: {
+    US: { months: [4, 5, 6, 7], nearMonths: [3, 8], sourceIds: ["usda-snaped"], confidence: "source" },
+    CA: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    AU: { months: [9, 10, 11, 12, 1, 2], nearMonths: [8, 3], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     JP: { months: [1, 2, 3], nearMonths: [12, 4], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   "épinard": {
+    CH: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [2, 12], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
+    US: { months: [3, 4, 5, 9, 10, 11], nearMonths: [2, 6, 8, 12], sourceIds: ["usda-snaped"], confidence: "source" },
+    CA: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
     JP: { months: [1, 2, 3], nearMonths: [12, 4], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   huître: {
@@ -258,6 +333,80 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   },
   calamar: {
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  banane: {
+    BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["india-apeda-produce"], confidence: "indicative" },
+  },
+  orange: {
+    BR: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
+  },
+  citron: {
+    BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+  },
+  avocat: {
+    BR: { months: [4, 5, 6, 7, 8], nearMonths: [3, 9], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
+  },
+  ananas: {
+    BR: { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: { months: [7, 8, 9, 10, 11, 12], nearMonths: [6, 1], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
+  },
+  mangue: {
+    BR: { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
+  },
+  goyave: {
+    BR: { months: [1, 2, 3, 4], nearMonths: [12, 5], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: { months: [7, 8, 9, 11, 12, 1, 2], nearMonths: [6, 10, 3], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
+  },
+  papaye: {
+    BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["india-apeda-produce"], confidence: "indicative" },
+  },
+  litchi: {
+    IN: { months: [5, 6], nearMonths: [4, 7], sourceIds: ["india-nhb-litchi"], confidence: "source" },
+  },
+  gombo: {
+    IN: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], sourceIds: ["india-desagri-vegetable-harvest"], confidence: "indicative" },
+    BR: { months: [10, 11, 12, 1, 2, 3, 4], nearMonths: [9, 5], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+  },
+  "champignon-de-paris": {
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+  },
+  lait: {
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+  },
+  fromage: {
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+  },
+  oeuf: {
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+  },
+  boeuf: {
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+  },
+  porc: {
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+  },
+  agneau: {
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+  },
+  poulet: {
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+  },
+  dinde: {
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+  },
+  canard: {
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+  },
+  miel: {
+    CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+  },
+  "sirop-erable": {
+    CA: { months: [1, 2, 3, 4, 5], nearMonths: [12, 6], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
   },
 };
 

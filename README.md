@@ -169,7 +169,13 @@ La logique est volontairement simple:
 - `nearMonths` contient le mois sélectionné: `Bientôt`
 - sinon: `Hors saison`
 
-Les sources et limites de couverture sont dans `docs/data-sources.md`.
+Les sources et limites de couverture sont dans `docs/data-sources.md`. Pour regénérer le rapport de couverture mesurable:
+
+```bash
+npm run audit:data
+```
+
+Le rapport sort dans `docs/data-coverage-report.md`.
 
 ## Assets et prompts
 

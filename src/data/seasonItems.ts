@@ -476,6 +476,150 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   },
 };
 
+const franceProduceOverrideIds = new Set([
+  "abricot",
+  "cassis",
+  "cerise",
+  "coing",
+  "figue",
+  "fraise",
+  "framboise",
+  "groseille",
+  "kiwi",
+  "mure",
+  "myrtille",
+  "nectarine",
+  "noisette",
+  "noix",
+  "peche",
+  "poire",
+  "pomme",
+  "prune",
+  "raisin",
+  "rhubarbe",
+  "melon",
+  "pastèque",
+  "tomate",
+  "aubergine",
+  "betterave",
+  "blette",
+  "brocoli",
+  "carotte",
+  "céleri-branche",
+  "céleri-rave",
+  "chou-blanc",
+  "chou-fleur",
+  "chou-frisé",
+  "chou-rouge",
+  "chou-rave",
+  "concombre",
+  "courge",
+  "courgette",
+  "cresson",
+  "endive",
+  "épinard",
+  "fenouil",
+  "haricot-vert",
+  "laitue",
+  "maïs-doux",
+  "navet",
+  "oignon",
+  "panais",
+  "petit-pois",
+  "poireau",
+  "poivron",
+  "pomme-de-terre",
+  "radis",
+  "roquette",
+  "ail",
+  "asperge",
+  "artichaut",
+]);
+
+const swissProduceOverrideIds = new Set([
+  "abricot",
+  "cassis",
+  "cerise",
+  "coing",
+  "fraise",
+  "framboise",
+  "groseille",
+  "kiwi",
+  "mure",
+  "myrtille",
+  "nectarine",
+  "noisette",
+  "noix",
+  "peche",
+  "poire",
+  "pomme",
+  "prune",
+  "raisin",
+  "rhubarbe",
+  "melon",
+  "pastèque",
+  "tomate",
+  "aubergine",
+  "betterave",
+  "blette",
+  "brocoli",
+  "carotte",
+  "céleri-branche",
+  "céleri-rave",
+  "chou-blanc",
+  "chou-fleur",
+  "chou-frisé",
+  "chou-rouge",
+  "chou-rave",
+  "concombre",
+  "courge",
+  "courgette",
+  "cresson",
+  "endive",
+  "épinard",
+  "fenouil",
+  "haricot-vert",
+  "laitue",
+  "maïs-doux",
+  "navet",
+  "oignon",
+  "panais",
+  "petit-pois",
+  "poireau",
+  "poivron",
+  "pomme-de-terre",
+  "radis",
+  "rampon",
+  "roquette",
+  "ail",
+  "asperge",
+  "artichaut",
+]);
+
+const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] => {
+  const countries: SeasonItem["countries"] = {};
+
+  if (franceProduceOverrideIds.has(item.id)) {
+    countries.FR = {
+      months: item.months,
+      nearMonths: item.nearMonths,
+      sourceIds: ["france-agriculture"],
+      confidence: "source",
+    };
+  }
+
+  if (swissProduceOverrideIds.has(item.id)) {
+    countries.CH = {
+      months: item.months,
+      nearMonths: item.nearMonths,
+      sourceIds: ["swiss-blw-season-table"],
+      confidence: "source",
+    };
+  }
+
+  return Object.keys(countries).length ? countries : undefined;
+};
+
 const localizedNamesById: Record<string, SeasonItem["names"]> = {
   abricot: { en: "Apricot", es: "Albaricoque", de: "Aprikose", it: "Albicocca", pt: "Damasco" },
   airelle: { en: "Lingonberry", es: "Arándano rojo", de: "Preiselbeere", it: "Mirtillo rosso", pt: "Arando-vermelho" },
@@ -567,11 +711,19 @@ const localizedNamesById: Record<string, SeasonItem["names"]> = {
   calamar: { en: "Squid", es: "Calamar", de: "Kalmar", it: "Calamaro", pt: "Lula" },
 };
 
-const withCountryOverrides = (item: SeasonItem): SeasonItem => ({
-  ...item,
-  names: item.names ?? localizedNamesById[item.id],
-  countries: countrySeasonOverrides[item.id] ?? item.countries,
-});
+const withCountryOverrides = (item: SeasonItem): SeasonItem => {
+  const countries = {
+    ...getSourceCountryOverrides(item),
+    ...item.countries,
+    ...countrySeasonOverrides[item.id],
+  };
+
+  return {
+    ...item,
+    names: item.names ?? localizedNamesById[item.id],
+    countries: Object.keys(countries).length ? countries : undefined,
+  };
+};
 
 export const seasonItems: SeasonItem[] = [
   ...romandieSeasonItems.map((item) => ({

@@ -75,7 +75,7 @@ The app now supports:
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
 - 241 food entries after the fourth worldwide expansion pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for France, Switzerland, United States, Canada, Australia, India, Brazil and Japan, with confidence kept lower when a source is regional rather than fully national.
+- country overrides for France, Switzerland, United States, Canada, Australia, India, Brazil and Japan, including 57 source-backed produce entries for France and 57 for Switzerland; confidence is kept lower when a source is regional rather than fully national.
 
 Run `npm run audit:data` to regenerate `docs/data-coverage-report.md`. The audit counts countries, food entries, categories, source references, country overrides, confidence levels and missing aliases so the remaining worldwide coverage gap stays visible.
 

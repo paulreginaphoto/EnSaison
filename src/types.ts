@@ -82,3 +82,14 @@ export type SeasonItem = {
 };
 
 export type CategoryFilter = SeasonCategory | "all";
+
+export type CategoryGroup =
+  | "all"
+  | "fruit"
+  | "vegetable"
+  | "mushroom"
+  | "protein"
+  | "sea"
+  | "pantry";
+
+export type SeasonView = "now" | "all" | "variable" | "out";

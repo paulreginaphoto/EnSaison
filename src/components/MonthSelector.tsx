@@ -20,6 +20,7 @@ export function MonthSelector({
       <CalendarDays aria-hidden="true" className="h-4 w-4 text-sage-700" />
       <select
         className="control-select"
+        name="month"
         value={selectedMonth}
         onChange={(event) => onMonthChange(Number(event.target.value))}
       >

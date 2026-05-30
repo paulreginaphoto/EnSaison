@@ -1,38 +1,19 @@
-import type { CategoryFilter } from "../types";
+import type { CategoryGroup } from "../types";
 
 type CategoryTabsProps = {
-  selectedCategory: CategoryFilter;
-  labels: Record<CategoryFilter, string>;
-  onCategoryChange: (category: CategoryFilter) => void;
+  selectedCategory: CategoryGroup;
+  labels: Record<CategoryGroup, string>;
+  onCategoryChange: (category: CategoryGroup) => void;
 };
 
-const categories: CategoryFilter[] = [
+const categories: CategoryGroup[] = [
   "all",
   "fruit",
   "vegetable",
-  "tuber",
-  "allium",
   "mushroom",
-  "herb",
-  "legume",
-  "grain",
-  "nut",
-  "seed",
-  "spice",
-  "fat",
-  "dairy",
-  "egg",
-  "fish",
-  "seafood",
-  "seaweed",
-  "meat",
-  "poultry",
-  "insect",
-  "beverage",
-  "sweetener",
-  "condiment",
-  "prepared",
-  "snack",
+  "protein",
+  "sea",
+  "pantry",
 ];
 
 export function CategoryTabs({
@@ -41,7 +22,7 @@ export function CategoryTabs({
   onCategoryChange,
 }: CategoryTabsProps) {
   return (
-    <div className="no-scrollbar flex gap-2 overflow-x-auto pb-1" role="tablist">
+    <div className="no-scrollbar flex gap-2 overflow-x-auto pb-1" aria-label="Catégories">
       {categories.map((category) => {
         const isSelected = selectedCategory === category;
 
@@ -50,8 +31,7 @@ export function CategoryTabs({
             className={`category-tab ${isSelected ? "category-tab-active" : ""}`}
             key={category}
             type="button"
-            role="tab"
-            aria-selected={isSelected}
+            aria-pressed={isSelected}
             onClick={() => onCategoryChange(category)}
           >
             {labels[category]}

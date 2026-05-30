@@ -1,4 +1,4 @@
-import type { Locale, SeasonCategory, SeasonStatus } from "./types";
+import type { CategoryGroup, Locale, SeasonCategory, SeasonStatus, SeasonView } from "./types";
 
 type Dictionary = {
   appTagline: string;
@@ -17,7 +17,17 @@ type Dictionary = {
   dataNote: string;
   source: string;
   sourceShort: string;
+  chooseNow: string;
+  clearSearch: string;
+  details: string;
+  hideDetails: string;
+  dataLevel: string;
+  seasonPeriod: string;
+  profilePrefix: string;
+  matchingFoods: string;
   all: string;
+  categoryGroups: Record<CategoryGroup, string>;
+  seasonViews: Record<SeasonView, string>;
   categories: Record<SeasonCategory, string>;
   statuses: Record<SeasonStatus, string>;
   confidence: Record<"source" | "model" | "indicative" | "taxonomy", string>;
@@ -51,7 +61,30 @@ export const dictionary: Record<Locale, Dictionary> = {
     dataNote: "Repère saisonnier indicatif: les récoltes varient selon climat, altitude et production locale.",
     source: "Sources",
     sourceShort: "source",
+    chooseNow: "Quoi choisir maintenant",
+    clearSearch: "Effacer la recherche",
+    details: "Sources & détails",
+    hideDetails: "Masquer les détails",
+    dataLevel: "Niveau",
+    seasonPeriod: "Période",
+    profilePrefix: "Repère",
+    matchingFoods: "aliments affichés",
     all: "Tous",
+    categoryGroups: {
+      all: "Tous",
+      fruit: "Fruits",
+      vegetable: "Légumes",
+      mushroom: "Champignons",
+      protein: "Protéines",
+      sea: "Mer",
+      pantry: "Épicerie",
+    },
+    seasonViews: {
+      now: "À choisir",
+      all: "Tout voir",
+      variable: "Variable",
+      out: "Hors saison",
+    },
     categories: {
       allium: "Aromates",
       beverage: "Boissons",
@@ -114,7 +147,30 @@ export const dictionary: Record<Locale, Dictionary> = {
     dataNote: "Indicative season guide: harvests vary by climate, altitude and local production.",
     source: "Sources",
     sourceShort: "source",
+    chooseNow: "What to choose now",
+    clearSearch: "Clear search",
+    details: "Sources & details",
+    hideDetails: "Hide details",
+    dataLevel: "Level",
+    seasonPeriod: "Season",
+    profilePrefix: "Guide",
+    matchingFoods: "foods shown",
     all: "All",
+    categoryGroups: {
+      all: "All",
+      fruit: "Fruits",
+      vegetable: "Vegetables",
+      mushroom: "Mushrooms",
+      protein: "Proteins",
+      sea: "Sea",
+      pantry: "Pantry",
+    },
+    seasonViews: {
+      now: "Choose now",
+      all: "Show all",
+      variable: "Variable",
+      out: "Out",
+    },
     categories: {
       allium: "Alliums",
       beverage: "Beverages",
@@ -177,7 +233,30 @@ export const dictionary: Record<Locale, Dictionary> = {
     dataNote: "Guía estacional indicativa: las cosechas varían por clima, altitud y producción local.",
     source: "Fuentes",
     sourceShort: "fuente",
+    chooseNow: "Qué elegir ahora",
+    clearSearch: "Borrar búsqueda",
+    details: "Fuentes y detalles",
+    hideDetails: "Ocultar detalles",
+    dataLevel: "Nivel",
+    seasonPeriod: "Temporada",
+    profilePrefix: "Guía",
+    matchingFoods: "alimentos mostrados",
     all: "Todos",
+    categoryGroups: {
+      all: "Todos",
+      fruit: "Frutas",
+      vegetable: "Verduras",
+      mushroom: "Hongos",
+      protein: "Proteínas",
+      sea: "Mar",
+      pantry: "Despensa",
+    },
+    seasonViews: {
+      now: "Elegir ahora",
+      all: "Ver todo",
+      variable: "Variable",
+      out: "Fuera",
+    },
     categories: {
       allium: "Aliáceas",
       beverage: "Bebidas",
@@ -240,7 +319,30 @@ export const dictionary: Record<Locale, Dictionary> = {
     dataNote: "Orientierende Saisonangaben: Ernten variieren je nach Klima, Höhe und lokaler Produktion.",
     source: "Quellen",
     sourceShort: "Quelle",
+    chooseNow: "Jetzt wählen",
+    clearSearch: "Suche löschen",
+    details: "Quellen & Details",
+    hideDetails: "Details ausblenden",
+    dataLevel: "Stufe",
+    seasonPeriod: "Saison",
+    profilePrefix: "Leitwert",
+    matchingFoods: "Lebensmittel angezeigt",
     all: "Alle",
+    categoryGroups: {
+      all: "Alle",
+      fruit: "Obst",
+      vegetable: "Gemüse",
+      mushroom: "Pilze",
+      protein: "Proteine",
+      sea: "Meer",
+      pantry: "Vorrat",
+    },
+    seasonViews: {
+      now: "Jetzt wählen",
+      all: "Alles zeigen",
+      variable: "Variabel",
+      out: "Außer Saison",
+    },
     categories: {
       allium: "Lauchgewächse",
       beverage: "Getränke",
@@ -303,7 +405,30 @@ export const dictionary: Record<Locale, Dictionary> = {
     dataNote: "Guida stagionale indicativa: i raccolti variano per clima, altitudine e produzione locale.",
     source: "Fonti",
     sourceShort: "fonte",
+    chooseNow: "Cosa scegliere ora",
+    clearSearch: "Cancella ricerca",
+    details: "Fonti e dettagli",
+    hideDetails: "Nascondi dettagli",
+    dataLevel: "Livello",
+    seasonPeriod: "Stagione",
+    profilePrefix: "Guida",
+    matchingFoods: "alimenti mostrati",
     all: "Tutti",
+    categoryGroups: {
+      all: "Tutti",
+      fruit: "Frutta",
+      vegetable: "Verdure",
+      mushroom: "Funghi",
+      protein: "Proteine",
+      sea: "Mare",
+      pantry: "Dispensa",
+    },
+    seasonViews: {
+      now: "Scegli ora",
+      all: "Vedi tutto",
+      variable: "Variabile",
+      out: "Fuori",
+    },
     categories: {
       allium: "Alliacee",
       beverage: "Bevande",
@@ -366,7 +491,30 @@ export const dictionary: Record<Locale, Dictionary> = {
     dataNote: "Guia sazonal indicativo: colheitas variam por clima, altitude e produção local.",
     source: "Fontes",
     sourceShort: "fonte",
+    chooseNow: "O que escolher agora",
+    clearSearch: "Limpar pesquisa",
+    details: "Fontes e detalhes",
+    hideDetails: "Ocultar detalhes",
+    dataLevel: "Nível",
+    seasonPeriod: "Época",
+    profilePrefix: "Guia",
+    matchingFoods: "alimentos exibidos",
     all: "Todos",
+    categoryGroups: {
+      all: "Todos",
+      fruit: "Frutas",
+      vegetable: "Legumes",
+      mushroom: "Cogumelos",
+      protein: "Proteínas",
+      sea: "Mar",
+      pantry: "Despensa",
+    },
+    seasonViews: {
+      now: "Escolher agora",
+      all: "Ver tudo",
+      variable: "Variável",
+      out: "Fora",
+    },
     categories: {
       allium: "Aliáceas",
       beverage: "Bebidas",

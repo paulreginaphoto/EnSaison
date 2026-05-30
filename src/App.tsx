@@ -1,16 +1,79 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CategoryTabs } from "./components/CategoryTabs";
 import { Header } from "./components/Header";
 import { SearchBar } from "./components/SearchBar";
 import { SeasonLegend } from "./components/SeasonLegend";
 import { SeasonSection } from "./components/SeasonSection";
 import { getCurrentMonth, getMonthLabel } from "./data/months";
-import { getProfileForCountry, seasonProfiles } from "./data/regions";
+import { countryOptions, getCountryName, getProfileForCountry, seasonProfiles } from "./data/regions";
 import { dataSources } from "./data/sources";
 import { seasonItems } from "./data/seasonItems";
 import { getItemName, getSeasonStatus, normalizeSearch, resolveSeason } from "./lib/season";
 import { t } from "./i18n";
-import type { CategoryFilter, Locale, SeasonCategory } from "./types";
+import type { CategoryGroup, Locale, SeasonCategory, SeasonView } from "./types";
+
+const defaultCountry = "CH";
+const defaultLocale: Locale = "fr";
+const defaultCategory: CategoryGroup = "all";
+const defaultView: SeasonView = "now";
+
+const validLocales = new Set<Locale>(["fr", "en", "es", "de", "it", "pt"]);
+const validCategories = new Set<CategoryGroup>([
+  "all",
+  "fruit",
+  "vegetable",
+  "mushroom",
+  "protein",
+  "sea",
+  "pantry",
+]);
+const validViews = new Set<SeasonView>(["now", "all", "variable", "out"]);
+const validCountries = new Set(countryOptions.map((country) => country.code));
+
+const categoryGroups: Record<CategoryGroup, SeasonCategory[] | null> = {
+  all: null,
+  fruit: ["fruit"],
+  vegetable: ["vegetable", "tuber", "allium", "herb", "legume"],
+  mushroom: ["mushroom"],
+  protein: ["meat", "poultry", "egg", "dairy", "legume", "insect"],
+  sea: ["fish", "seafood", "seaweed"],
+  pantry: [
+    "grain",
+    "nut",
+    "seed",
+    "spice",
+    "fat",
+    "beverage",
+    "sweetener",
+    "condiment",
+    "prepared",
+    "snack",
+  ],
+};
+
+const readInitialState = () => {
+  const params = new URLSearchParams(window.location.search);
+  const parsedMonth = Number(params.get("month"));
+  const localeParam = params.get("lang") as Locale | null;
+  const categoryParam = params.get("category") as CategoryGroup | null;
+  const viewParam = params.get("view") as SeasonView | null;
+  const countryParam = params.get("country")?.toUpperCase() ?? defaultCountry;
+
+  return {
+    month:
+      Number.isInteger(parsedMonth) && parsedMonth >= 1 && parsedMonth <= 12
+        ? parsedMonth
+        : getCurrentMonth(),
+    locale: localeParam && validLocales.has(localeParam) ? localeParam : defaultLocale,
+    country: validCountries.has(countryParam) ? countryParam : defaultCountry,
+    category:
+      categoryParam && validCategories.has(categoryParam)
+        ? categoryParam
+        : defaultCategory,
+    view: viewParam && validViews.has(viewParam) ? viewParam : defaultView,
+    search: params.get("q") ?? "",
+  };
+};
 
 function AboutPage() {
   const homeHref = import.meta.env.BASE_URL;
@@ -49,22 +112,48 @@ function AboutPage() {
 
 function MainPage() {
   const aboutHref = `${import.meta.env.BASE_URL}about`;
-  const [selectedMonth, setSelectedMonth] = useState(getCurrentMonth);
-  const [locale, setLocale] = useState<Locale>("fr");
-  const [selectedCountry, setSelectedCountry] = useState("CH");
+  const initialState = useMemo(readInitialState, []);
+  const [selectedMonth, setSelectedMonth] = useState(initialState.month);
+  const [locale, setLocale] = useState<Locale>(initialState.locale);
+  const [selectedCountry, setSelectedCountry] = useState(initialState.country);
   const [selectedCategory, setSelectedCategory] =
-    useState<CategoryFilter>("all");
-  const [search, setSearch] = useState("");
+    useState<CategoryGroup>(initialState.category);
+  const [selectedView, setSelectedView] = useState<SeasonView>(initialState.view);
+  const [search, setSearch] = useState(initialState.search);
   const copy = t(locale);
   const selectedProfileId = getProfileForCountry(selectedCountry);
   const selectedProfile = seasonProfiles[selectedProfileId];
+  const countryName = getCountryName(selectedCountry, locale);
+  const monthLabel = getMonthLabel(selectedMonth, locale);
+
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (selectedCountry !== defaultCountry) params.set("country", selectedCountry);
+    if (locale !== defaultLocale) params.set("lang", locale);
+    if (selectedMonth !== getCurrentMonth()) {
+      params.set("month", String(selectedMonth));
+    }
+    if (selectedCategory !== defaultCategory) {
+      params.set("category", selectedCategory);
+    }
+    if (selectedView !== defaultView) params.set("view", selectedView);
+    if (search.trim()) params.set("q", search.trim());
+
+    const query = params.toString();
+    window.history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}${query ? `?${query}` : ""}`,
+    );
+  }, [locale, search, selectedCategory, selectedCountry, selectedMonth, selectedView]);
 
   const filteredItems = useMemo(() => {
     const searchValue = normalizeSearch(search);
+    const allowedCategories = categoryGroups[selectedCategory];
 
     return seasonItems
       .filter((item) =>
-        selectedCategory === "all" ? true : item.category === selectedCategory,
+        allowedCategories ? allowedCategories.includes(item.category) : true,
       )
       .filter((item) =>
         normalizeSearch(
@@ -98,28 +187,39 @@ function MainPage() {
       );
   }, [locale, search, selectedCategory, selectedCountry, selectedMonth, selectedProfileId]);
 
-  const seasonalItems = filteredItems.filter(({ status }) => status !== "out");
-  const knownSeasonalItems = seasonalItems.filter(
-    ({ status }) => status !== "variable",
-  );
-  const variableItems = filteredItems.filter(({ status }) => status === "variable");
-  const outItems = filteredItems.filter(({ status }) => status === "out");
-  const categoryLabels: Record<CategoryFilter, string> = {
-    all: copy.all,
-    ...copy.categories,
-  };
+  const visibleItems = filteredItems.filter(({ status }) => {
+    if (selectedView === "now") {
+      return status === "in-season" || status === "soon";
+    }
+    if (selectedView === "variable") return status === "variable";
+    if (selectedView === "out") return status === "out";
+    return true;
+  });
+  const viewTitle =
+    selectedView === "now"
+      ? copy.inSeason
+      : selectedView === "variable"
+        ? copy.statuses.variable
+        : selectedView === "out"
+          ? copy.outSeason
+          : copy.all;
+  const statusViews: SeasonView[] = ["now", "all", "variable", "out"];
   const itemLabels = {
     categories: copy.categories as Record<SeasonCategory, string>,
     statuses: copy.statuses,
     confidence: copy.confidence,
     sourceShort: copy.sourceShort,
+    details: copy.details,
+    hideDetails: copy.hideDetails,
+    dataLevel: copy.dataLevel,
+    seasonPeriod: copy.seasonPeriod,
   };
   const sourceLinks = selectedProfile.sourceIds.map((sourceId) => dataSources[sourceId]);
 
   return (
     <main className="mx-auto min-h-screen w-full max-w-5xl px-4 py-5 sm:px-7 sm:py-8">
-      <div className="rounded-[2rem] bg-cream/75 p-3 shadow-soft sm:p-5">
-        <div className="rounded-[1.6rem] border border-white/75 bg-cream/90 p-4 sm:p-6">
+      <div className="rounded-[1.7rem] bg-cream/75 p-2.5 shadow-soft sm:p-4">
+        <div className="rounded-[1.3rem] border border-white/75 bg-cream/90 p-4 sm:p-6">
           <Header
             labels={{
               country: copy.country,
@@ -134,49 +234,59 @@ function MainPage() {
             onMonthChange={setSelectedMonth}
           />
 
-          <div className="mt-5 space-y-3">
+          <section className="mt-6 rounded-[1.25rem] bg-white/70 p-4 shadow-row">
+            <p className="text-sm font-semibold text-ink/55">
+              {countryName} · {monthLabel}
+            </p>
+            <h2 className="mt-1 text-2xl font-semibold leading-tight text-ink sm:text-3xl">
+              {copy.chooseNow}
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm font-medium leading-6 text-ink/62">
+              {visibleItems.length} {copy.matchingFoods} · {copy.profilePrefix}:{" "}
+              {selectedProfile.labels[locale]} ·{" "}
+              {selectedProfile.confidenceLabel[locale].toLowerCase()}
+            </p>
+          </section>
+
+          <div className="mt-4 space-y-3">
             <SearchBar
+              label={copy.search}
               placeholder={copy.search}
               value={search}
+              clearLabel={copy.clearSearch}
               onChange={setSearch}
             />
             <CategoryTabs
-              labels={categoryLabels}
+              labels={copy.categoryGroups}
               selectedCategory={selectedCategory}
               onCategoryChange={setSelectedCategory}
             />
+            <div className="no-scrollbar flex gap-2 overflow-x-auto pb-1" aria-label="Statut">
+              {statusViews.map((view) => {
+                const isSelected = selectedView === view;
+                return (
+                  <button
+                    aria-pressed={isSelected}
+                    className={`category-tab ${isSelected ? "category-tab-active" : ""}`}
+                    key={view}
+                    type="button"
+                    onClick={() => setSelectedView(view)}
+                  >
+                    {copy.seasonViews[view]}
+                  </button>
+                );
+              })}
+            </div>
             <SeasonLegend labels={copy.statuses} />
           </div>
 
-          <div className="mt-4 rounded-[1.15rem] border border-sage-100 bg-white/65 p-3 text-sm font-semibold text-ink/58">
-            <p>
-              {selectedProfile.labels[locale]} ·{" "}
-              {selectedProfile.confidenceLabel[locale]}
-            </p>
-            <p className="mt-1 font-medium">{copy.dataNote}</p>
-          </div>
-
-          <div className="mt-6 grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="mt-5 grid gap-4">
             <SeasonSection
               emptyLabel={copy.noResult}
-              items={knownSeasonalItems}
+              items={visibleItems}
               labels={itemLabels}
               locale={locale}
-              title={copy.inSeason}
-            />
-            <SeasonSection
-              emptyLabel={copy.noResult}
-              items={variableItems}
-              labels={itemLabels}
-              locale={locale}
-              title={copy.statuses.variable}
-            />
-            <SeasonSection
-              emptyLabel={copy.noResult}
-              items={outItems}
-              labels={itemLabels}
-              locale={locale}
-              title={copy.outSeason}
+              title={viewTitle}
             />
           </div>
 

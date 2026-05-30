@@ -9,6 +9,7 @@
     "postbuild": "node scripts/create-pages-fallback.mjs",
     "audit:data": "node scripts/audit-data-coverage.mjs",
     "preview": "vite preview",
+    "test:ux": "node scripts/ux-smoke-test.mjs",
     "deploy": "npm run build && gh-pages -d dist",
     "android:init": "cap add android",
     "android:sync": "npm run build && cap sync android",

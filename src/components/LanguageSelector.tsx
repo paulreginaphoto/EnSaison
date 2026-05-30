@@ -18,6 +18,7 @@ export function LanguageSelector({
       <Languages aria-hidden="true" className="h-4 w-4 text-sage-700" />
       <select
         className="control-select"
+        name="language"
         value={locale}
         onChange={(event) => onLocaleChange(event.target.value as Locale)}
       >

@@ -20,6 +20,10 @@ type SeasonSectionProps = {
     statuses: Record<SeasonStatus, string>;
     confidence: Record<"source" | "model" | "indicative" | "taxonomy", string>;
     sourceShort: string;
+    details: string;
+    hideDetails: string;
+    dataLevel: string;
+    seasonPeriod: string;
   };
 };
 

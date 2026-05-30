@@ -71,10 +71,12 @@ const tropicalAlways = new Set([
 export function resolveSeason(
   item: SeasonItem,
   profileId: SeasonProfileId,
+  countryCode: string,
   locale: Locale,
 ): ResolvedSeason {
-  const explicit = item.profiles?.[profileId];
-  const mode = item.seasonMode ?? "harvest";
+  const country = item.countries?.[countryCode];
+  const explicit = country ?? item.profiles?.[profileId];
+  const mode = explicit?.seasonMode ?? item.seasonMode ?? "harvest";
 
   if (mode === "variable") {
     return {

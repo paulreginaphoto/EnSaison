@@ -83,7 +83,7 @@ function MainPage() {
       )
       .map((item) => ({
         item,
-        season: resolveSeason(item, selectedProfileId, locale),
+        season: resolveSeason(item, selectedProfileId, selectedCountry, locale),
       }))
       .map(({ item, season }) => ({
         item,
@@ -96,7 +96,7 @@ function MainPage() {
           locale,
         ),
       );
-  }, [locale, search, selectedCategory, selectedMonth, selectedProfileId]);
+  }, [locale, search, selectedCategory, selectedCountry, selectedMonth, selectedProfileId]);
 
   const seasonalItems = filteredItems.filter(({ status }) => status !== "out");
   const knownSeasonalItems = seasonalItems.filter(
@@ -112,6 +112,7 @@ function MainPage() {
     categories: copy.categories as Record<SeasonCategory, string>,
     statuses: copy.statuses,
     confidence: copy.confidence,
+    sourceShort: copy.sourceShort,
   };
   const sourceLinks = selectedProfile.sourceIds.map((sourceId) => dataSources[sourceId]);
 

@@ -174,6 +174,137 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "chocolat", name: "Chocolat", names: { en: "Chocolate", es: "Chocolate", de: "Schokolade", it: "Cioccolato", pt: "Chocolate" }, category: "snack", icon: "fruit-nut", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "usda-fdc"], confidence: "taxonomy" },
 ];
 
+const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
+  radis: {
+    FR: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["france-agriculture"], confidence: "source" },
+  },
+  asperge: {
+    JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  "céleri-branche": {
+    JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  oignon: {
+    JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  ail: {
+    JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  "pomme-de-terre": {
+    JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  aubergine: {
+    JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  poivron: {
+    JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  concombre: {
+    JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  tomate: {
+    JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  "maïs-doux": {
+    JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  carotte: {
+    JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  pastèque: {
+    JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  melon: {
+    JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  peche: {
+    JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  prune: {
+    JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  brocoli: {
+    JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  "chou-fleur": {
+    JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  courge: {
+    JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  pomme: {
+    JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  poire: {
+    JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  raisin: {
+    JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  fraise: {
+    JP: { months: [1, 2, 3], nearMonths: [12, 4], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  "épinard": {
+    JP: { months: [1, 2, 3], nearMonths: [12, 4], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  huître: {
+    JP: { months: [1, 2, 3], nearMonths: [12, 4], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  cabillaud: {
+    JP: { months: [1, 2, 3], nearMonths: [12, 4], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  saumon: {
+    JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  calamar: {
+    JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+};
+
+const localizedNamesById: Record<string, SeasonItem["names"]> = {
+  abricot: { en: "Apricot", es: "Albaricoque", de: "Aprikose", it: "Albicocca", pt: "Damasco" },
+  fraise: { en: "Strawberry", es: "Fresa", de: "Erdbeere", it: "Fragola", pt: "Morango" },
+  framboise: { en: "Raspberry", es: "Frambuesa", de: "Himbeere", it: "Lampone", pt: "Framboesa" },
+  cerise: { en: "Cherry", es: "Cereza", de: "Kirsche", it: "Ciliegia", pt: "Cereja" },
+  pomme: { en: "Apple", es: "Manzana", de: "Apfel", it: "Mela", pt: "Maçã" },
+  poire: { en: "Pear", es: "Pera", de: "Birne", it: "Pera", pt: "Pera" },
+  peche: { en: "Peach", es: "Durazno", de: "Pfirsich", it: "Pesca", pt: "Pêssego" },
+  prune: { en: "Plum", es: "Ciruela", de: "Pflaume", it: "Prugna", pt: "Ameixa" },
+  raisin: { en: "Grape", es: "Uva", de: "Traube", it: "Uva", pt: "Uva" },
+  melon: { en: "Melon", es: "Melón", de: "Melone", it: "Melone", pt: "Melão" },
+  pastèque: { en: "Watermelon", es: "Sandía", de: "Wassermelone", it: "Anguria", pt: "Melancia" },
+  tomate: { en: "Tomato", es: "Tomate", de: "Tomate", it: "Pomodoro", pt: "Tomate" },
+  asperge: { en: "Asparagus", es: "Espárrago", de: "Spargel", it: "Asparago", pt: "Espargo" },
+  aubergine: { en: "Eggplant", es: "Berenjena", de: "Aubergine", it: "Melanzana", pt: "Beringela" },
+  brocoli: { en: "Broccoli", es: "Brócoli", de: "Brokkoli", it: "Broccoli", pt: "Brócolis" },
+  carotte: { en: "Carrot", es: "Zanahoria", de: "Karotte", it: "Carota", pt: "Cenoura" },
+  concombre: { en: "Cucumber", es: "Pepino", de: "Gurke", it: "Cetriolo", pt: "Pepino" },
+  courge: { en: "Squash", es: "Calabaza", de: "Kürbis", it: "Zucca", pt: "Abóbora" },
+  courgette: { en: "Zucchini", es: "Calabacín", de: "Zucchini", it: "Zucchina", pt: "Abobrinha" },
+  "céleri-branche": { en: "Celery", es: "Apio", de: "Stangensellerie", it: "Sedano", pt: "Aipo" },
+  "chou-fleur": { en: "Cauliflower", es: "Coliflor", de: "Blumenkohl", it: "Cavolfiore", pt: "Couve-flor" },
+  "maïs-doux": { en: "Sweet corn", es: "Maíz dulce", de: "Zuckermais", it: "Mais dolce", pt: "Milho doce" },
+  oignon: { en: "Onion", es: "Cebolla", de: "Zwiebel", it: "Cipolla", pt: "Cebola" },
+  ail: { en: "Garlic", es: "Ajo", de: "Knoblauch", it: "Aglio", pt: "Alho" },
+  "pomme-de-terre": { en: "Potato", es: "Patata", de: "Kartoffel", it: "Patata", pt: "Batata" },
+  poivron: { en: "Bell pepper", es: "Pimiento", de: "Paprika", it: "Peperone", pt: "Pimentão" },
+  radis: { en: "Radish", es: "Rábano", de: "Radieschen", it: "Ravanello", pt: "Rabanete" },
+  épinard: { en: "Spinach", es: "Espinaca", de: "Spinat", it: "Spinacio", pt: "Espinafre" },
+  morille: { en: "Morel", es: "Morilla", de: "Morchel", it: "Spugnola", pt: "Morel" },
+  chanterelle: { en: "Chanterelle", es: "Rebozuelo", de: "Pfifferling", it: "Finferlo", pt: "Cantarelo" },
+  "champignon-de-paris": { en: "Button mushroom", es: "Champiñón", de: "Champignon", it: "Champignon", pt: "Cogumelo Paris" },
+  huître: { en: "Oyster", es: "Ostra", de: "Auster", it: "Ostrica", pt: "Ostra" },
+  cabillaud: { en: "Cod", es: "Bacalao", de: "Kabeljau", it: "Merluzzo", pt: "Bacalhau" },
+  saumon: { en: "Salmon", es: "Salmón", de: "Lachs", it: "Salmone", pt: "Salmão" },
+  calamar: { en: "Squid", es: "Calamar", de: "Kalmar", it: "Calamaro", pt: "Lula" },
+};
+
+const withCountryOverrides = (item: SeasonItem): SeasonItem => ({
+  ...item,
+  names: item.names ?? localizedNamesById[item.id],
+  countries: countrySeasonOverrides[item.id] ?? item.countries,
+});
+
 export const seasonItems: SeasonItem[] = [
   ...romandieSeasonItems.map((item) => ({
     ...item,
@@ -182,4 +313,4 @@ export const seasonItems: SeasonItem[] = [
   })),
   ...globalStaples,
   ...worldwideFoodTaxonomyItems,
-];
+].map(withCountryOverrides);

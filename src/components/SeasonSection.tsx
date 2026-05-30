@@ -19,6 +19,7 @@ type SeasonSectionProps = {
     categories: Record<SeasonCategory, string>;
     statuses: Record<SeasonStatus, string>;
     confidence: Record<"source" | "model" | "indicative" | "taxonomy", string>;
+    sourceShort: string;
   };
 };
 

@@ -25,6 +25,15 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - USDA FoodData Central  
   https://fdc.nal.usda.gov/food-search/
 
+- French Ministry of Agriculture seasonal products  
+  https://agriculture.gouv.fr/produits-de-saison
+
+- Japan MAFF Tohoku seasonal foods  
+  https://www.maff.go.jp/tohoku/monosiritai/syokutaku/tabemono.html
+
+- Australian Government Healthy Aussie Produce  
+  https://www.health.gov.au/our-work/healthy-aussie-produce
+
 ## What The App Can Say Safely
 
 - Seasonal availability varies by exact location, altitude, growing conditions, weather, storage, greenhouse use and import habits.
@@ -34,6 +43,7 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Southern-temperate profiles are hemisphere-shifted from northern-temperate data unless an item has explicit regional data.
 - Tropical profiles are indicative and should be replaced item-by-item with country-level sources as the catalogue grows.
 - Animal products, prepared foods, drinks, condiments and processed staples are classified from food taxonomy sources. They are shown as variable unless the app has a reliable country-level seasonal signal.
+- Item rows display source links, so users can distinguish a climate model from a country-level source.
 
 ## Current Coverage
 
@@ -44,13 +54,14 @@ The app now supports:
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
 - 165 food entries after the second worldwide expansion pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
+- country overrides started for France and Japan, including Japan MAFF seasonal produce and seafood entries.
 
 ## Not Complete Yet
 
 The user objective remains broader than the current evidence. A truly complete worldwide app still needs:
 
 - authoritative country-level harvest calendars for every country;
-- item-level local data for tropical, southern-temperate and arid regions;
+- item-level local data for tropical, southern-temperate, arid regions and most countries beyond the first France/Japan overrides;
 - a larger item-level catalogue for regional cultivars, prepared foods and country-specific staples;
 - source-by-source audit trails per item and per country.
 

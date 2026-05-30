@@ -62,6 +62,20 @@ export type SeasonItem = {
         seasonLabel?: string;
         sourceIds?: string[];
         confidence?: DataConfidence;
+        seasonMode?: SeasonMode;
+      }
+    >
+  >;
+  countries?: Partial<
+    Record<
+      string,
+      {
+        months: number[];
+        nearMonths?: number[];
+        seasonLabel?: string;
+        sourceIds?: string[];
+        confidence?: DataConfidence;
+        seasonMode?: SeasonMode;
       }
     >
   >;

@@ -2,6 +2,7 @@ import { getItemName } from "../lib/season";
 import type { SeasonItem, SeasonStatus } from "../types";
 import type { ResolvedSeason } from "../lib/season";
 import type { Locale, SeasonCategory } from "../types";
+import { dataSources } from "../data/sources";
 import { ProduceIcon } from "./ProduceIcon";
 
 type SeasonItemRowProps = {
@@ -13,6 +14,7 @@ type SeasonItemRowProps = {
     categories: Record<SeasonCategory, string>;
     statuses: Record<SeasonStatus, string>;
     confidence: Record<"source" | "model" | "indicative" | "taxonomy", string>;
+    sourceShort: string;
   };
 };
 
@@ -50,6 +52,25 @@ export function SeasonItemRow({
         <p className="mt-1 flex flex-wrap gap-x-2 gap-y-1 text-sm font-medium text-ink/50">
           <span>{season.seasonLabel}</span>
           <span>· {labels.confidence[season.confidence]}</span>
+          <span>
+            · {labels.sourceShort}:{" "}
+            {season.sourceIds.slice(0, 2).map((sourceId, index) => {
+              const source = dataSources[sourceId as keyof typeof dataSources];
+              return (
+                <span key={sourceId}>
+                  <a
+                    className="text-sage-700"
+                    href={source?.url}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {index + 1}
+                  </a>
+                  {index < Math.min(season.sourceIds.length, 2) - 1 ? ", " : ""}
+                </span>
+              );
+            })}
+          </span>
         </p>
       </div>
     </li>

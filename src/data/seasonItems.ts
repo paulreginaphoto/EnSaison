@@ -596,6 +596,45 @@ const swissProduceOverrideIds = new Set([
   "artichaut",
 ]);
 
+const europeanRegionalProduceOverrideIds = new Set([...franceProduceOverrideIds, ...swissProduceOverrideIds]);
+
+const europeanRegionalCountryCodes = [
+  "AD",
+  "AT",
+  "BE",
+  "BG",
+  "CY",
+  "CZ",
+  "DE",
+  "DK",
+  "EE",
+  "ES",
+  "FI",
+  "GB",
+  "GR",
+  "HR",
+  "HU",
+  "IE",
+  "IS",
+  "IT",
+  "LI",
+  "LT",
+  "LU",
+  "LV",
+  "MC",
+  "MT",
+  "NL",
+  "NO",
+  "PL",
+  "PT",
+  "RO",
+  "SE",
+  "SI",
+  "SK",
+  "SM",
+  "VA",
+];
+
 const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] => {
   const countries: SeasonItem["countries"] = {};
 
@@ -615,6 +654,17 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
       sourceIds: ["swiss-blw-season-table"],
       confidence: "source",
     };
+  }
+
+  if (europeanRegionalProduceOverrideIds.has(item.id)) {
+    for (const countryCode of europeanRegionalCountryCodes) {
+      countries[countryCode] ??= {
+        months: item.months,
+        nearMonths: item.nearMonths,
+        sourceIds: ["eufic-europe", "ec-calendar"],
+        confidence: "indicative",
+      };
+    }
   }
 
   return Object.keys(countries).length ? countries : undefined;

@@ -59,7 +59,7 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 
 - Seasonal availability varies by exact location, altitude, growing conditions, weather, storage, greenhouse use and import habits.
 - Country selection maps each country to a broad climate/season profile.
-- European produce uses European climate-region sources where possible.
+- European produce uses European climate-region sources where possible, and is labeled as indicative unless a country-level source is attached.
 - Northern-temperate produce uses USDA and European references where possible.
 - Southern-temperate profiles are hemisphere-shifted from northern-temperate data unless an item has explicit regional data.
 - Tropical profiles are indicative and should be replaced item-by-item with country-level sources as the catalogue grows.
@@ -75,9 +75,11 @@ The app now supports:
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
 - 241 food entries after the fourth worldwide expansion pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for France, Switzerland, United States, Canada, Australia, India, Brazil and Japan, including 57 source-backed produce entries for France and 57 for Switzerland; confidence is kept lower when a source is regional rather than fully national.
+- country overrides for 42 countries, including France, Switzerland, United States, Canada, Australia, India, Brazil and Japan;
+- 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
+- France keeps 57 source-backed produce entries from the French Ministry of Agriculture, and Switzerland keeps 57 source-backed produce entries from the Swiss Federal Office for Agriculture.
 
-Run `npm run audit:data` to regenerate `docs/data-coverage-report.md`. The audit counts countries, food entries, categories, source references, country overrides, confidence levels and missing aliases so the remaining worldwide coverage gap stays visible.
+Run `npm run audit:data` to regenerate `docs/data-coverage-report.md`. The audit counts countries, food entries, categories, source references, country overrides, country override confidence, top country coverage and missing aliases so the remaining worldwide coverage gap stays visible.
 
 ## Not Complete Yet
 

@@ -132,7 +132,9 @@ function variableSeasonLabel(locale: Locale) {
 }
 
 export function formatSeasonRange(months: number[], locale: Locale) {
-  if (months.length === 12) {
+  const uniqueMonths = uniqueSortedMonths(months);
+
+  if (uniqueMonths.length === 12) {
     return locale === "fr"
       ? "toute l’année"
       : locale === "es"
@@ -146,10 +148,36 @@ export function formatSeasonRange(months: number[], locale: Locale) {
               : "year-round";
   }
 
-  if (months.length === 0) return "—";
+  if (uniqueMonths.length === 0) return "—";
 
+  const groups = uniqueMonths.reduce<number[][]>((ranges, month) => {
+    const lastRange = ranges[ranges.length - 1];
+    if (lastRange && month === lastRange[lastRange.length - 1] + 1) {
+      lastRange.push(month);
+    } else {
+      ranges.push([month]);
+    }
+    return ranges;
+  }, []);
+
+  if (
+    groups.length > 1 &&
+    groups[0][0] === 1 &&
+    groups[groups.length - 1][groups[groups.length - 1].length - 1] === 12
+  ) {
+    const startOfYear = groups.shift();
+    if (startOfYear) {
+      groups[groups.length - 1].push(...startOfYear);
+    }
+  }
+
+  return groups.map((group) => formatMonthGroup(group, locale)).join(", ");
+}
+
+function formatMonthGroup(months: number[], locale: Locale) {
   const first = months[0];
   const last = months[months.length - 1];
+  if (first === last) return getMonthShortLabel(first, locale);
   return `${getMonthShortLabel(first, locale)} – ${getMonthShortLabel(last, locale)}`;
 }
 

@@ -28,6 +28,15 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - French Ministry of Agriculture seasonal products  
   https://agriculture.gouv.fr/produits-de-saison
 
+- BZfE German seasonal fruit and vegetable calendar
+  https://www.bzfe.de/kueche-und-alltag/einkaufen/der-saisonkalender
+
+- Voedingscentrum Dutch seasonal vegetable and fruit calendar
+  https://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/gezonde-voeding-en-voedingsstoffen/wat-zijn-seizoensgroenten-en-seizoensfruit.aspx
+
+- British Dietetic Association UK seasonal fruit and vegetable guide
+  https://www.bda.uk.com/food-health/your-health/sustainable-diets/seasonal-fruit-and-veg-a-handy-guide.html
+
 - Japan MAFF Tohoku seasonal foods  
   https://www.maff.go.jp/tohoku/monosiritai/syokutaku/tabemono.html
 
@@ -75,11 +84,13 @@ The app now supports:
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
 - 241 food entries after the fourth worldwide expansion pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 42 countries, including France, Switzerland, United States, Canada, Australia, India, Brazil and Japan;
+- country overrides for 42 countries, including France, Switzerland, United Kingdom, Germany, Netherlands, United States, Canada, Australia, India, Brazil and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
+- Germany and the Netherlands keep their European seasonal months but now include country-specific reference links, still marked indicative until transcribed item by item;
+- the United Kingdom has source-backed BDA month-by-month overrides for 46 produce items already present in the catalogue;
 - France keeps 57 source-backed produce entries from the French Ministry of Agriculture, and Switzerland keeps 57 source-backed produce entries from the Swiss Federal Office for Agriculture.
 
-Run `npm run audit:data` to regenerate `docs/data-coverage-report.md`. The audit counts countries, food entries, categories, source references, country overrides, country override confidence, top country coverage and missing aliases so the remaining worldwide coverage gap stays visible.
+Run `npm run audit:data` to regenerate `docs/data-coverage-report.md`. The audit counts countries, food entries, categories, source references, country overrides, country-specific references, country override confidence, top country coverage and missing aliases so the remaining worldwide coverage gap stays visible.
 
 ## Not Complete Yet
 

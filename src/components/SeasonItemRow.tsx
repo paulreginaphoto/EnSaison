@@ -54,7 +54,7 @@ export function SeasonItemRow({
           <span>· {labels.confidence[season.confidence]}</span>
           <span>
             · {labels.sourceShort}:{" "}
-            {season.sourceIds.slice(0, 2).map((sourceId, index) => {
+            {season.sourceIds.slice(0, 3).map((sourceId, index) => {
               const source = dataSources[sourceId as keyof typeof dataSources];
               return (
                 <span key={sourceId}>
@@ -66,7 +66,7 @@ export function SeasonItemRow({
                   >
                     {index + 1}
                   </a>
-                  {index < Math.min(season.sourceIds.length, 2) - 1 ? ", " : ""}
+                  {index < Math.min(season.sourceIds.length, 3) - 1 ? ", " : ""}
                 </span>
               );
             })}

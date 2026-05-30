@@ -31,6 +31,18 @@ export const dataSources = {
     label: "French Ministry of Agriculture seasonal products",
     url: "https://agriculture.gouv.fr/produits-de-saison",
   },
+  "germany-bzfe-season-calendar": {
+    label: "BZfE German seasonal fruit and vegetable calendar",
+    url: "https://www.bzfe.de/kueche-und-alltag/einkaufen/der-saisonkalender",
+  },
+  "netherlands-voedingscentrum-calendar": {
+    label: "Voedingscentrum Dutch seasonal vegetable and fruit calendar",
+    url: "https://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/gezonde-voeding-en-voedingsstoffen/wat-zijn-seizoensgroenten-en-seizoensfruit.aspx",
+  },
+  "uk-bda-seasonal-produce": {
+    label: "British Dietetic Association UK seasonal fruit and vegetable guide",
+    url: "https://www.bda.uk.com/food-health/your-health/sustainable-diets/seasonal-fruit-and-veg-a-handy-guide.html",
+  },
   "japan-maff-tohoku": {
     label: "Japan MAFF Tohoku seasonal foods",
     url: "https://www.maff.go.jp/tohoku/monosiritai/syokutaku/tabemono.html",

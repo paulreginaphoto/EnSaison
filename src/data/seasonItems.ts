@@ -260,7 +260,7 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
     CH: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
     US: { months: [3, 4, 5], nearMonths: [2, 6], seasonLabel: "mars – mai", sourceIds: ["usda-snaped"], confidence: "source" },
     CA: { months: [5, 6], nearMonths: [4, 7], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
-    AU: { months: [9, 10, 11], nearMonths: [8, 12], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [9, 10, 11], nearMonths: [8, 12], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   "céleri-branche": {
@@ -303,23 +303,23 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
     JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   aubergine: {
-    AU: { months: [12, 1, 2, 3, 4], nearMonths: [11, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [12, 1, 2, 3, 4], nearMonths: [11, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   poivron: {
-    AU: { months: [12, 1, 2, 3, 4], nearMonths: [11, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [12, 1, 2, 3, 4], nearMonths: [11, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   concombre: {
     CH: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
     CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
-    AU: { months: [11, 12, 1, 2, 3, 4], nearMonths: [10, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [11, 12, 1, 2, 3, 4], nearMonths: [10, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   tomate: {
     US: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août", sourceIds: ["usda-snaped"], confidence: "source" },
     CA: { months: [7, 8, 9, 10], nearMonths: [6, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
-    AU: { months: [12, 1, 2, 3, 4], nearMonths: [11, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [12, 1, 2, 3, 4], nearMonths: [11, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: {
       months: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12],
@@ -333,7 +333,7 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   "maïs-doux": {
     US: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août", sourceIds: ["usda-snaped"], confidence: "source" },
     CA: { months: [8, 9, 10], nearMonths: [7, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
-    AU: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   carotte: {
@@ -341,30 +341,30 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   pastèque: {
-    AU: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     BR: { months: [9, 10, 11, 12, 1, 2, 3, 4], nearMonths: [8, 5], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   melon: {
     CH: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
-    AU: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   peche: {
-    AU: { months: [12, 1, 2], nearMonths: [11, 3], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [12, 1, 2], nearMonths: [11, 3], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     BR: { months: [11, 12, 1], nearMonths: [10, 2], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   prune: {
-    AU: { months: [12, 1, 2], nearMonths: [11, 3], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [12, 1, 2], nearMonths: [11, 3], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   brocoli: {
     CH: { months: [5, 6, 7, 8, 9, 10, 11], nearMonths: [4, 12], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
     US: { months: [3, 4, 5, 9, 10, 11], nearMonths: [2, 6, 8, 12], seasonLabel: "mars – mai, sept. – nov.", sourceIds: ["usda-snaped"], confidence: "source" },
     CA: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
-    AU: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   "chou-fleur": {
@@ -391,14 +391,14 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   courge: {
     US: { months: [9, 10, 11, 12, 1, 2], nearMonths: [8, 3], seasonLabel: "sept. – févr.", sourceIds: ["usda-snaped"], confidence: "source" },
     CA: { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
-    AU: { months: [3, 4, 5, 6, 7, 8], nearMonths: [2, 9], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [3, 4, 5, 6, 7, 8], nearMonths: [2, 9], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   pomme: {
     CH: { months: [9, 10, 11, 12, 1, 2, 3, 4], nearMonths: [8, 5], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
     US: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l’année", seasonMode: "year-round", sourceIds: ["usda-snaped"], confidence: "source" },
     CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
-    AU: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     IN: {
       months: [1, 2, 6, 7, 8, 9, 10, 11, 12],
       nearMonths: [3, 5],
@@ -410,11 +410,11 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   },
   poire: {
     CA: { months: [12, 1, 2, 8, 9, 10, 11], nearMonths: [7, 3], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
-    AU: { months: [3, 4, 5], nearMonths: [2, 6], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [3, 4, 5], nearMonths: [2, 6], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   raisin: {
-    AU: { months: [1, 2, 3, 4], nearMonths: [12, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [1, 2, 3, 4], nearMonths: [12, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     BR: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: {
       months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
@@ -429,7 +429,7 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   fraise: {
     US: { months: [3, 4, 5, 6, 7, 8], nearMonths: [2, 9], seasonLabel: "mars – août", sourceIds: ["usda-snaped"], confidence: "source" },
     CA: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
-    AU: { months: [9, 10, 11, 12, 1, 2], nearMonths: [8, 3], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    AU: { months: [9, 10, 11, 12, 1, 2], nearMonths: [8, 3], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
     JP: { months: [1, 2, 3], nearMonths: [12, 4], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   "épinard": {

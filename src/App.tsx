@@ -99,6 +99,10 @@ function MainPage() {
   }, [locale, search, selectedCategory, selectedMonth, selectedProfileId]);
 
   const seasonalItems = filteredItems.filter(({ status }) => status !== "out");
+  const knownSeasonalItems = seasonalItems.filter(
+    ({ status }) => status !== "variable",
+  );
+  const variableItems = filteredItems.filter(({ status }) => status === "variable");
   const outItems = filteredItems.filter(({ status }) => status === "out");
   const categoryLabels: Record<CategoryFilter, string> = {
     all: copy.all,
@@ -154,10 +158,17 @@ function MainPage() {
           <div className="mt-6 grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
             <SeasonSection
               emptyLabel={copy.noResult}
-              items={seasonalItems}
+              items={knownSeasonalItems}
               labels={itemLabels}
               locale={locale}
               title={copy.inSeason}
+            />
+            <SeasonSection
+              emptyLabel={copy.noResult}
+              items={variableItems}
+              labels={itemLabels}
+              locale={locale}
+              title={copy.statuses.variable}
             />
             <SeasonSection
               emptyLabel={copy.noResult}

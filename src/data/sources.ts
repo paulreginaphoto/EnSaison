@@ -15,6 +15,18 @@ export const dataSources = {
     label: "FAO Crop Calendar",
     url: "https://www.fao.org/sustainable-development-goals-helpdesk/transform/article-detail/crop-calendar/en",
   },
+  "fao-infoods": {
+    label: "FAO/INFOODS Food Composition",
+    url: "https://www.fao.org/food-composition/en/",
+  },
+  langual: {
+    label: "LanguaL international food description framework",
+    url: "https://www.langual.org/",
+  },
+  "usda-fdc": {
+    label: "USDA FoodData Central",
+    url: "https://fdc.nal.usda.gov/food-search/",
+  },
 } as const;
 
 export type DataSourceId = keyof typeof dataSources;

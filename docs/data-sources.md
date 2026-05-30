@@ -16,6 +16,15 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - FAO Crop Calendar  
   https://www.fao.org/sustainable-development-goals-helpdesk/transform/article-detail/crop-calendar/en
 
+- FAO/INFOODS Food Composition  
+  https://www.fao.org/food-composition/en/
+
+- LanguaL international food description framework  
+  https://www.langual.org/
+
+- USDA FoodData Central  
+  https://fdc.nal.usda.gov/food-search/
+
 ## What The App Can Say Safely
 
 - Seasonal availability varies by exact location, altitude, growing conditions, weather, storage, greenhouse use and import habits.
@@ -24,6 +33,7 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Northern-temperate produce uses USDA and European references where possible.
 - Southern-temperate profiles are hemisphere-shifted from northern-temperate data unless an item has explicit regional data.
 - Tropical profiles are indicative and should be replaced item-by-item with country-level sources as the catalogue grows.
+- Animal products, prepared foods, drinks, condiments and processed staples are classified from food taxonomy sources. They are shown as variable unless the app has a reliable country-level seasonal signal.
 
 ## Current Coverage
 
@@ -31,9 +41,9 @@ The app now supports:
 
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
-- 9 food categories: fruits, vegetables, mushrooms, herbs, legumes, grains, nuts, seeds and spices;
-- 110 food entries after the first worldwide expansion pass;
-- confidence labels per item: sourced, modeled or indicative.
+- 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
+- 165 food entries after the second worldwide expansion pass;
+- confidence labels per item: sourced, modeled, indicative or taxonomy-only.
 
 ## Not Complete Yet
 
@@ -41,7 +51,7 @@ The user objective remains broader than the current evidence. A truly complete w
 
 - authoritative country-level harvest calendars for every country;
 - item-level local data for tropical, southern-temperate and arid regions;
-- a much larger global food taxonomy including animal products, seaweed, fermented foods, processed staples and regional cultivars;
+- a larger item-level catalogue for regional cultivars, prepared foods and country-specific staples;
 - source-by-source audit trails per item and per country.
 
 Until those are added, DeSaison should keep showing confidence labels and source notes.

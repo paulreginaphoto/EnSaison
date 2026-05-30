@@ -12,7 +12,7 @@ type SeasonItemRowProps = {
   labels: {
     categories: Record<SeasonCategory, string>;
     statuses: Record<SeasonStatus, string>;
-    confidence: Record<"source" | "model" | "indicative", string>;
+    confidence: Record<"source" | "model" | "indicative" | "taxonomy", string>;
   };
 };
 
@@ -20,6 +20,7 @@ const statusClasses: Record<SeasonStatus, string> = {
   "in-season": "badge-in-season",
   soon: "badge-soon",
   out: "badge-out",
+  variable: "badge-variable",
 };
 
 export function SeasonItemRow({

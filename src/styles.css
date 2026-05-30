@@ -75,6 +75,10 @@ select {
     @apply bg-red-100 text-terracotta;
   }
 
+  .badge-variable {
+    @apply bg-stone-200 text-stone-700;
+  }
+
   .empty-state {
     @apply flex min-h-52 flex-col items-center justify-center gap-3 rounded-[1.15rem] border border-dashed border-sage-100 bg-white/60 text-sm font-semibold text-ink/40;
   }

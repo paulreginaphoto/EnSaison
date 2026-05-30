@@ -14,12 +14,17 @@ export type ResolvedSeason = {
   seasonLabel: string;
   sourceIds: string[];
   confidence: DataConfidence;
+  mode: "harvest" | "year-round" | "variable";
 };
 
 export const getSeasonStatus = (
   season: Pick<ResolvedSeason, "months" | "nearMonths">,
   selectedMonth: number,
 ): SeasonStatus => {
+  if ("mode" in season && season.mode === "variable") {
+    return "variable";
+  }
+
   if (season.months.includes(selectedMonth)) {
     return "in-season";
   }
@@ -69,6 +74,19 @@ export function resolveSeason(
   locale: Locale,
 ): ResolvedSeason {
   const explicit = item.profiles?.[profileId];
+  const mode = item.seasonMode ?? "harvest";
+
+  if (mode === "variable") {
+    return {
+      months: [],
+      nearMonths: [],
+      seasonLabel: variableSeasonLabel(locale),
+      sourceIds: item.sourceIds ?? ["fao-infoods", "langual", "usda-fdc"],
+      confidence: item.confidence ?? "taxonomy",
+      mode,
+    };
+  }
+
   const baseMonths = explicit?.months ?? item.months;
   const months =
     profileId === "south-temperate" && !explicit
@@ -97,7 +115,17 @@ export function resolveSeason(
       (profileId === "south-temperate" || profileId === "tropical"
         ? "model"
         : item.confidence ?? "indicative"),
+    mode,
   };
+}
+
+function variableSeasonLabel(locale: Locale) {
+  if (locale === "fr") return "variable selon pays";
+  if (locale === "es") return "variable por país";
+  if (locale === "de") return "je nach Land";
+  if (locale === "it") return "varia per paese";
+  if (locale === "pt") return "varia por país";
+  return "varies by country";
 }
 
 export function formatSeasonRange(months: number[], locale: Locale) {

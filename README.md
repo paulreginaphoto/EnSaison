@@ -113,6 +113,7 @@ L'application inclut:
 - 6 langues d'interface: français, anglais, espagnol, allemand, italien, portugais.
 - un sélecteur de pays basé sur les codes ISO-3166;
 - des profils saisonniers larges: Europe montagne, Europe tempérée, Méditerranée, nord tempéré, sud tempéré et tropical;
+- 25 catégories alimentaires incluant produits animaux, algues, boissons, huiles, condiments et aliments préparés;
 - des libellés de confiance pour éviter de présenter une approximation climatique comme une certitude locale.
 
 ## Données
@@ -127,21 +128,38 @@ type SeasonItem = {
   name: string
   names?: Partial<Record<Locale, string>>
   category:
+    | "allium"
+    | "beverage"
+    | "condiment"
+    | "dairy"
+    | "egg"
+    | "fat"
+    | "fish"
     | "fruit"
-    | "vegetable"
-    | "mushroom"
+    | "insect"
     | "herb"
     | "legume"
+    | "meat"
     | "grain"
+    | "mushroom"
     | "nut"
+    | "poultry"
+    | "prepared"
+    | "seafood"
+    | "seaweed"
     | "seed"
+    | "snack"
     | "spice"
+    | "sweetener"
+    | "tuber"
+    | "vegetable"
   icon: string
   months: number[]
   nearMonths?: number[]
   seasonLabel: string
+  seasonMode?: "harvest" | "year-round" | "variable"
   sourceIds?: string[]
-  confidence?: "source" | "model" | "indicative"
+  confidence?: "source" | "model" | "indicative" | "taxonomy"
 }
 ```
 

@@ -1,19 +1,37 @@
 export type Locale = "fr" | "en" | "es" | "de" | "it" | "pt";
 
 export type SeasonCategory =
+  | "allium"
+  | "beverage"
+  | "condiment"
+  | "dairy"
+  | "egg"
+  | "fat"
+  | "fish"
   | "fruit"
-  | "vegetable"
-  | "mushroom"
+  | "insect"
   | "herb"
   | "legume"
+  | "meat"
   | "grain"
+  | "mushroom"
   | "nut"
+  | "poultry"
+  | "prepared"
+  | "seafood"
+  | "seaweed"
   | "seed"
-  | "spice";
+  | "snack"
+  | "spice"
+  | "sweetener"
+  | "tuber"
+  | "vegetable";
 
-export type SeasonStatus = "in-season" | "soon" | "out";
+export type SeasonStatus = "in-season" | "soon" | "out" | "variable";
 
-export type DataConfidence = "source" | "model" | "indicative";
+export type DataConfidence = "source" | "model" | "indicative" | "taxonomy";
+
+export type SeasonMode = "harvest" | "year-round" | "variable";
 
 export type SeasonProfileId =
   | "europe-mountain"
@@ -32,6 +50,7 @@ export type SeasonItem = {
   months: number[];
   nearMonths?: number[];
   seasonLabel: string;
+  seasonMode?: SeasonMode;
   sourceIds?: string[];
   confidence?: DataConfidence;
   profiles?: Partial<

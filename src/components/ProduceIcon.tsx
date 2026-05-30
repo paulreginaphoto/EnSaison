@@ -6,7 +6,7 @@ type ProduceIconProps = {
 };
 
 export function ProduceIcon({ icon, category }: ProduceIconProps) {
-  const palette = {
+  const paletteMap = {
     fruit: {
       bg: "#f5ded1",
       body: "#c46f5f",
@@ -61,7 +61,13 @@ export function ProduceIcon({ icon, category }: ProduceIconProps) {
       accent: "#c8933c",
       detail: "#fbf7ee",
     },
-  }[category];
+  };
+  const palette = paletteMap[category as keyof typeof paletteMap] ?? {
+    bg: "#f3eadc",
+    body: "#7f9b77",
+    accent: "#526b4f",
+    detail: "#fbf7ee",
+  };
 
   if (category === "mushroom") {
     const isTall = icon.includes("morel") || icon.includes("trumpet");

@@ -79,6 +79,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Mexico PROFECO fourth-quarter seasonal fruit and vegetable guide
   https://www.gob.mx/profeco/prensa/recomienda-profeco-consumo-de-frutas-y-verduras-de-temporada?idiom=es
 
+- Portugal GPP plant products production calendars
+  https://www.gpp.gov.pt/images/GPP/O_que_disponibilizamos/Publicacoes/Periodicos/MercVegetais/InfoMercados_ProdutosVegetais_Final.pdf
+
 ## What The App Can Say Safely
 
 - Seasonal availability varies by exact location, altitude, growing conditions, weather, storage, greenhouse use and import habits.
@@ -103,6 +106,7 @@ The app now supports:
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Germany now has source-backed BZfE seasonal overrides for 40 produce items already present in the catalogue, while remaining German produce still falls back to indicative European regional data;
 - the Netherlands now has source-backed Voedingscentrum seasonal overrides for 54 produce and mushroom items already present in the catalogue, while remaining Dutch produce still falls back to indicative European regional data;
+- Portugal now has source-backed GPP national production-calendar overrides for 42 fruit, vegetable, nut and olive-oil items already present in the catalogue; this is production-calendar data from the 2016 GPP booklet, not current shop availability;
 - Australia has 16 source-backed produce overrides from the Australian Government's Healthy Aussie Produce guidance and its linked Seasonal Food Guide Australia general calendar; the app now labels this as national-general seasonal guidance, not state-level precision;
 - Canada has 29 Foodland Ontario-backed indicative overrides; this is useful Ontario/proxy guidance, not province-by-province precision for the whole country;
 - Brazil has 16 CEAGESP-backed indicative overrides; this mainly reflects a Sao Paulo wholesale-market signal, not full national local precision;

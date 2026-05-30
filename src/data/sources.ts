@@ -99,6 +99,10 @@ export const dataSources = {
     label: "Mexico PROFECO fourth-quarter seasonal fruit and vegetable guide",
     url: "https://www.gob.mx/profeco/prensa/recomienda-profeco-consumo-de-frutas-y-verduras-de-temporada?idiom=es",
   },
+  "portugal-gpp-plant-products": {
+    label: "Portugal GPP plant products production calendars",
+    url: "https://www.gpp.gov.pt/images/GPP/O_que_disponibilizamos/Publicacoes/Periodicos/MercVegetais/InfoMercados_ProdutosVegetais_Final.pdf",
+  },
 } as const;
 
 export type DataSourceId = keyof typeof dataSources;

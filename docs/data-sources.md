@@ -73,6 +73,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - India National Horticulture Board litchi availability note
   https://www.nhb.gov.in/model-project-reports/Horticulture%20Crops/Litchi/Litchi1.htm
 
+- Mexico PROFECO fourth-quarter seasonal fruit and vegetable guide
+  https://www.gob.mx/profeco/prensa/recomienda-profeco-consumo-de-frutas-y-verduras-de-temporada?idiom=es
+
 ## What The App Can Say Safely
 
 - Seasonal availability varies by exact location, altitude, growing conditions, weather, storage, greenhouse use and import habits.
@@ -93,10 +96,11 @@ The app now supports:
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
 - 241 food entries after the fourth worldwide expansion pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 42 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, United States, Canada, Australia, India, Brazil and Japan;
+- country overrides for 43 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, India, Brazil and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Germany and the Netherlands keep their European seasonal months but now include country-specific reference links, still marked indicative until transcribed item by item;
 - Spain has source-backed MAPA month-by-month overrides for 46 fruit and vegetable items already present in the catalogue, using higher commercialization as in-season and lower commercialization as soon/near season;
+- Mexico has source-backed PROFECO fourth-quarter overrides for 22 fruit and vegetable items already present in the catalogue; this is a Q4 source, not a complete annual Mexico calendar;
 - the United Kingdom has source-backed BDA month-by-month overrides for 46 produce items already present in the catalogue;
 - Italy has source-backed CREA month-by-month overrides for the catalogue items that directly match the CREA calendar;
 - France keeps 57 source-backed produce entries from the French Ministry of Agriculture, and Switzerland keeps 57 source-backed produce entries from the Swiss Federal Office for Agriculture.

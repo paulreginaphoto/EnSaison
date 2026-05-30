@@ -815,6 +815,31 @@ const spainVegetableSeasonOverrides: Record<string, NonNullable<NonNullable<Seas
   },
 };
 
+const mexicoProfecoQ4SeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  ananas: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  avocat: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  banane: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  blette: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  brocoli: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  carotte: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  "chou-fleur": { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  citron: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  concombre: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  courgette: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  "épinard": { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  goyave: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  laitue: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  melon: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  oignon: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  orange: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  papaye: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  poire: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  poivron: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  prune: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  raisin: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+  tomate: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+};
+
 const europeanCountryReferenceSourceIds: Record<string, string[]> = {
   DE: ["germany-bzfe-season-calendar"],
   ES: ["spain-mapa-fruit-calendar", "spain-mapa-vegetable-calendar"],
@@ -907,6 +932,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.ES = {
       ...spainVegetableSeasonOverrides[item.id],
       sourceIds: ["spain-mapa-vegetable-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (mexicoProfecoQ4SeasonOverrides[item.id]) {
+    countries.MX = {
+      ...mexicoProfecoQ4SeasonOverrides[item.id],
+      sourceIds: ["mexico-profeco-seasonal-q4"],
       confidence: "source",
     };
   }

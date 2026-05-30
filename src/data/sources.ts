@@ -91,6 +91,10 @@ export const dataSources = {
     label: "India National Horticulture Board litchi availability note",
     url: "https://www.nhb.gov.in/model-project-reports/Horticulture%20Crops/Litchi/Litchi1.htm",
   },
+  "mexico-profeco-seasonal-q4": {
+    label: "Mexico PROFECO fourth-quarter seasonal fruit and vegetable guide",
+    url: "https://www.gob.mx/profeco/prensa/recomienda-profeco-consumo-de-frutas-y-verduras-de-temporada?idiom=es",
+  },
 } as const;
 
 export type DataSourceId = keyof typeof dataSources;

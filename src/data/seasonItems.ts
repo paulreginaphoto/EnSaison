@@ -272,7 +272,14 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
     CH: { months: [1, 2, 3, 4, 7, 8, 9, 10, 11, 12], nearMonths: [5, 6], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
     CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
     BR: { months: [7, 8, 9, 10, 11, 12], nearMonths: [6, 1], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
-    IN: { months: [10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [9, 6], sourceIds: ["india-apeda-produce", "india-desagri-vegetable-harvest"], confidence: "indicative" },
+    IN: {
+      months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      nearMonths: [],
+      seasonLabel: "toute l’année",
+      seasonMode: "year-round",
+      sourceIds: ["india-desagri-vegetable-harvest"],
+      confidence: "source",
+    },
     JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   ail: {
@@ -285,7 +292,14 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
     CH: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["swiss-blw-season-table"], confidence: "source" },
     CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
     BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
-    IN: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], sourceIds: ["india-apeda-produce", "india-desagri-vegetable-harvest"], confidence: "indicative" },
+    IN: {
+      months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      nearMonths: [],
+      seasonLabel: "toute l’année",
+      seasonMode: "year-round",
+      sourceIds: ["india-desagri-vegetable-harvest"],
+      confidence: "source",
+    },
     JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   aubergine: {
@@ -307,7 +321,13 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
     CA: { months: [7, 8, 9, 10], nearMonths: [6, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
     AU: { months: [12, 1, 2, 3, 4], nearMonths: [11, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
-    IN: { months: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12], nearMonths: [5], sourceIds: ["india-apeda-produce", "india-desagri-vegetable-harvest"], confidence: "indicative" },
+    IN: {
+      months: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12],
+      nearMonths: [5],
+      seasonLabel: "juin – avr.",
+      sourceIds: ["india-desagri-vegetable-harvest"],
+      confidence: "source",
+    },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   "maïs-doux": {
@@ -350,7 +370,23 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   "chou-fleur": {
     CH: { months: [5, 6, 7, 8, 9, 10, 11], nearMonths: [4, 12], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
     CA: { months: [6, 7, 8, 9, 10, 11], nearMonths: [5, 12], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
+    IN: {
+      months: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12],
+      nearMonths: [5],
+      seasonLabel: "juin – avr.",
+      sourceIds: ["india-desagri-vegetable-harvest"],
+      confidence: "source",
+    },
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
+  },
+  "chou-blanc": {
+    IN: {
+      months: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12],
+      nearMonths: [5],
+      seasonLabel: "juin – avr.",
+      sourceIds: ["india-desagri-vegetable-harvest"],
+      confidence: "source",
+    },
   },
   courge: {
     US: { months: [9, 10, 11, 12, 1, 2], nearMonths: [8, 3], seasonLabel: "sept. – févr.", sourceIds: ["usda-snaped"], confidence: "source" },
@@ -363,6 +399,13 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
     US: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l’année", seasonMode: "year-round", sourceIds: ["usda-snaped"], confidence: "source" },
     CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
     AU: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
+    IN: {
+      months: [1, 2, 6, 7, 8, 9, 10, 11, 12],
+      nearMonths: [3, 5],
+      seasonLabel: "juin – févr.",
+      sourceIds: ["india-desagri-fruit-harvest"],
+      confidence: "source",
+    },
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   poire: {
@@ -373,7 +416,14 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   raisin: {
     AU: { months: [1, 2, 3, 4], nearMonths: [12, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "indicative" },
     BR: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
-    IN: { months: [1, 2, 3, 4], nearMonths: [12, 5], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
+    IN: {
+      months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      nearMonths: [],
+      seasonLabel: "toute l’année",
+      seasonMode: "year-round",
+      sourceIds: ["india-desagri-fruit-harvest"],
+      confidence: "source",
+    },
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   fraise: {
@@ -402,7 +452,14 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   },
   banane: {
     BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
-    IN: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["india-apeda-produce"], confidence: "indicative" },
+    IN: {
+      months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      nearMonths: [],
+      seasonLabel: "toute l’année",
+      seasonMode: "year-round",
+      sourceIds: ["india-desagri-fruit-harvest"],
+      confidence: "source",
+    },
   },
   orange: {
     BR: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
@@ -410,6 +467,14 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   },
   citron: {
     BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
+    IN: {
+      months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      nearMonths: [],
+      seasonLabel: "toute l’année",
+      seasonMode: "year-round",
+      sourceIds: ["india-desagri-fruit-harvest"],
+      confidence: "source",
+    },
   },
   avocat: {
     BR: { months: [4, 5, 6, 7, 8], nearMonths: [3, 9], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
@@ -421,7 +486,13 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   },
   mangue: {
     BR: { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
-    IN: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
+    IN: {
+      months: [3, 4, 5, 6, 7, 8, 9],
+      nearMonths: [2, 10],
+      seasonLabel: "mars – sept.",
+      sourceIds: ["india-desagri-fruit-harvest"],
+      confidence: "source",
+    },
   },
   goyave: {
     BR: { months: [1, 2, 3, 4], nearMonths: [12, 5], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },

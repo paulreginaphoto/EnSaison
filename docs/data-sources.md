@@ -70,6 +70,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - India Department of Agriculture harvesting season of major vegetables
   https://desagri.gov.in/en/document-report/6-harvesting-season-of-major-vegetables/
 
+- India Department of Agriculture harvesting season of major fruits
+  https://desagri.gov.in/document-report/5-harvesting-season-of-major-fruits/
+
 - India National Horticulture Board litchi availability note
   https://www.nhb.gov.in/model-project-reports/Horticulture%20Crops/Litchi/Litchi1.htm
 
@@ -102,6 +105,7 @@ The app now supports:
 - Spain has source-backed MAPA month-by-month overrides for 46 fruit and vegetable items already present in the catalogue, using higher commercialization as in-season and lower commercialization as soon/near season;
 - Mexico has source-backed PROFECO fourth-quarter overrides for 22 fruit and vegetable items already present in the catalogue; this is a Q4 source, not a complete annual Mexico calendar;
 - the United States has source-backed USDA SNAP-Ed seasonal overrides for 50 produce items already present in the catalogue, mapped from USDA spring/summer/fall/winter lists;
+- India has 11 source-backed produce overrides from Department of Agriculture/National Horticulture Board harvest tables; India values are broad national aggregations across states and territories, not city-level local precision;
 - the United Kingdom has source-backed BDA month-by-month overrides for 46 produce items already present in the catalogue;
 - Italy has source-backed CREA month-by-month overrides for the catalogue items that directly match the CREA calendar;
 - France keeps 57 source-backed produce entries from the French Ministry of Agriculture, and Switzerland keeps 57 source-backed produce entries from the Swiss Federal Office for Agriculture.

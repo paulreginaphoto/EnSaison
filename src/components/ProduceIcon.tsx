@@ -25,6 +25,42 @@ export function ProduceIcon({ icon, category }: ProduceIconProps) {
       accent: "#6f5d4d",
       detail: "#fbf7ee",
     },
+    herb: {
+      bg: "#dce9d7",
+      body: "#7f9b77",
+      accent: "#526b4f",
+      detail: "#f0c46d",
+    },
+    legume: {
+      bg: "#efe0cc",
+      body: "#7f9b77",
+      accent: "#526b4f",
+      detail: "#f0c46d",
+    },
+    grain: {
+      bg: "#f3eadc",
+      body: "#c8933c",
+      accent: "#7f9b77",
+      detail: "#fbf7ee",
+    },
+    nut: {
+      bg: "#efe0cc",
+      body: "#b98565",
+      accent: "#6f5d4d",
+      detail: "#f0c46d",
+    },
+    seed: {
+      bg: "#f3eadc",
+      body: "#6f5d4d",
+      accent: "#7f9b77",
+      detail: "#f0c46d",
+    },
+    spice: {
+      bg: "#f5ded1",
+      body: "#c46f5f",
+      accent: "#c8933c",
+      detail: "#fbf7ee",
+    },
   }[category];
 
   if (category === "mushroom") {
@@ -52,7 +88,7 @@ export function ProduceIcon({ icon, category }: ProduceIconProps) {
     );
   }
 
-  if (category === "vegetable") {
+  if (category !== "fruit") {
     const isLeaf = icon.includes("leaf") || icon.includes("cabbage") || icon.includes("broccoli");
     const isStem = icon.includes("stem") || icon.includes("bean") || icon.includes("cucumber");
 

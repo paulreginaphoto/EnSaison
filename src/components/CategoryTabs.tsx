@@ -2,35 +2,43 @@ import type { CategoryFilter } from "../types";
 
 type CategoryTabsProps = {
   selectedCategory: CategoryFilter;
+  labels: Record<CategoryFilter, string>;
   onCategoryChange: (category: CategoryFilter) => void;
 };
 
-const categories: { value: CategoryFilter; label: string }[] = [
-  { value: "fruit", label: "Fruits" },
-  { value: "vegetable", label: "Légumes" },
-  { value: "mushroom", label: "Champignons" },
-  { value: "all", label: "Tous" },
+const categories: CategoryFilter[] = [
+  "all",
+  "fruit",
+  "vegetable",
+  "mushroom",
+  "herb",
+  "legume",
+  "grain",
+  "nut",
+  "seed",
+  "spice",
 ];
 
 export function CategoryTabs({
   selectedCategory,
+  labels,
   onCategoryChange,
 }: CategoryTabsProps) {
   return (
     <div className="no-scrollbar flex gap-2 overflow-x-auto pb-1" role="tablist">
       {categories.map((category) => {
-        const isSelected = selectedCategory === category.value;
+        const isSelected = selectedCategory === category;
 
         return (
           <button
             className={`category-tab ${isSelected ? "category-tab-active" : ""}`}
-            key={category.value}
+            key={category}
             type="button"
             role="tab"
             aria-selected={isSelected}
-            onClick={() => onCategoryChange(category.value)}
+            onClick={() => onCategoryChange(category)}
           >
-            {category.label}
+            {labels[category]}
           </button>
         );
       })}

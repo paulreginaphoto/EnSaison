@@ -1,18 +1,34 @@
 import type { SeasonItem, SeasonStatus } from "../types";
+import type { ResolvedSeason } from "../lib/season";
+import type { Locale, SeasonCategory } from "../types";
 import emptyStateIcon from "../assets/icons/empty-state.svg";
 import { SeasonItemRow } from "./SeasonItemRow";
 
 type SectionItem = {
   item: SeasonItem;
   status: SeasonStatus;
+  season: ResolvedSeason;
 };
 
 type SeasonSectionProps = {
   title: string;
   items: SectionItem[];
+  locale: Locale;
+  emptyLabel: string;
+  labels: {
+    categories: Record<SeasonCategory, string>;
+    statuses: Record<SeasonStatus, string>;
+    confidence: Record<"source" | "model" | "indicative", string>;
+  };
 };
 
-export function SeasonSection({ title, items }: SeasonSectionProps) {
+export function SeasonSection({
+  title,
+  items,
+  locale,
+  emptyLabel,
+  labels,
+}: SeasonSectionProps) {
   return (
     <section className="section-shell" aria-labelledby={`${title}-title`}>
       <div className="mb-3 flex items-end justify-between">
@@ -24,14 +40,21 @@ export function SeasonSection({ title, items }: SeasonSectionProps) {
 
       {items.length > 0 ? (
         <ul className="space-y-2.5">
-          {items.map(({ item, status }) => (
-            <SeasonItemRow item={item} key={item.id} status={status} />
+          {items.map(({ item, status, season }) => (
+            <SeasonItemRow
+              item={item}
+              key={item.id}
+              labels={labels}
+              locale={locale}
+              season={season}
+              status={status}
+            />
           ))}
         </ul>
       ) : (
         <div className="empty-state">
           <img src={emptyStateIcon} alt="" className="h-16 w-16" />
-          <p>Aucun résultat</p>
+          <p>{emptyLabel}</p>
         </div>
       )}
     </section>

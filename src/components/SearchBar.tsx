@@ -2,10 +2,11 @@ import { Search } from "lucide-react";
 
 type SearchBarProps = {
   value: string;
+  placeholder: string;
   onChange: (value: string) => void;
 };
 
-export function SearchBar({ value, onChange }: SearchBarProps) {
+export function SearchBar({ value, placeholder, onChange }: SearchBarProps) {
   return (
     <label className="relative block" aria-label="Recherche">
       <Search
@@ -14,7 +15,7 @@ export function SearchBar({ value, onChange }: SearchBarProps) {
       />
       <input
         className="h-14 w-full rounded-[1.35rem] border border-sage-100 bg-white/90 pl-12 pr-4 text-base font-medium text-ink shadow-soft outline-none transition focus:border-sage-500 focus:ring-4 focus:ring-sage-100"
-        placeholder="Rechercher un fruit, légume, champignon…"
+        placeholder={placeholder}
         type="search"
         value={value}
         onChange={(event) => onChange(event.target.value)}

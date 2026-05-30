@@ -1,6 +1,6 @@
 import type { SeasonItem } from "../types";
 
-export const seasonItems: SeasonItem[] = [
+const romandieSeasonItems: SeasonItem[] = [
   { id: "abricot", name: "Abricot", category: "fruit", icon: "fruit-stone", months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
   { id: "airelle", name: "Airelle", category: "fruit", icon: "fruit-berry", months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
   { id: "cassis", name: "Cassis", category: "fruit", icon: "fruit-berry", months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
@@ -85,4 +85,42 @@ export const seasonItems: SeasonItem[] = [
   { id: "oreille-de-judas", name: "Oreille de Judas", category: "mushroom", icon: "mushroom-oyster", months: [10, 11, 12, 1, 2, 3], nearMonths: [9, 4], seasonLabel: "oct. – mars" },
   { id: "armillaire-couleur-de-miel", name: "Armillaire couleur de miel", category: "mushroom", icon: "mushroom-cap", months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
   { id: "pied-bleu", name: "Pied bleu", category: "mushroom", icon: "mushroom-cap", months: [10, 11, 12], nearMonths: [9, 1], seasonLabel: "oct. – déc." },
+];
+
+const globalStaples: SeasonItem[] = [
+  { id: "basilic", name: "Basilic", names: { en: "Basil", es: "Albahaca", de: "Basilikum", it: "Basilico", pt: "Manjericão" }, category: "herb", icon: "vegetable-leaf", months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept.", sourceIds: ["usda-snaped"], confidence: "source" },
+  { id: "persil", name: "Persil", names: { en: "Parsley", es: "Perejil", de: "Petersilie", it: "Prezzemolo", pt: "Salsa" }, category: "herb", icon: "vegetable-leaf", months: [4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [3, 12], seasonLabel: "avr. – nov.", sourceIds: ["usda-snaped"], confidence: "source" },
+  { id: "coriandre", name: "Coriandre", names: { en: "Cilantro", es: "Cilantro", de: "Koriander", it: "Coriandolo", pt: "Coentro" }, category: "herb", icon: "vegetable-leaf", months: [4, 5, 6, 9, 10], nearMonths: [3, 7, 8, 11], seasonLabel: "avr. – juin, sept. – oct.", sourceIds: ["usda-snaped"], confidence: "indicative" },
+  { id: "menthe", name: "Menthe", names: { en: "Mint", es: "Menta", de: "Minze", it: "Menta", pt: "Hortelã" }, category: "herb", icon: "vegetable-leaf", months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], seasonLabel: "mai – oct.", sourceIds: ["usda-snaped"], confidence: "indicative" },
+  { id: "thym", name: "Thym", names: { en: "Thyme", es: "Tomillo", de: "Thymian", it: "Timo", pt: "Tomilho" }, category: "herb", icon: "vegetable-leaf", months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "romarin", name: "Romarin", names: { en: "Rosemary", es: "Romero", de: "Rosmarin", it: "Rosmarino", pt: "Alecrim" }, category: "herb", icon: "vegetable-leaf", months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l’année", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "pois-chiche", name: "Pois chiche", names: { en: "Chickpea", es: "Garbanzo", de: "Kichererbse", it: "Cecio", pt: "Grão-de-bico" }, category: "legume", icon: "vegetable-bean", months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "lentille", name: "Lentille", names: { en: "Lentil", es: "Lenteja", de: "Linse", it: "Lenticchia", pt: "Lentilha" }, category: "legume", icon: "vegetable-bean", months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "haricot-sec", name: "Haricot sec", names: { en: "Dry bean", es: "Frijol seco", de: "Trockenbohne", it: "Fagiolo secco", pt: "Feijão seco" }, category: "legume", icon: "vegetable-bean", months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "soja", name: "Soja", names: { en: "Soybean", es: "Soja", de: "Sojabohne", it: "Soia", pt: "Soja" }, category: "legume", icon: "vegetable-bean", months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "blé", name: "Blé", names: { en: "Wheat", es: "Trigo", de: "Weizen", it: "Grano", pt: "Trigo" }, category: "grain", icon: "vegetable-stem", months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "orge", name: "Orge", names: { en: "Barley", es: "Cebada", de: "Gerste", it: "Orzo", pt: "Cevada" }, category: "grain", icon: "vegetable-stem", months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "avoine", name: "Avoine", names: { en: "Oats", es: "Avena", de: "Hafer", it: "Avena", pt: "Aveia" }, category: "grain", icon: "vegetable-stem", months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "seigle", name: "Seigle", names: { en: "Rye", es: "Centeno", de: "Roggen", it: "Segale", pt: "Centeio" }, category: "grain", icon: "vegetable-stem", months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "riz", name: "Riz", names: { en: "Rice", es: "Arroz", de: "Reis", it: "Riso", pt: "Arroz" }, category: "grain", icon: "vegetable-stem", months: [8, 9, 10, 11], nearMonths: [7, 12], seasonLabel: "août – nov.", sourceIds: ["fao-crop-calendar"], confidence: "indicative", profiles: { tropical: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], sourceIds: ["fao-crop-calendar"], confidence: "model" } } },
+  { id: "quinoa", name: "Quinoa", names: { en: "Quinoa", es: "Quinua", de: "Quinoa", it: "Quinoa", pt: "Quinoa" }, category: "grain", icon: "vegetable-stem", months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "châtaigne", name: "Châtaigne", names: { en: "Chestnut", es: "Castaña", de: "Esskastanie", it: "Castagna", pt: "Castanha" }, category: "nut", icon: "fruit-nut", months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov.", sourceIds: ["eufic-europe"], confidence: "indicative" },
+  { id: "amande", name: "Amande", names: { en: "Almond", es: "Almendra", de: "Mandel", it: "Mandorla", pt: "Amêndoa" }, category: "nut", icon: "fruit-nut", months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "pistache", name: "Pistache", names: { en: "Pistachio", es: "Pistacho", de: "Pistazie", it: "Pistacchio", pt: "Pistache" }, category: "nut", icon: "fruit-nut", months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "cacahuète", name: "Cacahuète", names: { en: "Peanut", es: "Cacahuete", de: "Erdnuss", it: "Arachide", pt: "Amendoim" }, category: "nut", icon: "fruit-nut", months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "sésame", name: "Sésame", names: { en: "Sesame", es: "Sésamo", de: "Sesam", it: "Sesamo", pt: "Gergelim" }, category: "seed", icon: "vegetable-bean", months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "tournesol", name: "Tournesol", names: { en: "Sunflower seed", es: "Semilla de girasol", de: "Sonnenblumenkern", it: "Semi di girasole", pt: "Semente de girassol" }, category: "seed", icon: "vegetable-bean", months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "lin", name: "Lin", names: { en: "Flaxseed", es: "Linaza", de: "Leinsamen", it: "Semi di lino", pt: "Linhaça" }, category: "seed", icon: "vegetable-bean", months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "gingembre", name: "Gingembre", names: { en: "Ginger", es: "Jengibre", de: "Ingwer", it: "Zenzero", pt: "Gengibre" }, category: "spice", icon: "vegetable-root", months: [9, 10, 11, 12, 1, 2], nearMonths: [8, 3], seasonLabel: "sept. – févr.", sourceIds: ["usda-snaped", "fao-crop-calendar"], confidence: "source" },
+  { id: "curcuma", name: "Curcuma", names: { en: "Turmeric", es: "Cúrcuma", de: "Kurkuma", it: "Curcuma", pt: "Cúrcuma" }, category: "spice", icon: "vegetable-root", months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "nov. – mars", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "piment", name: "Piment", names: { en: "Chili pepper", es: "Chile", de: "Chili", it: "Peperoncino", pt: "Pimenta" }, category: "spice", icon: "vegetable-pepper", months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct.", sourceIds: ["usda-snaped", "fao-crop-calendar"], confidence: "source" },
+];
+
+export const seasonItems: SeasonItem[] = [
+  ...romandieSeasonItems.map((item) => ({
+    ...item,
+    sourceIds: item.sourceIds ?? ["eufic-europe", "ec-calendar"],
+    confidence: item.confidence ?? "indicative",
+  })),
+  ...globalStaples,
 ];

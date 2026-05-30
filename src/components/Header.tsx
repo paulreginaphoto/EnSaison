@@ -1,13 +1,32 @@
 import appIcon from "../assets/icons/app-icon.svg";
+import type { Locale } from "../types";
+import { LanguageSelector } from "./LanguageSelector";
 import { LocationSelector } from "./LocationSelector";
 import { MonthSelector } from "./MonthSelector";
 
 type HeaderProps = {
+  locale: Locale;
   selectedMonth: number;
+  selectedCountry: string;
+  labels: {
+    country: string;
+    language: string;
+    month: string;
+  };
+  onCountryChange: (country: string) => void;
+  onLocaleChange: (locale: Locale) => void;
   onMonthChange: (month: number) => void;
 };
 
-export function Header({ selectedMonth, onMonthChange }: HeaderProps) {
+export function Header({
+  locale,
+  selectedMonth,
+  selectedCountry,
+  labels,
+  onCountryChange,
+  onLocaleChange,
+  onMonthChange,
+}: HeaderProps) {
   const homeHref = import.meta.env.BASE_URL;
 
   return (
@@ -22,8 +41,20 @@ export function Header({ selectedMonth, onMonthChange }: HeaderProps) {
       </a>
 
       <div className="grid grid-cols-2 gap-2 sm:flex sm:items-center">
-        <LocationSelector />
+        <LocationSelector
+          label={labels.country}
+          locale={locale}
+          selectedCountry={selectedCountry}
+          onCountryChange={onCountryChange}
+        />
+        <LanguageSelector
+          label={labels.language}
+          locale={locale}
+          onLocaleChange={onLocaleChange}
+        />
         <MonthSelector
+          label={labels.month}
+          locale={locale}
           selectedMonth={selectedMonth}
           onMonthChange={onMonthChange}
         />

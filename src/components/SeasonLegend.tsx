@@ -1,15 +1,21 @@
-const legend = [
-  { label: "De saison", className: "badge-in-season" },
-  { label: "Bientôt", className: "badge-soon" },
-  { label: "Hors saison", className: "badge-out" },
+import type { SeasonStatus } from "../types";
+
+const legend: { status: SeasonStatus; className: string }[] = [
+  { status: "in-season", className: "badge-in-season" },
+  { status: "soon", className: "badge-soon" },
+  { status: "out", className: "badge-out" },
 ];
 
-export function SeasonLegend() {
+type SeasonLegendProps = {
+  labels: Record<SeasonStatus, string>;
+};
+
+export function SeasonLegend({ labels }: SeasonLegendProps) {
   return (
     <div className="flex flex-wrap gap-2" aria-label="Légende de saison">
       {legend.map((entry) => (
-        <span key={entry.label} className={`season-badge ${entry.className}`}>
-          {entry.label}
+        <span key={entry.status} className={`season-badge ${entry.className}`}>
+          {labels[entry.status]}
         </span>
       ))}
     </div>

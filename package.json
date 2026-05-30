@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "postbuild": "node scripts/create-pages-fallback.mjs",
+    "audit:data": "node scripts/audit-data-coverage.mjs",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
     "android:init": "cap add android",

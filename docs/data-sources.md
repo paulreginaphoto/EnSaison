@@ -56,6 +56,8 @@ The app now supports:
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
 - country overrides started for France and Japan, including Japan MAFF seasonal produce and seafood entries.
 
+Run `npm run audit:data` to regenerate `docs/data-coverage-report.md`. The audit counts countries, food entries, categories, source references, country overrides, confidence levels and missing aliases so the remaining worldwide coverage gap stays visible.
+
 ## Not Complete Yet
 
 The user objective remains broader than the current evidence. A truly complete worldwide app still needs:

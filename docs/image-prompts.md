@@ -11,7 +11,7 @@ Minimal premium flat icon of [ITEM], simple organic shape, soft natural colors, 
 ```text
 Use case: logo-brand
 Asset type: mobile app icon
-Primary request: Minimal premium flat app icon for "De Saison", representing seasonal local produce with one soft fruit shape and one leaf, no text.
+Primary request: Minimal premium flat app icon for "DeSaison", representing seasonal local produce with one soft fruit shape and one leaf, no text.
 Style/medium: clean vector-like flat illustration, premium App Store MVP, organic and calm.
 Composition/framing: centered mark inside rounded square safe area, highly legible at small size.
 Color palette: warm off-white background, sage green leaf, soft terracotta fruit, small amber highlight.

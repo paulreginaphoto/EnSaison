@@ -19,7 +19,7 @@ function AboutPage() {
         <h2 className="text-2xl font-semibold text-ink">À propos</h2>
         <div className="mt-5 space-y-4 text-base leading-7 text-ink/70">
           <p>
-            De Saison aide à repérer rapidement les produits qui ont du sens à
+            DeSaison aide à repérer rapidement les produits qui ont du sens à
             Lausanne et en Romandie, sans compte, carte ou tableau compliqué.
           </p>
           <p>

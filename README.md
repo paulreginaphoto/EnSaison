@@ -1,6 +1,6 @@
-# De Saison
+# DeSaison
 
-De Saison est une application web simple pour voir rapidement quels fruits, légumes et champignons sont de saison à Lausanne et en Romandie.
+DeSaison est une application web simple pour voir rapidement quels fruits, légumes et champignons sont de saison à Lausanne et en Romandie.
 
 Pas de compte, pas de carte, pas de score, pas de backend. Tout est local et statique.
 

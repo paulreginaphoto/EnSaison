@@ -12,11 +12,11 @@ export function Header({ selectedMonth, onMonthChange }: HeaderProps) {
 
   return (
     <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-      <a href={homeHref} className="flex items-center gap-3" aria-label="De Saison">
+      <a href={homeHref} className="flex items-center gap-3" aria-label="DeSaison">
         <img src={appIcon} alt="" className="h-12 w-12" />
         <div>
           <h1 className="text-3xl font-semibold leading-none text-ink">
-            De Saison
+            DeSaison
           </h1>
         </div>
       </a>

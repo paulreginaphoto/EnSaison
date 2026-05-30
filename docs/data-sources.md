@@ -101,6 +101,7 @@ The app now supports:
 - Germany and the Netherlands keep their European seasonal months but now include country-specific reference links, still marked indicative until transcribed item by item;
 - Spain has source-backed MAPA month-by-month overrides for 46 fruit and vegetable items already present in the catalogue, using higher commercialization as in-season and lower commercialization as soon/near season;
 - Mexico has source-backed PROFECO fourth-quarter overrides for 22 fruit and vegetable items already present in the catalogue; this is a Q4 source, not a complete annual Mexico calendar;
+- the United States has source-backed USDA SNAP-Ed seasonal overrides for 50 produce items already present in the catalogue, mapped from USDA spring/summer/fall/winter lists;
 - the United Kingdom has source-backed BDA month-by-month overrides for 46 produce items already present in the catalogue;
 - Italy has source-backed CREA month-by-month overrides for the catalogue items that directly match the CREA calendar;
 - France keeps 57 source-backed produce entries from the French Ministry of Agriculture, and Switzerland keeps 57 source-backed produce entries from the Swiss Federal Office for Agriculture.

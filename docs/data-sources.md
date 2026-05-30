@@ -73,7 +73,7 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 175 food entries after the third worldwide expansion pass;
+- 241 food entries after the fourth worldwide expansion pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
 - country overrides for France, Switzerland, United States, Canada, Australia, India, Brazil and Japan, with confidence kept lower when a source is regional rather than fully national.
 

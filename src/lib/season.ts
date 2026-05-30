@@ -182,6 +182,7 @@ function formatMonthGroup(months: number[], locale: Locale) {
 }
 
 export function getItemName(item: SeasonItem, locale: Locale) {
+  if (locale === "fr") return item.name;
   return item.names?.[locale] ?? item.names?.en ?? item.name;
 }
 

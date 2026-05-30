@@ -5,7 +5,13 @@ import { SearchBar } from "./components/SearchBar";
 import { SeasonLegend } from "./components/SeasonLegend";
 import { SeasonSection } from "./components/SeasonSection";
 import { getCurrentMonth, getMonthLabel } from "./data/months";
-import { countryOptions, getCountryName, getProfileForCountry, seasonProfiles } from "./data/regions";
+import {
+  countryDataScopes,
+  countryOptions,
+  getCountryName,
+  getProfileForCountry,
+  seasonProfiles,
+} from "./data/regions";
 import { dataSources } from "./data/sources";
 import { seasonItems } from "./data/seasonItems";
 import { getItemName, getSeasonStatus, normalizeSearch, resolveSeason } from "./lib/season";
@@ -123,6 +129,7 @@ function MainPage() {
   const copy = t(locale);
   const selectedProfileId = getProfileForCountry(selectedCountry);
   const selectedProfile = seasonProfiles[selectedProfileId];
+  const selectedCountryDataScope = countryDataScopes[selectedCountry];
   const countryName = getCountryName(selectedCountry, locale);
   const monthLabel = getMonthLabel(selectedMonth, locale);
 
@@ -214,7 +221,12 @@ function MainPage() {
     dataLevel: copy.dataLevel,
     seasonPeriod: copy.seasonPeriod,
   };
-  const sourceLinks = selectedProfile.sourceIds.map((sourceId) => dataSources[sourceId]);
+  const sourceLinks = Array.from(
+    new Set([
+      ...selectedProfile.sourceIds,
+      ...(selectedCountryDataScope?.sourceIds ?? []),
+    ]),
+  ).map((sourceId) => dataSources[sourceId]);
 
   return (
     <main className="mx-auto min-h-screen w-full max-w-5xl px-4 py-5 sm:px-7 sm:py-8">
@@ -245,6 +257,9 @@ function MainPage() {
               {visibleItems.length} {copy.matchingFoods} · {copy.profilePrefix}:{" "}
               {selectedProfile.labels[locale]} ·{" "}
               {selectedProfile.confidenceLabel[locale].toLowerCase()}
+            </p>
+            <p className="mt-2 max-w-2xl text-xs font-semibold leading-5 text-ink/45">
+              {selectedCountryDataScope?.labels[locale] ?? copy.dataNote}
             </p>
           </section>
 

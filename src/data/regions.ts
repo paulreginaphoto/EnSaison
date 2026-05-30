@@ -6,6 +6,11 @@ export type CountryOption = {
   profileId: SeasonProfileId;
 };
 
+export type CountryDataScope = {
+  labels: Record<Locale, string>;
+  sourceIds: DataSourceId[];
+};
+
 export const seasonProfiles: Record<
   SeasonProfileId,
   {
@@ -127,6 +132,69 @@ export const seasonProfiles: Record<
       pt: "guia tropical",
     },
     sourceIds: ["fao-crop-calendar"],
+  },
+};
+
+export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
+  AU: {
+    labels: {
+      fr: "Australie: calendrier national indicatif, utile pour une lecture rapide mais pas precis Etat par Etat.",
+      en: "Australia: indicative national calendar, useful for a quick read but not state-by-state precision.",
+      es: "Australia: calendario nacional indicativo, util para una lectura rapida pero no preciso por estado.",
+      de: "Australien: indikativer nationaler Kalender, hilfreich fur einen schnellen Blick, aber nicht bundesstaatengenau.",
+      it: "Australia: calendario nazionale indicativo, utile per una lettura rapida ma non preciso Stato per Stato.",
+      pt: "Australia: calendario nacional indicativo, util para uma leitura rapida, mas sem precisao por estado.",
+    },
+    sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"],
+  },
+  BR: {
+    labels: {
+      fr: "Bresil: donnees indicatives; les references CEAGESP refletent surtout un signal de marche de Sao Paulo, pas tout le pays.",
+      en: "Brazil: indicative data; CEAGESP references mainly reflect a Sao Paulo market signal, not the whole country.",
+      es: "Brasil: datos indicativos; las referencias CEAGESP reflejan sobre todo el mercado de Sao Paulo, no todo el pais.",
+      de: "Brasilien: indikative Daten; CEAGESP verweist vor allem auf den Markt Sao Paulo, nicht auf das ganze Land.",
+      it: "Brasile: dati indicativi; i riferimenti CEAGESP riflettono soprattutto il mercato di Sao Paulo, non tutto il Paese.",
+      pt: "Brasil: dados indicativos; as referencias CEAGESP refletem sobretudo o mercado de Sao Paulo, nao todo o pais.",
+    },
+    sourceIds: ["brazil-ceagesp-seasonality"],
+  },
+  CA: {
+    labels: {
+      fr: "Canada: donnees indicatives; les references Foodland Ontario aident, mais ne remplacent pas une precision province par province.",
+      en: "Canada: indicative data; Foodland Ontario references help, but they do not replace province-by-province precision.",
+      es: "Canada: datos indicativos; Foodland Ontario ayuda, pero no sustituye una precision provincia por provincia.",
+      de: "Kanada: indikative Daten; Foodland Ontario hilft, ersetzt aber keine Genauigkeit nach Provinz.",
+      it: "Canada: dati indicativi; Foodland Ontario aiuta, ma non sostituisce una precisione provincia per provincia.",
+      pt: "Canada: dados indicativos; Foodland Ontario ajuda, mas nao substitui precisao provincia por provincia.",
+    },
+    sourceIds: ["foodland-ontario-availability"],
+  },
+  IN: {
+    labels: {
+      fr: "Inde: donnees nationales agregees; les saisons varient fortement selon les Etats, l'altitude et les moussons.",
+      en: "India: aggregated national data; seasons vary strongly by state, altitude and monsoon pattern.",
+      es: "India: datos nacionales agregados; las temporadas varian mucho por estado, altitud y monzon.",
+      de: "Indien: aggregierte nationale Daten; Saisons variieren stark nach Bundesstaat, Hohe und Monsun.",
+      it: "India: dati nazionali aggregati; le stagioni variano molto per Stato, altitudine e monsone.",
+      pt: "India: dados nacionais agregados; as estacoes variam muito por estado, altitude e moncoes.",
+    },
+    sourceIds: [
+      "india-apeda-produce",
+      "india-desagri-vegetable-harvest",
+      "india-desagri-fruit-harvest",
+      "india-nhb-litchi",
+    ],
+  },
+  MX: {
+    labels: {
+      fr: "Mexique: donnees sourcees surtout pour le quatrieme trimestre; le reste reste indicatif.",
+      en: "Mexico: source-backed mainly for the fourth quarter; the rest remains indicative.",
+      es: "Mexico: datos con fuente sobre todo para el cuarto trimestre; el resto sigue siendo indicativo.",
+      de: "Mexiko: Quellenbelege vor allem fur das vierte Quartal; der Rest bleibt indikativ.",
+      it: "Messico: dati con fonte soprattutto per il quarto trimestre; il resto resta indicativo.",
+      pt: "Mexico: dados com fonte sobretudo para o quarto trimestre; o restante continua indicativo.",
+    },
+    sourceIds: ["mexico-profeco-seasonal-q4"],
   },
 };
 

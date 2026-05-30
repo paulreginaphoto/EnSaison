@@ -136,6 +136,17 @@ export const seasonProfiles: Record<
 };
 
 export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
+  AT: {
+    labels: {
+      fr: "Autriche: calendrier national du portail public de sante, utile pour les produits regionaux offerts selon les mois.",
+      en: "Austria: national public-health portal calendar, useful for regionally offered produce by month.",
+      es: "Austria: calendario nacional del portal publico de salud, util para productos regionales disponibles por mes.",
+      de: "Osterreich: nationaler Kalender des offentlichen Gesundheitsportals, nutzlich fur regional angebotene Produkte nach Monat.",
+      it: "Austria: calendario nazionale del portale pubblico della salute, utile per prodotti regionali disponibili per mese.",
+      pt: "Austria: calendario nacional do portal publico de saude, util para produtos regionais disponiveis por mes.",
+    },
+    sourceIds: ["austria-gesundheit-season-calendar"],
+  },
   AU: {
     labels: {
       fr: "Australie: calendrier national indicatif, utile pour une lecture rapide mais pas precis Etat par Etat.",

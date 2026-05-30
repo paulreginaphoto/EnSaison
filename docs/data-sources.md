@@ -52,6 +52,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Australian Government Healthy Aussie Produce  
   https://www.health.gov.au/our-work/healthy-aussie-produce
 
+- Austrian public health portal fruit and vegetable season calendar
+  https://www.gesundheit.gv.at/leben/ernaehrung/saisonkalender.html
+
 - Swiss Federal Office for Agriculture seasonal fruit and vegetable table
   https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf
 
@@ -104,6 +107,7 @@ The app now supports:
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
 - country overrides for 43 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, India, Brazil and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
+- Austria now has source-backed Gesundheit.gv.at national season-calendar overrides for 50 fruit, vegetable and mushroom items already present in the catalogue, while remaining Austrian produce still falls back to indicative European regional data;
 - Germany now has source-backed BZfE seasonal overrides for 40 produce items already present in the catalogue, while remaining German produce still falls back to indicative European regional data;
 - the Netherlands now has source-backed Voedingscentrum seasonal overrides for 54 produce and mushroom items already present in the catalogue, while remaining Dutch produce still falls back to indicative European regional data;
 - Portugal now has source-backed GPP national production-calendar overrides for 42 fruit, vegetable, nut and olive-oil items already present in the catalogue; this is production-calendar data from the 2016 GPP booklet, not current shop availability;

@@ -31,6 +31,14 @@ export const dataSources = {
     label: "French Ministry of Agriculture seasonal products",
     url: "https://agriculture.gouv.fr/produits-de-saison",
   },
+  "spain-mapa-fruit-calendar": {
+    label: "Spanish Ministry of Agriculture seasonal fruit calendar",
+    url: "https://www.mapa.gob.es/es/alimentacion/temas/desperdicio/12calendario_frutas_completo_tcm30-623768.pdf",
+  },
+  "spain-mapa-vegetable-calendar": {
+    label: "Spanish Ministry of Agriculture seasonal vegetable calendar",
+    url: "https://www.mapa.gob.es/es/alimentacion/temas/desperdicio/11calendario_verduras_completo_tcm30-623767.pdf",
+  },
   "germany-bzfe-season-calendar": {
     label: "BZfE German seasonal fruit and vegetable calendar",
     url: "https://www.bzfe.de/kueche-und-alltag/einkaufen/der-saisonkalender",
@@ -42,6 +50,10 @@ export const dataSources = {
   "uk-bda-seasonal-produce": {
     label: "British Dietetic Association UK seasonal fruit and vegetable guide",
     url: "https://www.bda.uk.com/food-health/your-health/sustainable-diets/seasonal-fruit-and-veg-a-handy-guide.html",
+  },
+  "italy-crea-seasonal-produce": {
+    label: "CREA Sapermangiare Italian seasonal produce calendar",
+    url: "https://sapermangiare.an.crea.gov.it/528/prodotti-di-stagione.html",
   },
   "japan-maff-tohoku": {
     label: "Japan MAFF Tohoku seasonal foods",

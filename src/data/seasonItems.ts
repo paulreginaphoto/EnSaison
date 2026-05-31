@@ -1995,6 +1995,36 @@ const bulgariaBbTeamSeasonOverrides: Record<string, NonNullable<NonNullable<Seas
   navet: { months: [1, 2, 12], nearMonths: [3, 11], seasonLabel: "hiver" },
 };
 
+const estoniaGardestVegetableSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  "haricot-vert": { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  pastèque: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  aubergine: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  "petit-pois": { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  "persil-racine": { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  endive: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  rutabaga: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  "chou-blanc": { months: [7, 8, 9, 10, 11], nearMonths: [6, 12], seasonLabel: "juil. – nov." },
+  piment: { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+  courge: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  concombre: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  blette: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct." },
+  "maïs-doux": { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  melon: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  "radis-blanc": { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  navet: { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+  poivron: { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+  panais: { months: [10, 11], nearMonths: [9, 12], seasonLabel: "oct. – nov." },
+  carotte: { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+  poireau: { months: [8, 9, 10, 11], nearMonths: [7, 12], seasonLabel: "août – nov." },
+  betterave: { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
+  radis: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], seasonLabel: "mai – oct." },
+  "céleri-rave": { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  "céleri-branche": { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
+  oignon: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  courgette: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  tomate: { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+};
+
 const hungaryNovenytarSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   abricot: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
   amande: {
@@ -2550,6 +2580,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.BG = {
       ...bulgariaBbTeamSeasonOverrides[item.id],
       sourceIds: ["bulgaria-bbteam-season-guide"],
+      confidence: "source",
+    };
+  }
+
+  if (estoniaGardestVegetableSeasonOverrides[item.id]) {
+    countries.EE = {
+      ...estoniaGardestVegetableSeasonOverrides[item.id],
+      sourceIds: ["estonia-gardest-vegetable-calendar"],
       confidence: "source",
     };
   }

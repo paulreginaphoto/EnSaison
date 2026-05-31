@@ -224,6 +224,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["denmark-foedevarestyrelsen-season-posters"],
   },
+  EE: {
+    labels: {
+      fr: "Estonie: calendrier Gardest 2026 de semis et recolte des legumes, utilisant les mois de recolte prete; guide pratique de jardinage, pas calendrier gouvernemental ni disponibilite magasin.",
+      en: "Estonia: Gardest 2026 vegetable sowing and harvest calendar, using ready-to-harvest months; practical gardening guide, not a government calendar or shop availability forecast.",
+      es: "Estonia: calendario Gardest 2026 de siembra y cosecha de verduras, usando meses listos para cosechar; guia practica de huerto, no calendario gubernamental ni disponibilidad de tienda.",
+      de: "Estland: Gardest-Gemueseaussaat- und Erntekalender 2026 mit erntereifen Monaten; praktischer Gartenleitfaden, kein Regierungskalender und keine Ladenverfuegbarkeit.",
+      it: "Estonia: calendario Gardest 2026 di semina e raccolta degli ortaggi, usando i mesi pronti per la raccolta; guida pratica di orticoltura, non calendario governativo o disponibilita in negozio.",
+      pt: "Estonia: calendario Gardest 2026 de sementeira e colheita de legumes, usando meses prontos para colheita; guia pratico de horta, nao calendario governamental nem disponibilidade em loja.",
+    },
+    sourceIds: ["estonia-gardest-vegetable-calendar"],
+  },
   FI: {
     labels: {
       fr: "Finlande: guide Luontoon des aliments de saison par grandes periodes; utile pour une lecture nationale pratique, pas une precision mensuelle agricole.",

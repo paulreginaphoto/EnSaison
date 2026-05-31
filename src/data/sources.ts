@@ -135,6 +135,10 @@ export const dataSources = {
     label: "BB-Team practical guide to seasonal fruit and vegetables in Bulgaria",
     url: "https://www.bb-team.org/articles/4522_sezonni-plodove-i-zelenchuci-v-bulgaria",
   },
+  "estonia-gardest-vegetable-calendar": {
+    label: "Gardest 2026 Estonian vegetable sowing and harvest calendar",
+    url: "https://gardest.ee/wp-content/uploads/2026/01/Gardesti-kulvikalender-Koogiviljad.pdf",
+  },
   "swiss-blw-season-table": {
     label: "Swiss Federal Office for Agriculture seasonal fruit and vegetable table",
     url: "https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf",

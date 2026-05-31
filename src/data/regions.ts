@@ -642,6 +642,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["colombia-madr-ena-harvest-calendar"],
   },
+  TN: {
+    labels: {
+      fr: "Tunisie: calendrier ADAPT/AICS 2025 des fruits et legumes de saison tunisiens, mois par mois; signal national de sensibilisation, pas precision par gouvernorat, variete ni circuit retail.",
+      en: "Tunisia: ADAPT/AICS 2025 month-by-month calendar of Tunisian seasonal fruit and vegetables; national consumer guidance, not governorate-, variety- or retail-channel precision.",
+      es: "Tunez: calendario ADAPT/AICS 2025 mensual de frutas y verduras tunecinas de temporada; orientacion nacional para consumidores, no precision por gobernacion, variedad ni canal retail.",
+      de: "Tunesien: monatlicher ADAPT/AICS-Kalender 2025 fuer tunesisches saisonales Obst und Gemuese; nationale Verbraucherorientierung, keine Praezision nach Gouvernement, Sorte oder Handel.",
+      it: "Tunisia: calendario mensile ADAPT/AICS 2025 di frutta e verdura tunisine di stagione; guida nazionale per consumatori, non precisione per governatorato, varieta o canale retail.",
+      pt: "Tunisia: calendario mensal ADAPT/AICS 2025 de frutas e legumes tunisinos da epoca; orientacao nacional ao consumidor, nao precisao por governadoria, variedade nem canal retail.",
+    },
+    sourceIds: ["tunisia-adapt-aics-season-calendar"],
+  },
   RO: {
     labels: {
       fr: "Roumanie: calendrier Commission europeenne en roumain, section climat tempere incluant explicitement la Roumanie; source par grandes saisons, pas calendrier agricole national mois par mois.",

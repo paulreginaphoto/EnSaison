@@ -179,6 +179,10 @@ export const dataSources = {
     label: "Colombia Ministry of Agriculture / ENA sowing and harvest calendars 2010-2016",
     url: "https://agronet.gov.co/sites/default/files/2025-11/calendario_siembras_ena_2016_.pdf",
   },
+  "tunisia-adapt-aics-season-calendar": {
+    label: "ADAPT / AICS 2025 Tunisian seasonal fruit and vegetable calendar",
+    url: "https://www.adapt-tunisie.org/wp-content/uploads/2025/03/Calendrier-ADAPT-des-fruits-et-legumes-de-saison-tunisiens_compressed-1-1.pdf",
+  },
   "denmark-foedevarestyrelsen-season-posters": {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",

@@ -273,6 +273,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["portugal-gpp-plant-products"],
   },
+  SE: {
+    labels: {
+      fr: "Suede: guide ICA des legumes, fruits et baies suedoises de saison; utile comme guide national pratique, pas une source gouvernementale ni une precision regionale.",
+      en: "Sweden: ICA guide to Swedish vegetables, fruit and berries in season; useful as practical national guidance, not a government source or regional precision.",
+      es: "Suecia: guia de ICA de verduras, frutas y bayas suecas de temporada; util como guia nacional practica, no como fuente gubernamental ni precision regional.",
+      de: "Schweden: ICA-Leitfaden zu schwedischem Gemuese, Obst und Beeren der Saison; praktische nationale Orientierung, keine Regierungsquelle oder regionale Genauigkeit.",
+      it: "Svezia: guida ICA a verdure, frutta e bacche svedesi di stagione; utile come guida nazionale pratica, non come fonte governativa o precisione regionale.",
+      pt: "Suecia: guia ICA de legumes, frutas e bagas suecas da epoca; util como orientacao nacional pratica, nao como fonte governamental nem precisao regional.",
+    },
+    sourceIds: ["sweden-ica-season-guide"],
+  },
 };
 
 const allCountryCodes =

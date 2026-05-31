@@ -83,6 +83,10 @@ export const dataSources = {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",
   },
+  "sweden-ica-season-guide": {
+    label: "ICA Swedish vegetables, fruit and berries in season guide",
+    url: "https://www.ica.se/artikel/svenska-gronsaker-och-frukt-i-sasong/",
+  },
   "czech-mze-harvest-storage-calendar": {
     label: "Czech Ministry of Agriculture fruit, vegetable and potato harvest and storage calendar",
     url: "https://mze.gov.cz/public/portal/mze/zemedelstvi/rostlinna-vyroba/rostlinne-komodity/ovoce-a-zelenina/odbobi-sklizne-a-doba-skladovani",

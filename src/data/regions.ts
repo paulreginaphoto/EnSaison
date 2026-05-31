@@ -339,6 +339,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "india-nhb-litchi",
     ],
   },
+  IS: {
+    labels: {
+      fr: "Islande: calendrier SFG/Islenskt graenmeti des legumes islandais, incluant serres geothermiques et cultures exterieures; utile pour l'offre locale, pas pour les fruits importes.",
+      en: "Iceland: SFG/Islenskt graenmeti calendar for Icelandic vegetables, including geothermal greenhouse and outdoor crops; useful for local supply, not imported fruit.",
+      es: "Islandia: calendario SFG/Islenskt graenmeti de verduras islandesas, incluidas producciones en invernadero geotermico y al aire libre; util para oferta local, no frutas importadas.",
+      de: "Island: SFG/Islenskt-graenmeti-Kalender fuer islaendisches Gemuese, einschliesslich geothermischer Gewaechshaeuser und Freilandkulturen; nuetzlich fuer lokales Angebot, nicht fuer importiertes Obst.",
+      it: "Islanda: calendario SFG/Islenskt graenmeti per ortaggi islandesi, incluse serre geotermiche e colture all'aperto; utile per l'offerta locale, non per frutta importata.",
+      pt: "Islandia: calendario SFG/Islenskt graenmeti de legumes islandeses, incluindo estufas geotermicas e culturas ao ar livre; util para oferta local, nao fruta importada.",
+    },
+    sourceIds: ["iceland-sfg-vegetable-calendar"],
+  },
   IE: {
     labels: {
       fr: "Irlande: calendrier Bord Bia Best in Season pour produits frais irlandais, incluant saison pleine, entrees/sorties de saison et stockage.",

@@ -2124,6 +2124,38 @@ const romaniaEcTemperateSeasonOverrides: Record<string, NonNullable<NonNullable<
   "chou-blanc": { months: [9, 10, 11], nearMonths: [1, 2, 8, 12], seasonLabel: "automne" },
 };
 
+const icelandSfgVegetableSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  basilic: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  poireau: { months: [9], nearMonths: [8, 10], seasonLabel: "sept." },
+  "chou-fleur": { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+  tomate: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  piment: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  laitue: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  "chou-frisé": { months: [7, 8, 9, 10, 11], nearMonths: [6, 12], seasonLabel: "juil. – nov." },
+  carotte: { months: [1, 2, 7, 8, 9, 10, 11], nearMonths: [3, 6, 12], seasonLabel: "juil. – févr." },
+  concombre: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  framboise: { months: [6, 7, 8, 9, 10, 11], nearMonths: [5, 12], seasonLabel: "juin – nov." },
+  "chou-rave": { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  "chou-blanc": { months: [7, 8, 9, 10, 11], nearMonths: [6, 12], seasonLabel: "juil. – nov." },
+  fraise: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  "pomme-de-terre": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  "champignon-de-paris": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  "chou-chinois": { months: [7, 8, 9, 10, 11], nearMonths: [6, 12], seasonLabel: "juil. – nov." },
+  roquette: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  coriandre: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  menthe: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  panais: { months: [11], nearMonths: [10, 12], seasonLabel: "nov." },
+  romarin: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  poivron: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  "chou-rouge": { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  betterave: { months: [8], nearMonths: [7, 9], seasonLabel: "août" },
+  navet: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  "céleri-branche": { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  brocoli: { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+  persil: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  thym: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+};
+
 const hungaryNovenytarSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   abricot: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
   amande: {
@@ -2711,6 +2743,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.RO = {
       ...romaniaEcTemperateSeasonOverrides[item.id],
       sourceIds: ["romania-ec-temperate-calendar", "ec-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (icelandSfgVegetableSeasonOverrides[item.id]) {
+    countries.IS = {
+      ...icelandSfgVegetableSeasonOverrides[item.id],
+      sourceIds: ["iceland-sfg-vegetable-calendar"],
       confidence: "source",
     };
   }

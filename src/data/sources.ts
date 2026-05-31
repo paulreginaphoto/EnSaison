@@ -151,6 +151,10 @@ export const dataSources = {
     label: "European Commission Romanian fruit and vegetables calendar, temperate climate section",
     url: "https://agriculture.ec.europa.eu/farming/crop-productions-and-plant-based-products/fruit-and-vegetables/fruit-and-vegetables-calendar_ro",
   },
+  "iceland-sfg-vegetable-calendar": {
+    label: "SFG / Islenskt graenmeti Icelandic vegetable calendar",
+    url: "https://islenskt.is/graenmetisdagatal/",
+  },
   "swiss-blw-season-table": {
     label: "Swiss Federal Office for Agriculture seasonal fruit and vegetable table",
     url: "https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf",

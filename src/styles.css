@@ -114,18 +114,18 @@ button {
   }
 
   .hero-bento {
-    @apply mt-5 grid gap-3 sm:mt-7 sm:gap-4 lg:grid-cols-[minmax(0,1.42fr)_minmax(18rem,0.58fr)];
+    @apply mt-5 grid gap-3 sm:mt-7 sm:gap-4;
   }
 
   .hero-card {
-    @apply relative grid min-h-[28rem] overflow-hidden rounded-[2rem] bg-white p-5 shadow-soft sm:min-h-[28rem] sm:grid-cols-[minmax(0,0.92fr)_minmax(16rem,0.78fr)] sm:p-7;
+    @apply relative grid min-h-[37rem] overflow-hidden rounded-[2rem] bg-white p-5 shadow-soft sm:min-h-[29rem] sm:grid-cols-[minmax(0,0.78fr)_minmax(18rem,0.82fr)] sm:p-7;
     background:
       linear-gradient(125deg, rgba(255, 253, 246, 0.98), rgba(242, 239, 224, 0.96) 54%, rgba(227, 238, 216, 0.92)),
       #fffaf1;
   }
 
   .hero-copy {
-    @apply relative z-10 flex min-w-0 flex-col justify-between gap-6;
+    @apply relative z-10 flex min-w-0 flex-col justify-between gap-6 sm:py-6;
   }
 
   .hero-meta-row {
@@ -142,7 +142,7 @@ button {
   }
 
   .hero-description {
-    @apply max-w-md text-base font-medium leading-7 text-ink/[0.62];
+    @apply max-w-xs text-2xl font-medium leading-[1.45] text-ink/[0.62] sm:text-3xl;
     text-wrap: pretty;
   }
 
@@ -151,37 +151,26 @@ button {
   }
 
   .hero-cta {
-    @apply inline-flex h-14 w-fit items-center gap-3 rounded-full bg-[#12442d] px-5 text-sm font-bold text-white shadow-[0_16px_35px_rgba(18,68,45,0.25)] transition hover:-translate-y-0.5 hover:bg-[#173327] focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0;
-  }
-
-  .hero-count {
-    @apply text-sm font-bold text-ink/[0.54];
+    @apply inline-flex min-h-16 w-fit max-w-full items-center gap-3 rounded-full bg-[#12442d] px-4 py-2 text-base font-bold leading-6 text-white shadow-[0_16px_35px_rgba(18,68,45,0.25)] transition hover:-translate-y-0.5 hover:bg-[#173327] focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:px-6;
   }
 
   .hero-art {
-    @apply relative z-0 mt-2 min-h-[12rem] overflow-hidden rounded-[1.8rem] sm:mt-0 sm:min-h-[13rem];
+    @apply relative z-0 mt-2 min-h-[18rem] overflow-hidden sm:mt-0 sm:min-h-[25rem];
   }
 
   .hero-photo-window {
-    @apply relative h-full min-h-[12rem] overflow-hidden rounded-[1.8rem] shadow-[inset_0_1px_0_rgba(255,255,255,0.78)] sm:min-h-[13rem];
-    background:
-      linear-gradient(180deg, rgba(170, 198, 192, 0.7), rgba(237, 243, 218, 0.7) 42%, rgba(202, 155, 86, 0.33) 100%),
-      linear-gradient(120deg, #d9e8dd, #f2e7cf);
+    @apply relative h-full min-h-[18rem] overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.78)] sm:min-h-[25rem];
+    border-radius: 6.2rem 1.35rem 1.35rem 6.2rem;
   }
 
   .hero-photo-window > img {
     @apply absolute inset-0 h-full w-full object-cover;
+    object-position: 57% 56%;
   }
 
   .hero-photo-window::after {
-    @apply absolute inset-0 content-[''];
-    background:
-      linear-gradient(180deg, rgba(18, 68, 45, 0.02), rgba(18, 68, 45, 0.18)),
-      linear-gradient(90deg, rgba(255, 248, 235, 0.28), rgba(255, 248, 235, 0));
-  }
-
-  .hero-photo-badge {
-    @apply absolute bottom-4 left-4 right-4 z-10 flex items-center gap-2 rounded-[1.1rem] bg-white/[0.82] p-3 text-sm font-bold leading-5 text-[#12442d] shadow-row backdrop-blur-md;
+    @apply absolute inset-0 pointer-events-none content-[''];
+    background: linear-gradient(90deg, rgba(255, 248, 235, 0.18), rgba(255, 248, 235, 0));
   }
 
   .side-bento {

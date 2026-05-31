@@ -143,6 +143,10 @@ export const dataSources = {
     label: "APO/FAO postharvest management country paper with Bangladesh fruit and vegetable harvest windows",
     url: "https://www.apo-tokyo.org/wp-content/uploads/2015/11/e-edition_Postharvest-MGT-of-Fruit-and-Vegetables.pdf",
   },
+  "indonesia-worldbank-local-produce-seasons": {
+    label: "World Bank Indonesia local fruits and vegetables seasons table",
+    url: "https://documents1.worldbank.org/curated/en/863941468752426320/pdf/385430IND0P1011white0cover01PUBLIC1.pdf",
+  },
   "denmark-foedevarestyrelsen-season-posters": {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",

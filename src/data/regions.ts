@@ -200,6 +200,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "bangladesh-apo-postharvest-fruit-vegetables",
     ],
   },
+  ID: {
+    labels: {
+      fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",
+      en: "Indonesia: World Bank/Indonesia table of local fruit and vegetable availability; useful as practical national guidance, not island-by-island or variety-level precision.",
+      es: "Indonesia: tabla World Bank/Indonesia de disponibilidad local de frutas y verduras; util como orientacion nacional practica, no precision por isla ni por variedad.",
+      de: "Indonesien: World-Bank/Indonesia-Tabelle lokaler Obst- und Gemueseverfuegbarkeit; praktische nationale Orientierung, keine Genauigkeit nach Insel oder Sorte.",
+      it: "Indonesia: tabella World Bank/Indonesia sulla disponibilita locale di frutta e verdura; utile come guida nazionale pratica, non precisione isola per isola o per varieta.",
+      pt: "Indonesia: tabela World Bank/Indonesia de disponibilidade local de frutas e legumes; util como orientacao nacional pratica, nao precisao por ilha nem por variedade.",
+    },
+    sourceIds: ["indonesia-worldbank-local-produce-seasons"],
+  },
   BR: {
     labels: {
       fr: "Bresil: table CEAGESP 2026 de quantites ETSP, utile pour un signal de marche de Sao Paulo; pas une precision Etat par Etat.",

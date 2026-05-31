@@ -738,6 +738,88 @@ const bangladeshSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonIt
   tomate: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons", "bangladesh-bamis-crop-weather-calendar"] },
 };
 
+const indonesiaWorldBankSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  "pomme-de-terre": {
+    months: [1, 2, 3, 4],
+    nearMonths: [5, 6, 7, 8, 9, 10, 11, 12],
+    seasonLabel: "pic janv. – avr.",
+  },
+  carotte: {
+    months: [1, 2, 3, 4],
+    nearMonths: [5, 6, 7, 8, 9, 10, 11, 12],
+    seasonLabel: "pic janv. – avr.",
+  },
+  tomate: {
+    months: [3, 4, 5, 6, 7],
+    nearMonths: [1, 2, 8, 9, 10, 11, 12],
+    seasonLabel: "pic mars – juil.",
+  },
+  "chou-blanc": {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "disponible toute l'année (limite)",
+    seasonMode: "year-round",
+  },
+  oignon: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "disponible toute l'année (limite)",
+    seasonMode: "year-round",
+  },
+  piment: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "disponible toute l'année (limite)",
+    seasonMode: "year-round",
+  },
+  ail: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "disponible toute l'année (limite)",
+    seasonMode: "year-round",
+  },
+  concombre: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "disponible toute l'année (limite)",
+    seasonMode: "year-round",
+  },
+  "haricot-vert": {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "disponible toute l'année (limite)",
+    seasonMode: "year-round",
+  },
+  aubergine: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "disponible toute l'année (limite)",
+    seasonMode: "year-round",
+  },
+  avocat: {
+    months: [2, 3, 4],
+    nearMonths: [1, 5, 6, 7, 8, 9, 10, 11, 12],
+    seasonLabel: "pic fevr. – avr.",
+  },
+  ananas: {
+    months: [10, 11, 12],
+    nearMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    seasonLabel: "pic oct. – dec.",
+  },
+  banane: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "disponible toute l'année (limite)",
+    seasonMode: "year-round",
+  },
+  papaye: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "disponible toute l'année (limite)",
+    seasonMode: "year-round",
+  },
+};
+
 const franceProduceOverrideIds = new Set([
   "abricot",
   "cassis",
@@ -2862,6 +2944,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.BD = {
       ...bangladeshSeasonOverrides[item.id],
       sourceIds: bangladeshSeasonOverrides[item.id]?.sourceIds ?? ["bangladesh-bamis-crop-weather-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (indonesiaWorldBankSeasonOverrides[item.id]) {
+    countries.ID = {
+      ...indonesiaWorldBankSeasonOverrides[item.id],
+      sourceIds: ["indonesia-worldbank-local-produce-seasons"],
       confidence: "source",
     };
   }

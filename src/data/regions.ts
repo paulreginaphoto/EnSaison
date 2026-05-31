@@ -576,6 +576,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["thai-fresh-fruit-season-calendar"],
   },
+  ZA: {
+    labels: {
+      fr: "Afrique du Sud: guide Heleen Meyer des fruits et legumes par saisons australes; utile comme guide pratique national, pas calendrier gouvernemental ni precision par province.",
+      en: "South Africa: Heleen Meyer guide to fruit and vegetables by southern-hemisphere seasons; useful as practical national guidance, not a government calendar or province-level precision.",
+      es: "Sudafrica: guia Heleen Meyer de frutas y verduras por estaciones australes; util como guia nacional practica, no calendario gubernamental ni precision por provincia.",
+      de: "Suedafrika: Heleen-Meyer-Leitfaden fuer Obst und Gemuese nach suedlichen Jahreszeiten; praktische nationale Orientierung, kein Regierungskalender oder Provinzpraezision.",
+      it: "Sudafrica: guida Heleen Meyer per frutta e verdura secondo le stagioni australi; utile come guida nazionale pratica, non calendario governativo o precisione provinciale.",
+      pt: "Africa do Sul: guia Heleen Meyer de frutas e legumes por estacoes austrais; util como guia nacional pratico, nao calendario governamental nem precisao por provincia.",
+    },
+    sourceIds: ["south-africa-heleen-meyer-season-guide"],
+  },
   RO: {
     labels: {
       fr: "Roumanie: calendrier Commission europeenne en roumain, section climat tempere incluant explicitement la Roumanie; source par grandes saisons, pas calendrier agricole national mois par mois.",

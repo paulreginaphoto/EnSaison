@@ -155,6 +155,10 @@ export const dataSources = {
     label: "Thai Fresh Fruit / Pisitichai season calendar for Thai fruit, vegetables and herbs",
     url: "https://www.thaifreshfruit.com/wp-content/uploads/2017/12/Season-Calendar-2.pdf",
   },
+  "south-africa-heleen-meyer-season-guide": {
+    label: "Heleen Meyer fruit and veggies in season in South Africa",
+    url: "https://heleenmeyer.co.za/tips-tools/fruit-veggies-in-season-in-south-africa/",
+  },
   "denmark-foedevarestyrelsen-season-posters": {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",

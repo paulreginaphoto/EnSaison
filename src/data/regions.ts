@@ -246,6 +246,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["slovakia-minedu-school-season-calendar"],
   },
+  MT: {
+    labels: {
+      fr: "Malte: calendrier AgroKatina de Friends of the Earth Malta pour fruits et legumes locaux; source pratique ONG, pas calendrier gouvernemental.",
+      en: "Malta: Friends of the Earth Malta AgroKatina calendar for local fruit and vegetables; practical NGO source, not a government calendar.",
+      es: "Malta: calendario AgroKatina de Friends of the Earth Malta para frutas y verduras locales; fuente practica de ONG, no calendario gubernamental.",
+      de: "Malta: AgroKatina-Kalender von Friends of the Earth Malta fuer lokales Obst und Gemuese; praktische NGO-Quelle, kein Regierungskalender.",
+      it: "Malta: calendario AgroKatina di Friends of the Earth Malta per frutta e verdura locali; fonte pratica ONG, non calendario governativo.",
+      pt: "Malta: calendario AgroKatina da Friends of the Earth Malta para frutas e legumes locais; fonte pratica de ONG, nao calendario governamental.",
+    },
+    sourceIds: ["malta-foe-agrokatina-calendar"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

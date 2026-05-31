@@ -119,6 +119,10 @@ export const dataSources = {
     label: "Slovak Ministry of Education school catering fruit and vegetable seasonal calendar",
     url: "https://www.minedu.sk/data/att/22b/31011.8ee564.pdf",
   },
+  "malta-foe-agrokatina-calendar": {
+    label: "Friends of the Earth Malta AgroKatina local seasonal fruit and vegetable calendar",
+    url: "https://foemalta.org/wp-content/uploads/Local-Seasonal-Healthy-English-2.pdf",
+  },
   "swiss-blw-season-table": {
     label: "Swiss Federal Office for Agriculture seasonal fruit and vegetable table",
     url: "https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf",

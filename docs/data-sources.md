@@ -85,6 +85,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Slovak Ministry of Education school catering fruit and vegetable seasonal calendar
   https://www.minedu.sk/data/att/22b/31011.8ee564.pdf
 
+- Friends of the Earth Malta AgroKatina local seasonal fruit and vegetable calendar
+  https://foemalta.org/wp-content/uploads/Local-Seasonal-Healthy-English-2.pdf
+
 - Swiss Federal Office for Agriculture seasonal fruit and vegetable table
   https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf
 
@@ -149,6 +152,7 @@ The app now supports:
 - Finland now has source-backed Luontoon broad-season overrides for 48 Finnish produce, fish, seafood, game and birch-sap items already present in the catalogue; this source groups foods by season rather than exact month, so the app maps it to broad spring/summer/autumn/winter month ranges;
 - Slovenia now has source-backed Government green-procurement calendar overrides for 38 vegetable, fruit, nut and apple items already present in the catalogue, using the dark-green strong-supply cells as in-season and light-green supply cells as near-season;
 - Slovakia now has source-backed Ministry of Education school-catering calendar overrides for 47 fruit, herb and vegetable items already present in the catalogue, using green fresh cells as in-season and orange stored-availability cells as near-season;
+- Malta now has source-backed AgroKatina local fruit and vegetable overrides for 30 items already present in the catalogue, using green local-fresh cells as in-season and purple greenhouse cells as near-season where the calendar marks them;
 - Greece now has source-backed Food For Health month-by-month overrides for 52 fruit, vegetable, herb and mushroom items already present in the catalogue, plus 4 new globally localized fruit entries; this is national nutrition guidance cross-checked with the European Commission Mediterranean profile, not a government agricultural calendar;
 - Hungary now has source-backed Novenytar month-by-month overrides for 52 fruit, vegetable, herb, legume and nut items already present in the catalogue; this is a practical Hungarian plant-season table, not a government agricultural calendar or county-level forecast;
 - Germany now has source-backed BZfE seasonal overrides for 40 produce items already present in the catalogue, while remaining German produce still falls back to indicative European regional data;

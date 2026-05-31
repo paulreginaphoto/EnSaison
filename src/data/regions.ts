@@ -413,6 +413,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["cameroon-lavoixdupaysan-fruit-harvest", "cameroon-fao-plantain-postharvest"],
   },
+  BJ: {
+    labels: {
+      fr: "Benin: guide local Le Local TV des grandes periodes de fruits et legumes cites explicitement; couverture pratique par blocs saisonniers, pas calendrier agricole national complet.",
+      en: "Benin: Le Local TV local guide to broad periods for explicitly named fruits and vegetables; practical seasonal-block coverage, not a full national agricultural calendar.",
+      es: "Benin: guia local de Le Local TV sobre grandes periodos para frutas y verduras citadas explicitamente; cobertura practica por bloques estacionales, no calendario agricola nacional completo.",
+      de: "Benin: lokaler Le-Local-TV-Fuehrer zu groben Zeitfenstern fuer ausdruecklich genannte Obst- und Gemuesearten; praktische Saisonblock-Abdeckung, kein vollstaendiger nationaler Agrarkalender.",
+      it: "Benin: guida locale Le Local TV sui grandi periodi per frutta e verdura citate esplicitamente; copertura pratica per blocchi stagionali, non calendario agricolo nazionale completo.",
+      pt: "Benim: guia local Le Local TV sobre grandes periodos para frutas e legumes citados explicitamente; cobertura pratica por blocos sazonais, nao calendario agricola nacional completo.",
+    },
+    sourceIds: ["benin-lelocaltv-fruit-season-guide"],
+  },
   SN: {
     labels: {
       fr: "Senegal: tableaux Sen-Garden/CESAG de production faible, moyenne et forte pour fruits et legumes par zone de production, etablis a partir de donnees du ministere de l'Agriculture; synthese nationale pratique, pas precision par region dans l'interface.",

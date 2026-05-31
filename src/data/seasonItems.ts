@@ -2657,6 +2657,20 @@ const cameroonFruitHarvestSeasonOverrides: Record<string, NonNullable<NonNullabl
   "banane-plantain": { months: [1, 2, 3, 4, 10, 11, 12], nearMonths: [5, 9], seasonLabel: "oct. – avr." },
 };
 
+const beninLeLocalTvSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  mangue: { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  ananas: { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  papaye: { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  orange: { months: [4, 5, 6], nearMonths: [3, 7], seasonLabel: "avr. – juin" },
+  citron: { months: [4, 5, 6], nearMonths: [3, 7], seasonLabel: "avr. – juin" },
+  goyave: { months: [4, 5, 6], nearMonths: [3, 7], seasonLabel: "avr. – juin" },
+  "banane-plantain": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année, pic juil. – sept.", seasonMode: "year-round" },
+  avocat: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  pastèque: { months: [6, 7, 8, 9], nearMonths: [5, 10], seasonLabel: "juin – sept." },
+  "fruit-passion": { months: [10, 11, 12], nearMonths: [9, 1], seasonLabel: "oct. – déc." },
+  tomate: { months: [10, 11, 12], nearMonths: [9, 1], seasonLabel: "oct. – déc." },
+};
+
 const luxembourgAgricultureSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   endive: { months: [1, 2, 3, 10, 11, 12], nearMonths: [9, 4], seasonLabel: "oct. – mars" },
   rampon: { months: [1, 2, 3, 11, 12], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
@@ -3807,6 +3821,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
         item.id === "banane-plantain"
           ? ["cameroon-fao-plantain-postharvest"]
           : ["cameroon-lavoixdupaysan-fruit-harvest"],
+      confidence: "source",
+    };
+  }
+
+  if (beninLeLocalTvSeasonOverrides[item.id]) {
+    countries.BJ = {
+      ...beninLeLocalTvSeasonOverrides[item.id],
+      sourceIds: ["benin-lelocaltv-fruit-season-guide"],
       confidence: "source",
     };
   }

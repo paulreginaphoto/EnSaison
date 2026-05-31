@@ -275,6 +275,10 @@ export const dataSources = {
     label: "FAO Cameroon plantain postharvest and seasonality study",
     url: "https://www.fao.org/3/X5024F/x5024F01.htm",
   },
+  "benin-lelocaltv-fruit-season-guide": {
+    label: "Le Local TV Benin fruit season guide",
+    url: "https://lelocaltv.com/saison-des-fruits-au-benin-quand-savourer-les-meilleures-recoltes/",
+  },
   "senegal-sengarden-cesag-market-calendar": {
     label: "Sen-Garden / CESAG Senegal fruit and vegetable production calendar",
     url: "https://bibliotheque.cesag.sn/doc_num.php?explnum_id=2642",

@@ -328,6 +328,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["ireland-bord-bia-best-in-season"],
   },
+  LU: {
+    labels: {
+      fr: "Luxembourg: calendrier 2024 du ministere de l'Agriculture pour fruits, legumes et noix regionaux, distinguant produits frais et produits stockes.",
+      en: "Luxembourg: 2024 Ministry of Agriculture calendar for regional fruit, vegetables and nuts, distinguishing fresh produce and stored produce.",
+      es: "Luxemburgo: calendario 2024 del Ministerio de Agricultura para frutas, verduras y frutos secos regionales, distinguiendo productos frescos y almacenados.",
+      de: "Luxemburg: Saisonkalender 2024 des Landwirtschaftsministeriums fuer regionales Obst, Gemuese und Nuesse, mit frischer Ware und Lagerware.",
+      it: "Lussemburgo: calendario 2024 del Ministero dell'Agricoltura per frutta, verdura e frutta secca regionali, distinguendo prodotti freschi e conservati.",
+      pt: "Luxemburgo: calendario 2024 do Ministerio da Agricultura para frutas, legumes e frutos secos regionais, distinguindo produtos frescos e armazenados.",
+    },
+    sourceIds: ["luxembourg-agriculture-season-calendar"],
+  },
   MX: {
     labels: {
       fr: "Mexique: donnees sourcees surtout pour le quatrieme trimestre; le reste reste indicatif.",

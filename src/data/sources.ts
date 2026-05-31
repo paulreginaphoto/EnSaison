@@ -127,6 +127,10 @@ export const dataSources = {
     label: "Miresda Cyprus fruit, citrus and vegetable seasonal calendars",
     url: "https://www.miresda.com/fruits-vegetables/",
   },
+  "luxembourg-agriculture-season-calendar": {
+    label: "Luxembourg Ministry of Agriculture 2024 regional seasonal calendar",
+    url: "https://agriculture.public.lu/de/veroeffentlichungen/ernaehrung/saisonkalender.html",
+  },
   "swiss-blw-season-table": {
     label: "Swiss Federal Office for Agriculture seasonal fruit and vegetable table",
     url: "https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf",

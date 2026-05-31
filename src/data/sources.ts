@@ -107,6 +107,18 @@ export const dataSources = {
     label: "Frukt.no Norwegian season calendar",
     url: "https://www.frukt.no/globalassets/sesongkalender/norsk-sesongkalender.pdf",
   },
+  "new-zealand-5aday-season-guide": {
+    label: "5+ A Day New Zealand eating in season guide",
+    url: "https://5aday.co.nz/assets/site/assets/resources/25124_5_Eating-in-Season-with-5-A-Day_2025_web.pdf",
+  },
+  "new-zealand-5aday-availability-chart": {
+    label: "5+ A Day New Zealand fruit and vegetable availability chart",
+    url: "https://5aday.co.nz/assets/site/resources/Whats-Available-Chart.pdf",
+  },
+  "new-zealand-vegetables-seasonability-chart": {
+    label: "Vegetables.co.nz New Zealand grown vegetables seasonability chart",
+    url: "https://www.vegetables.co.nz/assets/Vegetables-co-nz/resources/garden-to-table/A3-SEASONABILITY-CHART-2021-WEB.pdf",
+  },
   "denmark-foedevarestyrelsen-season-posters": {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",

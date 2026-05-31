@@ -479,6 +479,21 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["norway-frukt-season-calendar"],
   },
+  NZ: {
+    labels: {
+      fr: "Nouvelle-Zelande: guides nationaux 5+ A Day et Vegetables.co.nz pour disponibilite saisonniere locale; les mois peuvent varier selon region, meteo et stockage.",
+      en: "New Zealand: national 5+ A Day and Vegetables.co.nz guides for local seasonal availability; months can vary by region, weather and storage.",
+      es: "Nueva Zelanda: guias nacionales de 5+ A Day y Vegetables.co.nz sobre disponibilidad local de temporada; los meses pueden variar por region, clima y almacenamiento.",
+      de: "Neuseeland: nationale 5+ A Day- und Vegetables.co.nz-Leitfaeden zur lokalen saisonalen Verfuegbarkeit; Monate koennen je nach Region, Wetter und Lagerung variieren.",
+      it: "Nuova Zelanda: guide nazionali 5+ A Day e Vegetables.co.nz sulla disponibilita locale stagionale; i mesi possono variare per regione, meteo e conservazione.",
+      pt: "Nova Zelandia: guias nacionais 5+ A Day e Vegetables.co.nz sobre disponibilidade local sazonal; os meses podem variar por regiao, clima e armazenamento.",
+    },
+    sourceIds: [
+      "new-zealand-5aday-season-guide",
+      "new-zealand-5aday-availability-chart",
+      "new-zealand-vegetables-seasonability-chart",
+    ],
+  },
   PT: {
     labels: {
       fr: "Portugal: donnees GPP de calendrier de production national 2016; utile pour la saison de production, pas une disponibilite magasin actuelle.",

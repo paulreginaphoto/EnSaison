@@ -166,6 +166,15 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Portugal GPP plant products production calendars
   https://www.gpp.gov.pt/images/GPP/O_que_disponibilizamos/Publicacoes/Periodicos/MercVegetais/InfoMercados_ProdutosVegetais_Final.pdf
 
+- 5+ A Day New Zealand eating in season guide
+  https://5aday.co.nz/assets/site/assets/resources/25124_5_Eating-in-Season-with-5-A-Day_2025_web.pdf
+
+- 5+ A Day New Zealand fruit and vegetable availability chart
+  https://5aday.co.nz/assets/site/resources/Whats-Available-Chart.pdf
+
+- Vegetables.co.nz New Zealand grown vegetables seasonability chart
+  https://www.vegetables.co.nz/assets/Vegetables-co-nz/resources/garden-to-table/A3-SEASONABILITY-CHART-2021-WEB.pdf
+
 ## What The App Can Say Safely
 
 - Seasonal availability varies by exact location, altitude, growing conditions, weather, storage, greenhouse use and import habits.
@@ -184,14 +193,15 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 278 food entries after the Vatican City Rome/Italy-CREA proxy pass;
+- 278 food entries after the New Zealand 5+ A Day / Vegetables.co.nz pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 43 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, India, Brazil, Croatia and Japan;
+- country overrides for 44 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Austria now has source-backed Gesundheit.gv.at national season-calendar overrides for 50 fruit, vegetable and mushroom items already present in the catalogue, while remaining Austrian produce still falls back to indicative European regional data;
 - Belgium now has source-backed Vlaanderen/VLAM month-by-month availability overrides for 45 fruit, vegetable, herb and mushroom items already present in the catalogue, while remaining Belgian produce still falls back to indicative European regional data;
 - Ireland now has source-backed Bord Bia Best in Season overrides for 36 Irish fresh produce items already present in the catalogue, including full season, coming in/out of season and storage signals;
 - Norway now has source-backed Frukt.no/OFG national season-calendar overrides for 43 Norwegian produce items already present in the catalogue, while remaining Norwegian produce still falls back to indicative European regional data;
+- New Zealand now has source-backed 5+ A Day and Vegetables.co.nz overrides for 56 local seasonal fruit, vegetable, herb, spice, tuber and mushroom items already present in the catalogue; this is national seasonal availability and may vary by region, weather and storage;
 - Denmark now has source-backed Fødevarestyrelsen monthly-poster overrides for 36 Danish seasonal fruit and vegetable items already present in the catalogue, while remaining Danish produce still falls back to indicative European regional data;
 - Czechia now has source-backed MZe 2026 harvest/ripening overrides for 34 fruit, vegetable and potato items already present in the catalogue; the MZe source also documents storage windows, but DeSaison maps the harvest/ripening signal for the badge logic;
 - Sweden now has source-backed ICA practical season-guide overrides for 43 Swedish vegetable, fruit, berry, herb and mushroom items already present in the catalogue; this is practical national retail guidance, not a government calendar or regional precision;

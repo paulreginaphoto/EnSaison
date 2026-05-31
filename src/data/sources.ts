@@ -147,6 +147,10 @@ export const dataSources = {
     label: "World Bank Indonesia local fruits and vegetables seasons table",
     url: "https://documents1.worldbank.org/curated/en/863941468752426320/pdf/385430IND0P1011white0cover01PUBLIC1.pdf",
   },
+  "philippines-fnri-fruit-calendar": {
+    label: "DOST-FNRI Philippines in-season fruits calendar",
+    url: "https://fnri.dost.gov.ph/images/images/standardtools/MenuGuideCalendar/MGC2023.pdf",
+  },
   "denmark-foedevarestyrelsen-season-posters": {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",

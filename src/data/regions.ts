@@ -554,6 +554,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["pakistan-phdec-horticulture-introduction", "pakistan-pbs-rabi-crop-calendar"],
   },
+  PH: {
+    labels: {
+      fr: "Philippines: calendrier DOST-FNRI des fruits de saison; utile pour les fruits locaux, pas encore pour les legumes ni pour une precision par ile.",
+      en: "Philippines: DOST-FNRI in-season fruits calendar; useful for local fruits, not yet for vegetables or island-by-island precision.",
+      es: "Filipinas: calendario DOST-FNRI de frutas de temporada; util para frutas locales, aun no para verduras ni precision por isla.",
+      de: "Philippinen: DOST-FNRI-Saisonkalender fuer Obst; nuetzlich fuer lokales Obst, noch nicht fuer Gemuese oder inselgenaue Angaben.",
+      it: "Filippine: calendario DOST-FNRI della frutta di stagione; utile per frutta locale, non ancora per verdure o precisione isola per isola.",
+      pt: "Filipinas: calendario DOST-FNRI de frutas sazonais; util para frutas locais, ainda nao para legumes nem precisao por ilha.",
+    },
+    sourceIds: ["philippines-fnri-fruit-calendar"],
+  },
   RO: {
     labels: {
       fr: "Roumanie: calendrier Commission europeenne en roumain, section climat tempere incluant explicitement la Roumanie; source par grandes saisons, pas calendrier agricole national mois par mois.",

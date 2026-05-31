@@ -147,6 +147,16 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "fruit-passion", name: "Fruit de la passion", names: { en: "Passion fruit", es: "Maracuyá", de: "Passionsfrucht", it: "Frutto della passione", pt: "Maracujá" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "jabuticaba", name: "Jabuticaba", names: { en: "Jabuticaba", es: "Jabuticaba", de: "Jabuticaba", it: "Jabuticaba", pt: "Jabuticaba" }, category: "fruit", icon: "fruit-berry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "pitaya", name: "Pitaya", names: { en: "Dragon fruit", es: "Pitaya", de: "Drachenfrucht", it: "Pitaya", pt: "Pitaia" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
+  { id: "sapotille", name: "Sapotille", names: { en: "Sapodilla", es: "Chicozapote", de: "Sapodilla", it: "Sapodilla", pt: "Sapoti" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
+  { id: "jamblon", name: "Jamblon", names: { en: "Java plum", es: "Jambolan", de: "Java-Pflaume", it: "Jambul", pt: "Jambolao" }, category: "fruit", icon: "fruit-berry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
+  { id: "durian", name: "Durian", names: { en: "Durian", es: "Durian", de: "Durian", it: "Durian", pt: "Duriao" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
+  { id: "mangoustan", name: "Mangoustan", names: { en: "Mangosteen", es: "Mangostan", de: "Mangostane", it: "Mangostano", pt: "Mangostao" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
+  { id: "santol", name: "Santol", names: { en: "Santol", es: "Santol", de: "Santol", it: "Santol", pt: "Santol" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
+  { id: "corossol", name: "Corossol", names: { en: "Soursop", es: "Guanabana", de: "Stachelannone", it: "Graviola", pt: "Graviola" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
+  { id: "pomme-lait", name: "Pomme de lait", names: { en: "Star apple", es: "Caimito", de: "Sternapfel", it: "Caimito", pt: "Caimito" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
+  { id: "ramboutan", name: "Ramboutan", names: { en: "Rambutan", es: "Rambutan", de: "Rambutan", it: "Rambutan", pt: "Rambutao" }, category: "fruit", icon: "fruit-berry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
+  { id: "langsat", name: "Langsat", names: { en: "Langsat", es: "Langsat", de: "Langsat", it: "Langsat", pt: "Langsat" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
+  { id: "anone", name: "Anone", names: { en: "Sugar apple", es: "Anon", de: "Zimtapfel", it: "Annona", pt: "Fruta-do-conde" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
   { id: "gombo", name: "Gombo", names: { en: "Okra", es: "Quimbombó", de: "Okra", it: "Gombo", pt: "Quiabo" }, category: "vegetable", icon: "vegetable-stem", months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct.", sourceIds: ["fao-crop-calendar", "india-desagri-vegetable-harvest"], confidence: "indicative" },
   { id: "pâtisson", name: "Pâtisson", names: { en: "Pattypan squash", es: "Calabaza pattypan", de: "Patisson", it: "Zucca patisson", pt: "Abóbora patisson" }, category: "vegetable", icon: "vegetable-pumpkin", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "persil-racine", name: "Persil-racine", names: { en: "Parsley root", es: "Raíz de perejil", de: "Wurzelpetersilie", it: "Prezzemolo da radice", pt: "Raiz de salsa" }, category: "vegetable", icon: "vegetable-root", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
@@ -816,6 +826,42 @@ const indonesiaWorldBankSeasonOverrides: Record<string, NonNullable<NonNullable<
     months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
     nearMonths: [],
     seasonLabel: "disponible toute l'année (limite)",
+    seasonMode: "year-round",
+  },
+};
+
+const philippinesFnriFruitSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  sapotille: { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  orange: { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  "pomme-lait": { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  jamblon: { months: [4, 5, 6], nearMonths: [3, 7], seasonLabel: "avr. – juin" },
+  mangue: { months: [4, 5, 6], nearMonths: [3, 7], seasonLabel: "avr. – juin" },
+  melon: { months: [4, 5, 6], nearMonths: [3, 7], seasonLabel: "avr. – juin" },
+  ananas: { months: [4, 5, 6], nearMonths: [3, 7], seasonLabel: "avr. – juin" },
+  durian: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  santol: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  ramboutan: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  pastèque: { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept." },
+  mangoustan: { months: [10, 11, 12], nearMonths: [9, 1], seasonLabel: "oct. – déc." },
+  corossol: { months: [10, 11, 12], nearMonths: [9, 1], seasonLabel: "oct. – déc." },
+  langsat: { months: [10, 11, 12], nearMonths: [9, 1], seasonLabel: "oct. – déc." },
+  anone: { months: [7, 8, 9, 10, 11, 12], nearMonths: [6, 1], seasonLabel: "juil. – déc." },
+  banane: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "toute l'année",
+    seasonMode: "year-round",
+  },
+  papaye: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "toute l'année",
+    seasonMode: "year-round",
+  },
+  pamplemousse: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "toute l'année",
     seasonMode: "year-round",
   },
 };
@@ -2952,6 +2998,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.ID = {
       ...indonesiaWorldBankSeasonOverrides[item.id],
       sourceIds: ["indonesia-worldbank-local-produce-seasons"],
+      confidence: "source",
+    };
+  }
+
+  if (philippinesFnriFruitSeasonOverrides[item.id]) {
+    countries.PH = {
+      ...philippinesFnriFruitSeasonOverrides[item.id],
+      sourceIds: ["philippines-fnri-fruit-calendar"],
       confidence: "source",
     };
   }

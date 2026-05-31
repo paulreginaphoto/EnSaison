@@ -167,6 +167,10 @@ export const dataSources = {
     label: "Montevideo / Uruguay MGAP fruit and vegetable seasonality calendar",
     url: "https://montevideo.gub.uy/sites/default/files/biblioteca/calendariodefrutasyhortalizassegunmesdelano_0.pdf",
   },
+  "argentina-agriculture-seasonal-produce": {
+    label: "Argentina Agriculture seasonal fruit and vegetable guide",
+    url: "https://www.argentina.gob.ar/agricultura/mas-frutas-y-verduras/recomendaciones/las-frutas-y-verduras-de-estacion-son-las-mas-sabrosas-y-nutritivas",
+  },
   "denmark-foedevarestyrelsen-season-posters": {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",

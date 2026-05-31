@@ -48,14 +48,15 @@ try {
   assert.ok(renderedRows > 0, "season rows should render");
   assert.ok(renderedRows < 140, `default screen renders too many rows: ${renderedRows}`);
 
-  await page.getByRole("button", { name: /fruits/i }).click();
+  const fruitTab = page.getByRole("button", { name: "Fruits", exact: true });
+  await fruitTab.click();
   await page.waitForURL(/category=fruit/);
   await page.reload({ waitUntil: "networkidle" });
   await assert.doesNotReject(() =>
-    page.getByRole("button", { name: /fruits/i }).getAttribute("aria-pressed"),
+    fruitTab.getAttribute("aria-pressed"),
   );
   assert.equal(
-    await page.getByRole("button", { name: /fruits/i }).getAttribute("aria-pressed"),
+    await fruitTab.getAttribute("aria-pressed"),
     "true",
   );
 

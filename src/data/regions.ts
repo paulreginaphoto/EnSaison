@@ -609,6 +609,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["uruguay-montevideo-mgap-season-calendar"],
   },
+  AR: {
+    labels: {
+      fr: "Argentine: guide officiel Argentina.gob.ar des fruits et legumes par grandes saisons; source nationale utile, pas precision par province ni par microclimat.",
+      en: "Argentina: official Argentina.gob.ar guide to fruit and vegetables by broad seasons; useful national guidance, not province-level or microclimate precision.",
+      es: "Argentina: guia oficial Argentina.gob.ar de frutas y verduras por grandes estaciones; orientacion nacional util, no precision por provincia ni microclima.",
+      de: "Argentinien: offizieller Argentina.gob.ar-Leitfaden fuer Obst und Gemuese nach breiten Jahreszeiten; nationale Orientierung, keine Provinz- oder Mikroklima-Praezision.",
+      it: "Argentina: guida ufficiale Argentina.gob.ar per frutta e verdura per grandi stagioni; orientamento nazionale utile, non precisione per provincia o microclima.",
+      pt: "Argentina: guia oficial Argentina.gob.ar de frutas e legumes por grandes estacoes; orientacao nacional util, nao precisao por provincia nem microclima.",
+    },
+    sourceIds: ["argentina-agriculture-seasonal-produce"],
+  },
   RO: {
     labels: {
       fr: "Roumanie: calendrier Commission europeenne en roumain, section climat tempere incluant explicitement la Roumanie; source par grandes saisons, pas calendrier agricole national mois par mois.",

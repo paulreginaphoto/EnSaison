@@ -216,16 +216,18 @@ button {
   }
 
   .category-bento {
-    @apply no-scrollbar mt-3 grid auto-cols-[minmax(12.4rem,1fr)] grid-flow-col gap-3 overflow-x-auto pb-1 sm:mt-4 sm:grid-flow-row sm:grid-cols-3 sm:overflow-visible sm:pb-0;
+    @apply no-scrollbar mt-3 grid auto-cols-[minmax(13.4rem,1fr)] grid-flow-col gap-3 overflow-x-auto pb-1 sm:mt-4 sm:grid-flow-row sm:grid-cols-3 sm:overflow-visible sm:pb-0;
   }
 
   .category-card {
-    @apply relative min-h-[13rem] overflow-hidden rounded-[1.7rem] p-5 text-left shadow-row transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0;
+    @apply relative min-h-[20rem] overflow-hidden rounded-[1.7rem] p-5 text-left shadow-row transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:min-h-[21rem];
   }
 
   .category-card::before {
-    @apply absolute inset-0 content-[''];
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0));
+    @apply absolute inset-0 z-10 content-[''];
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.42) 28%, rgba(255, 255, 255, 0) 54%),
+      linear-gradient(0deg, rgba(23, 51, 39, 0.07), rgba(23, 51, 39, 0));
   }
 
   .category-card-active {
@@ -245,27 +247,60 @@ button {
   }
 
   .category-card-title {
-    @apply relative z-10 block text-3xl font-semibold leading-none text-[#12442d];
+    @apply relative z-20 block text-3xl font-semibold leading-none text-[#12442d] sm:text-4xl;
   }
 
   .category-card-count {
-    @apply relative z-10 mt-3 block max-w-[11rem] text-sm font-bold leading-5 text-ink/[0.55];
+    @apply relative z-20 mt-3 block max-w-[11rem] text-sm font-bold leading-5 text-ink/[0.55];
   }
 
   .category-card-icon {
-    @apply absolute bottom-0 right-0 z-0 h-[8.5rem] w-[8.5rem] rounded-tl-[2rem] object-cover opacity-95 shadow-[0_18px_26px_rgba(73,59,42,0.14)];
+    @apply absolute inset-x-0 bottom-0 z-0 h-[76%] w-full object-cover opacity-100;
+    object-position: 50% 74%;
   }
 
   .category-card-mark {
-    @apply absolute right-4 top-4 z-10 h-6 w-6 text-[#12442d]/70;
+    @apply absolute right-4 top-4 z-20 h-14 w-14 rounded-full p-4 text-white shadow-row;
+  }
+
+  .category-card-fruit .category-card-mark {
+    @apply bg-[#e65d50];
+  }
+
+  .category-card-vegetable .category-card-mark {
+    @apply bg-[#5a8b48];
+  }
+
+  .category-card-mushroom .category-card-mark {
+    @apply bg-[#e4a820];
   }
 
   .filter-panel {
-    @apply mt-4 grid gap-3 rounded-[1.7rem] bg-white/[0.72] p-3 shadow-row backdrop-blur-md sm:p-4;
+    @apply mt-4 grid gap-3 rounded-[1.7rem] bg-transparent p-0;
   }
 
   .season-legend {
-    @apply flex flex-wrap gap-2;
+    @apply flex flex-wrap justify-between gap-2 rounded-[1.35rem] bg-white/[0.86] p-4 shadow-row backdrop-blur-md;
+  }
+
+  .season-legend .season-badge {
+    @apply bg-transparent px-0 text-base font-semibold text-ink/[0.78];
+  }
+
+  .season-legend .season-badge::before {
+    @apply mr-3 inline-block h-4 w-4 rounded-full content-[''];
+  }
+
+  .season-legend .badge-in-season::before {
+    @apply bg-[#4f8745];
+  }
+
+  .season-legend .badge-soon::before {
+    @apply bg-[#e1aa25];
+  }
+
+  .season-legend .badge-out::before {
+    @apply bg-[#e65d50];
   }
 
   .search-shell {
@@ -297,7 +332,7 @@ button {
   }
 
   .section-shell {
-    @apply min-w-0 rounded-[1.7rem] bg-white/[0.82] p-3.5 shadow-soft backdrop-blur-md sm:p-5;
+    @apply min-w-0 rounded-[1.7rem] bg-white/[0.86] p-3.5 shadow-soft backdrop-blur-md sm:p-5;
   }
 
   .section-heading {
@@ -318,19 +353,24 @@ button {
   }
 
   .item-row {
-    @apply flex min-h-[6.1rem] items-start gap-3 rounded-[1.35rem] border border-[#eee6d8] bg-white/[0.92] p-3 shadow-row transition hover:-translate-y-0.5 hover:bg-white;
+    @apply relative flex min-h-[6.8rem] items-center gap-4 border-b border-[#eee6d8] bg-transparent px-2 py-3 transition hover:bg-white/[0.55];
+  }
+
+  .item-row:last-child {
+    @apply border-b-0;
   }
 
   .item-row-content {
-    @apply min-w-0 flex-1;
+    @apply min-w-0 flex-1 pr-9;
   }
 
   .item-row-main {
-    @apply flex min-w-0 items-start justify-between gap-3;
+    @apply flex min-w-0 items-center justify-between gap-3;
   }
 
   .item-name {
-    @apply truncate text-lg font-semibold leading-tight text-ink;
+    @apply truncate text-xl font-semibold leading-tight text-ink sm:text-2xl;
+    font-family: Georgia, Cambria, "Times New Roman", serif;
   }
 
   .item-category {
@@ -338,15 +378,15 @@ button {
   }
 
   .item-season {
-    @apply mt-2 flex flex-wrap gap-x-2 gap-y-1 text-sm font-semibold text-ink/[0.48];
+    @apply mt-2 hidden flex-wrap gap-x-2 gap-y-1 text-sm font-semibold text-ink/[0.48] sm:flex;
   }
 
   .produce-icon {
-    @apply h-14 w-14 shrink-0 drop-shadow-sm;
+    @apply h-16 w-16 shrink-0 drop-shadow-sm;
   }
 
   .item-photo {
-    @apply h-14 w-14 shrink-0 rounded-[1rem] border border-white/80 object-cover shadow-row;
+    @apply h-16 w-16 shrink-0 rounded-full border border-white/80 object-cover shadow-row;
   }
 
   .season-badge {
@@ -370,11 +410,11 @@ button {
   }
 
   .details-button {
-    @apply mt-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#edf3e8] text-[#526b4f] transition hover:bg-[#dfead8] hover:text-ink focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100;
+    @apply absolute right-2 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-transparent text-ink transition hover:bg-[#edf3e8] hover:text-[#526b4f] focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100;
   }
 
   .details-chevron {
-    @apply h-4 w-4 transition-transform duration-200;
+    @apply h-6 w-6 transition-transform duration-200;
   }
 
   .details-button[aria-expanded="true"] .details-chevron {

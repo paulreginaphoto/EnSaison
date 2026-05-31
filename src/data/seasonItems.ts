@@ -2442,7 +2442,7 @@ const maltaAgrokatinaSeasonOverrides: Record<string, NonNullable<NonNullable<Sea
   courgette: { months: [4, 5, 6, 7], nearMonths: [1, 2, 3, 8, 9, 10, 11, 12], seasonLabel: "avr. – juil." },
 };
 
-const cyprusMiresdaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+const egyptMiresdaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   "haricot-vert": { months: [1, 2, 3, 4, 10, 11, 12], nearMonths: [5, 9], seasonLabel: "oct. – avr." },
   "pois-mange-tout": { months: [1, 2, 3, 12], nearMonths: [4, 11], seasonLabel: "déc. – mars" },
   oignon: { months: [1, 2, 3, 4, 5, 6], nearMonths: [7], seasonLabel: "janv. – juin" },
@@ -3555,10 +3555,10 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     };
   }
 
-  if (cyprusMiresdaSeasonOverrides[item.id]) {
-    countries.CY = {
-      ...cyprusMiresdaSeasonOverrides[item.id],
-      sourceIds: ["cyprus-miresda-season-calendars"],
+  if (egyptMiresdaSeasonOverrides[item.id]) {
+    countries.EG = {
+      ...egyptMiresdaSeasonOverrides[item.id],
+      sourceIds: ["egypt-miresda-season-calendars"],
       confidence: "source",
     };
   }

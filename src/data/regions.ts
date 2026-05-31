@@ -321,16 +321,16 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["malta-foe-agrokatina-calendar"],
   },
-  CY: {
+  EG: {
     labels: {
-      fr: "Chypre: calendriers Miresda fruits, agrumes et legumes pour l'offre locale chypriote; source fournisseur pratique, pas calendrier gouvernemental.",
-      en: "Cyprus: Miresda fruit, citrus and vegetable calendars for Cypriot local supply; practical supplier source, not a government calendar.",
-      es: "Chipre: calendarios Miresda de frutas, citricos y verduras para oferta local chipriota; fuente practica de proveedor, no calendario gubernamental.",
-      de: "Zypern: Miresda-Kalender fuer Obst, Zitrusfruechte und Gemuese aus zyprischem lokalen Angebot; praktische Lieferantenquelle, kein Regierungskalender.",
-      it: "Cipro: calendari Miresda di frutta, agrumi e verdura per l'offerta locale cipriota; fonte pratica di fornitore, non calendario governativo.",
-      pt: "Chipre: calendarios Miresda de frutas, citrinos e legumes da oferta local cipriota; fonte pratica de fornecedor, nao calendario governamental.",
+      fr: "Egypte: calendriers Miresda fruits, agrumes et legumes pour l'offre export/fournisseur egyptienne; source pratique, pas calendrier gouvernemental ni precision par gouvernorat.",
+      en: "Egypt: Miresda fruit, citrus and vegetable calendars for Egyptian export/supplier availability; practical source, not a government calendar or governorate-level precision.",
+      es: "Egipto: calendarios Miresda de frutas, citricos y verduras para disponibilidad exportadora/proveedora egipcia; fuente practica, no calendario gubernamental ni precision por gobernacion.",
+      de: "Aegypten: Miresda-Kalender fuer Obst, Zitrusfruechte und Gemuese aus aegyptischer Export-/Lieferantenverfuegbarkeit; praktische Quelle, kein Regierungskalender und keine Gouvernorats-Praezision.",
+      it: "Egitto: calendari Miresda di frutta, agrumi e verdura per disponibilita export/fornitore egiziana; fonte pratica, non calendario governativo ne precisione per governatorato.",
+      pt: "Egito: calendarios Miresda de frutas, citrinos e legumes para disponibilidade egipcia de exportacao/fornecedor; fonte pratica, nao calendario governamental nem precisao por governadoria.",
     },
-    sourceIds: ["cyprus-miresda-season-calendars"],
+    sourceIds: ["egypt-miresda-season-calendars"],
   },
   GR: {
     labels: {

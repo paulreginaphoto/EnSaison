@@ -109,7 +109,7 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Friends of the Earth Malta AgroKatina local seasonal fruit and vegetable calendar
   https://foemalta.org/wp-content/uploads/Local-Seasonal-Healthy-English-2.pdf
 
-- Miresda Cyprus fruit, citrus and vegetable seasonal calendars
+- Miresda Egypt fruit, citrus and vegetable seasonal calendars
   https://www.miresda.com/fruits-vegetables/
 
 - Luxembourg Ministry of Agriculture 2024 regional seasonal calendar
@@ -243,7 +243,7 @@ The app now supports:
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
 - 305 food entries after the Tunisia ADAPT/AICS season-calendar pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 56 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, India, Brazil, Croatia and Japan;
+- country overrides for 56 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Austria now has source-backed Gesundheit.gv.at national season-calendar overrides for 50 fruit, vegetable and mushroom items already present in the catalogue, while remaining Austrian produce still falls back to indicative European regional data;
 - Belgium now has source-backed Vlaanderen/VLAM month-by-month availability overrides for 45 fruit, vegetable, herb and mushroom items already present in the catalogue, while remaining Belgian produce still falls back to indicative European regional data;
@@ -271,7 +271,7 @@ The app now supports:
 - Slovenia now has source-backed Government green-procurement calendar overrides for 38 vegetable, fruit, nut and apple items already present in the catalogue, using the dark-green strong-supply cells as in-season and light-green supply cells as near-season;
 - Slovakia now has source-backed Ministry of Education school-catering calendar overrides for 47 fruit, herb and vegetable items already present in the catalogue, using green fresh cells as in-season and orange stored-availability cells as near-season;
 - Malta now has source-backed AgroKatina local fruit and vegetable overrides for 30 items already present in the catalogue, using green local-fresh cells as in-season and purple greenhouse cells as near-season where the calendar marks them;
-- Cyprus now has source-backed Miresda supplier-calendar overrides for 34 fruit, citrus, herb and vegetable items already present in the catalogue; this is practical local supply guidance from a Cyprus distributor, not a government harvest calendar;
+- Egypt now has source-backed Miresda supplier-calendar overrides for 34 fruit, citrus, herb and vegetable items already present in the catalogue; this is practical export/supplier availability guidance from an Egyptian company, not a government harvest calendar or governorate-level precision;
 - Luxembourg now has source-backed Ministry of Agriculture 2024 regional seasonal-calendar overrides for 52 fruit, vegetable and nut items, distinguishing fresh regional produce from stored availability; Damson plum / quetsche was added to the catalogue to match the Luxembourg calendar;
 - Bulgaria now has source-backed BB-Team practical broad-season overrides for 41 common fruit, vegetable and legume items, plus sorrel and nettle were added to match the Bulgarian table; this is a local practical guide, not a government calendar or month-level agricultural forecast;
 - Estonia now has source-backed Gardest 2026 vegetable sowing-and-harvest overrides for 27 vegetable and fruit-vegetable items, using the ready-to-harvest months; this is practical gardening guidance, not a government calendar or retail availability forecast;

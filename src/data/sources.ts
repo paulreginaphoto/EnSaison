@@ -227,8 +227,8 @@ export const dataSources = {
     label: "Friends of the Earth Malta AgroKatina local seasonal fruit and vegetable calendar",
     url: "https://foemalta.org/wp-content/uploads/Local-Seasonal-Healthy-English-2.pdf",
   },
-  "cyprus-miresda-season-calendars": {
-    label: "Miresda Cyprus fruit, citrus and vegetable seasonal calendars",
+  "egypt-miresda-season-calendars": {
+    label: "Miresda Egypt fruit, citrus and vegetable seasonal calendars",
     url: "https://www.miresda.com/fruits-vegetables/",
   },
   "luxembourg-agriculture-season-calendar": {

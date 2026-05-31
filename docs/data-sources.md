@@ -73,6 +73,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Czech Ministry of Agriculture fruit, vegetable and potato harvest and storage calendar
   https://mze.gov.cz/public/portal/mze/zemedelstvi/rostlinna-vyroba/rostlinne-komodity/ovoce-a-zelenina/odbobi-sklizne-a-doba-skladovani
 
+- Plodovi.hr Croatian seasonal fruit and vegetable calendar
+  https://plodovi.hr/novosti/kalendar-sezonskog-voca-i-povrca
+
 - Swiss Federal Office for Agriculture seasonal fruit and vegetable table
   https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf
 
@@ -123,7 +126,7 @@ The app now supports:
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
 - 249 food entries after the Brazil CEAGESP expansion pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 43 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, India, Brazil and Japan;
+- country overrides for 43 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Austria now has source-backed Gesundheit.gv.at national season-calendar overrides for 50 fruit, vegetable and mushroom items already present in the catalogue, while remaining Austrian produce still falls back to indicative European regional data;
 - Belgium now has source-backed Vlaanderen/VLAM month-by-month availability overrides for 45 fruit, vegetable, herb and mushroom items already present in the catalogue, while remaining Belgian produce still falls back to indicative European regional data;
@@ -133,6 +136,7 @@ The app now supports:
 - Czechia now has source-backed MZe 2026 harvest/ripening overrides for 34 fruit, vegetable and potato items already present in the catalogue; the MZe source also documents storage windows, but DeSaison maps the harvest/ripening signal for the badge logic;
 - Sweden now has source-backed ICA practical season-guide overrides for 43 Swedish vegetable, fruit, berry, herb and mushroom items already present in the catalogue; this is practical national retail guidance, not a government calendar or regional precision;
 - Poland now has source-backed KOWR Kupuj Swiadomie broad-season overrides for 46 fruit and vegetable items already present in the catalogue; this source groups foods by spring/summer/autumn/winter and includes storage/preservation guidance, so Poland is less month-precise than calendars with explicit monthly rows;
+- Croatia now has source-backed Plodovi.hr month-by-month overrides for 63 fruit, vegetable, herb, legume, nut and olive-oil items already present in the catalogue; this is practical Croatian short-supply-chain guidance, not a government calendar or county-level forecast;
 - Greece now has source-backed Food For Health month-by-month overrides for 52 fruit, vegetable, herb and mushroom items already present in the catalogue, plus 4 new globally localized fruit entries; this is national nutrition guidance cross-checked with the European Commission Mediterranean profile, not a government agricultural calendar;
 - Hungary now has source-backed Novenytar month-by-month overrides for 52 fruit, vegetable, herb, legume and nut items already present in the catalogue; this is a practical Hungarian plant-season table, not a government agricultural calendar or county-level forecast;
 - Germany now has source-backed BZfE seasonal overrides for 40 produce items already present in the catalogue, while remaining German produce still falls back to indicative European regional data;

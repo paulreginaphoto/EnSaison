@@ -1589,6 +1589,72 @@ const greeceFoodForHealthSeasonOverrides: Record<string, NonNullable<NonNullable
   tomate: { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
 };
 
+const croatiaPlodoviSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  abricot: { months: [5, 6, 7, 8] },
+  ail: { months: [1, 2, 3, 5, 8, 9] },
+  artichaut: { months: [5, 12] },
+  asperge: { months: [4, 5, 6] },
+  aubergine: { months: [6, 7, 8, 9] },
+  basilic: { months: [6, 7, 8, 9, 10] },
+  betterave: { months: [1, 2, 3, 4, 6, 9, 12] },
+  blette: { months: [1, 2, 3, 4, 8, 9, 10, 11, 12] },
+  brocoli: { months: [1, 9, 10, 11, 12] },
+  carotte: { months: [1, 2, 5, 7, 8, 9, 10, 11, 12] },
+  "céleri-branche": { months: [2, 3, 4, 6, 11] },
+  cerise: { months: [4, 5, 6, 7] },
+  châtaigne: { months: [11] },
+  "chou-blanc": { months: [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12] },
+  "chou-fleur": { months: [2, 3, 6, 10] },
+  "chou-frisé": { months: [1, 2, 3, 4, 5, 6, 11, 12] },
+  "chou-rave": { months: [1, 2, 3, 5, 6, 7, 10, 11, 12] },
+  citron: { months: [1, 2, 3, 4, 8, 9, 10, 12] },
+  coing: { months: [12] },
+  concombre: { months: [5, 7] },
+  courge: { months: [8, 10, 12] },
+  courgette: { months: [4, 5, 6, 7, 8, 10] },
+  endive: { months: [2, 3, 10] },
+  "épinard": { months: [2, 3, 7, 8, 9, 11, 12] },
+  fenouil: { months: [11] },
+  fève: { months: [4, 5, 6] },
+  figue: { months: [7, 8, 9, 10] },
+  fraise: { months: [4, 5, 6, 8] },
+  framboise: { months: [6, 7, 8] },
+  grenade: { months: [11] },
+  groseille: { months: [7] },
+  "haricot-vert": { months: [5, 6, 7, 8, 10, 11] },
+  "huile-olive": { months: [9] },
+  kiwi: { months: [11] },
+  laitue: { months: [1, 2, 3, 5, 8, 9, 10, 11, 12] },
+  mandarine: { months: [1, 2, 3, 9, 10, 11, 12] },
+  "maïs-doux": { months: [6, 7, 8, 9] },
+  melon: { months: [7, 8, 10, 11] },
+  menthe: { months: [4, 5, 6, 7, 8, 9, 10] },
+  mure: { months: [7] },
+  myrtille: { months: [7, 8] },
+  navet: { months: [2, 5, 12] },
+  nectarine: { months: [6, 7] },
+  oignon: { months: [1, 4, 6, 7, 8, 10, 11] },
+  orange: { months: [1, 2, 3, 4, 11, 12] },
+  pamplemousse: { months: [1, 2, 3, 11, 12] },
+  pastèque: { months: [6, 7] },
+  peche: { months: [6, 7, 8, 10] },
+  persil: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12] },
+  "petit-pois": { months: [4, 7, 9] },
+  poire: { months: [6, 7, 9, 10, 11] },
+  poireau: { months: [2, 3, 4, 5] },
+  poivron: { months: [4, 7, 8, 9, 10] },
+  pomme: { months: [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12] },
+  "pomme-de-terre": { months: [7, 8, 9] },
+  prune: { months: [6, 7, 8, 9, 10] },
+  radis: { months: [6, 7] },
+  raisin: { months: [7, 9] },
+  rampon: { months: [2, 3, 4, 6, 8, 9, 11] },
+  romarin: { months: [1, 2, 3, 4, 10, 11, 12] },
+  roquette: { months: [4, 5] },
+  thym: { months: [6, 7] },
+  tomate: { months: [4, 8, 10] },
+};
+
 const hungaryNovenytarSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   abricot: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
   amande: {
@@ -2080,6 +2146,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.GR = {
       ...greeceFoodForHealthSeasonOverrides[item.id],
       sourceIds: ["greece-foodforhealth-season-calendar", "ec-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (croatiaPlodoviSeasonOverrides[item.id]) {
+    countries.HR = {
+      ...croatiaPlodoviSeasonOverrides[item.id],
+      sourceIds: ["croatia-plodovi-season-calendar"],
       confidence: "source",
     };
   }

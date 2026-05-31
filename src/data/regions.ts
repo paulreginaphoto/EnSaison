@@ -224,6 +224,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["greece-foodforhealth-season-calendar", "ec-calendar"],
   },
+  HR: {
+    labels: {
+      fr: "Croatie: calendrier Plodovi.hr des fruits, legumes et herbes de saison en Croatie; source pratique de circuit court local, pas calendrier gouvernemental ni precision par region.",
+      en: "Croatia: Plodovi.hr calendar for seasonal fruit, vegetables and herbs in Croatia; practical local short-supply-chain source, not a government calendar or regional precision.",
+      es: "Croacia: calendario Plodovi.hr de frutas, verduras y hierbas de temporada en Croacia; fuente local practica de cadena corta, no calendario gubernamental ni precision regional.",
+      de: "Kroatien: Plodovi.hr-Kalender fuer saisonales Obst, Gemuese und Kraeuter in Kroatien; praktische lokale Kurzlieferketten-Quelle, kein Regierungskalender und keine regionale Genauigkeit.",
+      it: "Croazia: calendario Plodovi.hr di frutta, verdura ed erbe di stagione in Croazia; fonte locale pratica di filiera corta, non calendario governativo ne precisione regionale.",
+      pt: "Croacia: calendario Plodovi.hr de frutas, legumes e ervas da epoca na Croacia; fonte local pratica de cadeia curta, nao calendario governamental nem precisao regional.",
+    },
+    sourceIds: ["croatia-plodovi-season-calendar"],
+  },
   HU: {
     labels: {
       fr: "Hongrie: table mensuelle Novenytar pour fruits et legumes de saison; source pratique locale, pas calendrier gouvernemental agricole ni precision par comitat.",

@@ -361,6 +361,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["luxembourg-agriculture-season-calendar"],
   },
+  LV: {
+    labels: {
+      fr: "Lettonie: calendriers publics IUB/Zemkopibas ministrija pour les produits locaux, utilises en achats alimentaires publics; les mois optimaux sont de saison, le stockage ou la disponibilite plus couteuse est proche saison.",
+      en: "Latvia: public IUB/Ministry of Agriculture local produce calendars used for public food procurement; optimal months are in season, storage or higher-cost availability is near season.",
+      es: "Letonia: calendarios publicos IUB/Ministerio de Agricultura para productos locales usados en compras alimentarias publicas; meses optimos como temporada y almacenamiento/disponibilidad mas costosa como cercano.",
+      de: "Lettland: oeffentliche IUB-/Landwirtschaftsministerium-Kalender fuer lokale Produkte im oeffentlichen Lebensmitteleinkauf; optimale Monate sind Saison, Lagerung oder teurere Verfuegbarkeit ist nahe Saison.",
+      it: "Lettonia: calendari pubblici IUB/Ministero dell'Agricoltura per prodotti locali usati negli acquisti alimentari pubblici; mesi ottimali in stagione, stoccaggio o disponibilita piu costosa come quasi stagione.",
+      pt: "Letonia: calendarios publicos IUB/Ministerio da Agricultura para produtos locais usados em compras alimentares publicas; meses otimos em epoca, armazenamento ou disponibilidade mais cara como perto da epoca.",
+    },
+    sourceIds: ["latvia-iub-zm-season-calendars"],
+  },
   MX: {
     labels: {
       fr: "Mexique: donnees sourcees surtout pour le quatrieme trimestre; le reste reste indicatif.",

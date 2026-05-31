@@ -427,6 +427,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["poland-kowr-conscious-consumer-guide"],
   },
+  RO: {
+    labels: {
+      fr: "Roumanie: calendrier Commission europeenne en roumain, section climat tempere incluant explicitement la Roumanie; source par grandes saisons, pas calendrier agricole national mois par mois.",
+      en: "Romania: European Commission Romanian calendar, temperate climate section explicitly including Romania; broad-season source, not a national month-by-month agricultural calendar.",
+      es: "Rumania: calendario rumano de la Comision Europea, seccion de clima templado que incluye explicitamente Rumania; fuente por grandes estaciones, no calendario agricola nacional mensual.",
+      de: "Rumaenien: rumaenischer Kalender der Europaeischen Kommission, gemaessigte Klimazone mit ausdruecklicher Nennung Rumaeniens; Quelle nach breiten Jahreszeiten, kein nationaler Monats-Agrarkalender.",
+      it: "Romania: calendario rumeno della Commissione europea, sezione clima temperato che include esplicitamente la Romania; fonte per grandi stagioni, non calendario agricolo nazionale mensile.",
+      pt: "Romenia: calendario romeno da Comissao Europeia, secao de clima temperado que inclui explicitamente a Romenia; fonte por grandes epocas, nao calendario agricola nacional mensal.",
+    },
+    sourceIds: ["romania-ec-temperate-calendar", "ec-calendar"],
+  },
   SE: {
     labels: {
       fr: "Suede: guide ICA des legumes, fruits et baies suedoises de saison; utile comme guide national pratique, pas une source gouvernementale ni une precision regionale.",

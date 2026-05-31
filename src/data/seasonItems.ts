@@ -2081,6 +2081,49 @@ const lithuaniaEcMaritimeSeasonOverrides: Record<string, NonNullable<NonNullable
   "chou-blanc": { months: [1, 2, 12], nearMonths: [3, 11], seasonLabel: "hiver" },
 };
 
+const romaniaEcTemperateSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  kiwi: { months: [1, 2, 3, 4, 5, 12], nearMonths: [6, 11], seasonLabel: "hiver – printemps" },
+  pomme: { months: [1, 2, 3, 4, 5, 9, 10, 11, 12], nearMonths: [6, 8], seasonLabel: "printemps, automne – hiver" },
+  poire: { months: [1, 2, 3, 4, 5, 9, 10, 11, 12], nearMonths: [6, 8], seasonLabel: "printemps, automne – hiver" },
+  pamplemousse: { months: [1, 2, 3, 4, 5, 12], nearMonths: [6, 11], seasonLabel: "hiver – printemps" },
+  fraise: { months: [3, 4, 5], nearMonths: [6], seasonLabel: "printemps" },
+  abricot: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  nectarine: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  peche: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  prune: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  pastèque: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  melon: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  cerise: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  figue: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  framboise: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "automne" },
+  raisin: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "automne" },
+  kaki: { months: [1, 2, 12], nearMonths: [3, 11], seasonLabel: "hiver" },
+  mandarine: { months: [1, 2, 12], nearMonths: [3, 11], seasonLabel: "hiver" },
+  orange: { months: [1, 2, 12], nearMonths: [3, 11], seasonLabel: "hiver" },
+  carotte: { months: [1, 2, 3, 4, 5, 9, 10, 11, 12], nearMonths: [6, 8], seasonLabel: "printemps, automne – hiver" },
+  "céleri-branche": { months: [3, 4, 5], nearMonths: [2, 6], seasonLabel: "printemps" },
+  "épinard": { months: [3, 4, 5], nearMonths: [2, 6], seasonLabel: "printemps" },
+  laitue: { months: [3, 4, 5, 6, 7, 8], nearMonths: [2, 9], seasonLabel: "printemps – été" },
+  asperge: { months: [3, 4, 5], nearMonths: [2, 6], seasonLabel: "printemps" },
+  fève: { months: [3, 4, 5], nearMonths: [2, 6], seasonLabel: "printemps" },
+  poireau: { months: [1, 2, 3, 4, 5, 12], nearMonths: [6, 11], seasonLabel: "hiver – printemps" },
+  endive: { months: [1, 2, 3, 4, 5, 9, 10, 11, 12], nearMonths: [6, 8], seasonLabel: "printemps, automne – hiver" },
+  tomate: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  artichaut: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  aubergine: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  blette: { months: [1, 2, 6, 7, 8, 9, 10, 11, 12], nearMonths: [3, 5], seasonLabel: "été – hiver" },
+  brocoli: { months: [1, 2, 6, 7, 8, 9, 10, 11, 12], nearMonths: [3, 5], seasonLabel: "été – hiver" },
+  concombre: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  courgette: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  courge: { months: [1, 2, 6, 7, 8, 9, 10, 11, 12], nearMonths: [3, 5], seasonLabel: "été – hiver" },
+  "haricot-vert": { months: [1, 2, 6, 7, 8, 9, 10, 11, 12], nearMonths: [3, 5], seasonLabel: "été – hiver" },
+  poivron: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  "maïs-doux": { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "été" },
+  "chou-fleur": { months: [1, 2, 9, 10, 11, 12], nearMonths: [3, 8], seasonLabel: "automne – hiver" },
+  betterave: { months: [1, 2, 9, 10, 11, 12], nearMonths: [3, 8], seasonLabel: "automne – hiver" },
+  "chou-blanc": { months: [9, 10, 11], nearMonths: [1, 2, 8, 12], seasonLabel: "automne" },
+};
+
 const hungaryNovenytarSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   abricot: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
   amande: {
@@ -2660,6 +2703,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.LT = {
       ...lithuaniaEcMaritimeSeasonOverrides[item.id],
       sourceIds: ["lithuania-ec-maritime-calendar", "ec-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (romaniaEcTemperateSeasonOverrides[item.id]) {
+    countries.RO = {
+      ...romaniaEcTemperateSeasonOverrides[item.id],
+      sourceIds: ["romania-ec-temperate-calendar", "ec-calendar"],
       confidence: "source",
     };
   }

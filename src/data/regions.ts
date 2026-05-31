@@ -213,6 +213,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["denmark-foedevarestyrelsen-season-posters"],
   },
+  FI: {
+    labels: {
+      fr: "Finlande: guide Luontoon des aliments de saison par grandes periodes; utile pour une lecture nationale pratique, pas une precision mensuelle agricole.",
+      en: "Finland: Luontoon guide to seasonal foods by broad season; useful as practical national guidance, not month-level agricultural precision.",
+      es: "Finlandia: guia Luontoon de alimentos de temporada por grandes estaciones; util como orientacion nacional practica, no precision agricola mensual.",
+      de: "Finnland: Luontoon-Leitfaden zu saisonalen Lebensmitteln nach groben Jahreszeiten; praktische nationale Orientierung, keine monatsscharfe Agrarprognose.",
+      it: "Finlandia: guida Luontoon agli alimenti di stagione per grandi periodi; utile come orientamento nazionale pratico, non precisione agricola mensile.",
+      pt: "Finlandia: guia Luontoon de alimentos sazonais por grandes epocas; util como orientacao nacional pratica, nao precisao agricola mensal.",
+    },
+    sourceIds: ["finland-luontoon-seasonal-food"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

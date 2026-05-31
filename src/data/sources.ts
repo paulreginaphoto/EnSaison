@@ -107,6 +107,10 @@ export const dataSources = {
     label: "Plodovi.hr Croatian seasonal fruit and vegetable calendar",
     url: "https://plodovi.hr/novosti/kalendar-sezonskog-voca-i-povrca",
   },
+  "finland-luontoon-seasonal-food": {
+    label: "Luontoon Finnish seasonal outdoor food guide",
+    url: "https://www.luontoon.fi/sv/aktiviteter/vandring-och-friluftsliv/tips/friluftsmat/friluftsmat-enligt-sasong",
+  },
   "swiss-blw-season-table": {
     label: "Swiss Federal Office for Agriculture seasonal fruit and vegetable table",
     url: "https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf",

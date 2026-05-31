@@ -1390,6 +1390,43 @@ const denmarkFoodAgencySeasonOverrides: Record<string, NonNullable<NonNullable<S
   topinambour: { months: [1, 2, 3, 4, 11], nearMonths: [5, 10, 12], seasonLabel: "nov. – avr." },
 };
 
+const czechMzeHarvestSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  abricot: { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  asperge: { months: [4, 5, 6], nearMonths: [3, 7], seasonLabel: "avr. – juin" },
+  betterave: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct." },
+  brocoli: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct." },
+  carotte: { months: [6, 7, 8, 9], nearMonths: [5, 10], seasonLabel: "juin – sept." },
+  cassis: { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  "céleri-rave": { months: [7, 8, 9, 10, 11], nearMonths: [6, 12], seasonLabel: "juil. – nov." },
+  cerise: { months: [6, 7], nearMonths: [5, 8], seasonLabel: "juin – juil." },
+  "chou-blanc": { months: [7, 8, 9, 10, 11], nearMonths: [6, 12], seasonLabel: "juil. – nov." },
+  "chou-fleur": { months: [7, 8, 9, 10, 11], nearMonths: [6, 12], seasonLabel: "juil. – nov." },
+  "chou-rave": { months: [5, 6, 7, 8, 9, 10, 11], nearMonths: [4, 12], seasonLabel: "mai – nov." },
+  concombre: { months: [6, 7, 8, 9], nearMonths: [5, 10], seasonLabel: "juin – sept." },
+  courge: { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
+  courgette: { months: [6, 7, 8, 9], nearMonths: [5, 10], seasonLabel: "juin – sept." },
+  fraise: { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
+  framboise: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  groseille: { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  "haricot-vert": { months: [6, 7, 8, 9], nearMonths: [5, 10], seasonLabel: "juin – sept." },
+  laitue: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], seasonLabel: "mai – oct." },
+  melon: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  mure: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  oignon: { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept." },
+  peche: { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+  "petit-pois": { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  poire: { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+  poireau: { months: [6, 7, 8, 9, 10, 11], nearMonths: [5, 12], seasonLabel: "juin – nov." },
+  poivron: { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+  pomme: { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+  "pomme-de-terre": { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
+  prune: { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+  radis: { months: [4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [3, 12], seasonLabel: "avr. – nov." },
+  rhubarbe: { months: [5, 6], nearMonths: [4, 7], seasonLabel: "mai – juin" },
+  tomate: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct." },
+  ail: { months: [6, 7], nearMonths: [5, 8], seasonLabel: "juin – juil." },
+};
+
 const portugalGppSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   abricot: { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
   amande: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
@@ -1686,6 +1723,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.DK = {
       ...denmarkFoodAgencySeasonOverrides[item.id],
       sourceIds: ["denmark-foedevarestyrelsen-season-posters"],
+      confidence: "source",
+    };
+  }
+
+  if (czechMzeHarvestSeasonOverrides[item.id]) {
+    countries.CZ = {
+      ...czechMzeHarvestSeasonOverrides[item.id],
+      sourceIds: ["czech-mze-harvest-storage-calendar"],
       confidence: "source",
     };
   }

@@ -191,6 +191,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["foodland-ontario-availability"],
   },
+  CZ: {
+    labels: {
+      fr: "Tchequie: calendrier MZe 2026 des periodes de maturation, recolte et stockage pour fruits, legumes et pommes de terre cultives en Republique tcheque.",
+      en: "Czechia: 2026 MZe calendar for ripening, harvest and storage periods of fruits, vegetables and potatoes grown in the Czech Republic.",
+      es: "Chequia: calendario MZe 2026 de maduracion, cosecha y almacenamiento de frutas, verduras y patatas cultivadas en la Republica Checa.",
+      de: "Tschechien: MZe-Kalender 2026 fuer Reife-, Ernte- und Lagerzeiten von in Tschechien angebautem Obst, Gemuese und Kartoffeln.",
+      it: "Cechia: calendario MZe 2026 dei periodi di maturazione, raccolta e conservazione di frutta, verdura e patate coltivate nella Repubblica Ceca.",
+      pt: "Chequia: calendario MZe 2026 de maturacao, colheita e armazenamento de frutas, legumes e batatas cultivados na Republica Checa.",
+    },
+    sourceIds: ["czech-mze-harvest-storage-calendar"],
+  },
   DK: {
     labels: {
       fr: "Danemark: affiches mensuelles officielles de la Fødevarestyrelsen pour un echantillon de fruits et legumes de saison.",

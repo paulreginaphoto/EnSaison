@@ -140,6 +140,7 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "ananas", name: "Ananas", names: { en: "Pineapple", es: "Piña", de: "Ananas", it: "Ananas", pt: "Abacaxi" }, category: "fruit", icon: "fruit-round", months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l’année", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
   { id: "mangue", name: "Mangue", names: { en: "Mango", es: "Mango", de: "Mango", it: "Mango", pt: "Manga" }, category: "fruit", icon: "fruit-stone", months: [4, 5, 6, 7], nearMonths: [3, 8], seasonLabel: "avr. – juil.", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
   { id: "goyave", name: "Goyave", names: { en: "Guava", es: "Guayaba", de: "Guave", it: "Guava", pt: "Goiaba" }, category: "fruit", icon: "fruit-round", months: [7, 8, 9, 11, 12, 1, 2], nearMonths: [6, 10, 3], seasonLabel: "juil. – sept., nov. – févr.", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
+  { id: "jacquier", name: "Jacquier", names: { en: "Jackfruit", es: "Yaca", de: "Jackfrucht", it: "Giaca", pt: "Jaca" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "bangladesh-banglapedia-fruit"], confidence: "source" },
   { id: "papaye", name: "Papaye", names: { en: "Papaya", es: "Papaya", de: "Papaya", it: "Papaya", pt: "Mamão" }, category: "fruit", icon: "fruit-round", months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l’année", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
   { id: "litchi", name: "Litchi", names: { en: "Lychee", es: "Lichi", de: "Litschi", it: "Litchi", pt: "Lichia" }, category: "fruit", icon: "fruit-berry", months: [5, 6], nearMonths: [4, 7], seasonLabel: "mai – juin", sourceIds: ["india-nhb-litchi", "fao-crop-calendar"], confidence: "source" },
   { id: "carambola", name: "Carambole", names: { en: "Starfruit", es: "Carambola", de: "Sternfrucht", it: "Carambola", pt: "Carambola" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
@@ -698,6 +699,43 @@ const pakistanPhdecSeasonOverrides: Record<string, NonNullable<NonNullable<Seaso
   "pomme-de-terre": { months: [12, 1, 2, 3, 4], nearMonths: [11, 5], seasonLabel: "déc. – avr." },
   raisin: { months: [6, 7, 8, 9, 10, 11], nearMonths: [5, 12], seasonLabel: "juin – nov." },
   tomate: { months: [10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [9, 6], seasonLabel: "oct. – mai" },
+};
+
+const bangladeshSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  ail: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  ananas: { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil.", sourceIds: ["bangladesh-apo-postharvest-fruit-vegetables", "bangladesh-bamis-crop-weather-calendar"] },
+  aubergine: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons", "bangladesh-bamis-crop-weather-calendar"] },
+  banane: { months: [9, 10, 12, 1, 2], nearMonths: [8, 11, 3], seasonLabel: "pics sept. – oct., déc. – févr.", sourceIds: ["bangladesh-apo-postharvest-fruit-vegetables", "bangladesh-bamis-crop-weather-calendar"] },
+  blé: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons", "bangladesh-bamis-crop-weather-calendar"] },
+  carotte: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  "chou-blanc": { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  "chou-fleur": { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  coriandre: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  courge: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons", "bangladesh-bamis-crop-weather-calendar"] },
+  "épinard": { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  goyave: { months: [3, 4, 5, 11, 12], nearMonths: [2, 6, 10, 1], seasonLabel: "floraison mars – mai, nov. – déc.", sourceIds: ["bangladesh-apo-postharvest-fruit-vegetables", "bangladesh-banglapedia-fruit"] },
+  "haricot-vert": { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  jacquier: { months: [4, 5, 6, 7], nearMonths: [3, 8], seasonLabel: "mi-avr. – mi-juil.", sourceIds: ["bangladesh-apo-postharvest-fruit-vegetables", "bangladesh-banglapedia-fruit"] },
+  laitue: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  lentille: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons", "bangladesh-bamis-crop-weather-calendar"] },
+  litchi: { months: [5, 6], nearMonths: [4, 7], seasonLabel: "mi-mai – mi-juin", sourceIds: ["bangladesh-apo-postharvest-fruit-vegetables", "bangladesh-bamis-crop-weather-calendar"] },
+  mangue: { months: [4, 5, 6], nearMonths: [3, 7], seasonLabel: "mi-avr. – mi-juin", sourceIds: ["bangladesh-apo-postharvest-fruit-vegetables", "bangladesh-bamis-crop-weather-calendar"] },
+  melon: { months: [3, 4, 5, 6], nearMonths: [2, 7], seasonLabel: "mi-mars – mi-juin", sourceIds: ["bangladesh-apo-postharvest-fruit-vegetables"] },
+  moutarde: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons", "bangladesh-bamis-crop-weather-calendar"] },
+  navet: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  oignon: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons", "bangladesh-bamis-crop-weather-calendar"] },
+  orge: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  papaye: { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août", sourceIds: ["bangladesh-apo-postharvest-fruit-vegetables", "bangladesh-bamis-crop-weather-calendar"] },
+  pastèque: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  "patate-douce": { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  "petit-pois": { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  piment: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons", "bangladesh-bamis-crop-weather-calendar"] },
+  "pomme-de-terre": { months: [1, 2, 3, 10, 11, 12], nearMonths: [4, 9], seasonLabel: "oct. – mars", sourceIds: ["bangladesh-apo-postharvest-fruit-vegetables", "bangladesh-banglapedia-crop-seasons", "bangladesh-bamis-crop-weather-calendar"] },
+  "pois-chiche": { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  radis: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons"] },
+  riz: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "plusieurs saisons", seasonMode: "year-round", sourceIds: ["bangladesh-bamis-crop-weather-calendar", "bangladesh-banglapedia-crop-seasons"] },
+  soja: { months: [11, 12, 1, 2, 3, 4, 5], nearMonths: [10, 6], seasonLabel: "rabi et kharif 1", sourceIds: ["bangladesh-bamis-crop-weather-calendar"] },
+  tomate: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "rabi (nov. – mars)", sourceIds: ["bangladesh-banglapedia-crop-seasons", "bangladesh-bamis-crop-weather-calendar"] },
 };
 
 const franceProduceOverrideIds = new Set([
@@ -2816,6 +2854,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.PK = {
       ...pakistanPhdecSeasonOverrides[item.id],
       sourceIds: pakistanPhdecSeasonOverrides[item.id]?.sourceIds ?? ["pakistan-phdec-horticulture-introduction"],
+      confidence: "source",
+    };
+  }
+
+  if (bangladeshSeasonOverrides[item.id]) {
+    countries.BD = {
+      ...bangladeshSeasonOverrides[item.id],
+      sourceIds: bangladeshSeasonOverrides[item.id]?.sourceIds ?? ["bangladesh-bamis-crop-weather-calendar"],
       confidence: "source",
     };
   }

@@ -184,6 +184,22 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["belgium-vlaanderen-vlam-season-calendar"],
   },
+  BD: {
+    labels: {
+      fr: "Bangladesh: calendriers BAMIS du Department of Agricultural Extension et saisons agricoles Banglapedia; les fenetres restent nationales et peuvent varier selon district, mousson, variete et irrigation.",
+      en: "Bangladesh: BAMIS Department of Agricultural Extension crop calendars and Banglapedia agricultural seasons; windows are national and can vary by district, monsoon, variety and irrigation.",
+      es: "Bangladesh: calendarios de cultivos BAMIS del Department of Agricultural Extension y estaciones agricolas de Banglapedia; las ventanas son nacionales y pueden variar por distrito, monzon, variedad e irrigacion.",
+      de: "Bangladesch: BAMIS-Anbaukalender des Department of Agricultural Extension und Banglapedia-Agrarsaisons; die Fenster sind national und koennen je nach Distrikt, Monsun, Sorte und Bewaesserung variieren.",
+      it: "Bangladesh: calendari colturali BAMIS del Department of Agricultural Extension e stagioni agricole Banglapedia; le finestre sono nazionali e possono variare per distretto, monsone, varieta e irrigazione.",
+      pt: "Bangladesh: calendarios de culturas BAMIS do Department of Agricultural Extension e epocas agricolas da Banglapedia; as janelas sao nacionais e podem variar por distrito, moncao, variedade e irrigacao.",
+    },
+    sourceIds: [
+      "bangladesh-bamis-crop-weather-calendar",
+      "bangladesh-banglapedia-crop-seasons",
+      "bangladesh-banglapedia-fruit",
+      "bangladesh-apo-postharvest-fruit-vegetables",
+    ],
+  },
   BR: {
     labels: {
       fr: "Bresil: table CEAGESP 2026 de quantites ETSP, utile pour un signal de marche de Sao Paulo; pas une precision Etat par Etat.",

@@ -127,6 +127,22 @@ export const dataSources = {
     label: "Pakistan Bureau of Statistics approved rabi crop calendar",
     url: "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_14_approved_crop_calendar_rabi.pdf",
   },
+  "bangladesh-bamis-crop-weather-calendar": {
+    label: "Bangladesh BAMIS Department of Agricultural Extension crop weather calendar",
+    url: "https://www.bamis.gov.bd/en/calendar",
+  },
+  "bangladesh-banglapedia-crop-seasons": {
+    label: "Banglapedia agricultural crop seasons in Bangladesh",
+    url: "https://en.banglapedia.org/index.php/Crop",
+  },
+  "bangladesh-banglapedia-fruit": {
+    label: "Banglapedia major fruits of Bangladesh",
+    url: "https://en.banglapedia.org/index.php?title=Fruit",
+  },
+  "bangladesh-apo-postharvest-fruit-vegetables": {
+    label: "APO/FAO postharvest management country paper with Bangladesh fruit and vegetable harvest windows",
+    url: "https://www.apo-tokyo.org/wp-content/uploads/2015/11/e-edition_Postharvest-MGT-of-Fruit-and-Vegetables.pdf",
+  },
   "denmark-foedevarestyrelsen-season-posters": {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",

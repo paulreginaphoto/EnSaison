@@ -51,6 +51,14 @@ export const dataSources = {
     label: "European Commission San Marino customs union and preferential arrangements",
     url: "https://taxation-customs.ec.europa.eu/san-marino-customs-unions-and-preferential-arrangements_en",
   },
+  "vatican-state-enclave-supplies": {
+    label: "Vatican City State enclave and supply relations note",
+    url: "https://www.vaticanstate.va/en/state-and-government/international-relations/diplomatic-relations.html",
+  },
+  "vatican-italy-customs-cooperation": {
+    label: "Vatican City State and Italian Customs cooperation protocol",
+    url: "https://www.vaticanstate.va/en/news/1563-the-governorate-and-the-customs-and-monopolies-agency-of-the-italian-republic-sign-a-protocol-of-cooperation.html",
+  },
   "spain-mapa-fruit-calendar": {
     label: "Spanish Ministry of Agriculture seasonal fruit calendar",
     url: "https://www.mapa.gob.es/es/alimentacion/temas/desperdicio/12calendario_frutas_completo_tcm30-623768.pdf",

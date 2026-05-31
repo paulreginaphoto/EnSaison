@@ -431,6 +431,21 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["italy-crea-seasonal-produce", "san-marino-eu-customs-union"],
   },
+  VA: {
+    labels: {
+      fr: "Vatican: proxy Rome/Italie utilise prudemment, car l'Etat est une enclave et ses approvisionnements passent par des relations avec l'Italie; ce n'est pas un calendrier agricole national du Vatican.",
+      en: "Vatican City: Rome/Italy proxy used cautiously, because the State is an enclave and its supplies depend on relations with Italy; this is not a Vatican national harvest calendar.",
+      es: "Ciudad del Vaticano: proxy Roma/Italia usado con cautela, porque el Estado es un enclave y sus suministros dependen de relaciones con Italia; no es un calendario agricola nacional vaticano.",
+      de: "Vatikanstadt: Rom-/Italien-Proxy mit Vorsicht genutzt, weil der Staat eine Enklave ist und seine Versorgung von Beziehungen zu Italien abhaengt; kein nationaler vatikanischer Erntekalender.",
+      it: "Citta del Vaticano: proxy Roma/Italia usato con cautela, perche lo Stato e un'enclave e i suoi approvvigionamenti dipendono dai rapporti con l'Italia; non e un calendario agricolo nazionale vaticano.",
+      pt: "Cidade do Vaticano: proxy Roma/Italia usado com cautela, porque o Estado e um enclave e o abastecimento depende de relacoes com a Italia; nao e um calendario agricola nacional vaticano.",
+    },
+    sourceIds: [
+      "italy-crea-seasonal-produce",
+      "vatican-state-enclave-supplies",
+      "vatican-italy-customs-cooperation",
+    ],
+  },
   LT: {
     labels: {
       fr: "Lituanie: calendrier Commission europeenne en lituanien, section climat maritime incluant explicitement la Lituanie; source par grandes saisons, pas calendrier agricole national mois par mois.",

@@ -516,6 +516,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["poland-kowr-conscious-consumer-guide"],
   },
+  PK: {
+    labels: {
+      fr: "Pakistan: fenetres nationales PHDEC pour fruits et legumes majeurs, completees prudemment par le calendrier rabi PBS; les saisons varient selon province, altitude, stockage et irrigation.",
+      en: "Pakistan: PHDEC national windows for major fruit and vegetables, cautiously complemented by the PBS rabi crop calendar; seasons vary by province, altitude, storage and irrigation.",
+      es: "Pakistan: ventanas nacionales de PHDEC para frutas y verduras principales, complementadas con cautela por el calendario rabi de PBS; las temporadas varian por provincia, altitud, almacenamiento e irrigacion.",
+      de: "Pakistan: nationale PHDEC-Fenster fuer wichtige Obst- und Gemuesearten, vorsichtig ergaenzt durch den PBS-Rabi-Anbaukalender; Saisons variieren nach Provinz, Hoehe, Lagerung und Bewaesserung.",
+      it: "Pakistan: finestre nazionali PHDEC per i principali prodotti ortofrutticoli, integrate con cautela dal calendario rabi PBS; le stagioni variano per provincia, altitudine, conservazione e irrigazione.",
+      pt: "Paquistao: janelas nacionais da PHDEC para frutas e legumes principais, complementadas com cautela pelo calendario rabi do PBS; as epocas variam por provincia, altitude, armazenamento e irrigacao.",
+    },
+    sourceIds: ["pakistan-phdec-horticulture-introduction", "pakistan-pbs-rabi-crop-calendar"],
+  },
   RO: {
     labels: {
       fr: "Roumanie: calendrier Commission europeenne en roumain, section climat tempere incluant explicitement la Roumanie; source par grandes saisons, pas calendrier agricole national mois par mois.",

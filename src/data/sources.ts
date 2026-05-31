@@ -119,6 +119,14 @@ export const dataSources = {
     label: "Vegetables.co.nz New Zealand grown vegetables seasonability chart",
     url: "https://www.vegetables.co.nz/assets/Vegetables-co-nz/resources/garden-to-table/A3-SEASONABILITY-CHART-2021-WEB.pdf",
   },
+  "pakistan-phdec-horticulture-introduction": {
+    label: "Pakistan Horticulture Development & Export Company major fruits and vegetables windows",
+    url: "https://phdec.gov.pk/introduction/",
+  },
+  "pakistan-pbs-rabi-crop-calendar": {
+    label: "Pakistan Bureau of Statistics approved rabi crop calendar",
+    url: "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_14_approved_crop_calendar_rabi.pdf",
+  },
   "denmark-foedevarestyrelsen-season-posters": {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",

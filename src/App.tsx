@@ -42,6 +42,9 @@ const validCategories = new Set<CategoryGroup>([
   "fruit",
   "vegetable",
   "mushroom",
+  "protein",
+  "sea",
+  "pantry",
 ]);
 const validViews = new Set<SeasonView>(["now", "all", "out"]);
 const validCountries = new Set(countryOptions.map((country) => country.code));

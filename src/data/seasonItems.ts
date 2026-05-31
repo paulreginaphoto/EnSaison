@@ -3919,20 +3919,6 @@ const withCountryOverrides = (item: SeasonItem): SeasonItem => {
   };
 };
 
-const produceCatalogCategories = new Set<SeasonItem["category"]>([
-  "allium",
-  "fruit",
-  "herb",
-  "legume",
-  "mushroom",
-  "tuber",
-  "vegetable",
-]);
-
-const isMvpProduceItem = (item: SeasonItem) =>
-  produceCatalogCategories.has(item.category) &&
-  !(item.confidence === "taxonomy" && !item.countries && !item.profiles);
-
 export const seasonItems: SeasonItem[] = [
   ...romandieSeasonItems.map((item) => ({
     ...item,
@@ -3941,4 +3927,4 @@ export const seasonItems: SeasonItem[] = [
   })),
   ...globalStaples,
   ...worldwideFoodTaxonomyItems,
-].map(withCountryOverrides).filter(isMvpProduceItem);
+].map(withCountryOverrides);

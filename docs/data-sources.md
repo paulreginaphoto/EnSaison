@@ -94,6 +94,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Luxembourg Ministry of Agriculture 2024 regional seasonal calendar
   https://agriculture.public.lu/de/veroeffentlichungen/ernaehrung/saisonkalender.html
 
+- BB-Team practical guide to seasonal fruit and vegetables in Bulgaria
+  https://www.bb-team.org/articles/4522_sezonni-plodove-i-zelenchuci-v-bulgaria
+
 - Swiss Federal Office for Agriculture seasonal fruit and vegetable table
   https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf
 
@@ -142,7 +145,7 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 276 food entries after the Luxembourg regional-season expansion pass;
+- 278 food entries after the Bulgaria broad-season expansion pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
 - country overrides for 43 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
@@ -161,6 +164,7 @@ The app now supports:
 - Malta now has source-backed AgroKatina local fruit and vegetable overrides for 30 items already present in the catalogue, using green local-fresh cells as in-season and purple greenhouse cells as near-season where the calendar marks them;
 - Cyprus now has source-backed Miresda supplier-calendar overrides for 34 fruit, citrus, herb and vegetable items already present in the catalogue; this is practical local supply guidance from a Cyprus distributor, not a government harvest calendar;
 - Luxembourg now has source-backed Ministry of Agriculture 2024 regional seasonal-calendar overrides for 52 fruit, vegetable and nut items, distinguishing fresh regional produce from stored availability; Damson plum / quetsche was added to the catalogue to match the Luxembourg calendar;
+- Bulgaria now has source-backed BB-Team practical broad-season overrides for 41 common fruit, vegetable and legume items, plus sorrel and nettle were added to match the Bulgarian table; this is a local practical guide, not a government calendar or month-level agricultural forecast;
 - Greece now has source-backed Food For Health month-by-month overrides for 52 fruit, vegetable, herb and mushroom items already present in the catalogue, plus 4 new globally localized fruit entries; this is national nutrition guidance cross-checked with the European Commission Mediterranean profile, not a government agricultural calendar;
 - Hungary now has source-backed Novenytar month-by-month overrides for 52 fruit, vegetable, herb, legume and nut items already present in the catalogue; this is a practical Hungarian plant-season table, not a government agricultural calendar or county-level forecast;
 - Germany now has source-backed BZfE seasonal overrides for 40 produce items already present in the catalogue, while remaining German produce still falls back to indicative European regional data;

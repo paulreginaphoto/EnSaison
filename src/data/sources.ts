@@ -131,6 +131,10 @@ export const dataSources = {
     label: "Luxembourg Ministry of Agriculture 2024 regional seasonal calendar",
     url: "https://agriculture.public.lu/de/veroeffentlichungen/ernaehrung/saisonkalender.html",
   },
+  "bulgaria-bbteam-season-guide": {
+    label: "BB-Team practical guide to seasonal fruit and vegetables in Bulgaria",
+    url: "https://www.bb-team.org/articles/4522_sezonni-plodove-i-zelenchuci-v-bulgaria",
+  },
   "swiss-blw-season-table": {
     label: "Swiss Federal Office for Agriculture seasonal fruit and vegetable table",
     url: "https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf",

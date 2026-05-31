@@ -180,6 +180,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["brazil-ceagesp-seasonality"],
   },
+  BG: {
+    labels: {
+      fr: "Bulgarie: guide pratique BB-Team des fruits et legumes de saison par grandes saisons; source locale utile, pas calendrier gouvernemental ni precision mensuelle agricole.",
+      en: "Bulgaria: BB-Team practical guide to seasonal fruit and vegetables by broad season; useful local source, not a government calendar or month-level agricultural precision.",
+      es: "Bulgaria: guia practica BB-Team de frutas y verduras de temporada por grandes estaciones; fuente local util, no calendario gubernamental ni precision agricola mensual.",
+      de: "Bulgarien: praktischer BB-Team-Leitfaden zu saisonalem Obst und Gemuese nach breiten Jahreszeiten; nutzliche lokale Quelle, kein Regierungskalender und keine monatliche Agrargenauigkeit.",
+      it: "Bulgaria: guida pratica BB-Team a frutta e verdura stagionali per grandi stagioni; fonte locale utile, non calendario governativo ne precisione agricola mensile.",
+      pt: "Bulgaria: guia pratico BB-Team de frutas e legumes sazonais por grandes estacoes; fonte local util, nao calendario governamental nem precisao agricola mensal.",
+    },
+    sourceIds: ["bulgaria-bbteam-season-guide"],
+  },
   CA: {
     labels: {
       fr: "Canada: donnees Foodland Ontario source-backed pour les produits frais presents dans le catalogue; cela ne remplace pas une precision province par province.",

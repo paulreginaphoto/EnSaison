@@ -273,6 +273,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["portugal-gpp-plant-products"],
   },
+  PL: {
+    labels: {
+      fr: "Pologne: guide KOWR Kupuj Swiadomie 2025 pour fruits et legumes, mappe par grandes saisons avec stockage et conservation; moins precis qu'un calendrier mois par mois.",
+      en: "Poland: KOWR Kupuj Swiadomie 2025 fruit and vegetable guide, mapped by broad seasons with storage and preservation; less precise than a month-by-month calendar.",
+      es: "Polonia: guia KOWR Kupuj Swiadomie 2025 de frutas y verduras, mapeada por grandes estaciones con almacenamiento y conservacion; menos precisa que un calendario mensual.",
+      de: "Polen: KOWR-Kupuj-Swiadomie-Leitfaden 2025 fur Obst und Gemuse, nach breiten Jahreszeiten mit Lagerung und Konservierung abgebildet; weniger genau als ein Monatskalender.",
+      it: "Polonia: guida KOWR Kupuj Swiadomie 2025 per frutta e verdura, mappata per grandi stagioni con conservazione; meno precisa di un calendario mensile.",
+      pt: "Polonia: guia KOWR Kupuj Swiadomie 2025 de frutas e legumes, mapeado por grandes estacoes com armazenamento e conservacao; menos preciso que um calendario mensal.",
+    },
+    sourceIds: ["poland-kowr-conscious-consumer-guide"],
+  },
   SE: {
     labels: {
       fr: "Suede: guide ICA des legumes, fruits et baies suedoises de saison; utile comme guide national pratique, pas une source gouvernementale ni une precision regionale.",

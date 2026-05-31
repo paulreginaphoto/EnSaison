@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import {
   ArrowRight,
   CalendarDays,
-  Grid2X2,
   Heart,
   Leaf,
   MapPin,
@@ -30,7 +29,7 @@ import { dataSources } from "./data/sources";
 import { seasonItems } from "./data/seasonItems";
 import { getItemName, getSeasonStatus, normalizeSearch, resolveSeason } from "./lib/season";
 import { t } from "./i18n";
-import type { CategoryGroup, Locale, SeasonCategory, SeasonStatus, SeasonView } from "./types";
+import type { CategoryGroup, Locale, SeasonCategory, SeasonView } from "./types";
 
 const defaultCountry = "CH";
 const defaultLocale: Locale = "fr";
@@ -94,12 +93,6 @@ const categoryArt: Record<
     accentClass: "category-card-mushroom",
     icon: Sprout,
   },
-};
-
-const statusAccentClasses: Record<Exclude<SeasonStatus, "variable">, string> = {
-  "in-season": "badge-in-season",
-  soon: "badge-soon",
-  out: "badge-out",
 };
 
 const heroIntros: Record<Locale, string> = {
@@ -294,11 +287,6 @@ function MainPage() {
           ? copy.outSeason
           : copy.all;
   const statusViews: SeasonView[] = ["now", "all", "out"];
-  const statusTotals = {
-    "in-season": dashboardItems.filter(({ status }) => status === "in-season").length,
-    soon: dashboardItems.filter(({ status }) => status === "soon").length,
-    out: dashboardItems.filter(({ status }) => status === "out").length,
-  };
   const categorySummaries = featureCategories.map((category) => {
     const allowedCategories = categoryGroups[category] ?? [];
     const items = dashboardItems.filter(({ item }) =>
@@ -361,49 +349,22 @@ function MainPage() {
               <h2 className="hero-title" id="dashboard-title">
                 {copy.chooseNow}
               </h2>
-              <p className="hero-description">
-                {selectedCountryDataScope?.labels[locale] ?? copy.dataNote}
-              </p>
+              <p className="hero-description">{heroIntros[locale]}</p>
               <div className="hero-actions">
                 <a className="hero-cta" href="#season-results">
                   <Sprout aria-hidden="true" className="h-5 w-5" />
-                  {copy.seasonal}
+                  {locale === "fr" ? "Voir les produits de saison" : copy.seasonal}
                   <ArrowRight aria-hidden="true" className="h-5 w-5" />
                 </a>
-                <span className="hero-count">
-                  {visibleItems.length} {copy.matchingFoods}
-                </span>
               </div>
             </div>
 
             <div className="hero-art" aria-hidden="true">
               <div className="hero-photo-window">
                 <img src={heroMarketImage} alt="" />
-                <div className="hero-photo-badge">
-                  <Grid2X2 className="h-4 w-4" aria-hidden="true" />
-                  <span>{heroIntros[locale]}</span>
-                </div>
               </div>
             </div>
           </article>
-
-          <aside className="side-bento" aria-label={`${copy.country} ${copy.month}`}>
-            <div className="availability-card">
-              <span className="panel-label">{copy.profilePrefix}</span>
-              <strong>{selectedProfile.labels[locale]}</strong>
-              <p>{selectedProfile.confidenceLabel[locale].toLowerCase()}</p>
-            </div>
-
-            <div className="status-grid" aria-label="Statuts saisonniers">
-              {(["in-season", "soon", "out"] as const).map((status) => (
-                <div className="status-card" key={status}>
-                  <span className={`status-dot ${statusAccentClasses[status]}`} />
-                  <strong>{statusTotals[status]}</strong>
-                  <span>{copy.statuses[status]}</span>
-                </div>
-              ))}
-            </div>
-          </aside>
         </section>
 
         <section className="category-bento" aria-label="Catégories rapides">
@@ -434,13 +395,6 @@ function MainPage() {
         </section>
 
         <section className="filter-panel" aria-label="Filtres rapides">
-          <SearchBar
-            label={copy.search}
-            placeholder={copy.search}
-            value={search}
-            clearLabel={copy.clearSearch}
-            onChange={setSearch}
-          />
           <CategoryTabs
             labels={copy.categoryGroups}
             selectedCategory={selectedCategory}
@@ -463,6 +417,13 @@ function MainPage() {
             })}
           </div>
           <SeasonLegend labels={copy.statuses} />
+          <SearchBar
+            label={copy.search}
+            placeholder={copy.search}
+            value={search}
+            clearLabel={copy.clearSearch}
+            onChange={setSearch}
+          />
         </section>
 
         <div className="results-grid" id="season-results">

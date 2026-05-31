@@ -587,6 +587,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["south-africa-heleen-meyer-season-guide"],
   },
+  TR: {
+    labels: {
+      fr: "Turquie: calendrier mensuel MEB/MEGEP des fruits et legumes avec colonnes maintenant, bientot et fin de saison; source pedagogique nationale, pas prevision agricole regionale.",
+      en: "Turkey: MEB/MEGEP monthly fruit and vegetable calendar with now, coming soon and leaving-season columns; national training material, not a regional agricultural forecast.",
+      es: "Turquia: calendario mensual MEB/MEGEP de frutas y verduras con columnas ahora, pronto y fin de temporada; material pedagogico nacional, no prevision agricola regional.",
+      de: "Tuerkei: monatlicher MEB/MEGEP-Kalender fuer Obst und Gemuese mit Jetzt-, Bald- und Saisonende-Spalten; nationales Schulungsmaterial, keine regionale Agrarprognose.",
+      it: "Turchia: calendario mensile MEB/MEGEP di frutta e verdura con colonne ora, presto e fine stagione; materiale formativo nazionale, non previsione agricola regionale.",
+      pt: "Turquia: calendario mensal MEB/MEGEP de frutas e legumes com colunas agora, em breve e fim de epoca; material pedagogico nacional, nao previsao agricola regional.",
+    },
+    sourceIds: ["turkey-meb-megep-produce-sales-calendar"],
+  },
   RO: {
     labels: {
       fr: "Roumanie: calendrier Commission europeenne en roumain, section climat tempere incluant explicitement la Roumanie; source par grandes saisons, pas calendrier agricole national mois par mois.",

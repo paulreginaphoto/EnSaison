@@ -159,6 +159,10 @@ export const dataSources = {
     label: "Heleen Meyer fruit and veggies in season in South Africa",
     url: "https://heleenmeyer.co.za/tips-tools/fruit-veggies-in-season-in-south-africa/",
   },
+  "turkey-meb-megep-produce-sales-calendar": {
+    label: "Turkish Ministry of National Education MEGEP vegetable and fruit sales module season calendar",
+    url: "https://www.megep.meb.gov.tr/mte_program_modul/moduller_pdf/Sebze%20Ve%20Meyve%20Sat%C4%B1%C5%9F%C4%B1.pdf",
+  },
   "denmark-foedevarestyrelsen-season-posters": {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",

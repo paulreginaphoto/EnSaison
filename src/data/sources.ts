@@ -171,6 +171,10 @@ export const dataSources = {
     label: "Argentina Agriculture seasonal fruit and vegetable guide",
     url: "https://www.argentina.gob.ar/agricultura/mas-frutas-y-verduras/recomendaciones/las-frutas-y-verduras-de-estacion-son-las-mas-sabrosas-y-nutritivas",
   },
+  "peru-agromercado-harvest-calendar": {
+    label: "Peru MIDAGRI / Agromercado harvest calendar for 17 key products",
+    url: "https://www.gob.pe/institucion/agromercado/informes-publicaciones/7535756-calendario-de-cosecha-de-17-productos-claves-para-la-planificacion-comercial",
+  },
   "denmark-foedevarestyrelsen-season-posters": {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",

@@ -1154,6 +1154,33 @@ const argentinaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonIte
   peche: { months: [12, 1, 2], nearMonths: [], seasonLabel: "dec. – fevr." },
 };
 
+const peruAgromercadoHarvestOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  lait: { months: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [1], seasonLabel: "fevr. – dec." },
+  fromage: { months: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [1], seasonLabel: "fevr. – dec." },
+  yaourt: { months: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [1], seasonLabel: "fevr. – dec." },
+  riz: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'annee", seasonMode: "year-round" },
+  "haricot-sec": { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – dec." },
+  lentille: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – dec." },
+  "pois-chiche": { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – dec." },
+  quinoa: { months: [4, 5, 6, 9, 10, 11, 12], nearMonths: [3, 7, 8], seasonLabel: "avr. – juin, sept. – dec." },
+  mangue: { months: [12, 1, 2, 3], nearMonths: [4, 11], seasonLabel: "dec. – mars" },
+  raisin: { months: [1, 2, 3, 9, 10, 11, 12], nearMonths: [4, 8], seasonLabel: "janv. – mars, sept. – dec." },
+  citron: { months: [2, 3, 4, 5, 6, 7, 8, 9, 10], nearMonths: [1, 11], seasonLabel: "fevr. – oct." },
+  mandarine: { months: [2, 3, 4, 5, 6, 7, 8, 9, 10], nearMonths: [1, 11], seasonLabel: "fevr. – oct." },
+  orange: { months: [2, 3, 4, 5, 6, 7, 8, 9, 10], nearMonths: [1, 11], seasonLabel: "fevr. – oct." },
+  pamplemousse: { months: [2, 3, 4, 5, 6, 7, 8, 9, 10], nearMonths: [1, 11], seasonLabel: "fevr. – oct." },
+  grenade: { months: [2, 3, 4, 5, 6], nearMonths: [1, 7], seasonLabel: "fevr. – juin" },
+  avocat: { months: [2, 3, 4, 5, 6], nearMonths: [1, 7], seasonLabel: "fevr. – juin" },
+  myrtille: { months: [1, 2, 3, 8, 9, 10, 11, 12], nearMonths: [4, 7], seasonLabel: "janv. – mars, aout – dec." },
+  fraise: { months: [8, 9, 10, 11, 12], nearMonths: [7], seasonLabel: "aout – dec." },
+  oignon: { months: [4, 6], nearMonths: [5], seasonLabel: "avr., juin" },
+  ail: { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
+  gingembre: { months: [1, 2, 3, 4, 7, 8, 9, 10, 11, 12], nearMonths: [5, 6], seasonLabel: "janv. – avr., juil. – dec." },
+  asperge: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  cacao: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [2], seasonLabel: "mars – dec." },
+  café: { months: [3, 4, 5, 6, 7, 8, 9], nearMonths: [2, 10], seasonLabel: "mars – sept." },
+};
+
 const franceProduceOverrideIds = new Set([
   "abricot",
   "cassis",
@@ -3334,6 +3361,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.AR = {
       ...argentinaSeasonOverrides[item.id],
       sourceIds: ["argentina-agriculture-seasonal-produce"],
+      confidence: "source",
+    };
+  }
+
+  if (peruAgromercadoHarvestOverrides[item.id]) {
+    countries.PE = {
+      ...peruAgromercadoHarvestOverrides[item.id],
+      sourceIds: ["peru-agromercado-harvest-calendar"],
       confidence: "source",
     };
   }

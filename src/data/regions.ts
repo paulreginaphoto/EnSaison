@@ -620,6 +620,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["argentina-agriculture-seasonal-produce"],
   },
+  PE: {
+    labels: {
+      fr: "Perou: calendrier officiel MIDAGRI/Agromercado de disponibilite de recolte pour 17 produits cles; signal national, pas precision par region, altitude ni vallee.",
+      en: "Peru: official MIDAGRI/Agromercado harvest-availability calendar for 17 key products; national signal, not region-, altitude- or valley-level precision.",
+      es: "Peru: calendario oficial MIDAGRI/Agromercado de disponibilidad de cosecha para 17 productos clave; senal nacional, no precision por region, altitud ni valle.",
+      de: "Peru: offizieller MIDAGRI/Agromercado-Ernteverfuegbarkeitskalender fuer 17 Schluesselprodukte; nationales Signal, keine regionale, Hoehen- oder Tal-Praezision.",
+      it: "Peru: calendario ufficiale MIDAGRI/Agromercado di disponibilita di raccolta per 17 prodotti chiave; segnale nazionale, non precisione per regione, altitudine o valle.",
+      pt: "Peru: calendario oficial MIDAGRI/Agromercado de disponibilidade de colheita para 17 produtos-chave; sinal nacional, nao precisao por regiao, altitude nem vale.",
+    },
+    sourceIds: ["peru-agromercado-harvest-calendar"],
+  },
   RO: {
     labels: {
       fr: "Roumanie: calendrier Commission europeenne en roumain, section climat tempere incluant explicitement la Roumanie; source par grandes saisons, pas calendrier agricole national mois par mois.",

@@ -64,6 +64,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Frukt.no Norwegian season calendar
   https://www.frukt.no/globalassets/sesongkalender/norsk-sesongkalender.pdf
 
+- Danish Food Agency monthly seasonal fruit and vegetable posters
+  https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent
+
 - Swiss Federal Office for Agriculture seasonal fruit and vegetable table
   https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf
 
@@ -120,6 +123,7 @@ The app now supports:
 - Belgium now has source-backed Vlaanderen/VLAM month-by-month availability overrides for 45 fruit, vegetable, herb and mushroom items already present in the catalogue, while remaining Belgian produce still falls back to indicative European regional data;
 - Ireland now has source-backed Bord Bia Best in Season overrides for 36 Irish fresh produce items already present in the catalogue, including full season, coming in/out of season and storage signals;
 - Norway now has source-backed Frukt.no/OFG national season-calendar overrides for 43 Norwegian produce items already present in the catalogue, while remaining Norwegian produce still falls back to indicative European regional data;
+- Denmark now has source-backed Fødevarestyrelsen monthly-poster overrides for 36 Danish seasonal fruit and vegetable items already present in the catalogue, while remaining Danish produce still falls back to indicative European regional data;
 - Germany now has source-backed BZfE seasonal overrides for 40 produce items already present in the catalogue, while remaining German produce still falls back to indicative European regional data;
 - the Netherlands now has source-backed Voedingscentrum seasonal overrides for 54 produce and mushroom items already present in the catalogue, while remaining Dutch produce still falls back to indicative European regional data;
 - Portugal now has source-backed GPP national production-calendar overrides for 42 fruit, vegetable, nut and olive-oil items already present in the catalogue; this is production-calendar data from the 2016 GPP booklet, not current shop availability;

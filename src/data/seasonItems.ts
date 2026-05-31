@@ -1305,6 +1305,45 @@ const norwayFruktSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonI
   topinambour: { months: [4, 5, 10, 11, 12], nearMonths: [3, 6, 9], seasonLabel: "avr. – mai, oct. – déc." },
 };
 
+const denmarkFoodAgencySeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  asperge: { months: [5, 6], nearMonths: [4, 7], seasonLabel: "mai – juin" },
+  aubergine: { months: [7], nearMonths: [6, 8], seasonLabel: "juil." },
+  betterave: { months: [2, 3, 4, 9, 10, 12], nearMonths: [1, 5, 8, 11], seasonLabel: "févr. – avr., sept. – oct., déc." },
+  brocoli: { months: [8, 10, 11], nearMonths: [7, 9, 12], seasonLabel: "août, oct. – nov." },
+  carotte: { months: [1, 2, 3, 4, 5, 10, 12], nearMonths: [6, 9, 11], seasonLabel: "janv. – mai, oct., déc." },
+  "céleri-branche": { months: [4, 8, 9, 11], nearMonths: [3, 5, 7, 10, 12], seasonLabel: "avr., août – sept., nov." },
+  "céleri-rave": { months: [1, 2, 3, 11], nearMonths: [4, 10, 12], seasonLabel: "janv. – mars, nov." },
+  cerise: { months: [8], nearMonths: [7, 9], seasonLabel: "août" },
+  "chou-blanc": { months: [2], nearMonths: [1, 3], seasonLabel: "févr." },
+  "chou-fleur": { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  "chou-frisé": { months: [1, 2], nearMonths: [3, 12], seasonLabel: "janv. – févr." },
+  "chou-rave": { months: [1, 12], nearMonths: [2, 11], seasonLabel: "déc. – janv." },
+  "chou-rouge": { months: [1, 11, 12], nearMonths: [2, 10], seasonLabel: "nov. – janv." },
+  concombre: { months: [3, 4, 5, 6], nearMonths: [2, 7], seasonLabel: "mars – juin" },
+  courge: { months: [10], nearMonths: [9, 11], seasonLabel: "oct." },
+  courgette: { months: [7, 9], nearMonths: [6, 8, 10], seasonLabel: "juil., sept." },
+  "épinard": { months: [5, 6], nearMonths: [4, 7], seasonLabel: "mai – juin" },
+  fenouil: { months: [10], nearMonths: [9, 11], seasonLabel: "oct." },
+  fraise: { months: [6, 7], nearMonths: [5, 8], seasonLabel: "juin – juil." },
+  framboise: { months: [7], nearMonths: [6, 8], seasonLabel: "juil." },
+  laitue: { months: [7], nearMonths: [6, 8], seasonLabel: "juil." },
+  "maïs-doux": { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  mure: { months: [8], nearMonths: [7, 9], seasonLabel: "août" },
+  oignon: { months: [3, 5, 11], nearMonths: [2, 4, 6, 10, 12], seasonLabel: "mars, mai, nov." },
+  panais: { months: [2, 10, 12], nearMonths: [1, 3, 9, 11], seasonLabel: "févr., oct., déc." },
+  "petit-pois": { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  poire: { months: [8, 9, 10, 11, 12], nearMonths: [7, 1], seasonLabel: "août – déc." },
+  poireau: { months: [1, 2, 3, 4, 5], nearMonths: [6, 12], seasonLabel: "janv. – mai" },
+  poivron: { months: [5], nearMonths: [4, 6], seasonLabel: "mai" },
+  pomme: { months: [1, 2, 3, 9, 10, 11, 12], nearMonths: [4, 8], seasonLabel: "sept. – mars" },
+  prune: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  radis: { months: [4, 6, 7], nearMonths: [3, 5, 8], seasonLabel: "avr., juin – juil." },
+  rhubarbe: { months: [4, 5, 7], nearMonths: [3, 6, 8], seasonLabel: "avr. – mai, juil." },
+  roquette: { months: [5], nearMonths: [4, 6], seasonLabel: "mai" },
+  tomate: { months: [6, 7, 9], nearMonths: [5, 8, 10], seasonLabel: "juin – juil., sept." },
+  topinambour: { months: [1, 2, 3, 4, 11], nearMonths: [5, 10, 12], seasonLabel: "nov. – avr." },
+};
+
 const portugalGppSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   abricot: { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
   amande: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
@@ -1593,6 +1632,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.NO = {
       ...norwayFruktSeasonOverrides[item.id],
       sourceIds: ["norway-frukt-season-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (denmarkFoodAgencySeasonOverrides[item.id]) {
+    countries.DK = {
+      ...denmarkFoodAgencySeasonOverrides[item.id],
+      sourceIds: ["denmark-foedevarestyrelsen-season-posters"],
       confidence: "source",
     };
   }

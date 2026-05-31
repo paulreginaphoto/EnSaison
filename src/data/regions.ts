@@ -191,6 +191,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["foodland-ontario-availability"],
   },
+  DK: {
+    labels: {
+      fr: "Danemark: affiches mensuelles officielles de la Fødevarestyrelsen pour un echantillon de fruits et legumes de saison.",
+      en: "Denmark: official Danish Food Agency monthly posters for a sample of seasonal fruit and vegetables.",
+      es: "Dinamarca: carteles mensuales oficiales de la Agencia Danesa de Alimentos para una muestra de frutas y verduras de temporada.",
+      de: "Danemark: offizielle Monatsplakate der danischen Lebensmittelbehorde fur eine Auswahl saisonaler Obst- und Gemusearten.",
+      it: "Danimarca: poster mensili ufficiali dell'Agenzia alimentare danese per un campione di frutta e verdura di stagione.",
+      pt: "Dinamarca: cartazes mensais oficiais da Agencia Dinamarquesa de Alimentos para uma amostra de frutas e legumes da epoca.",
+    },
+    sourceIds: ["denmark-foedevarestyrelsen-season-posters"],
+  },
   IN: {
     labels: {
       fr: "Inde: donnees nationales agregees; les saisons varient fortement selon les Etats, l'altitude et les moussons.",

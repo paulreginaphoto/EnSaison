@@ -207,6 +207,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "india-nhb-litchi",
     ],
   },
+  IE: {
+    labels: {
+      fr: "Irlande: calendrier Bord Bia Best in Season pour produits frais irlandais, incluant saison pleine, entrees/sorties de saison et stockage.",
+      en: "Ireland: Bord Bia Best in Season calendar for Irish fresh produce, including full season, coming in/out of season and storage.",
+      es: "Irlanda: calendario Bord Bia Best in Season para productos frescos irlandeses, con plena temporada, entrada/salida de temporada y almacenamiento.",
+      de: "Irland: Bord Bia Best in Season-Kalender fur irische Frischprodukte, mit Hauptsaison, Saisonubergangen und Lagerware.",
+      it: "Irlanda: calendario Bord Bia Best in Season per prodotti freschi irlandesi, con piena stagione, entrata/uscita stagione e conservazione.",
+      pt: "Irlanda: calendario Bord Bia Best in Season para produtos frescos irlandeses, com epoca plena, entrada/saida de epoca e armazenamento.",
+    },
+    sourceIds: ["ireland-bord-bia-best-in-season"],
+  },
   MX: {
     labels: {
       fr: "Mexique: donnees sourcees surtout pour le quatrieme trimestre; le reste reste indicatif.",

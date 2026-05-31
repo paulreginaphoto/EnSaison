@@ -77,7 +77,7 @@ export function resolveSeason(
 ): ResolvedSeason {
   const country = item.countries?.[countryCode];
   const explicit = country ?? item.profiles?.[profileId];
-  const mode = explicit?.seasonMode ?? item.seasonMode ?? "harvest";
+  const mode = explicit?.seasonMode ?? (explicit ? "harvest" : item.seasonMode ?? "harvest");
 
   if (mode === "variable") {
     return {

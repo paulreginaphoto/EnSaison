@@ -48,7 +48,7 @@ export const dictionary: Record<Locale, Dictionary> = {
     appTagline: "Simple, local, de saison.",
     about: "À propos",
     back: "Retour",
-    soon: "Fin de saison",
+    soon: "Bientôt",
     inSeason: "De saison",
     outSeason: "Hors saison",
     noResult: "Aucun résultat",
@@ -114,7 +114,7 @@ export const dictionary: Record<Locale, Dictionary> = {
     },
     statuses: {
       "in-season": "De saison",
-      soon: "Fin de saison",
+      soon: "Bientôt",
       out: "Hors saison",
       variable: "Variable",
     },

@@ -354,6 +354,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["kenya-berito-fresh-season-calendar"],
   },
+  VN: {
+    labels: {
+      fr: "Vietnam: calendrier Greatfoods de disponibilite saisonniere pour fruits et legumes vietnamiens; source fournisseur/export pratique, pas calendrier gouvernemental ni precision par province.",
+      en: "Vietnam: Greatfoods seasonal availability calendar for Vietnamese fruit and vegetables; practical supplier/export source, not a government calendar or province-level precision.",
+      es: "Vietnam: calendario de disponibilidad estacional de Greatfoods para frutas y verduras vietnamitas; fuente practica de proveedor/exportador, no calendario gubernamental ni precision provincial.",
+      de: "Vietnam: Greatfoods-Saisonkalender fuer vietnamesisches Obst und Gemuese; praktische Lieferanten-/Exportquelle, kein Regierungskalender und keine Provinz-Praezision.",
+      it: "Vietnam: calendario stagionale Greatfoods per frutta e verdura vietnamite; fonte pratica fornitore/export, non calendario governativo ne precisione provinciale.",
+      pt: "Vietname: calendario sazonal da Greatfoods para frutas e legumes vietnamitas; fonte pratica de fornecedor/exportador, nao calendario governamental nem precisao provincial.",
+    },
+    sourceIds: ["vietnam-greatfoods-season-calendar"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

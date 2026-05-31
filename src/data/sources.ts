@@ -239,6 +239,10 @@ export const dataSources = {
     label: "Berito Fresh Kenya seasonal availability calendar",
     url: "https://beritofresh.com/",
   },
+  "vietnam-greatfoods-season-calendar": {
+    label: "Greatfoods Vietnam seasonal fruit and vegetable calendar",
+    url: "https://greatfoods.vn/about-us/seasonal/",
+  },
   "luxembourg-agriculture-season-calendar": {
     label: "Luxembourg Ministry of Agriculture 2024 regional seasonal calendar",
     url: "https://agriculture.public.lu/de/veroeffentlichungen/ernaehrung/saisonkalender.html",

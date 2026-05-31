@@ -155,6 +155,8 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "mangoustan", name: "Mangoustan", names: { en: "Mangosteen", es: "Mangostan", de: "Mangostane", it: "Mangostano", pt: "Mangostao" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
   { id: "santol", name: "Santol", names: { en: "Santol", es: "Santol", de: "Santol", it: "Santol", pt: "Santol" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
   { id: "corossol", name: "Corossol", names: { en: "Soursop", es: "Guanabana", de: "Stachelannone", it: "Graviola", pt: "Graviola" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
+  { id: "acerola", name: "Acérola", names: { en: "Acerola", es: "Acerola", de: "Acerola", it: "Acerola", pt: "Acerola" }, category: "fruit", icon: "fruit-berry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "vietnam-greatfoods-season-calendar"], confidence: "source" },
+  { id: "calamansi", name: "Calamansi", names: { en: "Calamansi", es: "Calamansi", de: "Calamansi", it: "Calamansi", pt: "Calamansi" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "vietnam-greatfoods-season-calendar"], confidence: "source" },
   { id: "pomme-lait", name: "Pomme de lait", names: { en: "Star apple", es: "Caimito", de: "Sternapfel", it: "Caimito", pt: "Caimito" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
   { id: "ramboutan", name: "Ramboutan", names: { en: "Rambutan", es: "Rambutan", de: "Rambutan", it: "Rambutan", pt: "Rambutao" }, category: "fruit", icon: "fruit-berry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
   { id: "langsat", name: "Langsat", names: { en: "Langsat", es: "Langsat", de: "Langsat", it: "Langsat", pt: "Langsat" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
@@ -163,6 +165,9 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "noix-coco-jeune", name: "Noix de coco jeune", names: { en: "Young coconut", es: "Coco joven", de: "Junge Kokosnuss", it: "Cocco giovane", pt: "Coco verde" }, category: "fruit", icon: "fruit-nut", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "thai-fresh-fruit-season-calendar"], confidence: "source" },
   { id: "salak", name: "Salak", names: { en: "Salak", es: "Salak", de: "Salak", it: "Salak", pt: "Salak" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "thai-fresh-fruit-season-calendar"], confidence: "source" },
   { id: "gombo", name: "Gombo", names: { en: "Okra", es: "Quimbombó", de: "Okra", it: "Gombo", pt: "Quiabo" }, category: "vegetable", icon: "vegetable-stem", months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct.", sourceIds: ["fao-crop-calendar", "india-desagri-vegetable-harvest"], confidence: "indicative" },
+  { id: "aloe-vera", name: "Aloe vera", names: { en: "Aloe vera", es: "Aloe vera", de: "Aloe vera", it: "Aloe vera", pt: "Aloe vera" }, category: "vegetable", icon: "vegetable-leaf", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "vietnam-greatfoods-season-calendar"], confidence: "source" },
+  { id: "bok-choy", name: "Bok choy", names: { en: "Bok choy", es: "Bok choy", de: "Pak Choi", it: "Bok choy", pt: "Bok choy" }, category: "vegetable", icon: "vegetable-cabbage", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "vietnam-greatfoods-season-calendar"], confidence: "source" },
+  { id: "feuilles-moutarde", name: "Feuilles de moutarde", names: { en: "Mustard greens", es: "Hojas de mostaza", de: "Senfblaetter", it: "Foglie di senape", pt: "Folhas de mostarda" }, category: "vegetable", icon: "vegetable-leaf", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "vietnam-greatfoods-season-calendar"], confidence: "source" },
   { id: "cardon", name: "Cardon", names: { en: "Cardoon", es: "Cardo", de: "Kardone", it: "Cardo", pt: "Cardo" }, category: "vegetable", icon: "vegetable-stem", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["tunisia-adapt-aics-season-calendar"], confidence: "source" },
   { id: "câpre", name: "Câpre", names: { en: "Caper", es: "Alcaparra", de: "Kaper", it: "Cappero", pt: "Alcaparra" }, category: "condiment", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["tunisia-adapt-aics-season-calendar"], confidence: "source" },
   { id: "maïs-mini", name: "Maïs mini", names: { en: "Baby corn", es: "Maiz baby", de: "Babymais", it: "Mais baby", pt: "Milho baby" }, category: "vegetable", icon: "vegetable-corn", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "thai-fresh-fruit-season-calendar"], confidence: "source" },
@@ -2507,6 +2512,33 @@ const kenyaBeritoFreshSeasonOverrides: Record<string, NonNullable<NonNullable<Se
   "fruit-passion": { months: [8, 9, 10, 11, 12], nearMonths: [1, 2, 3, 6, 7], seasonLabel: "août – déc." },
 };
 
+const vietnamGreatfoodsSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  "fruit-passion": { months: [1, 5, 6, 7, 8, 11, 12], nearMonths: [2, 4, 9, 10], seasonLabel: "mai – août, nov. – janv." },
+  mangue: { months: [3, 4, 5, 6, 7, 8], nearMonths: [2, 9], seasonLabel: "mars – août" },
+  ananas: { months: [5, 6, 7, 8], nearMonths: [4, 9], seasonLabel: "mai – août" },
+  "noix-coco-jeune": { months: [8, 9], nearMonths: [1, 2, 3, 4, 5, 6, 7, 10, 11, 12], seasonLabel: "août – sept. (pic)" },
+  calamansi: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  corossol: { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  papaye: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  pitaya: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  litchi: { months: [5, 6, 7, 8], nearMonths: [4, 9], seasonLabel: "mai – août" },
+  longane: { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  pastèque: { months: [3, 4, 5, 6, 7, 8], nearMonths: [1, 2, 9, 10, 11, 12], seasonLabel: "mars – août (pic)" },
+  durian: { months: [5, 6, 7, 8], nearMonths: [4, 9], seasonLabel: "mai – août" },
+  "citron-vert": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  banane: { months: [8, 9, 10, 11], nearMonths: [1, 2, 3, 4, 5, 6, 7, 12], seasonLabel: "août – nov. (pic)" },
+  acerola: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  goyave: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  jacquier: { months: [3, 4, 5, 6], nearMonths: [2, 7], seasonLabel: "mars – juin" },
+  "aloe-vera": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  carotte: { months: [1, 2, 3, 4, 12], nearMonths: [5, 11], seasonLabel: "déc. – avr." },
+  "bok-choy": { months: [1, 2, 3, 10, 11, 12], nearMonths: [4, 5, 6, 7, 8, 9], seasonLabel: "oct. – mars (pic)" },
+  "feuilles-moutarde": { months: [1, 2, 3, 4, 11, 12], nearMonths: [5, 6, 7, 8, 9, 10], seasonLabel: "nov. – avr. (pic)" },
+  "patate-douce": { months: [1, 2, 10, 11, 12], nearMonths: [3, 4, 5, 6, 7, 8, 9], seasonLabel: "oct. – févr. (pic)" },
+  ciboule: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  concombre: { months: [1, 2, 3, 4, 10, 11, 12], nearMonths: [5, 6, 7, 8, 9], seasonLabel: "oct. – avr. (pic)" },
+};
+
 const luxembourgAgricultureSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   endive: { months: [1, 2, 3, 10, 11, 12], nearMonths: [9, 4], seasonLabel: "oct. – mars" },
   rampon: { months: [1, 2, 3, 11, 12], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
@@ -3603,6 +3635,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.KE = {
       ...kenyaBeritoFreshSeasonOverrides[item.id],
       sourceIds: ["kenya-berito-fresh-season-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (vietnamGreatfoodsSeasonOverrides[item.id]) {
+    countries.VN = {
+      ...vietnamGreatfoodsSeasonOverrides[item.id],
+      sourceIds: ["vietnam-greatfoods-season-calendar"],
       confidence: "source",
     };
   }

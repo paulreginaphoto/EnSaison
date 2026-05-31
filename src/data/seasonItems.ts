@@ -2521,6 +2521,12 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
       sourceIds: ["swiss-blw-season-table"],
       confidence: "source",
     };
+    countries.LI = {
+      months: item.months,
+      nearMonths: item.nearMonths,
+      sourceIds: ["swiss-blw-season-table", "liechtenstein-llv-swiss-food-law"],
+      confidence: "source",
+    };
   }
 
   if (unitedKingdomSeasonOverrides[item.id]) {

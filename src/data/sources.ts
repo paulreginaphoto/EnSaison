@@ -159,6 +159,10 @@ export const dataSources = {
     label: "Swiss Federal Office for Agriculture seasonal fruit and vegetable table",
     url: "https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf",
   },
+  "liechtenstein-llv-swiss-food-law": {
+    label: "Liechtenstein National Administration food law basis under the Swiss customs treaty",
+    url: "https://www.llv.li/en/national-administration/food-and-veterinary-office/things-to-know/legal-basis",
+  },
   "foodland-ontario-availability": {
     label: "Ontario Data Catalogue Foodland Ontario fruits and vegetables availability guide",
     url: "https://data.ontario.ca/en/dataset/foodland-ontario-fruits-and-vegetables-availability-guide",

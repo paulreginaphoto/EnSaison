@@ -361,6 +361,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["ireland-bord-bia-best-in-season"],
   },
+  LI: {
+    labels: {
+      fr: "Liechtenstein: proxy suisse BLW utilise prudemment, car le LLV indique que le droit alimentaire suisse s'applique via le traite douanier; ce n'est pas un calendrier agricole national liechtensteinois.",
+      en: "Liechtenstein: Swiss BLW proxy used cautiously, because LLV states Swiss food law applies via the customs treaty; this is not an independent Liechtenstein national harvest calendar.",
+      es: "Liechtenstein: proxy suizo BLW usado con cautela, porque LLV indica que la legislacion alimentaria suiza se aplica por el tratado aduanero; no es un calendario agricola nacional independiente.",
+      de: "Liechtenstein: Schweizer BLW-Proxy mit Vorsicht genutzt, weil laut LLV Schweizer Lebensmittelrecht durch den Zollvertrag gilt; kein eigenstaendiger nationaler Erntekalender Liechtensteins.",
+      it: "Liechtenstein: proxy svizzero BLW usato con cautela, poiche LLV indica che il diritto alimentare svizzero si applica tramite il trattato doganale; non e un calendario agricolo nazionale indipendente.",
+      pt: "Liechtenstein: proxy suico BLW usado com cautela, porque o LLV indica que a lei alimentar suica se aplica pelo tratado aduaneiro; nao e calendario agricola nacional independente.",
+    },
+    sourceIds: ["swiss-blw-season-table", "liechtenstein-llv-swiss-food-law"],
+  },
   LU: {
     labels: {
       fr: "Luxembourg: calendrier 2024 du ministere de l'Agriculture pour fruits, legumes et noix regionaux, distinguant produits frais et produits stockes.",

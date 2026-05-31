@@ -257,6 +257,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["malta-foe-agrokatina-calendar"],
   },
+  CY: {
+    labels: {
+      fr: "Chypre: calendriers Miresda fruits, agrumes et legumes pour l'offre locale chypriote; source fournisseur pratique, pas calendrier gouvernemental.",
+      en: "Cyprus: Miresda fruit, citrus and vegetable calendars for Cypriot local supply; practical supplier source, not a government calendar.",
+      es: "Chipre: calendarios Miresda de frutas, citricos y verduras para oferta local chipriota; fuente practica de proveedor, no calendario gubernamental.",
+      de: "Zypern: Miresda-Kalender fuer Obst, Zitrusfruechte und Gemuese aus zyprischem lokalen Angebot; praktische Lieferantenquelle, kein Regierungskalender.",
+      it: "Cipro: calendari Miresda di frutta, agrumi e verdura per l'offerta locale cipriota; fonte pratica di fornitore, non calendario governativo.",
+      pt: "Chipre: calendarios Miresda de frutas, citrinos e legumes da oferta local cipriota; fonte pratica de fornecedor, nao calendario governamental.",
+    },
+    sourceIds: ["cyprus-miresda-season-calendars"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

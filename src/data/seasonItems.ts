@@ -124,8 +124,10 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "banane", name: "Banane", names: { en: "Banana", es: "Banana", de: "Banane", it: "Banana", pt: "Banana" }, category: "fruit", icon: "fruit-round", months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l’année", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
   { id: "orange", name: "Orange", names: { en: "Orange", es: "Naranja", de: "Orange", it: "Arancia", pt: "Laranja" }, category: "fruit", icon: "fruit-round", months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "nov. – mars", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
   { id: "citron", name: "Citron", names: { en: "Lemon", es: "Limón", de: "Zitrone", it: "Limone", pt: "Limão" }, category: "fruit", icon: "fruit-round", months: [11, 12, 1, 2, 3, 4], nearMonths: [10, 5], seasonLabel: "nov. – avr.", sourceIds: ["fao-crop-calendar"], confidence: "indicative" },
+  { id: "citron-vert", name: "Citron vert", names: { en: "Lime", es: "Lima", de: "Limette", it: "Lime", pt: "Lima" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "pamplemousse", name: "Pamplemousse", names: { en: "Grapefruit", es: "Pomelo", de: "Grapefruit", it: "Pompelmo", pt: "Toranja" }, category: "fruit", icon: "fruit-round", months: [12, 1, 2, 3], nearMonths: [11, 4], seasonLabel: "déc. – mars", sourceIds: ["ec-calendar", "fao-crop-calendar"], confidence: "indicative" },
   { id: "bambinella", name: "Bambinella", names: { en: "Bambinella pear", es: "Pera bambinella", de: "Bambinella-Birne", it: "Pera bambinella", pt: "Pera bambinella" }, category: "fruit", icon: "fruit-pear", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
+  { id: "clementine", name: "Clémentine", names: { en: "Clementine", es: "Clementina", de: "Clementine", it: "Clementina", pt: "Clementina" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "figue-barbarie", name: "Figue de Barbarie", names: { en: "Prickly pear", es: "Higo chumbo", de: "Kaktusfeige", it: "Fico d'India", pt: "Figo-da-índia" }, category: "fruit", icon: "fruit-fig", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "griotte", name: "Griotte", names: { en: "Sour cherry", es: "Guinda", de: "Sauerkirsche", it: "Amarena", pt: "Ginjeira" }, category: "fruit", icon: "fruit-cherry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "groseille-maquereau", name: "Groseille à maquereau", names: { en: "Gooseberry", es: "Grosella espinosa", de: "Stachelbeere", it: "Uva spina", pt: "Groselha-espim" }, category: "fruit", icon: "fruit-berry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
@@ -147,6 +149,7 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "persil-racine", name: "Persil-racine", names: { en: "Parsley root", es: "Raíz de perejil", de: "Wurzelpetersilie", it: "Prezzemolo da radice", pt: "Raiz de salsa" }, category: "vegetable", icon: "vegetable-root", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "radicchio", name: "Radicchio", names: { en: "Radicchio", es: "Radicchio", de: "Radicchio", it: "Radicchio", pt: "Radicchio" }, category: "vegetable", icon: "vegetable-leaf", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "radis-blanc", name: "Radis blanc", names: { en: "White radish", es: "Rábano blanco", de: "Weisser Rettich", it: "Rafano bianco", pt: "Rabanete branco" }, category: "vegetable", icon: "vegetable-radish", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
+  { id: "pois-mange-tout", name: "Pois mange-tout", names: { en: "Snow pea", es: "Tirabeque", de: "Zuckerschote", it: "Taccola", pt: "Ervilha-torta" }, category: "vegetable", icon: "vegetable-pea", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "rutabaga", name: "Rutabaga", names: { en: "Rutabaga", es: "Colinabo sueco", de: "Steckrübe", it: "Rutabaga", pt: "Rutabaga" }, category: "vegetable", icon: "vegetable-root", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "chou-bruxelles", name: "Chou de Bruxelles", names: { en: "Brussels sprouts", es: "Coles de Bruselas", de: "Rosenkohl", it: "Cavolini di Bruxelles", pt: "Couve-de-bruxelas" }, category: "vegetable", icon: "vegetable-cabbage", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "chou-savoie", name: "Chou de Savoie", names: { en: "Savoy cabbage", es: "Col de Saboya", de: "Wirsing", it: "Verza", pt: "Couve-lombarda" }, category: "vegetable", icon: "vegetable-cabbage", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
@@ -1853,6 +1856,43 @@ const maltaAgrokatinaSeasonOverrides: Record<string, NonNullable<NonNullable<Sea
   courgette: { months: [4, 5, 6, 7], nearMonths: [1, 2, 3, 8, 9, 10, 11, 12], seasonLabel: "avr. – juil." },
 };
 
+const cyprusMiresdaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  "haricot-vert": { months: [1, 2, 3, 4, 10, 11, 12], nearMonths: [5, 9], seasonLabel: "oct. – avr." },
+  "pois-mange-tout": { months: [1, 2, 3, 12], nearMonths: [4, 11], seasonLabel: "déc. – mars" },
+  oignon: { months: [1, 2, 3, 4, 5, 6], nearMonths: [7], seasonLabel: "janv. – juin" },
+  ciboule: { months: [1, 2, 3, 10, 11, 12], nearMonths: [4, 9], seasonLabel: "oct. – mars" },
+  ail: { months: [1, 2, 3, 4, 5], nearMonths: [6], seasonLabel: "janv. – mai" },
+  "patate-douce": { months: [1, 2, 8, 9, 10, 11, 12], nearMonths: [3, 7], seasonLabel: "août – févr." },
+  poivron: { months: [1, 2, 3, 4, 8, 9, 10, 11, 12], nearMonths: [5, 7], seasonLabel: "août – avr." },
+  brocoli: { months: [1, 2, 10, 11, 12], nearMonths: [3, 9], seasonLabel: "oct. – févr." },
+  laitue: { months: [1, 2, 3, 12], nearMonths: [4, 11], seasonLabel: "déc. – mars" },
+  "chou-blanc": { months: [1, 2, 7, 8, 9, 10, 11, 12], nearMonths: [3, 6], seasonLabel: "juil. – févr." },
+  "chou-rouge": { months: [1, 2, 7, 8, 9, 10, 11, 12], nearMonths: [3, 6], seasonLabel: "juil. – févr." },
+  gombo: { months: [1, 2, 3, 4, 5, 6, 7, 11, 12], nearMonths: [8, 10], seasonLabel: "nov. – juil." },
+  "céleri-branche": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  piment: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  basilic: { months: [1, 2, 3, 12], nearMonths: [4, 11], seasonLabel: "déc. – mars" },
+  concombre: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  tomate: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  asperge: { months: [1, 2, 3, 4], nearMonths: [5, 12], seasonLabel: "janv. – avr." },
+  aubergine: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  orange: { months: [1, 2, 3, 4, 5, 6, 11, 12], nearMonths: [7, 10], seasonLabel: "nov. – juin" },
+  citron: { months: [1, 2, 11, 12], nearMonths: [3, 10], seasonLabel: "nov. – févr." },
+  "citron-vert": { months: [1, 2, 3, 4, 9, 10, 11, 12], nearMonths: [5, 8], seasonLabel: "sept. – avr." },
+  mandarine: { months: [1, 2, 3, 4, 11, 12], nearMonths: [5, 10], seasonLabel: "nov. – avr." },
+  clementine: { months: [1, 2, 12], nearMonths: [3, 11], seasonLabel: "déc. – févr." },
+  fraise: { months: [1, 2, 5, 6, 7, 8, 12], nearMonths: [3, 4, 9, 11], seasonLabel: "mai – août, déc. – févr." },
+  raisin: { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept." },
+  grenade: { months: [7, 8, 9, 10, 11], nearMonths: [6, 12], seasonLabel: "juil. – nov." },
+  mangue: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], seasonLabel: "mai – oct." },
+  peche: { months: [4, 5, 6, 7], nearMonths: [3, 8], seasonLabel: "avr. – juil." },
+  abricot: { months: [4, 5, 6, 7, 8], nearMonths: [3, 9], seasonLabel: "avr. – août" },
+  melon: { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept." },
+  pastèque: { months: [4, 5, 6, 7, 8], nearMonths: [3, 9], seasonLabel: "avr. – août" },
+  poire: { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
+  prune: { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
+};
+
 const hungaryNovenytarSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   abricot: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
   amande: {
@@ -2384,6 +2424,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.MT = {
       ...maltaAgrokatinaSeasonOverrides[item.id],
       sourceIds: ["malta-foe-agrokatina-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (cyprusMiresdaSeasonOverrides[item.id]) {
+    countries.CY = {
+      ...cyprusMiresdaSeasonOverrides[item.id],
+      sourceIds: ["cyprus-miresda-season-calendars"],
       confidence: "source",
     };
   }

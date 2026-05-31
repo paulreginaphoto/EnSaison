@@ -123,6 +123,10 @@ export const dataSources = {
     label: "Friends of the Earth Malta AgroKatina local seasonal fruit and vegetable calendar",
     url: "https://foemalta.org/wp-content/uploads/Local-Seasonal-Healthy-English-2.pdf",
   },
+  "cyprus-miresda-season-calendars": {
+    label: "Miresda Cyprus fruit, citrus and vegetable seasonal calendars",
+    url: "https://www.miresda.com/fruits-vegetables/",
+  },
   "swiss-blw-season-table": {
     label: "Swiss Federal Office for Agriculture seasonal fruit and vegetable table",
     url: "https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf",

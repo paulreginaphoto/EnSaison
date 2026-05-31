@@ -35,6 +35,18 @@ export const dataSources = {
     label: "France Diplomatie Monaco-France customs union note",
     url: "https://www.diplomatie.gouv.fr/en/information-by-country/monaco/political-and-economic-relations",
   },
+  "catalonia-agriculture-season-calendar": {
+    label: "Generalitat de Catalunya seasonal fruit, vegetable and fish calendar",
+    url: "https://agricultura.gencat.cat/web/.content/04-alimentacio/cadena-alimentaria/codi-bones-practiques-comercials/documents/fitxers-binaris/calendari-productes-temporada.pdf",
+  },
+  "catalonia-salut-nearest-calendar-guidance": {
+    label: "Generalitat de Catalunya guidance to use the nearest seasonal calendar",
+    url: "https://canalsalut.gencat.cat/ca/vida-saludable/alimentacio/fruites-hortalisses/calendaris-temporada/index.html",
+  },
+  "eu-andorra-customs-union": {
+    label: "European Commission EU-Andorra customs union overview",
+    url: "https://taxation-customs.ec.europa.eu/customs/international-affairs/origin-goods/customs-unions",
+  },
   "spain-mapa-fruit-calendar": {
     label: "Spanish Ministry of Agriculture seasonal fruit calendar",
     url: "https://www.mapa.gob.es/es/alimentacion/temas/desperdicio/12calendario_frutas_completo_tcm30-623768.pdf",

@@ -31,6 +31,15 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - France Diplomatie Monaco-France customs union note
   https://www.diplomatie.gouv.fr/en/information-by-country/monaco/political-and-economic-relations
 
+- Generalitat de Catalunya seasonal fruit, vegetable and fish calendar
+  https://agricultura.gencat.cat/web/.content/04-alimentacio/cadena-alimentaria/codi-bones-practiques-comercials/documents/fitxers-binaris/calendari-productes-temporada.pdf
+
+- Generalitat de Catalunya guidance to use the nearest seasonal calendar
+  https://canalsalut.gencat.cat/ca/vida-saludable/alimentacio/fruites-hortalisses/calendaris-temporada/index.html
+
+- European Commission EU-Andorra customs union overview
+  https://taxation-customs.ec.europa.eu/customs/international-affairs/origin-goods/customs-unions
+
 - Spanish Ministry of Agriculture seasonal fruit calendar
   https://www.mapa.gob.es/es/alimentacion/temas/desperdicio/12calendario_frutas_completo_tcm30-623768.pdf
 
@@ -166,7 +175,7 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 278 food entries after the Monaco France-Agriculture proxy pass;
+- 278 food entries after the Andorra Catalonia/Pyrenees proxy pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
 - country overrides for 43 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
@@ -193,6 +202,7 @@ The app now supports:
 - Iceland now has source-backed SFG/Islenskt graenmeti overrides for 29 Icelandic vegetable, herb, mushroom and greenhouse berry items, using active months from the Icelandic vegetable calendar; this is local supply guidance including geothermal greenhouses, not a full fruit-import calendar;
 - Liechtenstein now has source-backed Swiss BLW proxy overrides for 57 produce items, justified by the Liechtenstein National Administration note that Swiss food law applies through the customs treaty; this is a cautious market/legal proxy, not an independent Liechtenstein harvest calendar;
 - Monaco now has source-backed French Ministry of Agriculture proxy overrides for 57 produce items, justified by the France-Monaco customs union; this is a cautious nearby-market proxy, not an independent Monegasque harvest calendar;
+- Andorra now has source-backed Catalonia/Pyrenees proxy overrides for 34 fruit, vegetable and legume items, using the nearest official Generalitat de Catalunya seasonal calendar plus explicit nearest-calendar guidance; this is a cautious nearby-region proxy, not an independent Andorran harvest calendar;
 - Greece now has source-backed Food For Health month-by-month overrides for 52 fruit, vegetable, herb and mushroom items already present in the catalogue, plus 4 new globally localized fruit entries; this is national nutrition guidance cross-checked with the European Commission Mediterranean profile, not a government agricultural calendar;
 - Hungary now has source-backed Novenytar month-by-month overrides for 52 fruit, vegetable, herb, legume and nut items already present in the catalogue; this is a practical Hungarian plant-season table, not a government agricultural calendar or county-level forecast;
 - Germany now has source-backed BZfE seasonal overrides for 40 produce items already present in the catalogue, while remaining German produce still falls back to indicative European regional data;

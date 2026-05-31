@@ -136,6 +136,21 @@ export const seasonProfiles: Record<
 };
 
 export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
+  AD: {
+    labels: {
+      fr: "Andorre: proxy Catalogne/Pyrenees utilise prudemment, avec le calendrier officiel catalan le plus proche; ce n'est pas un calendrier agricole national andorran.",
+      en: "Andorra: Catalonia/Pyrenees proxy used cautiously, with the nearest official Catalan calendar; this is not an Andorran national harvest calendar.",
+      es: "Andorra: proxy Cataluna/Pirineos usado con cautela, con el calendario oficial catalan mas cercano; no es un calendario agricola nacional andorrano.",
+      de: "Andorra: Katalonien-/Pyrenaeen-Proxy mit Vorsicht genutzt, mit dem naechsten offiziellen katalanischen Kalender; kein nationaler andorranischer Erntekalender.",
+      it: "Andorra: proxy Catalogna/Pirenei usato con cautela, con il calendario catalano ufficiale piu vicino; non e un calendario agricolo nazionale andorrano.",
+      pt: "Andorra: proxy Catalunha/Pireneus usado com cautela, com o calendario oficial catalao mais proximo; nao e um calendario agricola nacional andorrano.",
+    },
+    sourceIds: [
+      "catalonia-agriculture-season-calendar",
+      "catalonia-salut-nearest-calendar-guidance",
+      "eu-andorra-customs-union",
+    ],
+  },
   AT: {
     labels: {
       fr: "Autriche: calendrier national du portail public de sante, utile pour les produits regionaux offerts selon les mois.",

@@ -243,6 +243,10 @@ export const dataSources = {
     label: "Greatfoods Vietnam seasonal fruit and vegetable calendar",
     url: "https://greatfoods.vn/about-us/seasonal/",
   },
+  "nigeria-kitchenbutterfly-season-calendar": {
+    label: "Kitchen Butterfly Nigerian seasonal produce calendar",
+    url: "https://www.kitchenbutterfly.com/2018/version-1-3-nigerian-seasonal-produce-calendar-2/",
+  },
   "luxembourg-agriculture-season-calendar": {
     label: "Luxembourg Ministry of Agriculture 2024 regional seasonal calendar",
     url: "https://agriculture.public.lu/de/veroeffentlichungen/ernaehrung/saisonkalender.html",

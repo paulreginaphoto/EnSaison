@@ -365,6 +365,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["vietnam-greatfoods-season-calendar"],
   },
+  NG: {
+    labels: {
+      fr: "Nigeria: calendrier Kitchen Butterfly des fruits et legumes de saison au Nigeria; source culinaire pratique, pas calendrier gouvernemental ni precision par Etat.",
+      en: "Nigeria: Kitchen Butterfly seasonal fruit and vegetable calendar for Nigeria; practical culinary source, not a government calendar or state-level precision.",
+      es: "Nigeria: calendario Kitchen Butterfly de frutas y verduras de temporada en Nigeria; fuente culinaria practica, no calendario gubernamental ni precision por estado.",
+      de: "Nigeria: Kitchen-Butterfly-Saisonkalender fuer Obst und Gemuese in Nigeria; praktische kulinarische Quelle, kein Regierungskalender und keine Bundesstaat-Praezision.",
+      it: "Nigeria: calendario Kitchen Butterfly di frutta e verdura stagionale in Nigeria; fonte culinaria pratica, non calendario governativo ne precisione per Stato.",
+      pt: "Nigeria: calendario Kitchen Butterfly de frutas e legumes sazonais na Nigeria; fonte culinaria pratica, nao calendario governamental nem precisao por estado.",
+    },
+    sourceIds: ["nigeria-kitchenbutterfly-season-calendar"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

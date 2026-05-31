@@ -598,6 +598,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["turkey-meb-megep-produce-sales-calendar"],
   },
+  UY: {
+    labels: {
+      fr: "Uruguay: calendrier Montevideo/MGAP de saisonnalite des fruits et legumes selon les mois; rouge = offre abondante, bleu = offre moyenne, pas precision par departement.",
+      en: "Uruguay: Montevideo/MGAP monthly fruit and vegetable seasonality calendar; red means abundant supply, blue means medium supply, not department-level precision.",
+      es: "Uruguay: calendario mensual Montevideo/MGAP de estacionalidad de frutas y hortalizas; rojo indica oferta abundante, azul oferta media, no precision por departamento.",
+      de: "Uruguay: monatlicher Montevideo/MGAP-Saisonalitaetskalender fuer Obst und Gemuese; Rot bedeutet reichliches Angebot, Blau mittleres Angebot, keine Departement-Praezision.",
+      it: "Uruguay: calendario mensile Montevideo/MGAP di stagionalita per frutta e verdura; rosso indica offerta abbondante, blu offerta media, non precisione per dipartimento.",
+      pt: "Uruguai: calendario mensal Montevideo/MGAP de sazonalidade de frutas e horticolas; vermelho indica oferta abundante, azul oferta media, nao precisao por departamento.",
+    },
+    sourceIds: ["uruguay-montevideo-mgap-season-calendar"],
+  },
   RO: {
     labels: {
       fr: "Roumanie: calendrier Commission europeenne en roumain, section climat tempere incluant explicitement la Roumanie; source par grandes saisons, pas calendrier agricole national mois par mois.",

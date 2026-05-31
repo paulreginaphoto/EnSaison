@@ -163,6 +163,10 @@ export const dataSources = {
     label: "Turkish Ministry of National Education MEGEP vegetable and fruit sales module season calendar",
     url: "https://www.megep.meb.gov.tr/mte_program_modul/moduller_pdf/Sebze%20Ve%20Meyve%20Sat%C4%B1%C5%9F%C4%B1.pdf",
   },
+  "uruguay-montevideo-mgap-season-calendar": {
+    label: "Montevideo / Uruguay MGAP fruit and vegetable seasonality calendar",
+    url: "https://montevideo.gub.uy/sites/default/files/biblioteca/calendariodefrutasyhortalizassegunmesdelano_0.pdf",
+  },
   "denmark-foedevarestyrelsen-season-posters": {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",

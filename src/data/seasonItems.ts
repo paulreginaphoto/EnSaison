@@ -2595,6 +2595,33 @@ const ghanaGreenViewsSeasonOverrides: Record<string, NonNullable<NonNullable<Sea
   arachide: { months: [12], nearMonths: [1, 11], seasonLabel: "déc." },
 };
 
+const senegalSenGardenSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  banane: { months: [1, 2, 8, 9, 10, 11, 12], nearMonths: [3, 4, 5, 6, 7], seasonLabel: "janv. – févr., août – déc." },
+  "citron-vert": { months: [1, 2, 3, 11, 12], nearMonths: [4, 9, 10], seasonLabel: "janv. – mars, nov. – déc." },
+  pamplemousse: { months: [1, 2, 3], nearMonths: [4, 11, 12], seasonLabel: "janv. – mars" },
+  melon: { months: [2, 3, 4, 5], nearMonths: [1, 6, 7, 12], seasonLabel: "févr. – mai" },
+  pastèque: { months: [9, 10], nearMonths: [1, 2, 3, 4, 5, 7, 8, 11, 12], seasonLabel: "sept. – oct." },
+  ananas: { months: [4, 5, 6], nearMonths: [1, 2, 3, 7, 8, 9, 10, 11, 12], seasonLabel: "avr. – juin" },
+  papaye: { months: [1, 2, 12], nearMonths: [3, 4, 5, 6, 7, 8, 9, 10, 11], seasonLabel: "déc. – févr." },
+  mangue: { months: [6, 7, 8], nearMonths: [4, 5, 9, 10, 11], seasonLabel: "juin – août" },
+  fraise: { months: [1, 2, 12], nearMonths: [3, 11], seasonLabel: "déc. – févr." },
+  tomate: { months: [3, 4], nearMonths: [1, 2, 5, 6, 7, 12], seasonLabel: "mars – avr." },
+  oignon: { months: [3, 4, 5, 6], nearMonths: [1, 2, 7, 8], seasonLabel: "mars – juin" },
+  piment: { months: [2, 3, 4], nearMonths: [1, 5, 6, 10, 11, 12], seasonLabel: "févr. – avr." },
+  "maïs-doux": { months: [1, 2, 3, 4], nearMonths: [5, 6, 12], seasonLabel: "janv. – avr." },
+  poivron: { months: [2, 3, 4], nearMonths: [1, 5], seasonLabel: "févr. – avr." },
+  "pomme-de-terre": { months: [1, 2, 12], nearMonths: [3, 4, 5], seasonLabel: "déc. – févr." },
+  "patate-douce": { months: [5, 6], nearMonths: [1, 2, 3, 4, 7, 8, 9, 10, 11, 12], seasonLabel: "mai – juin" },
+  "haricot-vert": { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  gombo: { months: [2, 3, 9, 10, 11], nearMonths: [1, 4, 5, 7, 8, 12], seasonLabel: "févr. – mars, sept. – nov." },
+  asperge: { months: [1, 2, 3, 12], nearMonths: [4, 11], seasonLabel: "déc. – mars" },
+  "chou-blanc": { months: [3, 4], nearMonths: [1, 2, 5, 6, 10, 11, 12], seasonLabel: "mars – avr." },
+  carotte: { months: [3, 4, 5], nearMonths: [2, 6], seasonLabel: "mars – mai" },
+  aubergine: { months: [3, 4], nearMonths: [1, 2, 5, 6, 10, 11, 12], seasonLabel: "mars – avr." },
+  courgette: { months: [1, 2], nearMonths: [3, 5, 6, 10, 11, 12], seasonLabel: "janv. – févr." },
+  courge: { months: [1, 2, 3, 12], nearMonths: [4, 5, 6, 11], seasonLabel: "déc. – mars" },
+};
+
 const luxembourgAgricultureSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   endive: { months: [1, 2, 3, 10, 11, 12], nearMonths: [9, 4], seasonLabel: "oct. – mars" },
   rampon: { months: [1, 2, 3, 11, 12], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
@@ -3715,6 +3742,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.GH = {
       ...ghanaGreenViewsSeasonOverrides[item.id],
       sourceIds: ["ghana-greenviews-season-guide", "ghana-ghanaveg-market-report"],
+      confidence: "source",
+    };
+  }
+
+  if (senegalSenGardenSeasonOverrides[item.id]) {
+    countries.SN = {
+      ...senegalSenGardenSeasonOverrides[item.id],
+      sourceIds: ["senegal-sengarden-cesag-market-calendar"],
       confidence: "source",
     };
   }

@@ -9,6 +9,7 @@ yarn-error.log*
 pnpm-debug.log*
 preview*.log
 *.tsbuildinfo
+tmp/
 .idea
 .vscode
 android/.gradle

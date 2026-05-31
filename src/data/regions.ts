@@ -387,6 +387,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["ghana-greenviews-season-guide", "ghana-ghanaveg-market-report"],
   },
+  SN: {
+    labels: {
+      fr: "Senegal: tableaux Sen-Garden/CESAG de production faible, moyenne et forte pour fruits et legumes par zone de production, etablis a partir de donnees du ministere de l'Agriculture; synthese nationale pratique, pas precision par region dans l'interface.",
+      en: "Senegal: Sen-Garden/CESAG weak, medium and strong production tables for fruit and vegetables by production area, built from Ministry of Agriculture data; practical national synthesis, not region-level precision in the interface.",
+      es: "Senegal: tablas Sen-Garden/CESAG de produccion baja, media y fuerte para frutas y verduras por zona de produccion, elaboradas con datos del Ministerio de Agricultura; sintesis nacional practica, sin precision regional en la interfaz.",
+      de: "Senegal: Sen-Garden/CESAG-Tabellen mit schwacher, mittlerer und starker Produktion fuer Obst und Gemuese nach Produktionsgebiet, auf Basis von Daten des Landwirtschaftsministeriums; praktische nationale Synthese, keine regionale Genauigkeit in der Oberflaeche.",
+      it: "Senegal: tabelle Sen-Garden/CESAG di produzione bassa, media e forte per frutta e verdura per zona di produzione, basate su dati del Ministero dell'Agricoltura; sintesi nazionale pratica, senza precisione regionale nell'interfaccia.",
+      pt: "Senegal: tabelas Sen-Garden/CESAG de producao fraca, media e forte para frutas e legumes por zona de producao, feitas com dados do Ministerio da Agricultura; sintese nacional pratica, sem precisao regional na interface.",
+    },
+    sourceIds: ["senegal-sengarden-cesag-market-calendar"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

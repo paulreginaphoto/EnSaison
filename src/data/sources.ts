@@ -255,6 +255,10 @@ export const dataSources = {
     label: "GhanaVeg / HortiFresh domestic horticulture market report",
     url: "https://www.hortifresh.org/wp-content/uploads/GhanaVeg-Business-Opportunities-Report-11.pdf",
   },
+  "senegal-sengarden-cesag-market-calendar": {
+    label: "Sen-Garden / CESAG Senegal fruit and vegetable production calendar",
+    url: "https://bibliotheque.cesag.sn/doc_num.php?explnum_id=2642",
+  },
   "luxembourg-agriculture-season-calendar": {
     label: "Luxembourg Ministry of Agriculture 2024 regional seasonal calendar",
     url: "https://agriculture.public.lu/de/veroeffentlichungen/ernaehrung/saisonkalender.html",

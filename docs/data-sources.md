@@ -70,8 +70,8 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Swiss Federal Office for Agriculture seasonal fruit and vegetable table
   https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf
 
-- Foodland Ontario availability guide
-  https://www.ontario.ca/foodland/page/availability-guide
+- Ontario Data Catalogue Foodland Ontario fruits and vegetables availability guide
+  https://data.ontario.ca/en/dataset/foodland-ontario-fruits-and-vegetables-availability-guide
 
 - Seasonal Food Guide Australia
   https://seasonalfoodguide.com/
@@ -128,7 +128,7 @@ The app now supports:
 - the Netherlands now has source-backed Voedingscentrum seasonal overrides for 54 produce and mushroom items already present in the catalogue, while remaining Dutch produce still falls back to indicative European regional data;
 - Portugal now has source-backed GPP national production-calendar overrides for 42 fruit, vegetable, nut and olive-oil items already present in the catalogue; this is production-calendar data from the 2016 GPP booklet, not current shop availability;
 - Australia has 16 source-backed produce overrides from the Australian Government's Healthy Aussie Produce guidance and its linked Seasonal Food Guide Australia general calendar; the app now labels this as national-general seasonal guidance, not state-level precision;
-- Canada has 29 Foodland Ontario-backed indicative overrides; this is useful Ontario/proxy guidance, not province-by-province precision for the whole country;
+- Canada has source-backed Foodland Ontario open-data overrides for 43 fresh-produce items already present in the catalogue; this is Ontario availability guidance, not province-by-province precision for the whole country;
 - Brazil has 16 CEAGESP-backed indicative overrides; this mainly reflects a Sao Paulo wholesale-market signal, not full national local precision;
 - Spain has source-backed MAPA month-by-month overrides for 46 fruit and vegetable items already present in the catalogue, using higher commercialization as in-season and lower commercialization as soon/near season;
 - Mexico has source-backed PROFECO fourth-quarter overrides for 22 fruit and vegetable items already present in the catalogue; this is a Q4 source, not a complete annual Mexico calendar;

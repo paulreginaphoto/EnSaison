@@ -182,12 +182,12 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
   },
   CA: {
     labels: {
-      fr: "Canada: donnees indicatives; les references Foodland Ontario aident, mais ne remplacent pas une precision province par province.",
-      en: "Canada: indicative data; Foodland Ontario references help, but they do not replace province-by-province precision.",
-      es: "Canada: datos indicativos; Foodland Ontario ayuda, pero no sustituye una precision provincia por provincia.",
-      de: "Kanada: indikative Daten; Foodland Ontario hilft, ersetzt aber keine Genauigkeit nach Provinz.",
-      it: "Canada: dati indicativi; Foodland Ontario aiuta, ma non sostituisce una precisione provincia per provincia.",
-      pt: "Canada: dados indicativos; Foodland Ontario ajuda, mas nao substitui precisao provincia por provincia.",
+      fr: "Canada: donnees Foodland Ontario source-backed pour les produits frais presents dans le catalogue; cela ne remplace pas une precision province par province.",
+      en: "Canada: source-backed Foodland Ontario data for fresh produce present in the catalogue; this does not replace province-by-province precision.",
+      es: "Canada: datos Foodland Ontario con fuente para productos frescos presentes en el catalogo; no sustituyen una precision provincia por provincia.",
+      de: "Kanada: quellengestuetzte Foodland-Ontario-Daten fuer die im Katalog vorhandenen Frischprodukte; das ersetzt keine Genauigkeit nach Provinz.",
+      it: "Canada: dati Foodland Ontario supportati da fonte per prodotti freschi presenti nel catalogo; non sostituiscono una precisione provincia per provincia.",
+      pt: "Canada: dados Foodland Ontario com fonte para produtos frescos presentes no catalogo; nao substituem precisao provincia por provincia.",
     },
     sourceIds: ["foodland-ontario-availability"],
   },

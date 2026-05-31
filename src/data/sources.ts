@@ -88,8 +88,8 @@ export const dataSources = {
     url: "https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf",
   },
   "foodland-ontario-availability": {
-    label: "Foodland Ontario availability guide",
-    url: "https://www.ontario.ca/foodland/page/availability-guide",
+    label: "Ontario Data Catalogue Foodland Ontario fruits and vegetables availability guide",
+    url: "https://data.ontario.ca/en/dataset/foodland-ontario-fruits-and-vegetables-availability-guide",
   },
   "seasonal-food-guide-australia": {
     label: "Seasonal Food Guide Australia",

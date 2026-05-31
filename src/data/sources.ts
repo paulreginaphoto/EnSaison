@@ -279,6 +279,14 @@ export const dataSources = {
     label: "Le Local TV Benin fruit season guide",
     url: "https://lelocaltv.com/saison-des-fruits-au-benin-quand-savourer-les-meilleures-recoltes/",
   },
+  "togo-fewsnet-country-book": {
+    label: "FEWS NET Togo country book and FAO crop-calendar context",
+    url: "https://help.fews.net/fde/v3/togo-country-book",
+  },
+  "togo-florafaunafun-fruit-guide": {
+    label: "Flora Fauna Fun Togo fruit season table",
+    url: "https://florafaunafun.com/fruits-of-togo/",
+  },
   "senegal-sengarden-cesag-market-calendar": {
     label: "Sen-Garden / CESAG Senegal fruit and vegetable production calendar",
     url: "https://bibliotheque.cesag.sn/doc_num.php?explnum_id=2642",

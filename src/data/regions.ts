@@ -424,6 +424,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["benin-lelocaltv-fruit-season-guide"],
   },
+  TG: {
+    labels: {
+      fr: "Togo: tableau fruitier Flora Fauna Fun et contexte agricole FEWS NET/FAO Crop Calendar; guide national pratique, pas calendrier gouvernemental complet ni precision par region.",
+      en: "Togo: Flora Fauna Fun fruit table plus FEWS NET/FAO Crop Calendar agricultural context; practical national guide, not a complete government calendar or regional precision.",
+      es: "Togo: tabla de frutas de Flora Fauna Fun y contexto agricola FEWS NET/FAO Crop Calendar; guia nacional practica, no calendario gubernamental completo ni precision regional.",
+      de: "Togo: Obsttabelle von Flora Fauna Fun plus FEWS-NET/FAO-Crop-Calendar-Agrarkontext; praktische nationale Orientierung, kein vollstaendiger Regierungskalender und keine regionale Genauigkeit.",
+      it: "Togo: tabella frutticola Flora Fauna Fun e contesto agricolo FEWS NET/FAO Crop Calendar; guida nazionale pratica, non calendario governativo completo ne precisione regionale.",
+      pt: "Togo: tabela de frutas da Flora Fauna Fun e contexto agricola FEWS NET/FAO Crop Calendar; guia nacional pratica, nao calendario governamental completo nem precisao regional.",
+    },
+    sourceIds: ["togo-florafaunafun-fruit-guide", "togo-fewsnet-country-book"],
+  },
   SN: {
     labels: {
       fr: "Senegal: tableaux Sen-Garden/CESAG de production faible, moyenne et forte pour fruits et legumes par zone de production, etablis a partir de donnees du ministere de l'Agriculture; synthese nationale pratique, pas precision par region dans l'interface.",

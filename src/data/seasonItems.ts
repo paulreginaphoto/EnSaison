@@ -157,6 +157,9 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "santol", name: "Santol", names: { en: "Santol", es: "Santol", de: "Santol", it: "Santol", pt: "Santol" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
   { id: "corossol", name: "Corossol", names: { en: "Soursop", es: "Guanabana", de: "Stachelannone", it: "Graviola", pt: "Graviola" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
   { id: "agbalumo", name: "Agbalumo", names: { en: "African star apple", es: "Manzana estrella africana", de: "Afrikanischer Sternapfel", it: "Mela stella africana", pt: "Maçã-estrela africana" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "nigeria-kitchenbutterfly-season-calendar"], confidence: "source" },
+  { id: "pomme-cajou", name: "Pomme de cajou", names: { en: "Cashew apple", es: "Manzana de cajú", de: "Cashewapfel", it: "Mela di anacardio", pt: "Caju" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "togo-florafaunafun-fruit-guide"], confidence: "source" },
+  { id: "baobab", name: "Fruit de baobab", names: { en: "Baobab fruit", es: "Fruto de baobab", de: "Baobabfrucht", it: "Frutto di baobab", pt: "Fruto de baobá" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "togo-florafaunafun-fruit-guide"], confidence: "source" },
+  { id: "tamarin", name: "Tamarin", names: { en: "Tamarind", es: "Tamarindo", de: "Tamarinde", it: "Tamarindo", pt: "Tamarindo" }, category: "fruit", icon: "fruit-pod", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "togo-florafaunafun-fruit-guide"], confidence: "source" },
   { id: "acerola", name: "Acérola", names: { en: "Acerola", es: "Acerola", de: "Acerola", it: "Acerola", pt: "Acerola" }, category: "fruit", icon: "fruit-berry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "vietnam-greatfoods-season-calendar"], confidence: "source" },
   { id: "calamansi", name: "Calamansi", names: { en: "Calamansi", es: "Calamansi", de: "Calamansi", it: "Calamansi", pt: "Calamansi" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "vietnam-greatfoods-season-calendar"], confidence: "source" },
   { id: "pomme-lait", name: "Pomme de lait", names: { en: "Star apple", es: "Caimito", de: "Sternapfel", it: "Caimito", pt: "Caimito" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
@@ -296,6 +299,9 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "teff", name: "Teff", names: { en: "Teff", es: "Teff", de: "Teff", it: "Teff", pt: "Teff" }, category: "grain", icon: "vegetable-stem", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "noix-cajou", name: "Noix de cajou", names: { en: "Cashew", es: "Anacardo", de: "Cashew", it: "Anacardo", pt: "Caju" }, category: "nut", icon: "fruit-nut", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "usda-fdc"], confidence: "taxonomy" },
   { id: "noix-africaine", name: "Noix africaine", names: { en: "African walnut", es: "Nuez africana", de: "Afrikanische Walnuss", it: "Noce africana", pt: "Noz africana" }, category: "nut", icon: "fruit-nut", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "nigeria-kitchenbutterfly-season-calendar"], confidence: "source" },
+  { id: "jujube", name: "Jujube", names: { en: "Jujube", es: "Azufaifa", de: "Jujube", it: "Giuggiola", pt: "Jujuba" }, category: "fruit", icon: "fruit-berry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "togo-florafaunafun-fruit-guide"], confidence: "source" },
+  { id: "noix-kola", name: "Noix de kola", names: { en: "Kola nut", es: "Nuez de cola", de: "Kolanuss", it: "Noce di cola", pt: "Noz-de-cola" }, category: "nut", icon: "fruit-nut", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "togo-florafaunafun-fruit-guide"], confidence: "source" },
+  { id: "safou", name: "Safou", names: { en: "African pear", es: "Pera africana", de: "Afrikanische Pflaume", it: "Pera africana", pt: "Safou" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "togo-florafaunafun-fruit-guide"], confidence: "source" },
   { id: "arachide", name: "Arachide", names: { en: "Groundnut", es: "Cacahuete", de: "Erdnuss", it: "Arachide", pt: "Amendoim" }, category: "legume", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "nigeria-kitchenbutterfly-season-calendar"], confidence: "source" },
   { id: "canne-sucre", name: "Canne à sucre", names: { en: "Sugar cane", es: "Caña de azúcar", de: "Zuckerrohr", it: "Canna da zucchero", pt: "Cana-de-açúcar" }, category: "sweetener", icon: "vegetable-stem", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "nigeria-kitchenbutterfly-season-calendar"], confidence: "source" },
   { id: "noix-pecan", name: "Noix de pécan", names: { en: "Pecan", es: "Pacana", de: "Pekannuss", it: "Noce pecan", pt: "Noz-pecã" }, category: "nut", icon: "fruit-nut", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "usda-fdc"], confidence: "taxonomy" },
@@ -2671,6 +2677,41 @@ const beninLeLocalTvSeasonOverrides: Record<string, NonNullable<NonNullable<Seas
   tomate: { months: [10, 11, 12], nearMonths: [9, 1], seasonLabel: "oct. – déc." },
 };
 
+const togoSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  mangue: { months: [3, 4, 5, 6, 7], nearMonths: [2, 8], seasonLabel: "mars – juil." },
+  "pomme-cajou": { months: [2, 3, 4, 5], nearMonths: [1, 6], seasonLabel: "févr. – mai" },
+  banane: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "banane-plantain": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  ananas: { months: [3, 4, 5, 6, 7], nearMonths: [2, 8], seasonLabel: "mars – juil." },
+  papaye: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  orange: { months: [12, 1, 2, 3], nearMonths: [4, 11], seasonLabel: "déc. – mars" },
+  citron: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année, pic déc. – mars", seasonMode: "year-round" },
+  "citron-vert": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année, pic déc. – mars", seasonMode: "year-round" },
+  mandarine: { months: [12, 1, 2, 3], nearMonths: [4, 11], seasonLabel: "déc. – mars" },
+  goyave: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  avocat: { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept." },
+  "fruit-passion": { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct." },
+  corossol: { months: [6, 7, 8, 9, 10, 11], nearMonths: [5, 12], seasonLabel: "juin – nov." },
+  anone: { months: [6, 7, 8, 9], nearMonths: [5, 10], seasonLabel: "juin – sept." },
+  agbalumo: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  baobab: { months: [12, 1, 2], nearMonths: [3, 11], seasonLabel: "déc. – févr." },
+  tamarin: { months: [12, 1, 2, 3, 4], nearMonths: [5, 11], seasonLabel: "déc. – avr." },
+  jacquier: { months: [6, 7, 8, 9], nearMonths: [5, 10], seasonLabel: "juin – sept." },
+  pastèque: { months: [2, 3, 4, 5, 6], nearMonths: [1, 7], seasonLabel: "févr. – juin" },
+  jujube: { months: [2, 3, 4, 5], nearMonths: [1, 6], seasonLabel: "févr. – mai" },
+  "noix-kola": { months: [11, 12, 1, 2, 3], nearMonths: [4, 10], seasonLabel: "nov. – mars" },
+  jamblon: { months: [6, 7, 8, 9], nearMonths: [5, 10], seasonLabel: "juin – sept." },
+  carambola: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  safou: { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
+  "maïs-grain": { months: [8, 9, 10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [6, 7], seasonLabel: "août – mai" },
+  "maïs-doux": { months: [8, 9, 10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [6, 7], seasonLabel: "août – mai" },
+  "haricot-vert": { months: [8, 9, 10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [6, 7], seasonLabel: "août – mai" },
+  dolique: { months: [8, 9, 10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [6, 7], seasonLabel: "août – mai" },
+  riz: { months: [8, 9, 10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [6, 7], seasonLabel: "août – mai" },
+  sorgho: { months: [8, 9, 10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [6, 7], seasonLabel: "août – mai" },
+  igname: { months: [8, 9, 10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [6, 7], seasonLabel: "août – mai" },
+};
+
 const luxembourgAgricultureSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   endive: { months: [1, 2, 3, 10, 11, 12], nearMonths: [9, 4], seasonLabel: "oct. – mars" },
   rampon: { months: [1, 2, 3, 11, 12], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
@@ -3829,6 +3870,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.BJ = {
       ...beninLeLocalTvSeasonOverrides[item.id],
       sourceIds: ["benin-lelocaltv-fruit-season-guide"],
+      confidence: "source",
+    };
+  }
+
+  if (togoSeasonOverrides[item.id]) {
+    countries.TG = {
+      ...togoSeasonOverrides[item.id],
+      sourceIds: ["togo-florafaunafun-fruit-guide", "togo-fewsnet-country-book"],
       confidence: "source",
     };
   }

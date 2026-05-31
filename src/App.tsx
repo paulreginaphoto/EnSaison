@@ -315,7 +315,6 @@ function MainPage() {
       ...(selectedCountryDataScope?.sourceIds ?? []),
     ]),
   ).map((sourceId) => dataSources[sourceId]);
-
   return (
     <main className="app-page">
       <div className="dashboard-shell">
@@ -376,6 +375,7 @@ function MainPage() {
             return (
               <button
                 aria-pressed={isSelected}
+                aria-label={`Carte ${copy.categoryGroups[category]}`}
                 className={`category-card ${art.accentClass} ${
                   isSelected ? "category-card-active" : ""
                 }`}

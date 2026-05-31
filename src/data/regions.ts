@@ -200,6 +200,22 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "bangladesh-apo-postharvest-fruit-vegetables",
     ],
   },
+  BF: {
+    labels: {
+      fr: "Burkina Faso: livre de donnees FEWS NET, etude Cambridge sur l'offre alimentaire saisonniere rurale, FAO/Unasylva pour les produits forestiers de Zitenga et note filiere mangue; guide national prudent, pas precision par province.",
+      en: "Burkina Faso: FEWS NET data book, Cambridge study on rural seasonal food supply, FAO/Unasylva for Zitenga forest products and mango supply-chain note; cautious national guide, not province-level precision.",
+      es: "Burkina Faso: libro de datos FEWS NET, estudio Cambridge sobre oferta alimentaria rural estacional, FAO/Unasylva para productos forestales de Zitenga y nota de cadena de mango; guia nacional prudente, no precision provincial.",
+      de: "Burkina Faso: FEWS-NET-Datenbuch, Cambridge-Studie zum saisonalen laendlichen Nahrungsangebot, FAO/Unasylva zu Waldprodukten in Zitenga und Mango-Lieferkettenhinweis; vorsichtige nationale Orientierung, keine Provinzgenauigkeit.",
+      it: "Burkina Faso: data book FEWS NET, studio Cambridge sull'offerta alimentare rurale stagionale, FAO/Unasylva per i prodotti forestali di Zitenga e nota di filiera mango; guida nazionale prudente, non precisione provinciale.",
+      pt: "Burquina Faso: livro de dados FEWS NET, estudo Cambridge sobre oferta alimentar rural sazonal, FAO/Unasylva para produtos florestais de Zitenga e nota da cadeia da manga; guia nacional prudente, sem precisao provincial.",
+    },
+    sourceIds: [
+      "burkina-fewsnet-data-book",
+      "burkina-cambridge-seasonal-diet",
+      "burkina-fao-zitenga-forest-products",
+      "burkina-casamance-mango",
+    ],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

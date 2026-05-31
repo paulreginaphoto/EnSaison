@@ -159,6 +159,7 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "agbalumo", name: "Agbalumo", names: { en: "African star apple", es: "Manzana estrella africana", de: "Afrikanischer Sternapfel", it: "Mela stella africana", pt: "Maçã-estrela africana" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "nigeria-kitchenbutterfly-season-calendar"], confidence: "source" },
   { id: "pomme-cajou", name: "Pomme de cajou", names: { en: "Cashew apple", es: "Manzana de cajú", de: "Cashewapfel", it: "Mela di anacardio", pt: "Caju" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "togo-florafaunafun-fruit-guide"], confidence: "source" },
   { id: "baobab", name: "Fruit de baobab", names: { en: "Baobab fruit", es: "Fruto de baobab", de: "Baobabfrucht", it: "Frutto di baobab", pt: "Fruto de baobá" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "togo-florafaunafun-fruit-guide"], confidence: "source" },
+  { id: "feuille-baobab", name: "Feuille de baobab", names: { en: "Baobab leaf", es: "Hoja de baobab", de: "Baobabblatt", it: "Foglia di baobab", pt: "Folha de baobá" }, category: "vegetable", icon: "vegetable-leaf", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "burkina-fao-zitenga-forest-products"], confidence: "source" },
   { id: "tamarin", name: "Tamarin", names: { en: "Tamarind", es: "Tamarindo", de: "Tamarinde", it: "Tamarindo", pt: "Tamarindo" }, category: "fruit", icon: "fruit-pod", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "togo-florafaunafun-fruit-guide"], confidence: "source" },
   { id: "acerola", name: "Acérola", names: { en: "Acerola", es: "Acerola", de: "Acerola", it: "Acerola", pt: "Acerola" }, category: "fruit", icon: "fruit-berry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "vietnam-greatfoods-season-calendar"], confidence: "source" },
   { id: "calamansi", name: "Calamansi", names: { en: "Calamansi", es: "Calamansi", de: "Calamansi", it: "Calamansi", pt: "Calamansi" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "vietnam-greatfoods-season-calendar"], confidence: "source" },
@@ -301,6 +302,8 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "noix-africaine", name: "Noix africaine", names: { en: "African walnut", es: "Nuez africana", de: "Afrikanische Walnuss", it: "Noce africana", pt: "Noz africana" }, category: "nut", icon: "fruit-nut", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "nigeria-kitchenbutterfly-season-calendar"], confidence: "source" },
   { id: "jujube", name: "Jujube", names: { en: "Jujube", es: "Azufaifa", de: "Jujube", it: "Giuggiola", pt: "Jujuba" }, category: "fruit", icon: "fruit-berry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "togo-florafaunafun-fruit-guide"], confidence: "source" },
   { id: "noix-kola", name: "Noix de kola", names: { en: "Kola nut", es: "Nuez de cola", de: "Kolanuss", it: "Noce di cola", pt: "Noz-de-cola" }, category: "nut", icon: "fruit-nut", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "togo-florafaunafun-fruit-guide"], confidence: "source" },
+  { id: "karité", name: "Karité", names: { en: "Shea fruit", es: "Fruto de karité", de: "Sheafrucht", it: "Frutto di karité", pt: "Fruto de carité" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "burkina-fao-zitenga-forest-products"], confidence: "source" },
+  { id: "néré", name: "Néré", names: { en: "African locust bean", es: "Néré", de: "Néré", it: "Néré", pt: "Néré" }, category: "seed", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "burkina-fao-zitenga-forest-products"], confidence: "source" },
   { id: "safou", name: "Safou", names: { en: "African pear", es: "Pera africana", de: "Afrikanische Pflaume", it: "Pera africana", pt: "Safou" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "togo-florafaunafun-fruit-guide"], confidence: "source" },
   { id: "arachide", name: "Arachide", names: { en: "Groundnut", es: "Cacahuete", de: "Erdnuss", it: "Arachide", pt: "Amendoim" }, category: "legume", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "nigeria-kitchenbutterfly-season-calendar"], confidence: "source" },
   { id: "canne-sucre", name: "Canne à sucre", names: { en: "Sugar cane", es: "Caña de azúcar", de: "Zuckerrohr", it: "Canna da zucchero", pt: "Cana-de-açúcar" }, category: "sweetener", icon: "vegetable-stem", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "nigeria-kitchenbutterfly-season-calendar"], confidence: "source" },
@@ -2677,6 +2680,27 @@ const beninLeLocalTvSeasonOverrides: Record<string, NonNullable<NonNullable<Seas
   tomate: { months: [10, 11, 12], nearMonths: [9, 1], seasonLabel: "oct. – déc." },
 };
 
+const burkinaFasoSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  mangue: { months: [3, 4, 5, 6, 7, 8], nearMonths: [2, 9], seasonLabel: "mars – août" },
+  tomate: { months: [1, 2, 3, 4, 5], nearMonths: [6, 12], seasonLabel: "janv. – mai" },
+  oignon: { months: [1, 2, 3, 4, 5], nearMonths: [6, 12], seasonLabel: "janv. – mai" },
+  arachide: { months: [9, 10, 11, 12, 1, 2, 3], nearMonths: [6, 7, 8], seasonLabel: "sept. – mars" },
+  dolique: { months: [8, 9, 10, 11, 12, 1], nearMonths: [2, 7], seasonLabel: "août – janv." },
+  "maïs-grain": { months: [8, 9, 10, 11, 12, 1], nearMonths: [7, 2], seasonLabel: "août – janv." },
+  "maïs-doux": { months: [8, 9, 10, 11, 12], nearMonths: [7, 1], seasonLabel: "août – déc." },
+  gombo: { months: [8, 9, 10, 11, 12], nearMonths: [7, 1], seasonLabel: "août – déc." },
+  sorgho: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  millet: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  riz: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  "feuille-baobab": { months: [5, 6, 7], nearMonths: [8, 9, 10, 11, 12, 1, 2], seasonLabel: "mai – juil., séché jusqu'en févr." },
+  baobab: { months: [1, 2], nearMonths: [12, 3], seasonLabel: "janv. – févr." },
+  karité: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  néré: { months: [5, 6, 10, 11, 12, 3, 4], nearMonths: [1, 2, 7, 8, 9], seasonLabel: "mars – juin, oct. – déc." },
+  tamarin: { months: [11, 12], nearMonths: [10, 1, 2], seasonLabel: "nov. – déc." },
+  jujube: { months: [1, 2], nearMonths: [12, 3], seasonLabel: "janv. – févr." },
+  oseille: { months: [8, 9, 10, 11, 12, 1], nearMonths: [7, 2], seasonLabel: "août – janv." },
+};
+
 const togoSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   mangue: { months: [3, 4, 5, 6, 7], nearMonths: [2, 8], seasonLabel: "mars – juil." },
   "pomme-cajou": { months: [2, 3, 4, 5], nearMonths: [1, 6], seasonLabel: "févr. – mai" },
@@ -3870,6 +3894,19 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.BJ = {
       ...beninLeLocalTvSeasonOverrides[item.id],
       sourceIds: ["benin-lelocaltv-fruit-season-guide"],
+      confidence: "source",
+    };
+  }
+
+  if (burkinaFasoSeasonOverrides[item.id]) {
+    countries.BF = {
+      ...burkinaFasoSeasonOverrides[item.id],
+      sourceIds: [
+        "burkina-fewsnet-data-book",
+        "burkina-cambridge-seasonal-diet",
+        "burkina-fao-zitenga-forest-products",
+        "burkina-casamance-mango",
+      ],
       confidence: "source",
     };
   }

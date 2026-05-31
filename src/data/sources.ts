@@ -279,6 +279,22 @@ export const dataSources = {
     label: "Le Local TV Benin fruit season guide",
     url: "https://lelocaltv.com/saison-des-fruits-au-benin-quand-savourer-les-meilleures-recoltes/",
   },
+  "burkina-fewsnet-data-book": {
+    label: "FEWS NET Burkina Faso data book",
+    url: "https://devhelp.fews.net/fde/v1/burkina-faso-data-book",
+  },
+  "burkina-cambridge-seasonal-diet": {
+    label: "Public Health Nutrition study on seasonal food supply in rural Burkina Faso",
+    url: "https://www.cambridge.org/core/journals/public-health-nutrition/article/seasonal-variability-of-womens-dietary-diversity-and-food-supply-a-cohort-study-in-rural-burkina-faso/39B3FB2C42754A445FD1E1AD8684A632",
+  },
+  "burkina-fao-zitenga-forest-products": {
+    label: "FAO Unasylva edible forest products in Zitenga, Burkina Faso",
+    url: "https://www.fao.org/4/u5200e/u5200e05.htm",
+  },
+  "burkina-casamance-mango": {
+    label: "Casamance Bio Burkina Faso mango harvest note",
+    url: "https://www.casamance-bio.com/nos-filieres/le-burkina-faso/",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

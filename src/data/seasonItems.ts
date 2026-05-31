@@ -157,7 +157,15 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "ramboutan", name: "Ramboutan", names: { en: "Rambutan", es: "Rambutan", de: "Rambutan", it: "Rambutan", pt: "Rambutao" }, category: "fruit", icon: "fruit-berry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
   { id: "langsat", name: "Langsat", names: { en: "Langsat", es: "Langsat", de: "Langsat", it: "Langsat", pt: "Langsat" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
   { id: "anone", name: "Anone", names: { en: "Sugar apple", es: "Anon", de: "Zimtapfel", it: "Annona", pt: "Fruta-do-conde" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "philippines-fnri-fruit-calendar"], confidence: "source" },
+  { id: "longane", name: "Longane", names: { en: "Longan", es: "Longan", de: "Longan", it: "Longan", pt: "Longan" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "thai-fresh-fruit-season-calendar"], confidence: "source" },
+  { id: "noix-coco-jeune", name: "Noix de coco jeune", names: { en: "Young coconut", es: "Coco joven", de: "Junge Kokosnuss", it: "Cocco giovane", pt: "Coco verde" }, category: "fruit", icon: "fruit-nut", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "thai-fresh-fruit-season-calendar"], confidence: "source" },
+  { id: "salak", name: "Salak", names: { en: "Salak", es: "Salak", de: "Salak", it: "Salak", pt: "Salak" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "thai-fresh-fruit-season-calendar"], confidence: "source" },
   { id: "gombo", name: "Gombo", names: { en: "Okra", es: "Quimbombó", de: "Okra", it: "Gombo", pt: "Quiabo" }, category: "vegetable", icon: "vegetable-stem", months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct.", sourceIds: ["fao-crop-calendar", "india-desagri-vegetable-harvest"], confidence: "indicative" },
+  { id: "maïs-mini", name: "Maïs mini", names: { en: "Baby corn", es: "Maiz baby", de: "Babymais", it: "Mais baby", pt: "Milho baby" }, category: "vegetable", icon: "vegetable-corn", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "thai-fresh-fruit-season-calendar"], confidence: "source" },
+  { id: "citronnelle", name: "Citronnelle", names: { en: "Lemongrass", es: "Hierba limon", de: "Zitronengras", it: "Citronella", pt: "Capim-limao" }, category: "herb", icon: "vegetable-leaf", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "thai-fresh-fruit-season-calendar"], confidence: "source" },
+  { id: "feuille-combava", name: "Feuille de combava", names: { en: "Kaffir lime leaf", es: "Hoja de lima kaffir", de: "Kaffirlimettenblatt", it: "Foglia di kaffir lime", pt: "Folha de lima kaffir" }, category: "herb", icon: "vegetable-leaf", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "thai-fresh-fruit-season-calendar"], confidence: "source" },
+  { id: "galanga", name: "Galanga", names: { en: "Galangal", es: "Galanga", de: "Galgant", it: "Galanga", pt: "Galanga" }, category: "spice", icon: "vegetable-root", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "thai-fresh-fruit-season-calendar"], confidence: "source" },
+  { id: "feuille-curry", name: "Feuille de curry", names: { en: "Curry leaves", es: "Hojas de curry", de: "Curryblaetter", it: "Foglie di curry", pt: "Folhas de caril" }, category: "herb", icon: "vegetable-leaf", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "thai-fresh-fruit-season-calendar"], confidence: "source" },
   { id: "pâtisson", name: "Pâtisson", names: { en: "Pattypan squash", es: "Calabaza pattypan", de: "Patisson", it: "Zucca patisson", pt: "Abóbora patisson" }, category: "vegetable", icon: "vegetable-pumpkin", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "persil-racine", name: "Persil-racine", names: { en: "Parsley root", es: "Raíz de perejil", de: "Wurzelpetersilie", it: "Prezzemolo da radice", pt: "Raiz de salsa" }, category: "vegetable", icon: "vegetable-root", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "radicchio", name: "Radicchio", names: { en: "Radicchio", es: "Radicchio", de: "Radicchio", it: "Radicchio", pt: "Radicchio" }, category: "vegetable", icon: "vegetable-leaf", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
@@ -864,6 +872,43 @@ const philippinesFnriFruitSeasonOverrides: Record<string, NonNullable<NonNullabl
     seasonLabel: "toute l'année",
     seasonMode: "year-round",
   },
+};
+
+const thailandFreshFruitSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  durian: { months: [5, 6, 7], nearMonths: [1, 2, 3, 4, 8, 9, 10, 11, 12], seasonLabel: "mai – juil." },
+  mangoustan: { months: [4, 5, 6, 7, 9, 10], nearMonths: [1, 2, 8], seasonLabel: "avr. – juil., sept. – oct." },
+  ramboutan: { months: [4, 5, 6, 7, 8, 9], nearMonths: [1, 2, 10, 11, 12], seasonLabel: "avr. – sept." },
+  "noix-coco-jeune": { months: [1, 2, 3, 7, 8, 9, 10, 11, 12], nearMonths: [4, 5, 6], seasonLabel: "janv. – mars, juil. – dec." },
+  litchi: { months: [4, 5, 6, 7], nearMonths: [8], seasonLabel: "avr. – juil." },
+  longane: { months: [6, 7, 8], nearMonths: [1, 2, 3, 4, 5, 9, 10, 11, 12], seasonLabel: "juin – aout" },
+  mangue: { months: [3, 4, 5, 6, 11, 12], nearMonths: [1, 2, 7, 8, 9, 10], seasonLabel: "mars – juin, nov. – dec." },
+  sapotille: { months: [1, 2, 3], nearMonths: [10, 11, 12], seasonLabel: "janv. – mars" },
+  papaye: { months: [1, 2, 5, 6, 7, 8, 11, 12], nearMonths: [3, 4, 9, 10], seasonLabel: "janv. – fevr., mai – aout, nov. – dec." },
+  pamplemousse: { months: [6, 7, 8, 9, 10], nearMonths: [1, 2, 3, 4, 5, 11, 12], seasonLabel: "juin – oct." },
+  ananas: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "toute l'annee",
+    seasonMode: "year-round",
+  },
+  fraise: { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  pitaya: { months: [6, 7, 8], nearMonths: [], seasonLabel: "juin – aout" },
+  salak: { months: [5, 6, 7], nearMonths: [4, 8, 9, 10, 11, 12], seasonLabel: "mai – juil." },
+  asperge: { months: [1, 2, 3, 4, 5, 6, 7, 8], nearMonths: [9, 10, 11, 12], seasonLabel: "janv. – aout" },
+  "maïs-mini": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9], nearMonths: [10, 11, 12], seasonLabel: "janv. – sept." },
+  gombo: { months: [2, 3, 4, 5, 12], nearMonths: [1, 6, 7, 8, 9, 10, 11], seasonLabel: "fevr. – mai, dec." },
+  citronnelle: { months: [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [4], seasonLabel: "janv. – mars, mai – dec." },
+  "feuille-combava": { months: [1, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [2, 3, 4], seasonLabel: "janv., mai – dec." },
+  galanga: {
+    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    nearMonths: [],
+    seasonLabel: "toute l'annee",
+    seasonMode: "year-round",
+  },
+  piment: { months: [1, 2, 3, 4, 11, 12], nearMonths: [5, 6, 7, 8, 9, 10], seasonLabel: "janv. – avr., nov. – dec." },
+  gingembre: { months: [1, 2, 10, 11, 12], nearMonths: [3, 4], seasonLabel: "janv. – fevr., oct. – dec." },
+  ail: { months: [1, 2, 12], nearMonths: [3], seasonLabel: "dec. – fevr." },
+  "feuille-curry": { months: [1, 2, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [3, 4], seasonLabel: "janv. – fevr., mai – dec." },
 };
 
 const franceProduceOverrideIds = new Set([
@@ -3006,6 +3051,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.PH = {
       ...philippinesFnriFruitSeasonOverrides[item.id],
       sourceIds: ["philippines-fnri-fruit-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (thailandFreshFruitSeasonOverrides[item.id]) {
+    countries.TH = {
+      ...thailandFreshFruitSeasonOverrides[item.id],
+      sourceIds: ["thai-fresh-fruit-season-calendar"],
       confidence: "source",
     };
   }

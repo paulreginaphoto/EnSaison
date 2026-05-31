@@ -199,6 +199,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - DOST-FNRI Philippines in-season fruits calendar
   https://fnri.dost.gov.ph/images/images/standardtools/MenuGuideCalendar/MGC2023.pdf
 
+- Thai Fresh Fruit / Pisitichai season calendar for Thai fruit, vegetables and herbs
+  https://www.thaifreshfruit.com/wp-content/uploads/2017/12/Season-Calendar-2.pdf
+
 ## What The App Can Say Safely
 
 - Seasonal availability varies by exact location, altitude, growing conditions, weather, storage, greenhouse use and import habits.
@@ -217,9 +220,9 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 290 food entries after the Philippines FNRI fruit-calendar pass;
+- 298 food entries after the Thailand Thai Fresh Fruit/Pisitichai pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 48 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, India, Brazil, Croatia and Japan;
+- country overrides for 49 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Austria now has source-backed Gesundheit.gv.at national season-calendar overrides for 50 fruit, vegetable and mushroom items already present in the catalogue, while remaining Austrian produce still falls back to indicative European regional data;
 - Belgium now has source-backed Vlaanderen/VLAM month-by-month availability overrides for 45 fruit, vegetable, herb and mushroom items already present in the catalogue, while remaining Belgian produce still falls back to indicative European regional data;
@@ -230,6 +233,7 @@ The app now supports:
 - Bangladesh now has source-backed BAMIS/Banglapedia/APO overrides for 34 fruit, vegetable, grain, legume, spice, herb and tuber items already present in the catalogue or added in this pass; jackfruit was added because Banglapedia and the APO/FAO country paper list it as a major Bangladeshi fruit, while rabi vegetables are intentionally mapped as broad national season windows;
 - Indonesia now has source-backed World Bank/Indonesia local-availability overrides for 14 fruit, vegetable, spice, allium and tuber items already present in the catalogue; the source marks `XXX` as high production and `X` as limited availability, so DeSaison maps high-production months as "De saison" and all-`X` rows as limited year-round availability;
 - Philippines now has source-backed DOST-FNRI fruit-calendar overrides for 18 tropical fruit items; 10 fruit entries were added to the global catalogue to cover fruits shown in the Philippine calendar, while vegetables remain intentionally unmodeled until a harvest-availability source is mapped;
+- Thailand now has source-backed Thai Fresh Fruit/Pisitichai season-calendar overrides for 24 fruit, vegetable, herb and spice items; 8 globally localized Thai fruit, herb, spice and vegetable entries were added, using green cells as in-season and yellow low-season cells as near-season; this is practical market guidance, not government or province-level precision;
 - Denmark now has source-backed Fødevarestyrelsen monthly-poster overrides for 36 Danish seasonal fruit and vegetable items already present in the catalogue, while remaining Danish produce still falls back to indicative European regional data;
 - Czechia now has source-backed MZe 2026 harvest/ripening overrides for 34 fruit, vegetable and potato items already present in the catalogue; the MZe source also documents storage windows, but DeSaison maps the harvest/ripening signal for the badge logic;
 - Sweden now has source-backed ICA practical season-guide overrides for 43 Swedish vegetable, fruit, berry, herb and mushroom items already present in the catalogue; this is practical national retail guidance, not a government calendar or regional precision;

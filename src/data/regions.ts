@@ -565,6 +565,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["philippines-fnri-fruit-calendar"],
   },
+  TH: {
+    labels: {
+      fr: "Thailande: calendrier Thai Fresh Fruit/Pisitichai pour fruits, legumes et herbes thaies; utile comme guide pratique national, pas une source gouvernementale ni une precision province par province.",
+      en: "Thailand: Thai Fresh Fruit/Pisitichai calendar for Thai fruit, vegetables and herbs; useful as practical national guidance, not a government source or province-by-province precision.",
+      es: "Tailandia: calendario Thai Fresh Fruit/Pisitichai de frutas, verduras y hierbas tailandesas; util como guia nacional practica, no fuente gubernamental ni precision por provincia.",
+      de: "Thailand: Thai-Fresh-Fruit/Pisitichai-Kalender fuer thailaendisches Obst, Gemuese und Kraeuter; praktische nationale Orientierung, keine Regierungsquelle oder Provinzgenauigkeit.",
+      it: "Thailandia: calendario Thai Fresh Fruit/Pisitichai per frutta, verdure ed erbe thailandesi; utile come guida nazionale pratica, non fonte governativa o precisione per provincia.",
+      pt: "Tailandia: calendario Thai Fresh Fruit/Pisitichai de frutas, legumes e ervas tailandesas; util como guia nacional pratico, nao fonte governamental nem precisao por provincia.",
+    },
+    sourceIds: ["thai-fresh-fruit-season-calendar"],
+  },
   RO: {
     labels: {
       fr: "Roumanie: calendrier Commission europeenne en roumain, section climat tempere incluant explicitement la Roumanie; source par grandes saisons, pas calendrier agricole national mois par mois.",

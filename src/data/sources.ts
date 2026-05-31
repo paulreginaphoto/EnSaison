@@ -151,6 +151,10 @@ export const dataSources = {
     label: "DOST-FNRI Philippines in-season fruits calendar",
     url: "https://fnri.dost.gov.ph/images/images/standardtools/MenuGuideCalendar/MGC2023.pdf",
   },
+  "thai-fresh-fruit-season-calendar": {
+    label: "Thai Fresh Fruit / Pisitichai season calendar for Thai fruit, vegetables and herbs",
+    url: "https://www.thaifreshfruit.com/wp-content/uploads/2017/12/Season-Calendar-2.pdf",
+  },
   "denmark-foedevarestyrelsen-season-posters": {
     label: "Danish Food Agency monthly seasonal fruit and vegetable posters",
     url: "https://foedevarestyrelsen.dk/publikationer/2024/plakater-med-saesonens-frugt-og-groent",

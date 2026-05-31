@@ -224,6 +224,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["greece-foodforhealth-season-calendar", "ec-calendar"],
   },
+  HU: {
+    labels: {
+      fr: "Hongrie: table mensuelle Novenytar pour fruits et legumes de saison; source pratique locale, pas calendrier gouvernemental agricole ni precision par comitat.",
+      en: "Hungary: Novenytar monthly table for seasonal fruit and vegetables; practical local source, not a government agricultural calendar or county-level precision.",
+      es: "Hungria: tabla mensual Novenytar de frutas y verduras de temporada; fuente local practica, no calendario agricola gubernamental ni precision por condado.",
+      de: "Ungarn: monatliche Novenytar-Tabelle fur saisonales Obst und Gemuse; praktische lokale Quelle, kein staatlicher Agrarkalender und keine Komitatsgenauigkeit.",
+      it: "Ungheria: tabella mensile Novenytar per frutta e verdura di stagione; fonte locale pratica, non calendario agricolo governativo ne precisione per contea.",
+      pt: "Hungria: tabela mensal Novenytar de frutas e legumes da epoca; fonte local pratica, nao calendario agricola governamental nem precisao por condado.",
+    },
+    sourceIds: ["hungary-novenytar-season-table"],
+  },
   IN: {
     labels: {
       fr: "Inde: donnees nationales agregees; les saisons varient fortement selon les Etats, l'altitude et les moussons.",

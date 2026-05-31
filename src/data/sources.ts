@@ -95,6 +95,10 @@ export const dataSources = {
     label: "Food For Health Greek fruit and vegetable seasonal calendar",
     url: "https://foodforhealth.gr/imerologio-frouton-ke-lachanikon-ti-na-tros-kathe-epochi/",
   },
+  "hungary-novenytar-season-table": {
+    label: "Novenytar Hungarian fruit and vegetable season table",
+    url: "https://novenytar.krp.hu/idenytablazat",
+  },
   "czech-mze-harvest-storage-calendar": {
     label: "Czech Ministry of Agriculture fruit, vegetable and potato harvest and storage calendar",
     url: "https://mze.gov.cz/public/portal/mze/zemedelstvi/rostlinna-vyroba/rostlinne-komodity/ovoce-a-zelenina/odbobi-sklizne-a-doba-skladovani",

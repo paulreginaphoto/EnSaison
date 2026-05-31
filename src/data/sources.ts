@@ -75,6 +75,10 @@ export const dataSources = {
     label: "Bord Bia Best in Season fruit and vegetables calendar",
     url: "https://www.bordbia.ie/whats-in-season/best-in-season",
   },
+  "norway-frukt-season-calendar": {
+    label: "Frukt.no Norwegian season calendar",
+    url: "https://www.frukt.no/globalassets/sesongkalender/norsk-sesongkalender.pdf",
+  },
   "swiss-blw-season-table": {
     label: "Swiss Federal Office for Agriculture seasonal fruit and vegetable table",
     url: "https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf",

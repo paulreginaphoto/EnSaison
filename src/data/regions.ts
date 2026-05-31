@@ -229,6 +229,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["mexico-profeco-seasonal-q4"],
   },
+  NO: {
+    labels: {
+      fr: "Norvege: calendrier national Frukt.no/OFG pour produits norvegiens en saison, utile pour la disponibilite locale par mois.",
+      en: "Norway: Frukt.no/OFG national calendar for Norwegian produce in season, useful for local month-by-month availability.",
+      es: "Noruega: calendario nacional Frukt.no/OFG de productos noruegos de temporada, util para disponibilidad local por mes.",
+      de: "Norwegen: nationaler Frukt.no/OFG-Kalender fur norwegische Saisonprodukte, nutzlich fur lokale Monatsverfugbarkeit.",
+      it: "Norvegia: calendario nazionale Frukt.no/OFG per prodotti norvegesi di stagione, utile per disponibilita locale mese per mese.",
+      pt: "Noruega: calendario nacional Frukt.no/OFG para produtos noruegueses da epoca, util para disponibilidade local mensal.",
+    },
+    sourceIds: ["norway-frukt-season-calendar"],
+  },
   PT: {
     labels: {
       fr: "Portugal: donnees GPP de calendrier de production national 2016; utile pour la saison de production, pas une disponibilite magasin actuelle.",

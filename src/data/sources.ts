@@ -31,6 +31,10 @@ export const dataSources = {
     label: "French Ministry of Agriculture seasonal products",
     url: "https://agriculture.gouv.fr/produits-de-saison",
   },
+  "monaco-france-customs-union": {
+    label: "France Diplomatie Monaco-France customs union note",
+    url: "https://www.diplomatie.gouv.fr/en/information-by-country/monaco/political-and-economic-relations",
+  },
   "spain-mapa-fruit-calendar": {
     label: "Spanish Ministry of Agriculture seasonal fruit calendar",
     url: "https://www.mapa.gob.es/es/alimentacion/temas/desperdicio/12calendario_frutas_completo_tcm30-623768.pdf",

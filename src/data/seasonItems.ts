@@ -2512,6 +2512,12 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
       sourceIds: ["france-agriculture"],
       confidence: "source",
     };
+    countries.MC = {
+      months: item.months,
+      nearMonths: item.nearMonths,
+      sourceIds: ["france-agriculture", "monaco-france-customs-union"],
+      confidence: "source",
+    };
   }
 
   if (swissProduceOverrideIds.has(item.id)) {

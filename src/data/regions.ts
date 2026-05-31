@@ -394,6 +394,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["latvia-iub-zm-season-calendars"],
   },
+  MC: {
+    labels: {
+      fr: "Monaco: proxy France mediterraneenne utilise prudemment, car Monaco et la France ont une union douaniere; ce n'est pas un calendrier agricole monegasque autonome.",
+      en: "Monaco: Mediterranean France proxy used cautiously, because Monaco and France have a customs union; this is not an independent Monegasque harvest calendar.",
+      es: "Monaco: proxy de Francia mediterranea usado con cautela, porque Monaco y Francia tienen una union aduanera; no es un calendario agricola monegasco independiente.",
+      de: "Monaco: mediterraner Frankreich-Proxy mit Vorsicht genutzt, weil Monaco und Frankreich eine Zollunion haben; kein eigenstaendiger monegassischer Erntekalender.",
+      it: "Monaco: proxy della Francia mediterranea usato con cautela, poiche Monaco e Francia hanno un'unione doganale; non e un calendario agricolo monegasco indipendente.",
+      pt: "Monaco: proxy da Franca mediterranica usado com cautela, porque Monaco e Franca tem uma uniao aduaneira; nao e um calendario agricola monegasco independente.",
+    },
+    sourceIds: ["france-agriculture", "monaco-france-customs-union"],
+  },
   LT: {
     labels: {
       fr: "Lituanie: calendrier Commission europeenne en lituanien, section climat maritime incluant explicitement la Lituanie; source par grandes saisons, pas calendrier agricole national mois par mois.",
@@ -601,6 +612,7 @@ const mediterranean = new Set([
   "CY",
   "GR",
   "IT",
+  "MC",
   "MT",
   "PT",
   "ES",

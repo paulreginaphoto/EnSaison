@@ -82,8 +82,8 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Seasonal Food Guide Australia
   https://seasonalfoodguide.com/
 
-- CEAGESP seasonality purchasing tables
-  https://ceagesp.gov.br/sala-imprensa/sazonalidade-de-compras/
+- CEAGESP 2026 ETSP seasonality quantity table
+  https://ceagesp.gov.br/wp-content/uploads/2026/02/sazonalidade_quantidade-2023-2025.pdf
 
 - APEDA fresh fruits and vegetables overview
   https://apeda.gov.in/FreshFruitsAndVegetables
@@ -121,7 +121,7 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 241 food entries after the fourth worldwide expansion pass;
+- 249 food entries after the Brazil CEAGESP expansion pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
 - country overrides for 43 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, India, Brazil and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
@@ -140,7 +140,7 @@ The app now supports:
 - Portugal now has source-backed GPP national production-calendar overrides for 42 fruit, vegetable, nut and olive-oil items already present in the catalogue; this is production-calendar data from the 2016 GPP booklet, not current shop availability;
 - Australia has 16 source-backed produce overrides from the Australian Government's Healthy Aussie Produce guidance and its linked Seasonal Food Guide Australia general calendar; the app now labels this as national-general seasonal guidance, not state-level precision;
 - Canada has source-backed Foodland Ontario open-data overrides for 43 fresh-produce items already present in the catalogue; this is Ontario availability guidance, not province-by-province precision for the whole country;
-- Brazil has 16 CEAGESP-backed indicative overrides; this mainly reflects a Sao Paulo wholesale-market signal, not full national local precision;
+- Brazil now has 60 CEAGESP-backed source overrides from the 2026 ETSP quantity seasonality table, using green high-volume months as in-season and yellow medium-volume months as near season; this mainly reflects a Sao Paulo wholesale-market signal, not full national state-by-state precision;
 - Spain has source-backed MAPA month-by-month overrides for 46 fruit and vegetable items already present in the catalogue, using higher commercialization as in-season and lower commercialization as soon/near season;
 - Mexico has source-backed PROFECO fourth-quarter overrides for 22 fruit and vegetable items already present in the catalogue; this is a Q4 source, not a complete annual Mexico calendar;
 - the United States has source-backed USDA SNAP-Ed seasonal overrides for 50 produce items already present in the catalogue, mapped from USDA spring/summer/fall/winter lists;

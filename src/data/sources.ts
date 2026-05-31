@@ -116,8 +116,8 @@ export const dataSources = {
     url: "https://seasonalfoodguide.com/",
   },
   "brazil-ceagesp-seasonality": {
-    label: "CEAGESP seasonality purchasing tables",
-    url: "https://ceagesp.gov.br/sala-imprensa/sazonalidade-de-compras/",
+    label: "CEAGESP 2026 ETSP seasonality quantity table",
+    url: "https://ceagesp.gov.br/wp-content/uploads/2026/02/sazonalidade_quantidade-2023-2025.pdf",
   },
   "india-apeda-produce": {
     label: "APEDA fresh fruits and vegetables overview",

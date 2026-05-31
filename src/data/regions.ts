@@ -171,12 +171,12 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
   },
   BR: {
     labels: {
-      fr: "Bresil: donnees indicatives; les references CEAGESP refletent surtout un signal de marche de Sao Paulo, pas tout le pays.",
-      en: "Brazil: indicative data; CEAGESP references mainly reflect a Sao Paulo market signal, not the whole country.",
-      es: "Brasil: datos indicativos; las referencias CEAGESP reflejan sobre todo el mercado de Sao Paulo, no todo el pais.",
-      de: "Brasilien: indikative Daten; CEAGESP verweist vor allem auf den Markt Sao Paulo, nicht auf das ganze Land.",
-      it: "Brasile: dati indicativi; i riferimenti CEAGESP riflettono soprattutto il mercato di Sao Paulo, non tutto il Paese.",
-      pt: "Brasil: dados indicativos; as referencias CEAGESP refletem sobretudo o mercado de Sao Paulo, nao todo o pais.",
+      fr: "Bresil: table CEAGESP 2026 de quantites ETSP, utile pour un signal de marche de Sao Paulo; pas une precision Etat par Etat.",
+      en: "Brazil: CEAGESP 2026 ETSP quantity table, useful as a Sao Paulo market signal; not state-by-state precision.",
+      es: "Brasil: tabla CEAGESP 2026 de cantidades ETSP, util como senal del mercado de Sao Paulo; no precision estado por estado.",
+      de: "Brasilien: CEAGESP-ETSP-Mengentabelle 2026, nutzlich als Marktsignal Sao Paulo; keine bundesstaatliche Genauigkeit.",
+      it: "Brasile: tabella CEAGESP 2026 delle quantita ETSP, utile come segnale del mercato di Sao Paulo; non precisione Stato per Stato.",
+      pt: "Brasil: tabela CEAGESP 2026 de quantidades ETSP, util como sinal do mercado de Sao Paulo; nao precisao estado por estado.",
     },
     sourceIds: ["brazil-ceagesp-seasonality"],
   },

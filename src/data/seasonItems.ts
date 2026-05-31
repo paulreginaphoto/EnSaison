@@ -134,6 +134,10 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "goyave", name: "Goyave", names: { en: "Guava", es: "Guayaba", de: "Guave", it: "Guava", pt: "Goiaba" }, category: "fruit", icon: "fruit-round", months: [7, 8, 9, 11, 12, 1, 2], nearMonths: [6, 10, 3], seasonLabel: "juil. – sept., nov. – févr.", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
   { id: "papaye", name: "Papaye", names: { en: "Papaya", es: "Papaya", de: "Papaya", it: "Papaya", pt: "Mamão" }, category: "fruit", icon: "fruit-round", months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l’année", sourceIds: ["fao-crop-calendar", "india-apeda-produce"], confidence: "indicative" },
   { id: "litchi", name: "Litchi", names: { en: "Lychee", es: "Lichi", de: "Litschi", it: "Litchi", pt: "Lichia" }, category: "fruit", icon: "fruit-berry", months: [5, 6], nearMonths: [4, 7], seasonLabel: "mai – juin", sourceIds: ["india-nhb-litchi", "fao-crop-calendar"], confidence: "source" },
+  { id: "carambola", name: "Carambole", names: { en: "Starfruit", es: "Carambola", de: "Sternfrucht", it: "Carambola", pt: "Carambola" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
+  { id: "fruit-passion", name: "Fruit de la passion", names: { en: "Passion fruit", es: "Maracuyá", de: "Passionsfrucht", it: "Frutto della passione", pt: "Maracujá" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
+  { id: "jabuticaba", name: "Jabuticaba", names: { en: "Jabuticaba", es: "Jabuticaba", de: "Jabuticaba", it: "Jabuticaba", pt: "Jabuticaba" }, category: "fruit", icon: "fruit-berry", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
+  { id: "pitaya", name: "Pitaya", names: { en: "Dragon fruit", es: "Pitaya", de: "Drachenfrucht", it: "Pitaya", pt: "Pitaia" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "gombo", name: "Gombo", names: { en: "Okra", es: "Quimbombó", de: "Okra", it: "Gombo", pt: "Quiabo" }, category: "vegetable", icon: "vegetable-stem", months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct.", sourceIds: ["fao-crop-calendar", "india-desagri-vegetable-harvest"], confidence: "indicative" },
   { id: "échalote", name: "Échalote", names: { en: "Shallot", es: "Chalota", de: "Schalotte", it: "Scalogno", pt: "Chalota" }, category: "allium", icon: "vegetable-bulb", months: [7, 8, 9, 10, 11, 12, 1, 2, 3], nearMonths: [6, 4], seasonLabel: "juil. – mars", sourceIds: ["usda-snaped"], confidence: "indicative" },
   { id: "ciboule", name: "Ciboule", names: { en: "Scallion", es: "Cebolleta", de: "Frühlingszwiebel", it: "Cipollotto", pt: "Cebolinha" }, category: "allium", icon: "vegetable-stem", months: [4, 5, 6, 7, 8, 9, 10], nearMonths: [3, 11], seasonLabel: "avr. – oct.", sourceIds: ["usda-snaped"], confidence: "indicative" },
@@ -275,7 +279,6 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   oignon: {
     CH: { months: [1, 2, 3, 4, 7, 8, 9, 10, 11, 12], nearMonths: [5, 6], sourceIds: ["swiss-blw-season-table"], confidence: "source" },
     CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
-    BR: { months: [7, 8, 9, 10, 11, 12], nearMonths: [6, 1], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: {
       months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       nearMonths: [],
@@ -289,13 +292,11 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   ail: {
     CH: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["swiss-blw-season-table"], confidence: "source" },
     CA: { months: [1, 2, 3, 4, 7, 8, 9, 10, 11, 12], nearMonths: [5, 6], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
-    BR: { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     JP: { months: [4, 5, 6], nearMonths: [3, 7], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   "pomme-de-terre": {
     CH: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["swiss-blw-season-table"], confidence: "source" },
     CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
-    BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: {
       months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       nearMonths: [],
@@ -324,7 +325,6 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
     US: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août", sourceIds: ["usda-snaped"], confidence: "source" },
     CA: { months: [7, 8, 9, 10], nearMonths: [6, 11], sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
     AU: { months: [12, 1, 2, 3, 4], nearMonths: [11, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
-    BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: {
       months: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12],
       nearMonths: [5],
@@ -346,7 +346,6 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   },
   pastèque: {
     AU: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
-    BR: { months: [9, 10, 11, 12, 1, 2, 3, 4], nearMonths: [8, 5], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
@@ -357,7 +356,6 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   },
   peche: {
     AU: { months: [12, 1, 2], nearMonths: [11, 3], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
-    BR: { months: [11, 12, 1], nearMonths: [10, 2], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     JP: { months: [7, 8, 9], nearMonths: [6, 10], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   prune: {
@@ -419,7 +417,6 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   },
   raisin: {
     AU: { months: [1, 2, 3, 4], nearMonths: [12, 5], sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"], confidence: "source" },
-    BR: { months: [12, 1, 2, 3], nearMonths: [11, 4], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: {
       months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       nearMonths: [],
@@ -455,7 +452,6 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
     JP: { months: [10, 11, 12], nearMonths: [9, 1], sourceIds: ["japan-maff-tohoku"], confidence: "source" },
   },
   banane: {
-    BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: {
       months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       nearMonths: [],
@@ -466,11 +462,9 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
     },
   },
   orange: {
-    BR: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
   },
   citron: {
-    BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: {
       months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       nearMonths: [],
@@ -481,15 +475,12 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
     },
   },
   avocat: {
-    BR: { months: [4, 5, 6, 7, 8], nearMonths: [3, 9], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
   },
   ananas: {
-    BR: { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: { months: [7, 8, 9, 10, 11, 12], nearMonths: [6, 1], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
   },
   mangue: {
-    BR: { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: {
       months: [3, 4, 5, 6, 7, 8, 9],
       nearMonths: [2, 10],
@@ -499,11 +490,9 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
     },
   },
   goyave: {
-    BR: { months: [1, 2, 3, 4], nearMonths: [12, 5], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: { months: [7, 8, 9, 11, 12, 1, 2], nearMonths: [6, 10, 3], sourceIds: ["india-apeda-produce"], confidence: "indicative" },
   },
   papaye: {
-    BR: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
     IN: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["india-apeda-produce"], confidence: "indicative" },
   },
   litchi: {
@@ -511,7 +500,6 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   },
   gombo: {
     IN: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], sourceIds: ["india-desagri-vegetable-harvest"], confidence: "indicative" },
-    BR: { months: [10, 11, 12, 1, 2, 3, 4], nearMonths: [9, 5], sourceIds: ["brazil-ceagesp-seasonality"], confidence: "indicative" },
   },
   "champignon-de-paris": {
     CA: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round", sourceIds: ["foodland-ontario-availability"], confidence: "indicative" },
@@ -1816,6 +1804,69 @@ const portugalGppSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonI
   },
 };
 
+const brazilCeagespQuantitySeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  avocat: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonMode: "year-round" },
+  ananas: { months: [1, 2, 3, 10, 11, 12], nearMonths: [4, 5, 9] },
+  prune: { months: [1, 2, 7, 10, 11, 12], nearMonths: [3, 8, 9] },
+  mure: { months: [9, 11, 12], nearMonths: [1, 2, 3, 5, 8, 10] },
+  banane: { months: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12], nearMonths: [6] },
+  cacao: { months: [5, 8, 9, 10], nearMonths: [3, 4, 7, 11] },
+  kaki: { months: [3, 4, 5, 6, 7], nearMonths: [2] },
+  carambola: { months: [1, 2, 5, 6, 7], nearMonths: [3, 4, 8, 12] },
+  figue: { months: [1, 2, 3, 12], nearMonths: [4, 5, 6, 7, 11] },
+  framboise: { months: [3, 11, 12], nearMonths: [1, 7, 8, 10] },
+  goyave: { months: [1, 2, 3, 4], nearMonths: [5, 7, 8, 9, 10, 11, 12] },
+  pamplemousse: { months: [5, 6, 7, 8], nearMonths: [3, 4, 9] },
+  jabuticaba: { months: [9, 10], nearMonths: [1, 2, 3, 5, 7, 8, 11] },
+  kiwi: { months: [3, 4, 5, 6, 8], nearMonths: [2, 7, 12] },
+  orange: { months: [1, 2, 3, 5, 6, 7, 8, 9, 11, 12], nearMonths: [4, 10] },
+  litchi: { months: [1, 12], nearMonths: [2, 11] },
+  citron: { months: [1, 2, 3, 5, 6, 7, 8, 9, 10], nearMonths: [4, 11, 12] },
+  pomme: { months: [1, 2, 3, 4, 7, 8, 9, 10], nearMonths: [5, 6, 11, 12] },
+  papaye: { months: [1, 5, 8, 9, 10, 11], nearMonths: [2, 3, 4, 6, 7, 12] },
+  mangue: { months: [1, 2, 3, 4, 5, 7, 10, 11, 12], nearMonths: [6, 8, 9] },
+  "fruit-passion": { months: [1, 4, 5, 10], nearMonths: [2, 3, 6, 7, 8, 9, 11, 12] },
+  pastèque: { months: [1, 9, 10, 11, 12], nearMonths: [2, 3, 8] },
+  melon: { months: [1, 3, 6, 7, 8, 9, 10, 11, 12], nearMonths: [2, 4, 5] },
+  mandarine: { months: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [1, 12] },
+  myrtille: { months: [1, 12], nearMonths: [2, 3, 4, 5, 6, 8, 10, 11] },
+  nectarine: { months: [11, 12], nearMonths: [1, 9, 10] },
+  poire: { months: [1, 2, 3, 4, 5, 7, 8, 9, 10], nearMonths: [6, 11] },
+  peche: { months: [1, 9, 10, 11, 12], nearMonths: [2, 8] },
+  pitaya: { months: [1, 2, 3, 4], nearMonths: [5, 6, 12] },
+  grenade: { months: [4, 10, 12], nearMonths: [2, 3, 5, 6, 7, 11] },
+  raisin: { months: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12], nearMonths: [6] },
+  courge: { months: [1, 2, 3, 4, 5, 6, 7, 10], nearMonths: [8, 9, 11, 12] },
+  courgette: { months: [1, 2, 3, 5, 9, 10], nearMonths: [4, 6, 7, 8, 11, 12] },
+  artichaut: { months: [9, 10, 11, 12], nearMonths: [1, 4, 6, 7, 8] },
+  laitue: { months: [1, 2, 3, 4, 5, 6, 12], nearMonths: [7, 8, 9, 10, 11] },
+  ail: { months: [8, 9, 10, 11, 12], nearMonths: [1, 4, 6, 7] },
+  "patate-douce": { months: [1, 2, 3, 4, 5, 6, 7, 8], nearMonths: [9, 10, 11] },
+  "pomme-de-terre": { months: [1, 2, 3, 12], nearMonths: [4, 5, 7, 8, 9, 10, 11] },
+  aubergine: { months: [3, 4, 5, 9, 11], nearMonths: [1, 2, 6, 7, 8, 10, 12] },
+  betterave: { months: [8, 9, 10], nearMonths: [1, 2, 3, 4, 5, 6, 7, 11] },
+  brocoli: { months: [5, 6, 7, 8, 9, 10, 11], nearMonths: [1, 2, 4, 12] },
+  oignon: { months: [1, 2, 3, 7, 8, 10, 11], nearMonths: [4, 5, 9, 12] },
+  carotte: { months: [1, 2, 3, 4, 5, 9, 10, 11, 12], nearMonths: [6, 7, 8] },
+  "chou-fleur": { months: [7, 8, 9], nearMonths: [1, 2, 5, 6, 10, 11] },
+  "chou-frisé": { months: [3, 5, 7, 8, 9], nearMonths: [1, 2, 4, 6, 10, 11] },
+  fenouil: { months: [1, 2, 3, 4, 5], nearMonths: [6, 7, 8, 10, 11] },
+  "épinard": { months: [1, 2, 3, 5, 8], nearMonths: [4, 6, 7, 9, 10, 11] },
+  manioc: { months: [5, 6, 7, 8], nearMonths: [1, 2, 3, 4, 9, 10, 11] },
+  "maïs-doux": { months: [6, 7], nearMonths: [1, 3, 4, 5, 8, 9, 10, 11] },
+  navet: { months: [1, 3, 5], nearMonths: [2, 4, 6, 7, 8, 9, 10] },
+  concombre: { months: [1, 2, 3, 4, 5, 10, 12], nearMonths: [8, 11] },
+  poivron: { months: [1, 4, 5, 10, 12], nearMonths: [2, 3, 7, 8, 9, 11] },
+  gombo: { months: [1, 2, 3, 11], nearMonths: [4, 5, 7, 9, 10, 12] },
+  tomate: { months: [1, 4, 6, 7, 8, 9, 10, 11, 12], nearMonths: [2, 3, 5] },
+  "haricot-vert": { months: [1, 2, 3, 4, 5, 9, 11, 12], nearMonths: [6, 7, 8] },
+  "chou-blanc": { months: [1, 2, 3, 4, 5], nearMonths: [6, 7, 8, 9, 10, 12] },
+  roquette: { months: [1, 2, 3, 4, 5, 10], nearMonths: [7, 8, 9, 11, 12] },
+  persil: { months: [1, 2, 3, 4, 5], nearMonths: [6, 7, 8, 10, 12] },
+  "champignon-de-paris": { months: [1, 3, 5, 11], nearMonths: [4, 9, 10, 12] },
+  shiitake: { months: [1, 3, 4, 5], nearMonths: [6, 8, 12] },
+};
+
 const mexicoProfecoQ4SeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   ananas: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
   avocat: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
@@ -2045,6 +2096,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.PT = {
       ...portugalGppSeasonOverrides[item.id],
       sourceIds: ["portugal-gpp-plant-products"],
+      confidence: "source",
+    };
+  }
+
+  if (brazilCeagespQuantitySeasonOverrides[item.id]) {
+    countries.BR = {
+      ...brazilCeagespQuantitySeasonOverrides[item.id],
+      sourceIds: ["brazil-ceagesp-seasonality"],
       confidence: "source",
     };
   }

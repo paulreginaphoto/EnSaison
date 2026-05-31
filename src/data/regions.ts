@@ -387,6 +387,21 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["ghana-greenviews-season-guide", "ghana-ghanaveg-market-report"],
   },
+  CI: {
+    labels: {
+      fr: "Cote d'Ivoire: guide local LePetitJournal des mois de consommation, calendrier agricole Agripoint par zones Nord/Centre/Sud et note FIRCA pour la banane plantain; synthese nationale pratique, pas precision par region ni par variete.",
+      en: "Cote d'Ivoire: LePetitJournal local consumption-month guide, Agripoint agricultural calendar by North/Centre/South zones and FIRCA plantain note; practical national synthesis, not region- or variety-level precision.",
+      es: "Costa de Marfil: guia local de LePetitJournal por meses de consumo, calendario agricola Agripoint por zonas Norte/Centro/Sur y nota FIRCA sobre platano macho; sintesis nacional practica, sin precision regional ni varietal.",
+      de: "Elfenbeinkueste: lokaler LePetitJournal-Verbrauchsmonatsfuehrer, Agripoint-Agrarkalender nach Nord-/Zentral-/Suedzonen und FIRCA-Hinweis zu Kochbananen; praktische nationale Synthese, keine regionale oder sortengenaue Genauigkeit.",
+      it: "Costa d'Avorio: guida locale LePetitJournal sui mesi di consumo, calendario agricolo Agripoint per zone Nord/Centro/Sud e nota FIRCA sulla banana plantain; sintesi nazionale pratica, senza precisione regionale o varietale.",
+      pt: "Costa do Marfim: guia local LePetitJournal por meses de consumo, calendario agricola Agripoint por zonas Norte/Centro/Sul e nota FIRCA sobre banana-da-terra; sintese nacional pratica, sem precisao regional nem varietal.",
+    },
+    sourceIds: [
+      "cote-divoire-lepetitjournal-season-guide",
+      "cote-divoire-agripoint-calendar",
+      "cote-divoire-firca-plantain",
+    ],
+  },
   SN: {
     labels: {
       fr: "Senegal: tableaux Sen-Garden/CESAG de production faible, moyenne et forte pour fruits et legumes par zone de production, etablis a partir de donnees du ministere de l'Agriculture; synthese nationale pratique, pas precision par region dans l'interface.",

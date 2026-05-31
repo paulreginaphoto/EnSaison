@@ -255,6 +255,18 @@ export const dataSources = {
     label: "GhanaVeg / HortiFresh domestic horticulture market report",
     url: "https://www.hortifresh.org/wp-content/uploads/GhanaVeg-Business-Opportunities-Report-11.pdf",
   },
+  "cote-divoire-lepetitjournal-season-guide": {
+    label: "LePetitJournal Abidjan fruit and vegetable season guide for Cote d'Ivoire",
+    url: "https://lepetitjournal.com/abidjan/les-fruits-et-legumes-de-saison-en-cote-divoire-271472",
+  },
+  "cote-divoire-agripoint-calendar": {
+    label: "Agripoint agricultural calendar for Cote d'Ivoire",
+    url: "https://agripoint.pro/calendrier-agricole/",
+  },
+  "cote-divoire-firca-plantain": {
+    label: "FIRCA Cote d'Ivoire plantain sector seasonality note",
+    url: "https://firca.ci/filieres-agricoles/banane-plantain/",
+  },
   "senegal-sengarden-cesag-market-calendar": {
     label: "Sen-Garden / CESAG Senegal fruit and vegetable production calendar",
     url: "https://bibliotheque.cesag.sn/doc_num.php?explnum_id=2642",

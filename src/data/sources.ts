@@ -47,6 +47,10 @@ export const dataSources = {
     label: "European Commission EU-Andorra customs union overview",
     url: "https://taxation-customs.ec.europa.eu/customs/international-affairs/origin-goods/customs-unions",
   },
+  "san-marino-eu-customs-union": {
+    label: "European Commission San Marino customs union and preferential arrangements",
+    url: "https://taxation-customs.ec.europa.eu/san-marino-customs-unions-and-preferential-arrangements_en",
+  },
   "spain-mapa-fruit-calendar": {
     label: "Spanish Ministry of Agriculture seasonal fruit calendar",
     url: "https://www.mapa.gob.es/es/alimentacion/temas/desperdicio/12calendario_frutas_completo_tcm30-623768.pdf",

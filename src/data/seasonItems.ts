@@ -2626,6 +2626,11 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
       sourceIds: ["italy-crea-seasonal-produce"],
       confidence: "source",
     };
+    countries.SM = {
+      ...italySeasonOverrides[item.id],
+      sourceIds: ["italy-crea-seasonal-produce", "san-marino-eu-customs-union"],
+      confidence: "source",
+    };
   }
 
   if (spainFruitSeasonOverrides[item.id]) {

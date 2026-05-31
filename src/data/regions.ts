@@ -420,6 +420,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["france-agriculture", "monaco-france-customs-union"],
   },
+  SM: {
+    labels: {
+      fr: "Saint-Marin: proxy Italie utilise prudemment, car Saint-Marin est enclave en Italie et a une union douaniere avec l'UE; ce n'est pas un calendrier agricole national saint-marinais.",
+      en: "San Marino: Italy proxy used cautiously, because San Marino is enclaved in Italy and has a customs union with the EU; this is not a Sammarinese national harvest calendar.",
+      es: "San Marino: proxy de Italia usado con cautela, porque San Marino esta enclavado en Italia y tiene una union aduanera con la UE; no es un calendario agricola nacional sanmarinense.",
+      de: "San Marino: Italien-Proxy mit Vorsicht genutzt, weil San Marino von Italien umgeben ist und eine Zollunion mit der EU hat; kein nationaler san-marinesischer Erntekalender.",
+      it: "San Marino: proxy dell'Italia usato con cautela, perche San Marino e enclavato in Italia e ha un'unione doganale con l'UE; non e un calendario agricolo nazionale sammarinese.",
+      pt: "San Marino: proxy da Italia usado com cautela, porque San Marino esta encravado na Italia e tem uma uniao aduaneira com a UE; nao e um calendario agricola nacional sanmarinense.",
+    },
+    sourceIds: ["italy-crea-seasonal-produce", "san-marino-eu-customs-union"],
+  },
   LT: {
     labels: {
       fr: "Lituanie: calendrier Commission europeenne en lituanien, section climat maritime incluant explicitement la Lituanie; source par grandes saisons, pas calendrier agricole national mois par mois.",

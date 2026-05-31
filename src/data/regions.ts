@@ -224,6 +224,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["finland-luontoon-seasonal-food"],
   },
+  SI: {
+    labels: {
+      fr: "Slovenie: calendrier saisonnier du gouvernement pour les achats publics verts, avec offre forte et offre disponible pour legumes, fruits et pommes.",
+      en: "Slovenia: government green-procurement seasonal calendar, with strong and available supply periods for vegetables, fruit and apples.",
+      es: "Eslovenia: calendario estacional gubernamental de compras publicas verdes, con periodos de oferta fuerte y disponible para verduras, frutas y manzanas.",
+      de: "Slowenien: staatlicher Saisonkalender fuer gruenes oeffentliches Beschaffungswesen, mit starken und verfuegbaren Angebotszeiten fuer Gemuese, Obst und Aepfel.",
+      it: "Slovenia: calendario stagionale governativo per gli appalti pubblici verdi, con periodi di offerta forte e disponibile per verdure, frutta e mele.",
+      pt: "Eslovenia: calendario sazonal governamental de compras publicas verdes, com periodos de oferta forte e disponivel para legumes, frutas e macas.",
+    },
+    sourceIds: ["slovenia-gov-green-procurement-season-calendar"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

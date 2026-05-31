@@ -12,7 +12,7 @@ type SeasonLegendProps = {
 
 export function SeasonLegend({ labels }: SeasonLegendProps) {
   return (
-    <div className="flex flex-wrap gap-2" aria-label="Légende de saison">
+    <div className="season-legend" aria-label="Légende de saison">
       {legend.map((entry) => (
         <span key={entry.status} className={`season-badge ${entry.className}`}>
           {labels[entry.status]}

@@ -1,4 +1,9 @@
 import { useState } from "react";
+import { ChevronRight } from "lucide-react";
+import asparagusThumb from "../assets/produce/thumb-asperges.webp";
+import orangeThumb from "../assets/produce/thumb-oranges.webp";
+import radishThumb from "../assets/produce/thumb-radis.webp";
+import strawberryThumb from "../assets/produce/thumb-fraises.webp";
 import { getItemName } from "../lib/season";
 import type { SeasonItem, SeasonStatus } from "../types";
 import type { ResolvedSeason } from "../lib/season";
@@ -30,6 +35,13 @@ const statusClasses: Record<SeasonStatus, string> = {
   variable: "badge-variable",
 };
 
+const itemThumbnails: Record<string, string> = {
+  asperge: asparagusThumb,
+  fraise: strawberryThumb,
+  orange: orangeThumb,
+  radis: radishThumb,
+};
+
 export function SeasonItemRow({
   item,
   status,
@@ -42,7 +54,16 @@ export function SeasonItemRow({
 
   return (
     <li className="item-row" data-category={item.category} data-season-row data-status={status}>
-      <ProduceIcon category={item.category} icon={item.icon} />
+      {itemThumbnails[item.id] ? (
+        <img
+          alt=""
+          className="item-photo"
+          loading="lazy"
+          src={itemThumbnails[item.id]}
+        />
+      ) : (
+        <ProduceIcon category={item.category} icon={item.icon} />
+      )}
       <div className="item-row-content">
         <div className="item-row-main">
           <div className="min-w-0">
@@ -62,12 +83,13 @@ export function SeasonItemRow({
           <span>· {labels.confidence[season.confidence]}</span>
         </p>
         <button
+          aria-label={`${labels.details} (${sourceCount})`}
           aria-expanded={isOpen}
           className="details-button"
           type="button"
           onClick={() => setIsOpen((value) => !value)}
         >
-          {isOpen ? labels.hideDetails : `${labels.details} (${sourceCount})`}
+          <ChevronRight aria-hidden="true" className="details-chevron" />
         </button>
         {isOpen ? (
           <div className="details-panel">

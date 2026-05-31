@@ -115,6 +115,10 @@ export const dataSources = {
     label: "Slovenian Government green public procurement seasonal calendar",
     url: "https://www.gov.si/assets/ministrstva/MJU/DJN/Zeleno-JN/ZeJN_P2_zivila-1.pdf",
   },
+  "slovakia-minedu-school-season-calendar": {
+    label: "Slovak Ministry of Education school catering fruit and vegetable seasonal calendar",
+    url: "https://www.minedu.sk/data/att/22b/31011.8ee564.pdf",
+  },
   "swiss-blw-season-table": {
     label: "Swiss Federal Office for Agriculture seasonal fruit and vegetable table",
     url: "https://www.blw.admin.ch/dam/blw/de/dokumente/Markt/Marktbeobachtung/Fruechte%20und%20Gemuese/Saisontabelle/FG_Saisontabelle.pdf.download.pdf/Schweizer%20Saisontabelle%20Fr%C3%BCchte%20und%20Gem%C3%BCse%20sowie%20Aktionen.pdf",

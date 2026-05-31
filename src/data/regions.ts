@@ -235,6 +235,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["slovenia-gov-green-procurement-season-calendar"],
   },
+  SK: {
+    labels: {
+      fr: "Slovaquie: calendrier saisonnier du ministere de l'Education pour la restauration scolaire, distinguant produits frais et disponibles en stockage.",
+      en: "Slovakia: Ministry of Education school-catering seasonal calendar, distinguishing fresh produce from stored availability.",
+      es: "Eslovaquia: calendario estacional del Ministerio de Educacion para comedores escolares, que distingue productos frescos y disponibilidad almacenada.",
+      de: "Slowakei: Saisonkalender des Bildungsministeriums fuer die Schulverpflegung, der frische Produkte und Lagerverfuegbarkeit unterscheidet.",
+      it: "Slovacchia: calendario stagionale del Ministero dell'Istruzione per la ristorazione scolastica, che distingue prodotti freschi e disponibilita da stoccaggio.",
+      pt: "Eslovaquia: calendario sazonal do Ministerio da Educacao para alimentacao escolar, distinguindo produtos frescos e disponibilidade armazenada.",
+    },
+    sourceIds: ["slovakia-minedu-school-season-calendar"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

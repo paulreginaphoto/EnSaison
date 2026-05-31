@@ -247,6 +247,14 @@ export const dataSources = {
     label: "Kitchen Butterfly Nigerian seasonal produce calendar",
     url: "https://www.kitchenbutterfly.com/2018/version-1-3-nigerian-seasonal-produce-calendar-2/",
   },
+  "ghana-greenviews-season-guide": {
+    label: "Green Views month-by-month guide to seasonal produce in Ghana",
+    url: "https://greenviewsresidential.com/seasonal-produce-in-ghana/",
+  },
+  "ghana-ghanaveg-market-report": {
+    label: "GhanaVeg / HortiFresh domestic horticulture market report",
+    url: "https://www.hortifresh.org/wp-content/uploads/GhanaVeg-Business-Opportunities-Report-11.pdf",
+  },
   "luxembourg-agriculture-season-calendar": {
     label: "Luxembourg Ministry of Agriculture 2024 regional seasonal calendar",
     url: "https://agriculture.public.lu/de/veroeffentlichungen/ernaehrung/saisonkalender.html",

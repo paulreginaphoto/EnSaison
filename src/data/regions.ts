@@ -376,6 +376,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["nigeria-kitchenbutterfly-season-calendar"],
   },
+  GH: {
+    labels: {
+      fr: "Ghana: guide mensuel Green Views des produits de saison, complete par le rapport GhanaVeg/HortiFresh sur la saisonnalite du marche horticole; source pratique nationale, pas calendrier gouvernemental ni precision par region.",
+      en: "Ghana: Green Views month-by-month seasonal produce guide, supplemented by the GhanaVeg/HortiFresh horticulture market seasonality report; practical national source, not a government calendar or regional precision.",
+      es: "Ghana: guia mensual Green Views de productos de temporada, complementada por el informe GhanaVeg/HortiFresh sobre estacionalidad del mercado horticola; fuente nacional practica, no calendario gubernamental ni precision regional.",
+      de: "Ghana: monatlicher Green-Views-Saisonfuehrer fuer Erzeugnisse, ergaenzt durch den GhanaVeg/HortiFresh-Bericht zur Saisonalitaet im Gartenbaumarkt; praktische nationale Quelle, kein Regierungskalender und keine regionale Genauigkeit.",
+      it: "Ghana: guida mensile Green Views ai prodotti stagionali, integrata dal rapporto GhanaVeg/HortiFresh sulla stagionalita del mercato orticolo; fonte nazionale pratica, non calendario governativo ne precisione regionale.",
+      pt: "Gana: guia mensal Green Views de produtos sazonais, complementado pelo relatorio GhanaVeg/HortiFresh sobre sazonalidade do mercado horticola; fonte nacional pratica, nao calendario governamental nem precisao regional.",
+    },
+    sourceIds: ["ghana-greenviews-season-guide", "ghana-ghanaveg-market-report"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

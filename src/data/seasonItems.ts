@@ -2574,6 +2574,27 @@ const nigeriaKitchenButterflySeasonOverrides: Record<string, NonNullable<NonNull
   pastèque: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
 };
 
+const ghanaGreenViewsSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  tomate: { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  carotte: { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  "chou-blanc": { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  orange: { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  pamplemousse: { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  ananas: { months: [1, 2, 3], nearMonths: [4, 12], seasonLabel: "janv. – mars" },
+  "épinard": { months: [4, 5, 6], nearMonths: [3, 7], seasonLabel: "avr. – juin" },
+  mangue: { months: [4, 5, 6], nearMonths: [3, 7], seasonLabel: "avr. – juin" },
+  pastèque: { months: [6], nearMonths: [5, 7], seasonLabel: "juin" },
+  papaye: { months: [6], nearMonths: [5, 7], seasonLabel: "juin" },
+  gombo: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  aubergine: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  banane: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  goyave: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  manioc: { months: [10, 11, 12], nearMonths: [1, 9], seasonLabel: "oct. – déc." },
+  "patate-douce": { months: [10, 11, 12], nearMonths: [1, 9], seasonLabel: "oct. – déc." },
+  avocat: { months: [11], nearMonths: [10, 12], seasonLabel: "nov." },
+  arachide: { months: [12], nearMonths: [1, 11], seasonLabel: "déc." },
+};
+
 const luxembourgAgricultureSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   endive: { months: [1, 2, 3, 10, 11, 12], nearMonths: [9, 4], seasonLabel: "oct. – mars" },
   rampon: { months: [1, 2, 3, 11, 12], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
@@ -3686,6 +3707,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.NG = {
       ...nigeriaKitchenButterflySeasonOverrides[item.id],
       sourceIds: ["nigeria-kitchenbutterfly-season-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (ghanaGreenViewsSeasonOverrides[item.id]) {
+    countries.GH = {
+      ...ghanaGreenViewsSeasonOverrides[item.id],
+      sourceIds: ["ghana-greenviews-season-guide", "ghana-ghanaveg-market-report"],
       confidence: "source",
     };
   }

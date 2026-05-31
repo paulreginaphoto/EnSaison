@@ -343,6 +343,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["morocco-zalar-fruit-production-calendar"],
   },
+  KE: {
+    labels: {
+      fr: "Kenya: calendrier Berito Fresh de disponibilite mensuelle pour fruits, legumes, pois, herbes et piments; source fournisseur pratique, pas calendrier gouvernemental ni precision par comte.",
+      en: "Kenya: Berito Fresh monthly availability calendar for fruit, vegetables, peas, herbs and chilies; practical supplier source, not a government calendar or county-level precision.",
+      es: "Kenia: calendario mensual de disponibilidad de Berito Fresh para frutas, verduras, guisantes, hierbas y chiles; fuente practica de proveedor, no calendario gubernamental ni precision por condado.",
+      de: "Kenia: monatlicher Berito-Fresh-Verfuegbarkeitskalender fuer Obst, Gemuese, Erbsen, Kraeuter und Chilis; praktische Lieferantenquelle, kein Regierungskalender und keine County-Praezision.",
+      it: "Kenya: calendario mensile Berito Fresh di disponibilita per frutta, verdura, piselli, erbe e peperoncini; fonte pratica fornitore, non calendario governativo ne precisione per contea.",
+      pt: "Quenia: calendario mensal de disponibilidade da Berito Fresh para frutas, legumes, ervilhas, ervas e pimentas; fonte pratica de fornecedor, nao calendario governamental nem precisao por condado.",
+    },
+    sourceIds: ["kenya-berito-fresh-season-calendar"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

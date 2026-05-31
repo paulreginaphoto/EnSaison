@@ -235,6 +235,10 @@ export const dataSources = {
     label: "Zalar Agri Morocco fruit production calendar",
     url: "https://zalaragri.com/fruits-in-season-morocco/",
   },
+  "kenya-berito-fresh-season-calendar": {
+    label: "Berito Fresh Kenya seasonal availability calendar",
+    url: "https://beritofresh.com/",
+  },
   "luxembourg-agriculture-season-calendar": {
     label: "Luxembourg Ministry of Agriculture 2024 regional seasonal calendar",
     url: "https://agriculture.public.lu/de/veroeffentlichungen/ernaehrung/saisonkalender.html",

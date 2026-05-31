@@ -2494,6 +2494,19 @@ const moroccoZalarFruitSeasonOverrides: Record<string, NonNullable<NonNullable<S
   prune: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], seasonLabel: "mai – oct." },
 };
 
+const kenyaBeritoFreshSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  "haricot-vert": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "pois-mange-tout": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "petit-pois": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  avocat: { months: [4, 5, 6, 7, 8], nearMonths: [1, 2, 3, 11, 12], seasonLabel: "avr. – août" },
+  mangue: { months: [1, 2, 3, 10, 11, 12], nearMonths: [4, 9], seasonLabel: "oct. – mars" },
+  piment: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  aubergine: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  basilic: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  menthe: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "fruit-passion": { months: [8, 9, 10, 11, 12], nearMonths: [1, 2, 3, 6, 7], seasonLabel: "août – déc." },
+};
+
 const luxembourgAgricultureSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   endive: { months: [1, 2, 3, 10, 11, 12], nearMonths: [9, 4], seasonLabel: "oct. – mars" },
   rampon: { months: [1, 2, 3, 11, 12], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
@@ -3582,6 +3595,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.MA = {
       ...moroccoZalarFruitSeasonOverrides[item.id],
       sourceIds: ["morocco-zalar-fruit-production-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (kenyaBeritoFreshSeasonOverrides[item.id]) {
+    countries.KE = {
+      ...kenyaBeritoFreshSeasonOverrides[item.id],
+      sourceIds: ["kenya-berito-fresh-season-calendar"],
       confidence: "source",
     };
   }

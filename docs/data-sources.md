@@ -217,6 +217,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Peru MIDAGRI / Agromercado harvest calendar for 17 key products
   https://www.gob.pe/institucion/agromercado/informes-publicaciones/7535756-calendario-de-cosecha-de-17-productos-claves-para-la-planificacion-comercial
 
+- Colombia Ministry of Agriculture / ENA sowing and harvest calendars 2010-2016
+  https://agronet.gov.co/sites/default/files/2025-11/calendario_siembras_ena_2016_.pdf
+
 ## What The App Can Say Safely
 
 - Seasonal availability varies by exact location, altitude, growing conditions, weather, storage, greenhouse use and import habits.
@@ -235,9 +238,9 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 302 food entries after the Peru Agromercado harvest-calendar pass;
+- 302 food entries after the Colombia MADR/ENA harvest-calendar pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 54 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, South Africa, Turkey, Uruguay, Argentina, Peru, India, Brazil, Croatia and Japan;
+- country overrides for 55 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Austria now has source-backed Gesundheit.gv.at national season-calendar overrides for 50 fruit, vegetable and mushroom items already present in the catalogue, while remaining Austrian produce still falls back to indicative European regional data;
 - Belgium now has source-backed Vlaanderen/VLAM month-by-month availability overrides for 45 fruit, vegetable, herb and mushroom items already present in the catalogue, while remaining Belgian produce still falls back to indicative European regional data;
@@ -254,6 +257,7 @@ The app now supports:
 - Uruguay now has source-backed Montevideo/MGAP month-by-month overrides for 46 fruit, vegetable, herb, allium and tuber items already present in the catalogue; red abundant-supply cells are mapped as in-season and blue medium-supply cells as near-season, with no department-level precision claim;
 - Argentina now has source-backed Argentina.gob.ar broad-season overrides for 57 fruit, vegetable, herb, allium and tuber items already present in the catalogue; autumn-winter, spring and summer lists are mapped to southern-hemisphere month blocks, without province-level or microclimate precision;
 - Peru now has source-backed MIDAGRI/Agromercado harvest-calendar overrides for 24 existing catalogue items mapped from 17 product rows; generic source rows such as citrus, legumes and dairy are mapped conservatively to matching catalogue items, with no region, altitude or valley precision claim;
+- Colombia now has source-backed MADR/ENA 2010-2016 harvest-calendar overrides for 10 existing catalogue items covering transitory crops such as onion, scallion, pea, bean, fava bean, maize grain, potato, tomato, cassava and carrot; harvest percentages were aggregated by month, so this is a historical national crop signal, not current retail availability or department-level precision;
 - Denmark now has source-backed Fødevarestyrelsen monthly-poster overrides for 36 Danish seasonal fruit and vegetable items already present in the catalogue, while remaining Danish produce still falls back to indicative European regional data;
 - Czechia now has source-backed MZe 2026 harvest/ripening overrides for 34 fruit, vegetable and potato items already present in the catalogue; the MZe source also documents storage windows, but DeSaison maps the harvest/ripening signal for the badge logic;
 - Sweden now has source-backed ICA practical season-guide overrides for 43 Swedish vegetable, fruit, berry, herb and mushroom items already present in the catalogue; this is practical national retail guidance, not a government calendar or regional precision;

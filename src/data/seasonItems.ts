@@ -1181,6 +1181,19 @@ const peruAgromercadoHarvestOverrides: Record<string, NonNullable<NonNullable<Se
   café: { months: [3, 4, 5, 6, 7, 8, 9], nearMonths: [2, 10], seasonLabel: "mars – sept." },
 };
 
+const colombiaMadrEnaHarvestOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  "petit-pois": { months: [5, 6, 11, 12], nearMonths: [1, 2, 3, 4, 8, 9, 10], seasonLabel: "mai – juin, nov. – dec." },
+  oignon: { months: [2, 4, 6, 11, 12], nearMonths: [1, 5, 7, 8, 9, 10], seasonLabel: "fevr., avr., juin, nov. – dec." },
+  ciboule: { months: [4, 6, 12], nearMonths: [2, 3, 5, 7, 8, 9, 10, 11], seasonLabel: "avr., juin, dec." },
+  "haricot-sec": { months: [2, 6, 12], nearMonths: [1, 3, 4, 5, 7, 8, 9, 10, 11], seasonLabel: "fevr., juin, dec." },
+  fève: { months: [3, 4, 11, 12], nearMonths: [1, 2, 5, 6, 10], seasonLabel: "mars – avr., nov. – dec." },
+  "maïs-grain": { months: [1, 2, 6, 8, 9, 12], nearMonths: [3, 7, 11], seasonLabel: "janv. – fevr., juin, aout – sept., dec." },
+  "pomme-de-terre": { months: [5, 6, 11, 12], nearMonths: [1, 2, 3, 4, 7, 8, 10], seasonLabel: "mai – juin, nov. – dec." },
+  tomate: { months: [6, 12], nearMonths: [1, 2, 3, 4, 5, 7, 8, 10, 11], seasonLabel: "juin, dec." },
+  manioc: { months: [3, 6, 11, 12], nearMonths: [1, 2, 4, 5], seasonLabel: "mars, juin, nov. – dec." },
+  carotte: { months: [6, 7, 11, 12], nearMonths: [1, 3, 4, 5, 8, 10], seasonLabel: "juin – juil., nov. – dec." },
+};
+
 const franceProduceOverrideIds = new Set([
   "abricot",
   "cassis",
@@ -3369,6 +3382,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.PE = {
       ...peruAgromercadoHarvestOverrides[item.id],
       sourceIds: ["peru-agromercado-harvest-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (colombiaMadrEnaHarvestOverrides[item.id]) {
+    countries.CO = {
+      ...colombiaMadrEnaHarvestOverrides[item.id],
+      sourceIds: ["colombia-madr-ena-harvest-calendar"],
       confidence: "source",
     };
   }

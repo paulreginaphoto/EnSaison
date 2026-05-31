@@ -631,6 +631,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["peru-agromercado-harvest-calendar"],
   },
+  CO: {
+    labels: {
+      fr: "Colombie: calendriers officiels MADR/ENA de semis et recoltes 2010-2016 pour cultures transitoires; signal national historique par culture, pas disponibilite retail actuelle ni precision departementale.",
+      en: "Colombia: official MADR/ENA 2010-2016 sowing and harvest calendars for transitory crops; historical national crop signal, not current retail availability or department-level precision.",
+      es: "Colombia: calendarios oficiales MADR/ENA 2010-2016 de siembras y cosechas para cultivos transitorios; senal nacional historica por cultivo, no disponibilidad retail actual ni precision departamental.",
+      de: "Kolumbien: offizielle MADR/ENA-Aussaat- und Erntekalender 2010-2016 fuer einjaehrige Kulturen; historisches nationales Kultursignal, keine aktuelle Ladenverfuegbarkeit oder Departement-Praezision.",
+      it: "Colombia: calendari ufficiali MADR/ENA 2010-2016 di semina e raccolta per colture transitorie; segnale nazionale storico per coltura, non disponibilita retail attuale ne precisione dipartimentale.",
+      pt: "Colombia: calendarios oficiais MADR/ENA 2010-2016 de semeadura e colheita para culturas transitorias; sinal nacional historico por cultura, nao disponibilidade retail atual nem precisao departamental.",
+    },
+    sourceIds: ["colombia-madr-ena-harvest-calendar"],
+  },
   RO: {
     labels: {
       fr: "Roumanie: calendrier Commission europeenne en roumain, section climat tempere incluant explicitement la Roumanie; source par grandes saisons, pas calendrier agricole national mois par mois.",

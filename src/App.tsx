@@ -1,11 +1,20 @@
 import { useEffect, useMemo, useState } from "react";
-import { ArrowRight, CalendarDays, MapPin, Sprout } from "lucide-react";
-import fruitIcon from "./assets/icons/category-fruits.svg";
-import mushroomIcon from "./assets/icons/category-mushrooms.svg";
-import vegetableIcon from "./assets/icons/category-vegetables.svg";
+import {
+  ArrowRight,
+  CalendarDays,
+  Grid2X2,
+  Heart,
+  Leaf,
+  MapPin,
+  Sprout,
+  type LucideIcon,
+} from "lucide-react";
+import fruitImage from "./assets/produce/category-fruits.webp";
+import heroMarketImage from "./assets/produce/hero-market.webp";
+import mushroomImage from "./assets/produce/category-mushrooms.webp";
+import vegetableImage from "./assets/produce/category-vegetables.webp";
 import { CategoryTabs } from "./components/CategoryTabs";
 import { Header } from "./components/Header";
-import { ProduceIcon } from "./components/ProduceIcon";
 import { SearchBar } from "./components/SearchBar";
 import { SeasonLegend } from "./components/SeasonLegend";
 import { SeasonSection } from "./components/SeasonSection";
@@ -26,7 +35,7 @@ import type { CategoryGroup, Locale, SeasonCategory, SeasonStatus, SeasonView } 
 const defaultCountry = "CH";
 const defaultLocale: Locale = "fr";
 const defaultCategory: CategoryGroup = "all";
-const defaultView: SeasonView = "now";
+const defaultView: SeasonView = "all";
 
 const validLocales = new Set<Locale>(["fr", "en", "es", "de", "it", "pt"]);
 const validCategories = new Set<CategoryGroup>([
@@ -68,19 +77,22 @@ const featureCategories: ("fruit" | "vegetable" | "mushroom")[] = [
 
 const categoryArt: Record<
   "fruit" | "vegetable" | "mushroom",
-  { icon: string; accentClass: string }
+  { image: string; accentClass: string; icon: LucideIcon }
 > = {
   fruit: {
-    icon: fruitIcon,
+    image: fruitImage,
     accentClass: "category-card-fruit",
+    icon: Heart,
   },
   vegetable: {
-    icon: vegetableIcon,
+    image: vegetableImage,
     accentClass: "category-card-vegetable",
+    icon: Leaf,
   },
   mushroom: {
-    icon: mushroomIcon,
+    image: mushroomImage,
     accentClass: "category-card-mushroom",
+    icon: Sprout,
   },
 };
 
@@ -89,6 +101,19 @@ const statusAccentClasses: Record<Exclude<SeasonStatus, "variable">, string> = {
   soon: "badge-soon",
   out: "badge-out",
 };
+
+const heroIntros: Record<Locale, string> = {
+  fr: "Des produits de saison, au bon moment, près de chez vous.",
+  en: "Seasonal produce, at the right moment, close to you.",
+  es: "Productos de temporada, en el momento justo, cerca de ti.",
+  de: "Saisonale Produkte, zum richtigen Zeitpunkt, in deiner Nähe.",
+  it: "Prodotti di stagione, al momento giusto, vicino a te.",
+  pt: "Produtos da época, no momento certo, perto de si.",
+};
+
+const featuredItemOrder = new Map(
+  ["fraise", "asperge", "radis", "orange"].map((itemId, index) => [itemId, index]),
+);
 
 const readInitialState = () => {
   const params = new URLSearchParams(window.location.search);
@@ -206,7 +231,9 @@ function MainPage() {
 
   const dashboardItems = useMemo(
     () =>
-      resolvedItems.filter(({ item }) => focusCategorySet.has(item.category)),
+      resolvedItems.filter(
+        ({ item, status }) => focusCategorySet.has(item.category) && status !== "variable",
+      ),
     [resolvedItems],
   );
 
@@ -233,9 +260,21 @@ function MainPage() {
             .join(" "),
         ).includes(searchValue),
       )
-      .sort((left, right) =>
-        getItemName(left.item, locale).localeCompare(getItemName(right.item, locale), locale),
-      );
+      .sort((left, right) => {
+        if (!searchValue && selectedCategory === "all") {
+          const leftPriority =
+            featuredItemOrder.get(left.item.id) ?? Number.POSITIVE_INFINITY;
+          const rightPriority =
+            featuredItemOrder.get(right.item.id) ?? Number.POSITIVE_INFINITY;
+
+          if (leftPriority !== rightPriority) return leftPriority - rightPriority;
+        }
+
+        return getItemName(left.item, locale).localeCompare(
+          getItemName(right.item, locale),
+          locale,
+        );
+      });
   }, [dashboardItems, locale, search, selectedCategory]);
 
   const visibleItems = filteredItems.filter(({ status }) => {
@@ -339,9 +378,11 @@ function MainPage() {
 
             <div className="hero-art" aria-hidden="true">
               <div className="hero-photo-window">
-                <ProduceIcon category="vegetable" icon="vegetable-stem" />
-                <ProduceIcon category="fruit" icon="fruit-strawberry" />
-                <ProduceIcon category="mushroom" icon="mushroom-morel" />
+                <img src={heroMarketImage} alt="" />
+                <div className="hero-photo-badge">
+                  <Grid2X2 className="h-4 w-4" aria-hidden="true" />
+                  <span>{heroIntros[locale]}</span>
+                </div>
               </div>
             </div>
           </article>
@@ -368,6 +409,7 @@ function MainPage() {
         <section className="category-bento" aria-label="Catégories rapides">
           {categorySummaries.map(({ category, count }) => {
             const art = categoryArt[category];
+            const Icon = art.icon;
             const isSelected = selectedCategory === category;
 
             return (
@@ -384,7 +426,8 @@ function MainPage() {
                 <span className="category-card-count">
                   {count} {copy.matchingFoods}
                 </span>
-                <img src={art.icon} alt="" className="category-card-icon" />
+                <Icon aria-hidden="true" className="category-card-mark" />
+                <img src={art.image} alt="" className="category-card-icon" />
               </button>
             );
           })}

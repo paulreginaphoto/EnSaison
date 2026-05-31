@@ -169,30 +169,19 @@ button {
       linear-gradient(120deg, #d9e8dd, #f2e7cf);
   }
 
-  .hero-photo-window::before {
-    @apply absolute left-[-10%] top-[18%] h-28 w-[70%] rounded-full bg-[#d7e0d2]/90 content-[''];
-    filter: blur(1px);
+  .hero-photo-window > img {
+    @apply absolute inset-0 h-full w-full object-cover;
   }
 
   .hero-photo-window::after {
-    @apply absolute bottom-[-2.8rem] left-1/2 h-32 w-[120%] -translate-x-1/2 rounded-t-full bg-[#b98565] content-[''];
-    box-shadow: inset 0 24px 0 rgba(255, 255, 255, 0.16);
+    @apply absolute inset-0 content-[''];
+    background:
+      linear-gradient(180deg, rgba(18, 68, 45, 0.02), rgba(18, 68, 45, 0.18)),
+      linear-gradient(90deg, rgba(255, 248, 235, 0.28), rgba(255, 248, 235, 0));
   }
 
-  .hero-photo-window .produce-icon {
-    @apply absolute z-10 h-28 w-28 drop-shadow-[0_20px_20px_rgba(43,52,32,0.2)];
-  }
-
-  .hero-photo-window .produce-icon:nth-child(1) {
-    @apply bottom-10 right-7 h-32 w-32 rotate-6;
-  }
-
-  .hero-photo-window .produce-icon:nth-child(2) {
-    @apply bottom-7 left-8 h-28 w-28 -rotate-6;
-  }
-
-  .hero-photo-window .produce-icon:nth-child(3) {
-    @apply bottom-20 left-1/2 h-24 w-24 -translate-x-1/2 rotate-3;
+  .hero-photo-badge {
+    @apply absolute bottom-4 left-4 right-4 z-10 flex items-center gap-2 rounded-[1.1rem] bg-white/[0.82] p-3 text-sm font-bold leading-5 text-[#12442d] shadow-row backdrop-blur-md;
   }
 
   .side-bento {
@@ -275,7 +264,11 @@ button {
   }
 
   .category-card-icon {
-    @apply absolute bottom-4 right-4 z-10 h-20 w-20 drop-shadow-[0_18px_22px_rgba(73,59,42,0.12)];
+    @apply absolute bottom-0 right-0 z-0 h-[8.5rem] w-[8.5rem] rounded-tl-[2rem] object-cover opacity-95 shadow-[0_18px_26px_rgba(73,59,42,0.14)];
+  }
+
+  .category-card-mark {
+    @apply absolute right-4 top-4 z-10 h-6 w-6 text-[#12442d]/70;
   }
 
   .filter-panel {
@@ -434,12 +427,10 @@ button {
     font-size: 2.85rem;
   }
 
-  .hero-photo-window .produce-icon:nth-child(1) {
-    right: 0.8rem;
-  }
-
-  .hero-photo-window .produce-icon:nth-child(2) {
-    left: 0.8rem;
+  .hero-photo-badge {
+    left: 0.85rem;
+    right: 0.85rem;
+    bottom: 0.85rem;
   }
 
   .status-card {

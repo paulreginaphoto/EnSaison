@@ -372,6 +372,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["latvia-iub-zm-season-calendars"],
   },
+  LT: {
+    labels: {
+      fr: "Lituanie: calendrier Commission europeenne en lituanien, section climat maritime incluant explicitement la Lituanie; source par grandes saisons, pas calendrier agricole national mois par mois.",
+      en: "Lithuania: European Commission Lithuanian calendar, maritime climate section explicitly including Lithuania; broad-season source, not a national month-by-month agricultural calendar.",
+      es: "Lituania: calendario lituano de la Comision Europea, seccion de clima maritimo que incluye explicitamente Lituania; fuente por grandes estaciones, no calendario agricola nacional mensual.",
+      de: "Litauen: litauischer Kalender der Europaeischen Kommission, maritime Klimazone mit ausdruecklicher Nennung Litauens; Quelle nach breiten Jahreszeiten, kein nationaler Monats-Agrarkalender.",
+      it: "Lituania: calendario lituano della Commissione europea, sezione clima marittimo che include esplicitamente la Lituania; fonte per grandi stagioni, non calendario agricolo nazionale mensile.",
+      pt: "Lituania: calendario lituano da Comissao Europeia, secao de clima maritimo que inclui explicitamente a Lituania; fonte por grandes epocas, nao calendario agricola nacional mensal.",
+    },
+    sourceIds: ["lithuania-ec-maritime-calendar", "ec-calendar"],
+  },
   MX: {
     labels: {
       fr: "Mexique: donnees sourcees surtout pour le quatrieme trimestre; le reste reste indicatif.",

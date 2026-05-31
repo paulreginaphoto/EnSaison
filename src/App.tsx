@@ -1,6 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
+import { ArrowRight, CalendarDays, MapPin, Sprout } from "lucide-react";
+import fruitIcon from "./assets/icons/category-fruits.svg";
+import mushroomIcon from "./assets/icons/category-mushrooms.svg";
+import vegetableIcon from "./assets/icons/category-vegetables.svg";
 import { CategoryTabs } from "./components/CategoryTabs";
 import { Header } from "./components/Header";
+import { ProduceIcon } from "./components/ProduceIcon";
 import { SearchBar } from "./components/SearchBar";
 import { SeasonLegend } from "./components/SeasonLegend";
 import { SeasonSection } from "./components/SeasonSection";
@@ -16,7 +21,7 @@ import { dataSources } from "./data/sources";
 import { seasonItems } from "./data/seasonItems";
 import { getItemName, getSeasonStatus, normalizeSearch, resolveSeason } from "./lib/season";
 import { t } from "./i18n";
-import type { CategoryGroup, Locale, SeasonCategory, SeasonView } from "./types";
+import type { CategoryGroup, Locale, SeasonCategory, SeasonStatus, SeasonView } from "./types";
 
 const defaultCountry = "CH";
 const defaultLocale: Locale = "fr";
@@ -29,32 +34,60 @@ const validCategories = new Set<CategoryGroup>([
   "fruit",
   "vegetable",
   "mushroom",
-  "protein",
-  "sea",
-  "pantry",
 ]);
-const validViews = new Set<SeasonView>(["now", "all", "variable", "out"]);
+const validViews = new Set<SeasonView>(["now", "all", "out"]);
 const validCountries = new Set(countryOptions.map((country) => country.code));
 
+const focusCategories: SeasonCategory[] = [
+  "fruit",
+  "vegetable",
+  "tuber",
+  "allium",
+  "herb",
+  "legume",
+  "mushroom",
+];
+
 const categoryGroups: Record<CategoryGroup, SeasonCategory[] | null> = {
-  all: null,
+  all: focusCategories,
   fruit: ["fruit"],
   vegetable: ["vegetable", "tuber", "allium", "herb", "legume"],
   mushroom: ["mushroom"],
-  protein: ["meat", "poultry", "egg", "dairy", "legume", "insect"],
-  sea: ["fish", "seafood", "seaweed"],
-  pantry: [
-    "grain",
-    "nut",
-    "seed",
-    "spice",
-    "fat",
-    "beverage",
-    "sweetener",
-    "condiment",
-    "prepared",
-    "snack",
-  ],
+  protein: [],
+  sea: [],
+  pantry: [],
+};
+
+const focusCategorySet = new Set(focusCategories);
+
+const featureCategories: ("fruit" | "vegetable" | "mushroom")[] = [
+  "fruit",
+  "vegetable",
+  "mushroom",
+];
+
+const categoryArt: Record<
+  "fruit" | "vegetable" | "mushroom",
+  { icon: string; accentClass: string }
+> = {
+  fruit: {
+    icon: fruitIcon,
+    accentClass: "category-card-fruit",
+  },
+  vegetable: {
+    icon: vegetableIcon,
+    accentClass: "category-card-vegetable",
+  },
+  mushroom: {
+    icon: mushroomIcon,
+    accentClass: "category-card-mushroom",
+  },
+};
+
+const statusAccentClasses: Record<Exclude<SeasonStatus, "variable">, string> = {
+  "in-season": "badge-in-season",
+  soon: "badge-soon",
+  out: "badge-out",
 };
 
 const readInitialState = () => {
@@ -87,7 +120,8 @@ function AboutPage() {
   const copy = t(locale);
 
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-3xl flex-col px-5 py-8 sm:px-8">
+    <main className="app-page">
+      <div className="dashboard-shell max-w-3xl">
       <Header
         labels={{
           country: copy.country,
@@ -101,8 +135,8 @@ function AboutPage() {
         onLocaleChange={setLocale}
         onMonthChange={() => undefined}
       />
-      <section className="mt-10 rounded-[2rem] bg-white/80 p-6 shadow-soft sm:p-8">
-        <h2 className="text-2xl font-semibold text-ink">{copy.about}</h2>
+      <section className="about-card">
+        <h2 className="about-title">{copy.about}</h2>
         <div className="mt-5 space-y-4 text-base leading-7 text-ink/70">
           {copy.aboutCopy.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
@@ -112,6 +146,7 @@ function AboutPage() {
           {copy.back}
         </a>
       </section>
+      </div>
     </main>
   );
 }
@@ -154,15 +189,36 @@ function MainPage() {
     );
   }, [locale, search, selectedCategory, selectedCountry, selectedMonth, selectedView]);
 
+  const resolvedItems = useMemo(
+    () =>
+      seasonItems
+        .map((item) => ({
+          item,
+          season: resolveSeason(item, selectedProfileId, selectedCountry, locale),
+        }))
+        .map(({ item, season }) => ({
+          item,
+          season,
+          status: getSeasonStatus(season, selectedMonth),
+        })),
+    [locale, selectedCountry, selectedMonth, selectedProfileId],
+  );
+
+  const dashboardItems = useMemo(
+    () =>
+      resolvedItems.filter(({ item }) => focusCategorySet.has(item.category)),
+    [resolvedItems],
+  );
+
   const filteredItems = useMemo(() => {
     const searchValue = normalizeSearch(search);
     const allowedCategories = categoryGroups[selectedCategory];
 
-    return seasonItems
+    return dashboardItems
       .filter((item) =>
-        allowedCategories ? allowedCategories.includes(item.category) : true,
+        allowedCategories ? allowedCategories.includes(item.item.category) : true,
       )
-      .filter((item) =>
+      .filter(({ item }) =>
         normalizeSearch(
           [
             item.name,
@@ -177,22 +233,10 @@ function MainPage() {
             .join(" "),
         ).includes(searchValue),
       )
-      .map((item) => ({
-        item,
-        season: resolveSeason(item, selectedProfileId, selectedCountry, locale),
-      }))
-      .map(({ item, season }) => ({
-        item,
-        season,
-        status: getSeasonStatus(season, selectedMonth),
-      }))
       .sort((left, right) =>
-        getItemName(left.item, locale).localeCompare(
-          getItemName(right.item, locale),
-          locale,
-        ),
+        getItemName(left.item, locale).localeCompare(getItemName(right.item, locale), locale),
       );
-  }, [locale, search, selectedCategory, selectedCountry, selectedMonth, selectedProfileId]);
+  }, [dashboardItems, locale, search, selectedCategory]);
 
   const visibleItems = filteredItems.filter(({ status }) => {
     if (selectedView === "now") {
@@ -210,7 +254,24 @@ function MainPage() {
         : selectedView === "out"
           ? copy.outSeason
           : copy.all;
-  const statusViews: SeasonView[] = ["now", "all", "variable", "out"];
+  const statusViews: SeasonView[] = ["now", "all", "out"];
+  const statusTotals = {
+    "in-season": dashboardItems.filter(({ status }) => status === "in-season").length,
+    soon: dashboardItems.filter(({ status }) => status === "soon").length,
+    out: dashboardItems.filter(({ status }) => status === "out").length,
+  };
+  const categorySummaries = featureCategories.map((category) => {
+    const allowedCategories = categoryGroups[category] ?? [];
+    const items = dashboardItems.filter(({ item }) =>
+      allowedCategories.includes(item.category),
+    );
+
+    return {
+      category,
+      count: items.filter(({ status }) => status === "in-season" || status === "soon")
+        .length,
+    };
+  });
   const itemLabels = {
     categories: copy.categories as Record<SeasonCategory, string>,
     statuses: copy.statuses,
@@ -229,100 +290,161 @@ function MainPage() {
   ).map((sourceId) => dataSources[sourceId]);
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-5xl px-4 py-5 sm:px-7 sm:py-8">
-      <div className="rounded-[1.7rem] bg-cream/75 p-2.5 shadow-soft sm:p-4">
-        <div className="rounded-[1.3rem] border border-white/75 bg-cream/90 p-4 sm:p-6">
-          <Header
-            labels={{
-              country: copy.country,
-              language: copy.language,
-              month: copy.month,
-            }}
-            locale={locale}
-            selectedCountry={selectedCountry}
-            selectedMonth={selectedMonth}
-            onCountryChange={setSelectedCountry}
-            onLocaleChange={setLocale}
-            onMonthChange={setSelectedMonth}
-          />
+    <main className="app-page">
+      <div className="dashboard-shell">
+        <Header
+          labels={{
+            country: copy.country,
+            language: copy.language,
+            month: copy.month,
+          }}
+          locale={locale}
+          selectedCountry={selectedCountry}
+          selectedMonth={selectedMonth}
+          onCountryChange={setSelectedCountry}
+          onLocaleChange={setLocale}
+          onMonthChange={setSelectedMonth}
+        />
 
-          <section className="mt-6 rounded-[1.25rem] bg-white/70 p-4 shadow-row">
-            <p className="text-sm font-semibold text-ink/55">
-              {countryName} · {monthLabel}
-            </p>
-            <h2 className="mt-1 text-2xl font-semibold leading-tight text-ink sm:text-3xl">
-              {copy.chooseNow}
-            </h2>
-            <p className="mt-2 max-w-2xl text-sm font-medium leading-6 text-ink/62">
-              {visibleItems.length} {copy.matchingFoods} · {copy.profilePrefix}:{" "}
-              {selectedProfile.labels[locale]} ·{" "}
-              {selectedProfile.confidenceLabel[locale].toLowerCase()}
-            </p>
-            <p className="mt-2 max-w-2xl text-xs font-semibold leading-5 text-ink/45">
-              {selectedCountryDataScope?.labels[locale] ?? copy.dataNote}
-            </p>
-          </section>
-
-          <div className="mt-4 space-y-3">
-            <SearchBar
-              label={copy.search}
-              placeholder={copy.search}
-              value={search}
-              clearLabel={copy.clearSearch}
-              onChange={setSearch}
-            />
-            <CategoryTabs
-              labels={copy.categoryGroups}
-              selectedCategory={selectedCategory}
-              onCategoryChange={setSelectedCategory}
-            />
-            <div className="no-scrollbar flex gap-2 overflow-x-auto pb-1" aria-label="Statut">
-              {statusViews.map((view) => {
-                const isSelected = selectedView === view;
-                return (
-                  <button
-                    aria-pressed={isSelected}
-                    className={`category-tab ${isSelected ? "category-tab-active" : ""}`}
-                    key={view}
-                    type="button"
-                    onClick={() => setSelectedView(view)}
-                  >
-                    {copy.seasonViews[view]}
-                  </button>
-                );
-              })}
-            </div>
-            <SeasonLegend labels={copy.statuses} />
-          </div>
-
-          <div className="mt-5 grid gap-4">
-            <SeasonSection
-              emptyLabel={copy.noResult}
-              items={visibleItems}
-              labels={itemLabels}
-              locale={locale}
-              title={viewTitle}
-            />
-          </div>
-
-          <footer className="mt-6 flex flex-col gap-2 text-sm font-semibold text-ink/48 sm:flex-row sm:items-center sm:justify-between">
-            <span>{copy.footer}</span>
-            <span>
-              {copy.source}:{" "}
-              {sourceLinks.map((source, index) => (
-                <span key={source.url}>
-                  <a className="text-sage-700" href={source.url}>
-                    {index + 1}
-                  </a>
-                  {index < sourceLinks.length - 1 ? ", " : ""}
+        <section className="hero-bento" aria-labelledby="dashboard-title">
+          <article className="hero-card">
+            <div className="hero-copy">
+              <div className="hero-meta-row">
+                <span>
+                  <MapPin aria-hidden="true" className="h-4 w-4" />
+                  {countryName}
                 </span>
+                <span>
+                  <CalendarDays aria-hidden="true" className="h-4 w-4" />
+                  {monthLabel}
+                </span>
+              </div>
+              <h2 className="hero-title" id="dashboard-title">
+                {copy.chooseNow}
+              </h2>
+              <p className="hero-description">
+                {selectedCountryDataScope?.labels[locale] ?? copy.dataNote}
+              </p>
+              <div className="hero-actions">
+                <a className="hero-cta" href="#season-results">
+                  <Sprout aria-hidden="true" className="h-5 w-5" />
+                  {copy.seasonal}
+                  <ArrowRight aria-hidden="true" className="h-5 w-5" />
+                </a>
+                <span className="hero-count">
+                  {visibleItems.length} {copy.matchingFoods}
+                </span>
+              </div>
+            </div>
+
+            <div className="hero-art" aria-hidden="true">
+              <div className="hero-photo-window">
+                <ProduceIcon category="vegetable" icon="vegetable-stem" />
+                <ProduceIcon category="fruit" icon="fruit-strawberry" />
+                <ProduceIcon category="mushroom" icon="mushroom-morel" />
+              </div>
+            </div>
+          </article>
+
+          <aside className="side-bento" aria-label={`${copy.country} ${copy.month}`}>
+            <div className="availability-card">
+              <span className="panel-label">{copy.profilePrefix}</span>
+              <strong>{selectedProfile.labels[locale]}</strong>
+              <p>{selectedProfile.confidenceLabel[locale].toLowerCase()}</p>
+            </div>
+
+            <div className="status-grid" aria-label="Statuts saisonniers">
+              {(["in-season", "soon", "out"] as const).map((status) => (
+                <div className="status-card" key={status}>
+                  <span className={`status-dot ${statusAccentClasses[status]}`} />
+                  <strong>{statusTotals[status]}</strong>
+                  <span>{copy.statuses[status]}</span>
+                </div>
               ))}
-            </span>
-            <a className="text-sage-700" href={aboutHref}>
-              {copy.about}
-            </a>
-          </footer>
+            </div>
+          </aside>
+        </section>
+
+        <section className="category-bento" aria-label="Catégories rapides">
+          {categorySummaries.map(({ category, count }) => {
+            const art = categoryArt[category];
+            const isSelected = selectedCategory === category;
+
+            return (
+              <button
+                aria-pressed={isSelected}
+                className={`category-card ${art.accentClass} ${
+                  isSelected ? "category-card-active" : ""
+                }`}
+                key={category}
+                type="button"
+                onClick={() => setSelectedCategory(category)}
+              >
+                <span className="category-card-title">{copy.categoryGroups[category]}</span>
+                <span className="category-card-count">
+                  {count} {copy.matchingFoods}
+                </span>
+                <img src={art.icon} alt="" className="category-card-icon" />
+              </button>
+            );
+          })}
+        </section>
+
+        <section className="filter-panel" aria-label="Filtres rapides">
+          <SearchBar
+            label={copy.search}
+            placeholder={copy.search}
+            value={search}
+            clearLabel={copy.clearSearch}
+            onChange={setSearch}
+          />
+          <CategoryTabs
+            labels={copy.categoryGroups}
+            selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
+          />
+          <div className="quick-chip-row" aria-label="Statut">
+            {statusViews.map((view) => {
+              const isSelected = selectedView === view;
+              return (
+                <button
+                  aria-pressed={isSelected}
+                  className={`quick-chip ${isSelected ? "quick-chip-active" : ""}`}
+                  key={view}
+                  type="button"
+                  onClick={() => setSelectedView(view)}
+                >
+                  {copy.seasonViews[view]}
+                </button>
+              );
+            })}
+          </div>
+          <SeasonLegend labels={copy.statuses} />
+        </section>
+
+        <div className="results-grid" id="season-results">
+          <SeasonSection
+            emptyLabel={copy.noResult}
+            items={visibleItems}
+            labels={itemLabels}
+            locale={locale}
+            title={viewTitle}
+          />
         </div>
+
+        <footer className="app-footer">
+          <span>{copy.footer}</span>
+          <span>
+            {copy.source}:{" "}
+            {sourceLinks.map((source, index) => (
+              <span key={source.url}>
+                <a href={source.url}>{index + 1}</a>
+                {index < sourceLinks.length - 1 ? ", " : ""}
+              </span>
+            ))}
+          </span>
+          <a href={aboutHref}>{copy.about}</a>
+        </footer>
       </div>
       <p className="sr-only">
         {copy.month}: {getMonthLabel(selectedMonth, locale)}

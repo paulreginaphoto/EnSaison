@@ -11,9 +11,6 @@ const categories: CategoryGroup[] = [
   "fruit",
   "vegetable",
   "mushroom",
-  "protein",
-  "sea",
-  "pantry",
 ];
 
 export function CategoryTabs({
@@ -22,13 +19,13 @@ export function CategoryTabs({
   onCategoryChange,
 }: CategoryTabsProps) {
   return (
-    <div className="no-scrollbar flex gap-2 overflow-x-auto pb-1" aria-label="Catégories">
+    <div className="quick-chip-row" aria-label="Catégories">
       {categories.map((category) => {
         const isSelected = selectedCategory === category;
 
         return (
           <button
-            className={`category-tab ${isSelected ? "category-tab-active" : ""}`}
+            className={`quick-chip ${isSelected ? "quick-chip-active" : ""}`}
             key={category}
             type="button"
             aria-pressed={isSelected}

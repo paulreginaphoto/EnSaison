@@ -36,11 +36,11 @@ export function SeasonSection({
 }: SeasonSectionProps) {
   return (
     <section className="section-shell" aria-labelledby={`${title}-title`}>
-      <div className="mb-3 flex items-end justify-between">
-        <h2 className="text-xl font-semibold text-ink" id={`${title}-title`}>
+      <div className="section-heading">
+        <h2 id={`${title}-title`}>
           {title}
         </h2>
-        <span className="text-sm font-semibold text-ink/45">{items.length}</span>
+        <span>{items.length}</span>
       </div>
 
       {items.length > 0 ? (

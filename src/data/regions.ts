@@ -213,6 +213,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["denmark-foedevarestyrelsen-season-posters"],
   },
+  GR: {
+    labels: {
+      fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",
+      en: "Greece: Food For Health monthly calendar for common fruit and vegetables, cross-checked with the European Commission Mediterranean profile; national nutrition guidance, not a government agricultural calendar.",
+      es: "Grecia: calendario mensual Food For Health de frutas y verduras comunes, contrastado con el perfil mediterraneo de la Comision Europea; guia nutricional nacional, no calendario agricola gubernamental.",
+      de: "Griechenland: monatlicher Food-For-Health-Kalender fur gangiges Obst und Gemuse, mit dem mediterranen Profil der Europaischen Kommission abgeglichen; nationale Ernahrungsorientierung, kein staatlicher Agrarkalender.",
+      it: "Grecia: calendario mensile Food For Health per frutta e verdura comuni, confrontato con il profilo mediterraneo della Commissione europea; guida nutrizionale nazionale, non calendario agricolo governativo.",
+      pt: "Grecia: calendario mensal Food For Health para frutas e legumes comuns, cruzado com o perfil mediterranico da Comissao Europeia; orientacao nutricional nacional, nao calendario agricola governamental.",
+    },
+    sourceIds: ["greece-foodforhealth-season-calendar", "ec-calendar"],
+  },
   IN: {
     labels: {
       fr: "Inde: donnees nationales agregees; les saisons varient fortement selon les Etats, l'altitude et les moussons.",

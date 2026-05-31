@@ -2646,6 +2646,17 @@ const coteDivoireSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonI
   riz: { months: [8, 9, 10], nearMonths: [3, 4, 5, 6, 7, 11], seasonLabel: "août – oct." },
 };
 
+const cameroonFruitHarvestSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  ananas: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  gingembre: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  mangue: { months: [2, 3, 4, 5, 6, 7], nearMonths: [1, 8], seasonLabel: "févr. – juil." },
+  orange: { months: [9, 10, 11, 12], nearMonths: [8, 1], seasonLabel: "sept. – déc." },
+  pamplemousse: { months: [10, 11, 12, 1], nearMonths: [9, 2], seasonLabel: "oct. – janv." },
+  papaye: { months: [9, 10, 11, 12], nearMonths: [1, 2, 3], seasonLabel: "sept. – déc." },
+  goyave: { months: [8, 9, 10, 11], nearMonths: [7, 12], seasonLabel: "août – nov." },
+  "banane-plantain": { months: [1, 2, 3, 4, 10, 11, 12], nearMonths: [5, 9], seasonLabel: "oct. – avr." },
+};
+
 const luxembourgAgricultureSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   endive: { months: [1, 2, 3, 10, 11, 12], nearMonths: [9, 4], seasonLabel: "oct. – mars" },
   rampon: { months: [1, 2, 3, 11, 12], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
@@ -3785,6 +3796,17 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
         item.id === "banane-plantain"
           ? ["cote-divoire-firca-plantain", "cote-divoire-agripoint-calendar"]
           : ["cote-divoire-lepetitjournal-season-guide", "cote-divoire-agripoint-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (cameroonFruitHarvestSeasonOverrides[item.id]) {
+    countries.CM = {
+      ...cameroonFruitHarvestSeasonOverrides[item.id],
+      sourceIds:
+        item.id === "banane-plantain"
+          ? ["cameroon-fao-plantain-postharvest"]
+          : ["cameroon-lavoixdupaysan-fruit-harvest"],
       confidence: "source",
     };
   }

@@ -267,6 +267,14 @@ export const dataSources = {
     label: "FIRCA Cote d'Ivoire plantain sector seasonality note",
     url: "https://firca.ci/filieres-agricoles/banane-plantain/",
   },
+  "cameroon-lavoixdupaysan-fruit-harvest": {
+    label: "La Voix du Paysan Cameroon fruit harvest periods",
+    url: "https://www.lavoixdupaysan.net/cameroun-periodes-de-recolte-fruits-lannee/",
+  },
+  "cameroon-fao-plantain-postharvest": {
+    label: "FAO Cameroon plantain postharvest and seasonality study",
+    url: "https://www.fao.org/3/X5024F/x5024F01.htm",
+  },
   "senegal-sengarden-cesag-market-calendar": {
     label: "Sen-Garden / CESAG Senegal fruit and vegetable production calendar",
     url: "https://bibliotheque.cesag.sn/doc_num.php?explnum_id=2642",

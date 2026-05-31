@@ -213,6 +213,12 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - FIRCA Cote d'Ivoire plantain sector seasonality note
   https://firca.ci/filieres-agricoles/banane-plantain/
 
+- La Voix du Paysan Cameroon fruit harvest periods
+  https://www.lavoixdupaysan.net/cameroun-periodes-de-recolte-fruits-lannee/
+
+- FAO Cameroon plantain postharvest and seasonality study
+  https://www.fao.org/3/X5024F/x5024F01.htm
+
 - Sen-Garden / CESAG Senegal fruit and vegetable production calendar
   https://bibliotheque.cesag.sn/doc_num.php?explnum_id=2642
 
@@ -255,9 +261,9 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 316 food entries after the Cote d'Ivoire LePetitJournal/Agripoint/FIRCA pass;
+- 316 food entries after the Cameroon La Voix du Paysan / FAO pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 64 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, Vietnam, Nigeria, Ghana, Cote d'Ivoire, Senegal, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, Morocco, Kenya, India, Brazil, Croatia and Japan;
+- country overrides for 65 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, Vietnam, Nigeria, Ghana, Cote d'Ivoire, Cameroon, Senegal, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, Morocco, Kenya, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Austria now has source-backed Gesundheit.gv.at national season-calendar overrides for 50 fruit, vegetable and mushroom items already present in the catalogue, while remaining Austrian produce still falls back to indicative European regional data;
 - Belgium now has source-backed Vlaanderen/VLAM month-by-month availability overrides for 45 fruit, vegetable, herb and mushroom items already present in the catalogue, while remaining Belgian produce still falls back to indicative European regional data;
@@ -293,6 +299,7 @@ The app now supports:
 - Ghana now has source-backed Green Views monthly seasonal-produce overrides for 18 fruit, vegetable, tuber and legume items already present in the catalogue, with GhanaVeg/HortiFresh used as market-seasonality context; this is practical national guidance, not a government calendar or region-level precision, and GhanaVeg critical-supply chart rows were not inverted into harvest months unless supported by the monthly guide;
 - Senegal now has source-backed Sen-Garden/CESAG production-calendar overrides for 24 fruit, vegetable, tuber and spice items already present in the catalogue; "forte production" months are mapped as in-season and "production moyenne" months as near-season, aggregating the report's production-area rows into one national view without region-level precision;
 - Cote d'Ivoire now has source-backed LePetitJournal/Agripoint/FIRCA overrides for 20 fruit, vegetable, tuber, grain and legume items; banane plantain was added to the catalogue because FIRCA gives a clear national plantain seasonality note, and broad Agripoint family windows are used only as national practical guidance without region-level precision;
+- Cameroon now has source-backed La Voix du Paysan / FAO overrides for 8 fruit, spice and plantain items; the pass intentionally stays limited to documented fruit-harvest windows and the FAO plantain seasonality study rather than claiming full vegetable coverage;
 - Luxembourg now has source-backed Ministry of Agriculture 2024 regional seasonal-calendar overrides for 52 fruit, vegetable and nut items, distinguishing fresh regional produce from stored availability; Damson plum / quetsche was added to the catalogue to match the Luxembourg calendar;
 - Bulgaria now has source-backed BB-Team practical broad-season overrides for 41 common fruit, vegetable and legume items, plus sorrel and nettle were added to match the Bulgarian table; this is a local practical guide, not a government calendar or month-level agricultural forecast;
 - Estonia now has source-backed Gardest 2026 vegetable sowing-and-harvest overrides for 27 vegetable and fruit-vegetable items, using the ready-to-harvest months; this is practical gardening guidance, not a government calendar or retail availability forecast;

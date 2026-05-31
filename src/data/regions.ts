@@ -402,6 +402,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "cote-divoire-firca-plantain",
     ],
   },
+  CM: {
+    labels: {
+      fr: "Cameroun: periodes de recolte fruitiere de La Voix du Paysan et etude FAO sur la saisonnalite du plantain; couverture volontairement ciblee sur les fruits documentes, pas calendrier national complet.",
+      en: "Cameroon: fruit harvest periods from La Voix du Paysan and FAO study on plantain seasonality; intentionally focused on documented fruits, not a full national calendar.",
+      es: "Camerun: periodos de cosecha de frutas de La Voix du Paysan y estudio FAO sobre estacionalidad del platano macho; cobertura centrada en frutas documentadas, no calendario nacional completo.",
+      de: "Kamerun: Obsterntezeiten von La Voix du Paysan und FAO-Studie zur Kochbananen-Saisonalitaet; bewusst auf dokumentierte Fruechte fokussiert, kein vollstaendiger nationaler Kalender.",
+      it: "Camerun: periodi di raccolta frutticola da La Voix du Paysan e studio FAO sulla stagionalita della banana plantain; copertura volutamente centrata sui frutti documentati, non calendario nazionale completo.",
+      pt: "Camaroes: periodos de colheita de frutas da La Voix du Paysan e estudo FAO sobre sazonalidade da banana-da-terra; cobertura focada nos frutos documentados, nao calendario nacional completo.",
+    },
+    sourceIds: ["cameroon-lavoixdupaysan-fruit-harvest", "cameroon-fao-plantain-postharvest"],
+  },
   SN: {
     labels: {
       fr: "Senegal: tableaux Sen-Garden/CESAG de production faible, moyenne et forte pour fruits et legumes par zone de production, etablis a partir de donnees du ministere de l'Agriculture; synthese nationale pratique, pas precision par region dans l'interface.",

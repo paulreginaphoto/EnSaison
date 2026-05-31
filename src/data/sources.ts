@@ -231,6 +231,10 @@ export const dataSources = {
     label: "Miresda Egypt fruit, citrus and vegetable seasonal calendars",
     url: "https://www.miresda.com/fruits-vegetables/",
   },
+  "morocco-zalar-fruit-production-calendar": {
+    label: "Zalar Agri Morocco fruit production calendar",
+    url: "https://zalaragri.com/fruits-in-season-morocco/",
+  },
   "luxembourg-agriculture-season-calendar": {
     label: "Luxembourg Ministry of Agriculture 2024 regional seasonal calendar",
     url: "https://agriculture.public.lu/de/veroeffentlichungen/ernaehrung/saisonkalender.html",

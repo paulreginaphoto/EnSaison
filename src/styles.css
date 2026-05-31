@@ -216,17 +216,17 @@ button {
   }
 
   .category-bento {
-    @apply no-scrollbar mt-3 grid auto-cols-[minmax(13.4rem,1fr)] grid-flow-col gap-3 overflow-x-auto pb-1 sm:mt-4 sm:grid-flow-row sm:grid-cols-3 sm:overflow-visible sm:pb-0;
+    @apply mt-3 grid grid-cols-3 gap-2 sm:mt-4 sm:gap-4;
   }
 
   .category-card {
-    @apply relative min-h-[20rem] overflow-hidden rounded-[1.7rem] p-5 text-left shadow-row transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:min-h-[21rem];
+    @apply relative min-h-[14.5rem] overflow-hidden rounded-[1.45rem] p-3 text-left shadow-row transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:min-h-[21rem] sm:rounded-[1.7rem] sm:p-5;
   }
 
   .category-card::before {
     @apply absolute inset-0 z-10 content-[''];
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.42) 28%, rgba(255, 255, 255, 0) 54%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 38%, rgba(255, 255, 255, 0) 68%),
       linear-gradient(0deg, rgba(23, 51, 39, 0.07), rgba(23, 51, 39, 0));
   }
 
@@ -247,20 +247,20 @@ button {
   }
 
   .category-card-title {
-    @apply relative z-20 block text-3xl font-semibold leading-none text-[#12442d] sm:text-4xl;
+    @apply relative z-20 block text-[1.08rem] font-semibold leading-none text-[#12442d] sm:text-4xl;
   }
 
   .category-card-count {
-    @apply relative z-20 mt-3 block max-w-[11rem] text-sm font-bold leading-5 text-ink/[0.55];
+    @apply relative z-20 mt-2 block max-w-[7rem] text-[0.68rem] font-bold leading-4 text-ink/[0.55] sm:mt-3 sm:max-w-[11rem] sm:text-sm sm:leading-5;
   }
 
   .category-card-icon {
-    @apply absolute inset-x-0 bottom-0 z-0 h-[76%] w-full object-cover opacity-100;
-    object-position: 50% 74%;
+    @apply absolute inset-x-0 bottom-0 z-0 h-[72%] w-full object-cover opacity-100 sm:h-[76%];
+    object-position: 50% 80%;
   }
 
   .category-card-mark {
-    @apply absolute right-4 top-4 z-20 h-14 w-14 rounded-full p-4 text-white shadow-row;
+    @apply absolute right-2.5 top-2.5 z-20 h-9 w-9 rounded-full p-2.5 text-white shadow-row sm:right-4 sm:top-4 sm:h-14 sm:w-14 sm:p-4;
   }
 
   .category-card-fruit .category-card-mark {
@@ -280,7 +280,7 @@ button {
   }
 
   .season-legend {
-    @apply flex flex-wrap justify-between gap-2 rounded-[1.35rem] bg-white/[0.86] p-4 shadow-row backdrop-blur-md;
+    @apply flex flex-wrap justify-between gap-2 rounded-[1.35rem] bg-white/[0.9] p-4 shadow-row backdrop-blur-md;
   }
 
   .season-legend .season-badge {
@@ -332,7 +332,7 @@ button {
   }
 
   .section-shell {
-    @apply min-w-0 rounded-[1.7rem] bg-white/[0.86] p-3.5 shadow-soft backdrop-blur-md sm:p-5;
+    @apply min-w-0 rounded-[1.7rem] bg-white/[0.9] p-3.5 shadow-soft backdrop-blur-md sm:p-5;
   }
 
   .section-heading {
@@ -353,7 +353,7 @@ button {
   }
 
   .item-row {
-    @apply relative flex min-h-[6.8rem] items-center gap-4 border-b border-[#eee6d8] bg-transparent px-2 py-3 transition hover:bg-white/[0.55];
+    @apply relative flex min-h-[6.5rem] items-center gap-3 border-b border-[#eee6d8] bg-transparent px-2 py-3 transition hover:bg-white/[0.55] sm:gap-4;
   }
 
   .item-row:last-child {
@@ -374,7 +374,7 @@ button {
   }
 
   .item-category {
-    @apply mt-1 text-sm font-semibold text-ink/50;
+    @apply sr-only;
   }
 
   .item-season {
@@ -390,7 +390,7 @@ button {
   }
 
   .season-badge {
-    @apply inline-flex min-h-8 items-center justify-center rounded-full px-3 text-xs font-bold leading-none;
+    @apply inline-flex min-h-9 items-center justify-center rounded-full px-3 text-sm font-semibold leading-none sm:min-h-10 sm:px-4 sm:text-base;
   }
 
   .badge-in-season {

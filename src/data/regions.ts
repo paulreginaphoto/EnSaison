@@ -332,6 +332,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["egypt-miresda-season-calendars"],
   },
+  MA: {
+    labels: {
+      fr: "Maroc: calendrier Zalar Agri de production fruitiere marocaine par mois; source producteur/export pratique, pas calendrier gouvernemental ni precision par region.",
+      en: "Morocco: Zalar Agri month-by-month Moroccan fruit production calendar; practical producer/export source, not a government calendar or region-level precision.",
+      es: "Marruecos: calendario mensual de produccion fruticola marroqui de Zalar Agri; fuente practica de productor/exportador, no calendario gubernamental ni precision regional.",
+      de: "Marokko: monatlicher Zalar-Agri-Kalender fuer marokkanische Obstproduktion; praktische Produzenten-/Exportquelle, kein Regierungskalender und keine regionale Praezision.",
+      it: "Marocco: calendario mensile Zalar Agri della produzione frutticola marocchina; fonte pratica produttore/export, non calendario governativo ne precisione regionale.",
+      pt: "Marrocos: calendario mensal da Zalar Agri para producao fruticola marroquina; fonte pratica de produtor/exportador, nao calendario governamental nem precisao regional.",
+    },
+    sourceIds: ["morocco-zalar-fruit-production-calendar"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

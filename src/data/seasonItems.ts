@@ -2479,6 +2479,21 @@ const egyptMiresdaSeasonOverrides: Record<string, NonNullable<NonNullable<Season
   prune: { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
 };
 
+const moroccoZalarFruitSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  pomme: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  amande: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  avocat: { months: [1, 2, 3, 12], nearMonths: [4, 11], seasonLabel: "déc. – mars" },
+  myrtille: { months: [1, 2, 3, 4, 5, 6, 12], nearMonths: [7, 11], seasonLabel: "déc. – juin" },
+  orange: { months: [1, 2, 3, 4, 5, 6, 11], nearMonths: [7, 10, 12], seasonLabel: "nov. – juin" },
+  citron: { months: [1, 2, 3, 4, 5, 6, 11], nearMonths: [7, 10, 12], seasonLabel: "nov. – juin" },
+  mandarine: { months: [1, 2, 3, 4, 5, 6, 11], nearMonths: [7, 10, 12], seasonLabel: "nov. – juin" },
+  clementine: { months: [1, 2, 3, 4, 5, 6, 11], nearMonths: [7, 10, 12], seasonLabel: "nov. – juin" },
+  datte: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov." },
+  grenade: { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
+  peche: { months: [6, 7], nearMonths: [5, 8], seasonLabel: "juin – juil." },
+  prune: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], seasonLabel: "mai – oct." },
+};
+
 const luxembourgAgricultureSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   endive: { months: [1, 2, 3, 10, 11, 12], nearMonths: [9, 4], seasonLabel: "oct. – mars" },
   rampon: { months: [1, 2, 3, 11, 12], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
@@ -3559,6 +3574,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.EG = {
       ...egyptMiresdaSeasonOverrides[item.id],
       sourceIds: ["egypt-miresda-season-calendars"],
+      confidence: "source",
+    };
+  }
+
+  if (moroccoZalarFruitSeasonOverrides[item.id]) {
+    countries.MA = {
+      ...moroccoZalarFruitSeasonOverrides[item.id],
+      sourceIds: ["morocco-zalar-fruit-production-calendar"],
       confidence: "source",
     };
   }

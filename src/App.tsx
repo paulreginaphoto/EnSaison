@@ -471,6 +471,7 @@ function MainPage() {
             items={visibleItems}
             labels={itemLabels}
             locale={locale}
+            selectedMonth={selectedMonth}
             subtitle={seasonResultSubtitle}
             title={seasonResultTitle}
           />

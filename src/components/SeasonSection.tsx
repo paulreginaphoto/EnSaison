@@ -15,6 +15,7 @@ type SectionItem = {
 type SeasonSectionProps = {
   title: string;
   subtitle: string;
+  selectedMonth: number;
   items: SectionItem[];
   locale: Locale;
   emptyLabel: string;
@@ -42,6 +43,7 @@ const sectionActions: Record<Locale, { showAll: string; showLess: string }> = {
 export function SeasonSection({
   title,
   subtitle,
+  selectedMonth,
   items,
   locale,
   emptyLabel,
@@ -72,6 +74,7 @@ export function SeasonSection({
                 key={item.id}
                 labels={labels}
                 locale={locale}
+                selectedMonth={selectedMonth}
                 season={season}
                 status={status}
               />

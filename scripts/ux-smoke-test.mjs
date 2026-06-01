@@ -79,6 +79,23 @@ try {
   assert.ok(renderedRows > 0, "season rows should render");
   assert.ok(renderedRows < 140, `default screen renders too many rows: ${renderedRows}`);
 
+  const firstSeasonChart = page.locator("[data-season-chart]").first();
+  await assert.doesNotReject(() => firstSeasonChart.waitFor());
+  assert.equal(
+    await firstSeasonChart.locator("[data-season-month]").count(),
+    12,
+    "season chart should show all 12 months at a glance",
+  );
+  assert.equal(
+    await firstSeasonChart.locator('[data-current-month="true"]').count(),
+    1,
+    "season chart should mark the selected month",
+  );
+  assert.ok(
+    await page.locator('[data-season-state="in-season"]').count() > 0,
+    "season chart should visibly mark in-season months",
+  );
+
   for (const label of ["Pays", "Mois", "Langue"]) {
     assert.equal(
       await page.locator(".control-label", { hasText: label }).count(),

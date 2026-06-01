@@ -418,11 +418,31 @@ button {
   }
 
   .season-period-label {
-    @apply text-ink/[0.52];
+    @apply sr-only;
   }
 
   .season-period-value {
     @apply rounded-lg bg-[#f7f2e8] px-2 py-0.5 text-ink/[0.78];
+  }
+
+  .season-chart {
+    @apply grid w-[7.5rem] max-w-full shrink-0 grid-cols-12 items-center gap-0.5 rounded-full border border-[#e9dfcf] bg-[#f7f2e8] px-1.5 py-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)] sm:w-[8.25rem];
+  }
+
+  .season-month {
+    @apply h-1.5 min-w-0 rounded-full bg-[#d8d1c5] opacity-80 transition-[height,opacity,background-color,box-shadow] duration-200;
+  }
+
+  .season-month[data-season-state="soon"] {
+    @apply h-2.5 bg-[#e1aa25] opacity-100;
+  }
+
+  .season-month[data-season-state="in-season"] {
+    @apply h-4 bg-[#4f8745] opacity-100 shadow-[0_0_0_1px_rgba(79,135,69,0.14)];
+  }
+
+  .season-month[data-current-month="true"] {
+    @apply outline outline-2 outline-offset-1 outline-[#173327];
   }
 
   .season-confidence {

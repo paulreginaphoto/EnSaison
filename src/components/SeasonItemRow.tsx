@@ -6,12 +6,14 @@ import type { ResolvedSeason } from "../lib/season";
 import type { Locale, SeasonCategory } from "../types";
 import { dataSources } from "../data/sources";
 import { ProduceIcon } from "./ProduceIcon";
+import { SeasonMiniChart } from "./SeasonMiniChart";
 
 type SeasonItemRowProps = {
   item: SeasonItem;
   status: SeasonStatus;
   season: ResolvedSeason;
   locale: Locale;
+  selectedMonth: number;
   labels: {
     categories: Record<SeasonCategory, string>;
     statuses: Record<SeasonStatus, string>;
@@ -52,6 +54,7 @@ export function SeasonItemRow({
   status,
   season,
   locale,
+  selectedMonth,
   labels,
 }: SeasonItemRowProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,7 +89,13 @@ export function SeasonItemRow({
         </div>
         <p className="item-season">
           <span className="season-period-label">{labels.seasonPeriod}</span>
-          <span className="season-period-value">{season.seasonLabel}</span>
+          <SeasonMiniChart
+            labels={labels.statuses}
+            locale={locale}
+            periodLabel={labels.seasonPeriod}
+            season={season}
+            selectedMonth={selectedMonth}
+          />
           <span className="season-confidence">{labels.confidence[season.confidence]}</span>
         </p>
         <button

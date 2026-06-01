@@ -403,6 +403,10 @@ export const dataSources = {
     label: "SAYS Malaysian fruit season guide",
     url: "https://says.com/my/lifestyle/malaysian-fruit-season-guide",
   },
+  "taiwan-afa-main-fruit-seasons": {
+    label: "Taiwan AFA main fruit production seasons and producing areas",
+    url: "https://www.afa.gov.tw/cht/index.php?act=download&ids=44428",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

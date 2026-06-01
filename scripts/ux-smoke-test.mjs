@@ -104,6 +104,74 @@ try {
     "season chart should visibly mark in-season months",
   );
 
+  const fruitCategoryCard = page.getByRole("button", { name: "Carte Fruits" });
+  const fruitCategoryCopy = fruitCategoryCard.locator("[data-category-card-copy]");
+  await assert.doesNotReject(() => fruitCategoryCopy.waitFor());
+  assert.match(
+    await fruitCategoryCopy.textContent(),
+    /20 fruits/i,
+    "category card count should use a compact readable label",
+  );
+  const fruitCategoryCopyMetrics = await fruitCategoryCopy.evaluate((copy) => {
+    const copyRect = copy.getBoundingClientRect();
+    const cardRect = copy.closest(".category-card")?.getBoundingClientRect();
+    const titleRect = copy
+      .querySelector(".category-card-title")
+      ?.getBoundingClientRect();
+    const style = getComputedStyle(copy);
+
+    return {
+      backgroundColor: style.backgroundColor,
+      bottomInset: cardRect ? cardRect.bottom - copyRect.bottom : 0,
+      leftInset: cardRect ? copyRect.left - cardRect.left : 0,
+      rightInset: cardRect ? cardRect.right - copyRect.right : 0,
+      textAlign: style.textAlign,
+      titleInset: titleRect ? titleRect.left - copyRect.left : 0,
+    };
+  });
+  assert.match(
+    fruitCategoryCopyMetrics.backgroundColor,
+    /rgba?\(/,
+    "category card copy should have a readable background",
+  );
+  assert.ok(
+    fruitCategoryCopyMetrics.leftInset >= 8 &&
+      fruitCategoryCopyMetrics.rightInset >= 8,
+    "category card copy should align inside the card",
+  );
+  assert.ok(
+    fruitCategoryCopyMetrics.bottomInset >= 8,
+    "category card copy should sit clear of the card edge",
+  );
+  assert.ok(
+    fruitCategoryCopyMetrics.titleInset >= 8,
+    "category card title should align inside its copy panel",
+  );
+  assert.equal(fruitCategoryCopyMetrics.textAlign, "left");
+
+  const searchBox = page.getByRole("searchbox");
+  await searchBox.fill("orange");
+  await page.waitForURL(/q=orange/);
+  const orangeRow = page.locator("[data-season-row]").filter({
+    has: page.locator(".item-name", { hasText: /^Orange$/ }),
+  });
+  await assert.doesNotReject(() =>
+    orangeRow.getByText(/import nécessaire/i).waitFor(),
+  );
+
+  await searchBox.fill("pomme");
+  await page.waitForURL(/q=pomme/);
+  const appleRow = page.locator("[data-season-row]").filter({
+    has: page.locator(".item-name", { hasText: /^Pomme$/ }),
+  });
+  await assert.doesNotReject(() =>
+    appleRow.getByText(/^local$/i).waitFor(),
+  );
+
+  await page.getByRole("button", { name: /effacer la recherche/i }).click();
+  assert.equal(await searchBox.inputValue(), "");
+  assert.ok(!new URL(page.url()).searchParams.has("q"));
+
   for (const label of ["Pays", "Mois", "Langue"]) {
     assert.equal(
       await page.locator(".control-label", { hasText: label }).count(),
@@ -180,11 +248,12 @@ try {
   await fruitTab.click();
   await page.waitForURL(/category=fruit/);
   await page.reload({ waitUntil: "networkidle" });
+  const reloadedFruitTab = page.getByRole("button", { name: "Fruits", exact: true });
   await assert.doesNotReject(() =>
-    fruitTab.getAttribute("aria-pressed"),
+    reloadedFruitTab.getAttribute("aria-pressed"),
   );
   assert.equal(
-    await fruitTab.getAttribute("aria-pressed"),
+    await reloadedFruitTab.getAttribute("aria-pressed"),
     "true",
   );
 

@@ -375,6 +375,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["malaysia-says-fruit-season-guide"],
   },
+  TW: {
+    labels: {
+      fr: "Taiwan: calendrier officiel AFA/MOA des principales periodes de production fruitiere et principaux bassins; guide national prudent, pas precision par comte, altitude, variete ou ferme.",
+      en: "Taiwan: official AFA/MOA calendar for main fruit production seasons and producing areas; cautious national guide, not county, altitude, variety or farm-level precision.",
+      es: "Taiwan: calendario oficial AFA/MOA de principales temporadas de produccion fruticola y zonas productoras; guia nacional prudente, no precision por condado, altitud, variedad ni finca.",
+      de: "Taiwan: offizieller AFA/MOA-Kalender fuer wichtigste Obstproduktionszeiten und Anbaugebiete; vorsichtiger nationaler Leitfaden, keine Genauigkeit nach Landkreis, Hoehenlage, Sorte oder Betrieb.",
+      it: "Taiwan: calendario ufficiale AFA/MOA delle principali stagioni di produzione frutticola e aree produttrici; guida nazionale prudente, non precisione per contea, altitudine, varieta o azienda.",
+      pt: "Taiwan: calendario oficial AFA/MOA das principais epocas de producao de fruta e zonas produtoras; guia nacional prudente, sem precisao por condado, altitude, variedade ou quinta.",
+    },
+    sourceIds: ["taiwan-afa-main-fruit-seasons"],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

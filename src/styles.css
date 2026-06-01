@@ -374,14 +374,14 @@ button {
   }
 
   .category-card {
-    @apply relative min-h-[14.5rem] overflow-hidden rounded-[1.45rem] p-3 text-left shadow-row transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:min-h-[21rem] sm:rounded-[1.7rem] sm:p-5;
+    @apply relative flex min-h-[14.5rem] items-end overflow-hidden rounded-[1.45rem] p-2.5 text-left shadow-row transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:min-h-[21rem] sm:rounded-[1.7rem] sm:p-4;
   }
 
   .category-card::before {
     @apply absolute inset-0 z-10 content-[''];
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 38%, rgba(255, 255, 255, 0) 68%),
-      linear-gradient(0deg, rgba(23, 51, 39, 0.07), rgba(23, 51, 39, 0));
+      linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.08) 42%, rgba(23, 51, 39, 0.22) 100%),
+      linear-gradient(0deg, rgba(23, 51, 39, 0.1), rgba(23, 51, 39, 0));
   }
 
   .category-card-active {
@@ -400,12 +400,16 @@ button {
     background: linear-gradient(150deg, #fff4df, #ead0ab);
   }
 
+  .category-card-copy {
+    @apply relative z-20 mt-auto flex w-full min-w-0 flex-col items-start rounded-2xl border border-white/75 bg-[#fffdf8]/[0.92] px-2.5 py-2 text-left shadow-[0_14px_34px_rgba(23,51,39,0.14),0_1px_0_rgba(255,255,255,0.9)_inset] backdrop-blur-md sm:rounded-[1.15rem] sm:px-3.5 sm:py-3;
+  }
+
   .category-card-title {
-    @apply relative z-20 block text-[0.94rem] font-semibold leading-none text-[#12442d] sm:text-4xl;
+    @apply block max-w-full truncate text-[0.95rem] font-semibold leading-none text-[#12442d] sm:text-3xl;
   }
 
   .category-card-count {
-    @apply relative z-20 mt-3 hidden max-w-[11rem] text-sm font-bold leading-5 text-ink/[0.55] sm:block;
+    @apply mt-1 block max-w-full text-[0.67rem] font-bold leading-4 text-ink/[0.62] sm:mt-1.5 sm:text-sm sm:leading-5;
   }
 
   .category-card-icon {
@@ -571,6 +575,26 @@ button {
 
   .season-confidence {
     @apply rounded-lg bg-[#eef3e8] px-2 py-0.5 text-[#526b4f];
+  }
+
+  .season-origin {
+    @apply rounded-lg px-2 py-0.5;
+  }
+
+  .origin-local {
+    @apply bg-[#e5f1df] text-[#4f8745];
+  }
+
+  .origin-imported {
+    @apply bg-[#fff0dc] text-[#926000];
+  }
+
+  .origin-regional {
+    @apply bg-[#edf1f3] text-[#53666f];
+  }
+
+  .origin-unknown {
+    @apply bg-[#f3eee6] text-ink/[0.62];
   }
 
   .produce-icon {

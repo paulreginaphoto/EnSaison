@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 import { getItemName } from "../lib/season";
 import type { SeasonItem, SeasonStatus } from "../types";
 import type { ResolvedSeason } from "../lib/season";
-import type { Locale, SeasonCategory } from "../types";
+import type { Locale, SeasonCategory, SupplyOrigin } from "../types";
 import { dataSources } from "../data/sources";
 import { ProduceIcon } from "./ProduceIcon";
 import { SeasonMiniChart } from "./SeasonMiniChart";
@@ -22,6 +22,8 @@ type SeasonItemRowProps = {
     details: string;
     hideDetails: string;
     dataLevel: string;
+    supplyOriginLabel: string;
+    supplyOrigins: Record<SupplyOrigin, string>;
     seasonPeriod: string;
   };
 };
@@ -97,6 +99,9 @@ export function SeasonItemRow({
             selectedMonth={selectedMonth}
           />
           <span className="season-confidence">{labels.confidence[season.confidence]}</span>
+          <span className={`season-origin origin-${season.origin}`}>
+            {labels.supplyOrigins[season.origin]}
+          </span>
         </p>
         <button
           aria-label={`${detailsLabel} (${sourceCount})`}
@@ -118,6 +123,10 @@ export function SeasonItemRow({
               <div className="flex flex-wrap gap-x-2">
                 <dt className="font-semibold text-ink">{labels.dataLevel}</dt>
                 <dd>{labels.confidence[season.confidence]}</dd>
+              </div>
+              <div className="flex flex-wrap gap-x-2">
+                <dt className="font-semibold text-ink">{labels.supplyOriginLabel}</dt>
+                <dd>{labels.supplyOrigins[season.origin]}</dd>
               </div>
             </dl>
             <div className="mt-2 flex flex-wrap gap-2">

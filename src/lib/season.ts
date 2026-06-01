@@ -6,6 +6,7 @@ import type {
   SeasonItem,
   SeasonProfileId,
   SeasonStatus,
+  SupplyOrigin,
 } from "../types";
 
 export type ResolvedSeason = {
@@ -14,6 +15,7 @@ export type ResolvedSeason = {
   seasonLabel: string;
   sourceIds: string[];
   confidence: DataConfidence;
+  origin: SupplyOrigin;
   mode: "harvest" | "year-round" | "variable";
 };
 
@@ -71,6 +73,86 @@ const tropicalAlways = new Set([
   "curcuma",
 ]);
 
+const coldEuropeanProfiles = new Set<SeasonProfileId>([
+  "europe-mountain",
+  "europe-temperate",
+]);
+
+const warmClimateImportIds = new Set([
+  "acerola",
+  "agbalumo",
+  "ananas",
+  "anone",
+  "avocat",
+  "banane",
+  "banane-plantain",
+  "cacao",
+  "café",
+  "calamansi",
+  "cannelle",
+  "carambola",
+  "citron",
+  "citron-vert",
+  "clementine",
+  "clou-girofle",
+  "corossol",
+  "datte",
+  "durian",
+  "figue-barbarie",
+  "fruit-pain",
+  "fruit-passion",
+  "gingembre",
+  "goyave",
+  "grenade",
+  "jacquier",
+  "jabuticaba",
+  "jamblon",
+  "langsat",
+  "litchi",
+  "longane",
+  "mandarine",
+  "mangoustan",
+  "mangue",
+  "noix-coco-jeune",
+  "orange",
+  "pamplemousse",
+  "papaye",
+  "pitaya",
+  "poivre",
+  "pomme-lait",
+  "ramboutan",
+  "salak",
+  "santol",
+  "sapotille",
+  "thé",
+  "vanille",
+]);
+
+function resolveSupplyOrigin(
+  item: SeasonItem,
+  countryCode: string,
+  profileId: SeasonProfileId,
+): SupplyOrigin {
+  const country = item.countries?.[countryCode];
+  if (country) {
+    const sourceIds = country.sourceIds ?? [];
+    const isRegionalProxy =
+      country.confidence === "indicative" &&
+      (sourceIds.includes("eufic-europe") || sourceIds.includes("ec-calendar"));
+
+    return isRegionalProxy ? "regional" : "local";
+  }
+
+  if (coldEuropeanProfiles.has(profileId) && warmClimateImportIds.has(item.id)) {
+    return "imported";
+  }
+
+  if (item.profiles?.[profileId]) return "regional";
+  if (item.seasonMode === "variable") return "unknown";
+
+  return "regional";
+}
+
 export function resolveSeason(
   item: SeasonItem,
   profileId: SeasonProfileId,
@@ -80,6 +162,7 @@ export function resolveSeason(
   const country = item.countries?.[countryCode];
   const explicit = country ?? item.profiles?.[profileId];
   const mode = explicit?.seasonMode ?? (explicit ? "harvest" : item.seasonMode ?? "harvest");
+  const origin = resolveSupplyOrigin(item, countryCode, profileId);
 
   if (mode === "variable") {
     return {
@@ -88,6 +171,7 @@ export function resolveSeason(
       seasonLabel: variableSeasonLabel(locale),
       sourceIds: item.sourceIds ?? ["fao-infoods", "langual", "usda-fdc"],
       confidence: item.confidence ?? "taxonomy",
+      origin,
       mode,
     };
   }
@@ -120,6 +204,7 @@ export function resolveSeason(
       (profileId === "south-temperate" || profileId === "tropical"
         ? "model"
         : item.confidence ?? "indicative"),
+    origin,
     mode,
   };
 }

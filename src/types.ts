@@ -31,6 +31,8 @@ export type SeasonStatus = "in-season" | "soon" | "out" | "variable";
 
 export type DataConfidence = "source" | "model" | "indicative" | "taxonomy";
 
+export type SupplyOrigin = "local" | "imported" | "regional" | "unknown";
+
 export type SeasonMode = "harvest" | "year-round" | "variable";
 
 export type SeasonProfileId =

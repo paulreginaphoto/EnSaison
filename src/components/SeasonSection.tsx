@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import type { SeasonItem, SeasonStatus } from "../types";
 import type { ResolvedSeason } from "../lib/season";
-import type { Locale, SeasonCategory } from "../types";
+import type { Locale, SeasonCategory, SupplyOrigin } from "../types";
 import emptyStateIcon from "../assets/icons/empty-state.svg";
 import { SeasonItemRow } from "./SeasonItemRow";
 
@@ -27,6 +27,8 @@ type SeasonSectionProps = {
     details: string;
     hideDetails: string;
     dataLevel: string;
+    supplyOriginLabel: string;
+    supplyOrigins: Record<SupplyOrigin, string>;
     seasonPeriod: string;
   };
 };

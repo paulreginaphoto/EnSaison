@@ -346,6 +346,8 @@ function MainPage() {
     details: copy.details,
     hideDetails: copy.hideDetails,
     dataLevel: copy.dataLevel,
+    supplyOriginLabel: copy.supplyOriginLabel,
+    supplyOrigins: copy.supplyOrigins,
     seasonPeriod: copy.seasonPeriod,
   };
   const sourceLinks = Array.from(
@@ -410,6 +412,9 @@ function MainPage() {
             const art = categoryArt[category];
             const Icon = art.icon;
             const isSelected = selectedCategory === category;
+            const categoryCountLabel = copy.categoryGroups[category].toLocaleLowerCase(
+              locale,
+            );
 
             return (
               <button
@@ -422,9 +427,13 @@ function MainPage() {
                 type="button"
                 onClick={() => setSelectedCategory(category)}
               >
-                <span className="category-card-title">{copy.categoryGroups[category]}</span>
-                <span className="category-card-count">
-                  {count} {copy.matchingFoods}
+                <span className="category-card-copy" data-category-card-copy>
+                  <span className="category-card-title">
+                    {copy.categoryGroups[category]}
+                  </span>
+                  <span className="category-card-count">
+                    {count} {categoryCountLabel}
+                  </span>
                 </span>
                 <Icon aria-hidden="true" className="category-card-mark" />
                 <img src={art.image} alt="" className="category-card-icon" />

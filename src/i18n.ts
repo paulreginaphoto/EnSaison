@@ -1,4 +1,11 @@
-import type { CategoryGroup, Locale, SeasonCategory, SeasonStatus, SeasonView } from "./types";
+import type {
+  CategoryGroup,
+  Locale,
+  SeasonCategory,
+  SeasonStatus,
+  SeasonView,
+  SupplyOrigin,
+} from "./types";
 
 type Dictionary = {
   appTagline: string;
@@ -22,6 +29,7 @@ type Dictionary = {
   details: string;
   hideDetails: string;
   dataLevel: string;
+  supplyOriginLabel: string;
   seasonPeriod: string;
   profilePrefix: string;
   matchingFoods: string;
@@ -31,6 +39,7 @@ type Dictionary = {
   categories: Record<SeasonCategory, string>;
   statuses: Record<SeasonStatus, string>;
   confidence: Record<"source" | "model" | "indicative" | "taxonomy", string>;
+  supplyOrigins: Record<SupplyOrigin, string>;
   aboutCopy: [string, string, string];
 };
 
@@ -66,6 +75,7 @@ export const dictionary: Record<Locale, Dictionary> = {
     details: "Sources & détails",
     hideDetails: "Masquer les détails",
     dataLevel: "Donnée",
+    supplyOriginLabel: "Origine",
     seasonPeriod: "Période habituelle",
     profilePrefix: "Repère",
     matchingFoods: "aliments affichés",
@@ -124,6 +134,12 @@ export const dictionary: Record<Locale, Dictionary> = {
       indicative: "indicatif",
       taxonomy: "taxonomie",
     },
+    supplyOrigins: {
+      local: "Local",
+      imported: "Import nécessaire",
+      regional: "Repère régional",
+      unknown: "À vérifier",
+    },
     aboutCopy: [
       "DeSaison aide à repérer rapidement les aliments de saison selon le pays ou le grand profil climatique choisi.",
       "Les données sont séparées par source et par niveau de confiance afin d’éviter de présenter une approximation comme une certitude locale.",
@@ -152,6 +168,7 @@ export const dictionary: Record<Locale, Dictionary> = {
     details: "Sources & details",
     hideDetails: "Hide details",
     dataLevel: "Data",
+    supplyOriginLabel: "Origin",
     seasonPeriod: "Usual season",
     profilePrefix: "Guide",
     matchingFoods: "foods shown",
@@ -210,6 +227,12 @@ export const dictionary: Record<Locale, Dictionary> = {
       indicative: "indicative",
       taxonomy: "taxonomy",
     },
+    supplyOrigins: {
+      local: "Local",
+      imported: "Import required",
+      regional: "Regional guide",
+      unknown: "Check source",
+    },
     aboutCopy: [
       "DeSaison helps people quickly see seasonal foods for the selected country or climate profile.",
       "Data is split by source and confidence level so an approximation is not presented as local certainty.",
@@ -238,6 +261,7 @@ export const dictionary: Record<Locale, Dictionary> = {
     details: "Fuentes y detalles",
     hideDetails: "Ocultar detalles",
     dataLevel: "Dato",
+    supplyOriginLabel: "Origen",
     seasonPeriod: "Temporada habitual",
     profilePrefix: "Guía",
     matchingFoods: "alimentos mostrados",
@@ -296,6 +320,12 @@ export const dictionary: Record<Locale, Dictionary> = {
       indicative: "indicativo",
       taxonomy: "taxonomía",
     },
+    supplyOrigins: {
+      local: "Local",
+      imported: "Importación necesaria",
+      regional: "Guía regional",
+      unknown: "Verificar",
+    },
     aboutCopy: [
       "DeSaison ayuda a ver rápidamente alimentos de temporada según el país o perfil climático.",
       "Los datos muestran fuente y confianza para no convertir una aproximación en certeza local.",
@@ -324,6 +354,7 @@ export const dictionary: Record<Locale, Dictionary> = {
     details: "Quellen & Details",
     hideDetails: "Details ausblenden",
     dataLevel: "Datenstand",
+    supplyOriginLabel: "Herkunft",
     seasonPeriod: "Übliche Saison",
     profilePrefix: "Leitwert",
     matchingFoods: "Lebensmittel angezeigt",
@@ -382,6 +413,12 @@ export const dictionary: Record<Locale, Dictionary> = {
       indicative: "indikativ",
       taxonomy: "Taxonomie",
     },
+    supplyOrigins: {
+      local: "Lokal",
+      imported: "Import nötig",
+      regional: "Regionaler Leitwert",
+      unknown: "Prüfen",
+    },
     aboutCopy: [
       "DeSaison zeigt schnell saisonale Lebensmittel für das gewählte Land oder Klimaprofil.",
       "Daten sind nach Quelle und Vertrauensgrad getrennt, damit Näherungen nicht als lokale Gewissheit erscheinen.",
@@ -410,6 +447,7 @@ export const dictionary: Record<Locale, Dictionary> = {
     details: "Fonti e dettagli",
     hideDetails: "Nascondi dettagli",
     dataLevel: "Dato",
+    supplyOriginLabel: "Origine",
     seasonPeriod: "Stagione abituale",
     profilePrefix: "Guida",
     matchingFoods: "alimenti mostrati",
@@ -468,6 +506,12 @@ export const dictionary: Record<Locale, Dictionary> = {
       indicative: "indicativo",
       taxonomy: "tassonomia",
     },
+    supplyOrigins: {
+      local: "Locale",
+      imported: "Import necessario",
+      regional: "Guida regionale",
+      unknown: "Da verificare",
+    },
     aboutCopy: [
       "DeSaison aiuta a vedere rapidamente gli alimenti stagionali per paese o profilo climatico.",
       "I dati mostrano fonte e confidenza per non presentare una stima come certezza locale.",
@@ -496,6 +540,7 @@ export const dictionary: Record<Locale, Dictionary> = {
     details: "Fontes e detalhes",
     hideDetails: "Ocultar detalhes",
     dataLevel: "Dado",
+    supplyOriginLabel: "Origem",
     seasonPeriod: "Época habitual",
     profilePrefix: "Guia",
     matchingFoods: "alimentos exibidos",
@@ -553,6 +598,12 @@ export const dictionary: Record<Locale, Dictionary> = {
       model: "modelado",
       indicative: "indicativo",
       taxonomy: "taxonomia",
+    },
+    supplyOrigins: {
+      local: "Local",
+      imported: "Importação necessária",
+      regional: "Guia regional",
+      unknown: "Verificar",
     },
     aboutCopy: [
       "DeSaison ajuda a ver rapidamente alimentos sazonais para o país ou perfil climático escolhido.",

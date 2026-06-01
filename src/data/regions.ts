@@ -320,6 +320,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["guatemala-maga-sowing-harvest-calendar"],
   },
+  SV: {
+    labels: {
+      fr: "El Salvador: calendrier national prudent base sur le tableau MAG/CEPAL des semis et recoltes de hortalizas; surtout legumes et tubercules, pas precision departement, altitude, variete ou ferme.",
+      en: "El Salvador: cautious national calendar based on the MAG/CEPAL sowing and harvest table for vegetables; mainly vegetables and tubers, not department, altitude, variety or farm-level precision.",
+      es: "El Salvador: calendario nacional prudente basado en el cuadro MAG/CEPAL de siembras y cosechas de hortalizas; sobre todo hortalizas y tuberculos, no precision por departamento, altitud, variedad ni finca.",
+      de: "El Salvador: vorsichtiger nationaler Kalender auf Basis der MAG/CEPAL-Tabelle fuer Aussaat und Ernte von Gemuese; vor allem Gemuese und Knollen, keine Genauigkeit nach Departamento, Hoehenlage, Sorte oder Betrieb.",
+      it: "El Salvador: calendario nazionale prudente basato sulla tabella MAG/CEPAL di semina e raccolta degli ortaggi; soprattutto ortaggi e tuberi, non precisione per dipartimento, altitudine, varieta o azienda.",
+      pt: "El Salvador: calendario nacional prudente baseado na tabela MAG/CEPAL de sementeira e colheita de horticolas; sobretudo horticolas e tuberculos, sem precisao por departamento, altitude, variedade ou quinta.",
+    },
+    sourceIds: ["el-salvador-cepal-mag-vegetable-calendar"],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

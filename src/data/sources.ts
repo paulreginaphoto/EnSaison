@@ -383,6 +383,10 @@ export const dataSources = {
     label: "Guatemala MAGA sowing and harvest seasons for agricultural products",
     url: "https://www.maga.gob.gt/sitios/diplan/download/informacion_del_sector/publicaciones_diversas/%C3%89pocas%20de%20siembra%20y%20cosecha%20de%20productos%20agr%C3%ADcolas%20en%20Guatemala.pdf",
   },
+  "el-salvador-cepal-mag-vegetable-calendar": {
+    label: "El Salvador MAG / CEPAL sowing and harvest calendar for vegetables",
+    url: "https://repositorio.cepal.org/bitstream/handle/11362/26227/CEPALmex74-15_es.pdf",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

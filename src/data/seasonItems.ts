@@ -1325,6 +1325,39 @@ const guatemalaMagaSeasonOverrides: Record<string, NonNullable<NonNullable<Seaso
   ramboutan: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
 };
 
+const elSalvadorCepalMagSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  blette: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "céleri-branche": { months: [1, 2, 3, 4], nearMonths: [5, 12], seasonLabel: "janv. – avr." },
+  "petit-pois": { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  aubergine: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  brocoli: { months: [11, 12, 1, 2, 3, 4, 5, 6], nearMonths: [7, 10], seasonLabel: "nov. – juin" },
+  courge: { months: [9, 10, 11, 12], nearMonths: [1, 8], seasonLabel: "sept. – déc." },
+  "patate-douce": { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
+  oignon: { months: [1, 2, 3, 4, 5, 6], nearMonths: [7, 12], seasonLabel: "janv. – juin" },
+  poivron: { months: [8, 9, 10, 11, 12, 1, 2], nearMonths: [3, 7], seasonLabel: "août – févr." },
+  piment: { months: [8, 9, 10, 11, 12, 1], nearMonths: [2, 7], seasonLabel: "août – janv." },
+  "chou-rave": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "chou-fleur": { months: [11, 12, 1, 2, 3], nearMonths: [4, 10], seasonLabel: "nov. – mars" },
+  asperge: { months: [4, 5], nearMonths: [3, 6], seasonLabel: "avr. – mai" },
+  épinard: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  chayote: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  laitue: { months: [11, 12, 1, 2, 3, 4], nearMonths: [5, 10], seasonLabel: "nov. – avr." },
+  taro: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  melon: { months: [12, 1, 2, 3, 4, 5, 6], nearMonths: [7, 11], seasonLabel: "déc. – juin" },
+  navet: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  igname: { months: [12, 1], nearMonths: [2, 11], seasonLabel: "déc. – janv." },
+  gombo: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "pomme-de-terre": { months: [12, 1, 2, 3, 4, 5], nearMonths: [6, 11], seasonLabel: "déc. – mai" },
+  concombre: { months: [1, 2], nearMonths: [3, 12], seasonLabel: "janv. – févr." },
+  radis: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  betterave: { months: [12, 1], nearMonths: [2, 11], seasonLabel: "déc. – janv." },
+  "chou-blanc": { months: [1, 2], nearMonths: [3, 12], seasonLabel: "janv. – févr." },
+  pastèque: { months: [2, 3, 4], nearMonths: [1, 5], seasonLabel: "févr. – avr." },
+  tomate: { months: [2, 3], nearMonths: [1, 4], seasonLabel: "févr. – mars" },
+  manioc: { months: [5, 6, 7, 8, 9, 10, 11, 12, 1], nearMonths: [2, 4], seasonLabel: "mai – janv." },
+  carotte: { months: [2, 3, 4, 5], nearMonths: [1, 6], seasonLabel: "févr. – mai" },
+};
+
 const argentinaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   blette: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [], seasonLabel: "toute l'annee", seasonMode: "year-round" },
   "céleri-branche": { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [], seasonLabel: "mars – nov." },
@@ -3996,6 +4029,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.GT = {
       ...guatemalaMagaSeasonOverrides[item.id],
       sourceIds: ["guatemala-maga-sowing-harvest-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (elSalvadorCepalMagSeasonOverrides[item.id]) {
+    countries.SV = {
+      ...elSalvadorCepalMagSeasonOverrides[item.id],
+      sourceIds: ["el-salvador-cepal-mag-vegetable-calendar"],
       confidence: "source",
     };
   }

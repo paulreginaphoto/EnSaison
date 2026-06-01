@@ -40,6 +40,8 @@ export const normalizeSearch = (value: string) =>
   value
     .normalize("NFD")
     .replace(/\p{Diacritic}/gu, "")
+    .replace(/[-_]+/g, " ")
+    .replace(/\s+/g, " ")
     .toLowerCase()
     .trim();
 

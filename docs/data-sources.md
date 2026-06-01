@@ -363,6 +363,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Mustip seasonal fruits and vegetables in Israel by month
   https://mustip.co.il/seasonal-fruits-and-vegetables-in-israel-by-month/
 
+- SSTWAL Farm Jordan harvest calendar
+  https://sstwal-farm.com/harvest-calendar/
+
 - ThorKit monthly seasonal foods guide for Korea
   https://thorkit.kr/guides/seasonal-foods/
 
@@ -505,6 +508,7 @@ The app now supports:
 - Hong Kong now has source-backed AFCD/EHS overrides for 25 fruit, vegetable, tuber, nut and seafood items already present in the catalogue, mapping official local all-year, summer and winter-spring vegetable crop lists plus EHS broad seasonal foods for spring, summer, autumn and winter; this is cautious HKSAR guidance, not farm, wet-market, supermarket import or variety-level precision;
 - Nepal now has source-backed Flora Fauna Fun / NepJOL overrides for 56 fruit, vegetable, herb, spice, tuber and mushroom items already present in the catalogue, mapping Nepal fruit seasons by altitude/region plus Dharan market monthly availability and all-year rows; this is cautious national and market guidance, not district, altitude, variety, farm or import precision;
 - Sri Lanka now has source-backed Sri Lanka Spirit / Experience Travel Group / Purana Ayurveda overrides for 24 fruit, vegetable and tuber items already present in the catalogue, mapping tropical fruit seasons and a practical Sri Lankan vegetable calendar; this is cautious national guidance, not district, altitude, variety, farm, market or import precision;
+- Jordan now has source-backed SSTWAL Farm harvest-calendar overrides for 52 fruit, vegetable, herb and allium items already present in the catalogue, mapping the farm's listed harvest months around Dhlail/Zarqa; this is cautious local Jordanian farm guidance, not an official national calendar or governorate, valley, greenhouse, variety, retail or import precision;
 - Luxembourg now has source-backed Ministry of Agriculture 2024 regional seasonal-calendar overrides for 52 fruit, vegetable and nut items, distinguishing fresh regional produce from stored availability; Damson plum / quetsche was added to the catalogue to match the Luxembourg calendar;
 - Bulgaria now has source-backed BB-Team practical broad-season overrides for 41 common fruit, vegetable and legume items, plus sorrel and nettle were added to match the Bulgarian table; this is a local practical guide, not a government calendar or month-level agricultural forecast;
 - Estonia now has source-backed Gardest 2026 vegetable sowing-and-harvest overrides for 27 vegetable and fruit-vegetable items, using the ready-to-harvest months; this is practical gardening guidance, not a government calendar or retail availability forecast;

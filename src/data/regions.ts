@@ -379,6 +379,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["israel-mustip-seasonal-produce-guide"],
   },
+  JO: {
+    labels: {
+      fr: "Jordanie: calendrier de recolte SSTWAL Farm a Dhlail/Zarqa pour fruits, legumes et herbes de ferme; signal local prudent, pas calendrier national officiel ni precision par gouvernorat, vallee, serre, variete ou import.",
+      en: "Jordan: SSTWAL Farm harvest calendar in Dhlail/Zarqa for farm fruit, vegetables and herbs; cautious local signal, not an official national calendar or governorate, valley, greenhouse, variety or import precision.",
+      es: "Jordania: calendario de cosecha de SSTWAL Farm en Dhlail/Zarqa para frutas, verduras y hierbas de finca; senal local prudente, no calendario nacional oficial ni precision por gobernacion, valle, invernadero, variedad o importacion.",
+      de: "Jordanien: SSTWAL-Farm-Erntekalender in Dhlail/Zarqa fuer Obst, Gemuese und Kraeuter vom Hof; vorsichtiger lokaler Hinweis, kein offizieller nationaler Kalender und keine Genauigkeit nach Gouvernement, Tal, Gewaechshaus, Sorte oder Import.",
+      it: "Giordania: calendario di raccolta SSTWAL Farm a Dhlail/Zarqa per frutta, verdura ed erbe aziendali; segnale locale prudente, non calendario nazionale ufficiale ne precisione per governatorato, valle, serra, varieta o importazione.",
+      pt: "Jordania: calendario de colheita da SSTWAL Farm em Dhlail/Zarqa para frutas, legumes e ervas da quinta; sinal local prudente, nao calendario nacional oficial nem precisao por governacao, vale, estufa, variedade ou importacao.",
+    },
+    sourceIds: ["jordan-sstwal-harvest-calendar"],
+  },
   IR: {
     labels: {
       fr: "Iran: calendriers fruits Hina Greenery et GilaFruit pour recolte/disponibilite export; signal national pratique, pas precision province, stockage, serre, variete ou marche local.",

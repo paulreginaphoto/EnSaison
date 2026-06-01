@@ -459,6 +459,10 @@ export const dataSources = {
     label: "Mustip seasonal fruits and vegetables in Israel by month",
     url: "https://mustip.co.il/seasonal-fruits-and-vegetables-in-israel-by-month/",
   },
+  "jordan-sstwal-harvest-calendar": {
+    label: "SSTWAL Farm Jordan harvest calendar",
+    url: "https://sstwal-farm.com/harvest-calendar/",
+  },
   "iran-hina-fruit-export-calendar": {
     label: "Hina Greenery Iranian fruit export harvest calendar",
     url: "https://hinagreenery.com/iranian-fruit-export-calendar-monthly-guide/",

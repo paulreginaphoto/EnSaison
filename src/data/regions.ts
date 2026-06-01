@@ -309,6 +309,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "panama-mida-planting-harvest-projection-2025-2026",
     ],
   },
+  GT: {
+    labels: {
+      fr: "Guatemala: calendrier national prudent base sur le MAGA, avec les mois de cycle haut de recolte; indicateur national, pas precision departement, altitude, variete ou ferme.",
+      en: "Guatemala: cautious national calendar based on MAGA, using high-harvest-cycle months; national indicator, not department, altitude, variety or farm-level precision.",
+      es: "Guatemala: calendario nacional prudente basado en MAGA, con meses de ciclo alto de cosecha; indicador nacional, no precision por departamento, altitud, variedad ni finca.",
+      de: "Guatemala: vorsichtiger nationaler Kalender auf Basis von MAGA, mit Monaten des hohen Erntezyklus; nationaler Hinweis, keine Genauigkeit nach Departamento, Hoehenlage, Sorte oder Betrieb.",
+      it: "Guatemala: calendario nazionale prudente basato su MAGA, con mesi di ciclo alto di raccolta; indicatore nazionale, non precisione per dipartimento, altitudine, varieta o azienda.",
+      pt: "Guatemala: calendario nacional prudente baseado no MAGA, com meses de ciclo alto de colheita; indicador nacional, sem precisao por departamento, altitude, variedade ou quinta.",
+    },
+    sourceIds: ["guatemala-maga-sowing-harvest-calendar"],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

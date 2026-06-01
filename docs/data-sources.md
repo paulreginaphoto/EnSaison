@@ -297,6 +297,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Panama MIDA planting and harvest projection 2025-2026
   https://mida.gob.pa/wp-content/uploads/2025/10/PROYECCION-DE-SIEMBRA-Y-COSECHA-2025-2026.pdf
 
+- Guatemala MAGA sowing and harvest seasons for agricultural products
+  https://www.maga.gob.gt/sitios/diplan/download/informacion_del_sector/publicaciones_diversas/%C3%89pocas%20de%20siembra%20y%20cosecha%20de%20productos%20agr%C3%ADcolas%20en%20Guatemala.pdf
+
 - FEWS NET Togo country book and FAO crop-calendar context
   https://help.fews.net/fde/v3/togo-country-book
 
@@ -345,9 +348,9 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 331 food entries after the Panama IMA/MIDA pass;
+- 331 food entries after the Guatemala MAGA pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 74 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, Vietnam, Nigeria, Ghana, Cote d'Ivoire, Benin, Cameroon, Senegal, Togo, Burkina Faso, Mali, Chile, Costa Rica, Paraguay, Dominican Republic, Panama, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, Morocco, Kenya, India, Brazil, Croatia and Japan;
+- country overrides for 75 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, Vietnam, Nigeria, Ghana, Cote d'Ivoire, Benin, Cameroon, Senegal, Togo, Burkina Faso, Mali, Chile, Costa Rica, Paraguay, Dominican Republic, Panama, Guatemala, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, Morocco, Kenya, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Austria now has source-backed Gesundheit.gv.at national season-calendar overrides for 50 fruit, vegetable and mushroom items already present in the catalogue, while remaining Austrian produce still falls back to indicative European regional data;
 - Belgium now has source-backed Vlaanderen/VLAM month-by-month availability overrides for 45 fruit, vegetable, herb and mushroom items already present in the catalogue, while remaining Belgian produce still falls back to indicative European regional data;
@@ -393,6 +396,7 @@ The app now supports:
 - Paraguay now has source-backed Agrotec / Pro Cosara / Asuncion Times overrides for 17 fruit and major-crop items already present in the catalogue, mapping explicit harvest windows for guava, citrus, grape, pineapple, plum, avocado, watermelon, melon and banana plus seasonal-fruit and grain/cereal signals for mango, papaya, strawberry, maize and wheat; this is cautious national guidance, not department-level or variety-level precision;
 - Dominican Republic now has source-backed Ministry of Agriculture / DominicanSources / Dominican Cooking overrides for 24 crop, vegetable, tuber, legume and tropical-fruit items; pigeon pea / guandul was added to cover a crop explicitly listed in the official calendar, with year-round rows kept as year-round and mango/avocado windows treated as national market guidance rather than variety, province or farm-level precision;
 - Panama now has source-backed IMA/MIDA overrides for 29 fruit, grain, tuber and vegetable items already present in the catalogue, mapping official crop-calendar/product rows such as yam, taro, potato, cassava, carrot, rice, beans, maize, sorghum, avocado, strawberry, soursop, banana, guava, limes, citrus, mango, rambutan, passion fruit, melon, cashew apple, papaya, pineapple, plantain, watermelon, tamarind and grapefruit; this is national sowing/harvest guidance, not province, altitude or farm-level precision;
+- Guatemala now has source-backed MAGA high-harvest-cycle overrides for 42 fruit, grain, legume, tuber and vegetable items already present in the catalogue, mapping the official crop calendar rows for banana, cocoa, rice, beans, maize, sorghum, soybean, fava bean, garlic, snow pea, eggplant, broccoli, squash, sweet potato, onion, peppers, cauliflower, lettuce, turnip, potato, cucumber, cabbage, tomato, carrot, cassava, avocado, strawberry, raspberry, apple, lemon, mango, passion fruit, peach, melon, orange, papaya, pineapple, plantain, watermelon and rambutan; this is national high-harvest guidance, not department, altitude, variety or farm-level precision;
 - Luxembourg now has source-backed Ministry of Agriculture 2024 regional seasonal-calendar overrides for 52 fruit, vegetable and nut items, distinguishing fresh regional produce from stored availability; Damson plum / quetsche was added to the catalogue to match the Luxembourg calendar;
 - Bulgaria now has source-backed BB-Team practical broad-season overrides for 41 common fruit, vegetable and legume items, plus sorrel and nettle were added to match the Bulgarian table; this is a local practical guide, not a government calendar or month-level agricultural forecast;
 - Estonia now has source-backed Gardest 2026 vegetable sowing-and-harvest overrides for 27 vegetable and fruit-vegetable items, using the ready-to-harvest months; this is practical gardening guidance, not a government calendar or retail availability forecast;

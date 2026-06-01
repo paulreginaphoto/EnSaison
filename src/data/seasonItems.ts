@@ -1280,6 +1280,51 @@ const panamaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["
   pamplemousse: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
 };
 
+const guatemalaMagaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  banane: { months: [1, 2, 3, 4, 5, 6], nearMonths: [7, 12], seasonLabel: "janv. – juin" },
+  cacao: { months: [1, 8, 9, 10, 11, 12], nearMonths: [7], seasonLabel: "janv., août – déc." },
+  riz: { months: [8, 9, 10, 11, 12], nearMonths: [7], seasonLabel: "août – déc." },
+  "haricot-noir": { months: [2, 3, 8, 9, 10, 11], nearMonths: [4, 7, 12], seasonLabel: "févr. – mars, août – nov." },
+  "haricot-rouge": { months: [8, 9, 12], nearMonths: [7, 10, 11], seasonLabel: "août – sept., déc." },
+  "maïs-grain": { months: [1, 2, 3, 4, 7, 8, 9, 10, 11, 12], nearMonths: [5, 6], seasonLabel: "janv. – avr., juil. – déc." },
+  sorgho: { months: [1, 2, 10, 11, 12], nearMonths: [3, 9], seasonLabel: "janv. – févr., oct. – déc." },
+  soja: { months: [1, 9, 10, 11, 12], nearMonths: [8], seasonLabel: "janv., sept. – déc." },
+  fève: { months: [1, 2, 3, 4, 5, 6, 12], nearMonths: [7, 11], seasonLabel: "déc. – juin" },
+  ail: { months: [2, 3, 4], nearMonths: [1, 5], seasonLabel: "févr. – avr." },
+  "pois-mange-tout": { months: [2, 3, 4, 5, 6, 8, 9, 10, 11], nearMonths: [1, 7, 12], seasonLabel: "févr. – juin, août – nov." },
+  aubergine: { months: [2, 3, 7, 8, 9, 10, 11], nearMonths: [1, 6, 12], seasonLabel: "févr. – mars, juil. – nov." },
+  brocoli: { months: [1, 2, 7, 8, 9, 10, 11], nearMonths: [3, 6, 12], seasonLabel: "janv. – févr., juil. – nov." },
+  courge: { months: [8, 9, 10, 11], nearMonths: [7, 12], seasonLabel: "août – nov." },
+  "patate-douce": { months: [1, 2, 3, 4, 9, 10, 11, 12], nearMonths: [5, 8], seasonLabel: "janv. – avr., sept. – déc." },
+  oignon: { months: [2, 3, 4, 5, 6, 7, 8, 9], nearMonths: [1, 10], seasonLabel: "févr. – sept." },
+  poivron: { months: [2, 3, 4, 5, 6, 8, 9, 10], nearMonths: [1, 7, 11], seasonLabel: "févr. – juin, août – oct." },
+  "chou-fleur": { months: [1, 2, 3, 5, 6, 7], nearMonths: [4, 8], seasonLabel: "janv. – mars, mai – juil." },
+  piment: { months: [1, 2, 3, 5, 6, 7], nearMonths: [4, 8], seasonLabel: "janv. – mars, mai – juil." },
+  laitue: { months: [2, 3, 7, 8, 9, 10, 11, 12], nearMonths: [1, 6], seasonLabel: "févr. – mars, juil. – déc." },
+  navet: { months: [8, 9, 10, 11], nearMonths: [7, 12], seasonLabel: "août – nov." },
+  "pomme-de-terre": { months: [6, 7, 8, 9, 10, 11], nearMonths: [5, 12], seasonLabel: "juin – nov." },
+  concombre: { months: [1, 2, 7, 8, 11, 12], nearMonths: [6, 9, 10], seasonLabel: "janv. – févr., juil. – août, nov. – déc." },
+  "chou-blanc": { months: [1, 4, 5, 6, 7, 8, 9, 10], nearMonths: [2, 3, 11], seasonLabel: "janv., avr. – oct." },
+  tomate: { months: [2, 3, 4, 5, 8, 9], nearMonths: [1, 6, 7, 10], seasonLabel: "févr. – mai, août – sept." },
+  carotte: { months: [1, 3, 4, 5, 6, 7, 12], nearMonths: [2, 8, 11], seasonLabel: "déc. – janv., mars – juil." },
+  manioc: { months: [1, 2, 3, 4, 11, 12], nearMonths: [5, 10], seasonLabel: "nov. – avr." },
+  avocat: { months: [1, 2, 3, 4], nearMonths: [5, 12], seasonLabel: "janv. – avr." },
+  fraise: { months: [1, 2, 10, 11, 12], nearMonths: [3, 9], seasonLabel: "oct. – févr." },
+  framboise: { months: [1, 2, 10, 11, 12], nearMonths: [3, 9], seasonLabel: "oct. – févr." },
+  pomme: { months: [4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [3, 12], seasonLabel: "avr. – nov." },
+  citron: { months: [3, 4, 5, 6, 7, 8], nearMonths: [2, 9], seasonLabel: "mars – août" },
+  mangue: { months: [3, 4, 5, 6, 7, 8, 9], nearMonths: [2, 10], seasonLabel: "mars – sept." },
+  "fruit-passion": { months: [1, 6, 7, 12], nearMonths: [2, 5, 8, 11], seasonLabel: "janv., juin – juil., déc." },
+  peche: { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept." },
+  melon: { months: [3, 4, 5, 6, 7, 8, 9], nearMonths: [2, 10], seasonLabel: "mars – sept." },
+  orange: { months: [2, 3, 4, 8, 9, 10], nearMonths: [1, 5, 7, 11], seasonLabel: "févr. – avr., août – oct." },
+  papaye: { months: [4, 5, 6, 9, 10, 11], nearMonths: [3, 7, 8, 12], seasonLabel: "avr. – juin, sept. – nov." },
+  ananas: { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
+  "banane-plantain": { months: [1, 2, 5, 6, 7, 8, 10, 11, 12], nearMonths: [3, 4, 9], seasonLabel: "janv. – févr., mai – août, oct. – déc." },
+  pastèque: { months: [3, 4, 5, 6, 9, 10, 11], nearMonths: [2, 7, 8, 12], seasonLabel: "mars – juin, sept. – nov." },
+  ramboutan: { months: [10, 11, 12], nearMonths: [9], seasonLabel: "oct. – déc." },
+};
+
 const argentinaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   blette: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [], seasonLabel: "toute l'annee", seasonMode: "year-round" },
   "céleri-branche": { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [], seasonLabel: "mars – nov." },
@@ -3943,6 +3988,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
         "panama-ima-mida-sowing-harvest-calendar-2022-2023",
         "panama-mida-planting-harvest-projection-2025-2026",
       ],
+      confidence: "source",
+    };
+  }
+
+  if (guatemalaMagaSeasonOverrides[item.id]) {
+    countries.GT = {
+      ...guatemalaMagaSeasonOverrides[item.id],
+      sourceIds: ["guatemala-maga-sowing-harvest-calendar"],
       confidence: "source",
     };
   }

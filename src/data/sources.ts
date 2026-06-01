@@ -379,6 +379,10 @@ export const dataSources = {
     label: "Panama MIDA planting and harvest projection 2025-2026",
     url: "https://mida.gob.pa/wp-content/uploads/2025/10/PROYECCION-DE-SIEMBRA-Y-COSECHA-2025-2026.pdf",
   },
+  "guatemala-maga-sowing-harvest-calendar": {
+    label: "Guatemala MAGA sowing and harvest seasons for agricultural products",
+    url: "https://www.maga.gob.gt/sitios/diplan/download/informacion_del_sector/publicaciones_diversas/%C3%89pocas%20de%20siembra%20y%20cosecha%20de%20productos%20agr%C3%ADcolas%20en%20Guatemala.pdf",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

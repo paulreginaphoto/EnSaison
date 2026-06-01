@@ -392,13 +392,13 @@ button {
   }
 
   .category-card {
-    @apply relative flex min-h-[14.5rem] items-end overflow-hidden rounded-[1.45rem] p-2.5 text-left shadow-row transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:min-h-[21rem] sm:rounded-[1.7rem] sm:p-4;
+    @apply relative min-h-[14.5rem] overflow-hidden rounded-[1.45rem] text-left shadow-row transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:min-h-[21rem] sm:rounded-[1.7rem];
   }
 
   .category-card::before {
     @apply absolute inset-0 z-10 content-[''];
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.08) 42%, rgba(23, 51, 39, 0.22) 100%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.06) 46%, rgba(23, 51, 39, 0.2) 100%),
       linear-gradient(0deg, rgba(23, 51, 39, 0.1), rgba(23, 51, 39, 0));
   }
 
@@ -419,11 +419,11 @@ button {
   }
 
   .category-card-copy {
-    @apply relative z-20 mt-auto flex w-full min-w-0 flex-col items-start rounded-2xl border border-white/80 bg-[#fffdf8]/[0.95] px-2.5 py-2 text-left shadow-[0_14px_34px_rgba(23,51,39,0.14),0_1px_0_rgba(255,255,255,0.9)_inset] backdrop-blur-md sm:rounded-[1.15rem] sm:px-3.5 sm:py-3;
+    @apply absolute inset-x-2 top-12 z-20 flex min-w-0 flex-col items-start text-left sm:left-5 sm:right-20 sm:top-5;
   }
 
   .category-card-title {
-    @apply block max-w-full truncate text-[0.95rem] font-bold leading-none text-[#12442d] sm:text-3xl;
+    @apply block max-w-full text-[0.88rem] font-bold leading-none text-[#12442d] sm:text-3xl;
   }
 
   .category-card-count {
@@ -431,7 +431,7 @@ button {
   }
 
   .category-card-icon {
-    @apply absolute inset-x-0 bottom-0 z-0 h-[72%] w-full object-cover opacity-100 sm:h-[76%];
+    @apply absolute inset-x-0 bottom-0 z-0 h-[58%] w-full object-cover opacity-100 sm:h-[68%];
     object-position: 50% 80%;
   }
 

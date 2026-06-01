@@ -2,16 +2,14 @@ import { useEffect, useMemo, useState } from "react";
 import {
   ArrowRight,
   CalendarDays,
-  Heart,
-  Leaf,
   MapPin,
   Sprout,
-  type LucideIcon,
 } from "lucide-react";
 import fruitImage from "./assets/produce/category-fruits.webp";
 import heroMarketImage from "./assets/produce/hero-market.webp";
 import mushroomImage from "./assets/produce/category-mushrooms.webp";
 import vegetableImage from "./assets/produce/category-vegetables.webp";
+import { CategoryFeatureCard } from "./components/CategoryFeatureCard";
 import { CategoryTabs } from "./components/CategoryTabs";
 import { Header } from "./components/Header";
 import { SearchBar } from "./components/SearchBar";
@@ -79,22 +77,19 @@ const featureCategories: ("fruit" | "vegetable" | "mushroom")[] = [
 
 const categoryArt: Record<
   "fruit" | "vegetable" | "mushroom",
-  { image: string; accentClass: string; icon: LucideIcon }
+  { image: string; accentClass: string }
 > = {
   fruit: {
     image: fruitImage,
     accentClass: "category-card-fruit",
-    icon: Heart,
   },
   vegetable: {
     image: vegetableImage,
     accentClass: "category-card-vegetable",
-    icon: Leaf,
   },
   mushroom: {
     image: mushroomImage,
     accentClass: "category-card-mushroom",
-    icon: Sprout,
   },
 };
 
@@ -410,34 +405,24 @@ function MainPage() {
         <section className="category-bento" aria-label="Catégories rapides">
           {categorySummaries.map(({ category, count }) => {
             const art = categoryArt[category];
-            const Icon = art.icon;
             const isSelected = selectedCategory === category;
+            const categoryLabel = copy.categoryGroups[category];
             const categoryCountLabel = copy.categoryGroups[category].toLocaleLowerCase(
               locale,
             );
 
             return (
-              <button
-                aria-pressed={isSelected}
-                aria-label={`Carte ${copy.categoryGroups[category]}`}
-                className={`category-card ${art.accentClass} ${
-                  isSelected ? "category-card-active" : ""
-                }`}
+              <CategoryFeatureCard
+                accentClass={art.accentClass}
+                category={category}
+                count={count}
+                countLabel={categoryCountLabel}
+                image={art.image}
+                isSelected={isSelected}
                 key={category}
-                type="button"
-                onClick={() => setSelectedCategory(category)}
-              >
-                <span className="category-card-copy" data-category-card-copy>
-                  <span className="category-card-title">
-                    {copy.categoryGroups[category]}
-                  </span>
-                  <span className="category-card-count">
-                    {count} {categoryCountLabel}
-                  </span>
-                </span>
-                <Icon aria-hidden="true" className="category-card-mark" />
-                <img src={art.image} alt="" className="category-card-icon" />
-              </button>
+                label={categoryLabel}
+                onSelect={() => setSelectedCategory(category)}
+              />
             );
           })}
         </section>

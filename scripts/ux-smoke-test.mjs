@@ -112,40 +112,55 @@ try {
     /20 fruits/i,
     "category card count should use a compact readable label",
   );
+  const categoryCardIconNames = await page
+    .locator("[data-category-card-icon]")
+    .evaluateAll((icons) =>
+      icons.map((icon) => icon.getAttribute("data-category-card-icon")),
+    );
+  assert.deepEqual(
+    categoryCardIconNames,
+    ["cherry", "carrot", "mushroom"],
+    "category cards should use category-specific icons",
+  );
   const fruitCategoryCopyMetrics = await fruitCategoryCopy.evaluate((copy) => {
     const copyRect = copy.getBoundingClientRect();
-    const cardRect = copy.closest(".category-card")?.getBoundingClientRect();
+    const card = copy.closest(".category-card");
+    const cardRect = card?.getBoundingClientRect();
+    const imageRect = card
+      ?.querySelector(".category-card-icon")
+      ?.getBoundingClientRect();
     const titleRect = copy
       .querySelector(".category-card-title")
       ?.getBoundingClientRect();
     const style = getComputedStyle(copy);
 
     return {
-      backgroundColor: style.backgroundColor,
       bottomInset: cardRect ? cardRect.bottom - copyRect.bottom : 0,
+      imageGap: imageRect ? imageRect.top - copyRect.bottom : 0,
       leftInset: cardRect ? copyRect.left - cardRect.left : 0,
       rightInset: cardRect ? cardRect.right - copyRect.right : 0,
       textAlign: style.textAlign,
       titleInset: titleRect ? titleRect.left - copyRect.left : 0,
+      topInset: cardRect ? copyRect.top - cardRect.top : 0,
     };
   });
-  assert.match(
-    fruitCategoryCopyMetrics.backgroundColor,
-    /rgba?\(/,
-    "category card copy should have a readable background",
-  );
   assert.ok(
     fruitCategoryCopyMetrics.leftInset >= 8 &&
       fruitCategoryCopyMetrics.rightInset >= 8,
     "category card copy should align inside the card",
   );
   assert.ok(
-    fruitCategoryCopyMetrics.bottomInset >= 8,
-    "category card copy should sit clear of the card edge",
+    fruitCategoryCopyMetrics.topInset >= 8 &&
+      fruitCategoryCopyMetrics.topInset <= 64,
+    "category card copy should sit in the image-free top bar",
   );
   assert.ok(
-    fruitCategoryCopyMetrics.titleInset >= 8,
-    "category card title should align inside its copy panel",
+    fruitCategoryCopyMetrics.imageGap >= 8,
+    "category card image should start below the copy",
+  );
+  assert.ok(
+    fruitCategoryCopyMetrics.titleInset >= 0,
+    "category card title should align with its top copy block",
   );
   assert.equal(fruitCategoryCopyMetrics.textAlign, "left");
 

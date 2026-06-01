@@ -455,6 +455,14 @@ export const dataSources = {
     label: "Ecuador Ministry of Public Health fruit and vegetable availability table",
     url: "https://www.salud.gob.ec/wp-content/uploads/2013/11/GUIA-DE-ALIM-DOCENTES-web-07-07-2017.pdf",
   },
+  "albania-brookeonfoot-seasonal-produce": {
+    label: "Brooke on Foot seasonal produce guide for Albania",
+    url: "https://brookeonfoot.com/seasonal-produce-in-albania-fruits-vegetables/",
+  },
+  "albania-worldbank-crop-calendar": {
+    label: "World Bank crop calendar for Albania",
+    url: "https://documents1.worldbank.org/curated/en/892611468740389435/pdf/multi-page.pdf",
+  },
   "israel-mustip-seasonal-produce-guide": {
     label: "Mustip seasonal fruits and vegetables in Israel by month",
     url: "https://mustip.co.il/seasonal-fruits-and-vegetables-in-israel-by-month/",

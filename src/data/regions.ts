@@ -151,6 +151,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "eu-andorra-customs-union",
     ],
   },
+  AL: {
+    labels: {
+      fr: "Albanie: guide local de produits de saison et calendrier agricole World Bank; signal national pratique surtout base sur marches de Tirana et grandes saisons, pas precision prefecture, altitude, serre, variete, ferme, stockage ou import.",
+      en: "Albania: local seasonal-produce guide and World Bank crop calendar; practical national signal mostly based on Tirana markets and broad seasons, not prefecture, altitude, greenhouse, variety, farm, storage or import precision.",
+      es: "Albania: guia local de productos de temporada y calendario agricola del Banco Mundial; senal nacional practica sobre todo basada en mercados de Tirana y temporadas amplias, no precision por prefectura, altitud, invernadero, variedad, finca, almacenamiento ni importacion.",
+      de: "Albanien: lokaler Saisonprodukt-Leitfaden und Weltbank-Erntekalender; praktischer nationaler Hinweis, vor allem aus Tiranaer Maerkten und breiten Saisons abgeleitet, keine Genauigkeit nach Praefektur, Hoehenlage, Gewaechshaus, Sorte, Betrieb, Lagerung oder Import.",
+      it: "Albania: guida locale ai prodotti di stagione e calendario agricolo World Bank; segnale nazionale pratico basato soprattutto su mercati di Tirana e stagioni ampie, non precisione per prefettura, altitudine, serra, varieta, azienda, conservazione o import.",
+      pt: "Albania: guia local de produtos sazonais e calendario agricola do Banco Mundial; sinal nacional pratico sobretudo baseado nos mercados de Tirana e epocas amplas, sem precisao por prefeitura, altitude, estufa, variedade, quinta, armazenamento nem importacao.",
+    },
+    sourceIds: ["albania-brookeonfoot-seasonal-produce", "albania-worldbank-crop-calendar"],
+  },
   AT: {
     labels: {
       fr: "Autriche: calendrier national du portail public de sante, utile pour les produits regionaux offerts selon les mois.",

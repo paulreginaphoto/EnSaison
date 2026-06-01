@@ -2978,6 +2978,39 @@ const greeceFoodForHealthSeasonOverrides: Record<string, NonNullable<NonNullable
   tomate: { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
 };
 
+const albaniaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  "ail": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "amande": { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  "abricot": { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
+  "aubergine": { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
+  "cacahuète": { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  "cerise": { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
+  "châtaigne": { months: [11, 12, 1, 2], nearMonths: [3, 10], seasonLabel: "nov. – févr." },
+  "ciboule": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "citron": { months: [12, 1, 2, 3], nearMonths: [4, 11], seasonLabel: "déc. – mars" },
+  "courge": { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  "figue": { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  "fraise": { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
+  "framboise": { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  "gombo": { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
+  "grenade": { months: [9, 10, 11, 12, 1, 2], nearMonths: [3, 8], seasonLabel: "sept. – févr." },
+  "huile-olive": { months: [11, 12, 1, 2], nearMonths: [3, 10], seasonLabel: "nov. – févr." },
+  "laitue": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "mandarine": { months: [12, 1, 2, 3], nearMonths: [4, 11], seasonLabel: "déc. – mars" },
+  "mure": { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  "myrtille": { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  "noisette": { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  "noix": { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  "oignon": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "orange": { months: [12, 1, 2, 3], nearMonths: [4, 11], seasonLabel: "déc. – mars" },
+  "poivron": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "pomme": { months: [10, 11, 12, 1, 2, 3, 4], nearMonths: [5, 9], seasonLabel: "oct. – avr." },
+  "pomme-de-terre": { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  "prune": { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
+  "raisin": { months: [8, 9, 10, 11], nearMonths: [7, 12], seasonLabel: "août – nov." },
+  "tomate": { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
+};
+
 const cyprusSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   banane: { months: [12, 1, 2], nearMonths: [3, 11], seasonLabel: "déc. – févr.", sourceIds: ["cyprus-faq-fruit-season-guide"] },
   "nèfle": { months: [2, 3, 4, 5, 6], nearMonths: [1, 7], seasonLabel: "févr. – juin", sourceIds: ["cyprus-faq-fruit-season-guide"] },
@@ -4945,6 +4978,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.GR = {
       ...greeceFoodForHealthSeasonOverrides[item.id],
       sourceIds: ["greece-foodforhealth-season-calendar", "ec-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (albaniaSeasonOverrides[item.id]) {
+    countries.AL = {
+      ...albaniaSeasonOverrides[item.id],
+      sourceIds: ["albania-brookeonfoot-seasonal-produce", "albania-worldbank-crop-calendar"],
       confidence: "source",
     };
   }

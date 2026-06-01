@@ -1200,6 +1200,26 @@ const costaRicaPimaSeasonOverrides: Record<string, NonNullable<NonNullable<Seaso
   chayote: { months: [10, 11, 12, 1], nearMonths: [2, 4], seasonLabel: "oct. – janv." },
 };
 
+const paraguaySeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  goyave: { months: [1, 2, 3], nearMonths: [12, 4], seasonLabel: "janv. – mars" },
+  orange: { months: [3, 4, 5, 6, 7, 8, 9, 10], nearMonths: [2, 11], seasonLabel: "mars – oct." },
+  citron: { months: [3, 4, 5, 6, 7, 8, 9, 10], nearMonths: [2, 11], seasonLabel: "mars – oct." },
+  mandarine: { months: [3, 4, 5, 6, 7, 8, 9, 10], nearMonths: [2, 11], seasonLabel: "mars – oct." },
+  pamplemousse: { months: [3, 4, 5, 6, 7, 8, 9, 10], nearMonths: [2, 11], seasonLabel: "mars – oct." },
+  raisin: { months: [12, 1], nearMonths: [11, 2], seasonLabel: "déc. – janv." },
+  ananas: { months: [12, 1], nearMonths: [11, 2], seasonLabel: "déc. – janv." },
+  prune: { months: [12, 1], nearMonths: [11, 2], seasonLabel: "déc. – janv." },
+  avocat: { months: [4, 5], nearMonths: [3, 6], seasonLabel: "avr. – mai" },
+  pastèque: { months: [9, 10, 11, 12, 1, 2, 3, 4], nearMonths: [8, 5], seasonLabel: "sept. – avr." },
+  melon: { months: [9, 10, 11, 12, 1, 2, 3, 4], nearMonths: [8, 5], seasonLabel: "sept. – avr." },
+  banane: { months: [1, 2, 3, 4, 5, 9, 10, 11, 12], nearMonths: [6, 7, 8], seasonLabel: "toute l'année hors froid" },
+  mangue: { months: [12, 1, 2, 3], nearMonths: [11, 4], seasonLabel: "déc. – mars" },
+  papaye: { months: [12, 1, 2, 3], nearMonths: [4, 5, 6, 7, 8, 9, 10, 11], seasonLabel: "pic déc. – mars; production étalée" },
+  fraise: { months: [9, 10, 11], nearMonths: [4, 5, 6, 8, 12], seasonLabel: "sept. – nov." },
+  "maïs-grain": { months: [12, 1, 2], nearMonths: [11, 3], seasonLabel: "déc. – févr." },
+  blé: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+};
+
 const argentinaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   blette: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [], seasonLabel: "toute l'annee", seasonMode: "year-round" },
   "céleri-branche": { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [], seasonLabel: "mars – nov." },
@@ -3827,6 +3847,18 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
       sourceIds: [
         "costa-rica-pima-seasonal-index-2025",
         "costa-rica-pima-seasonal-pdf-2025",
+      ],
+      confidence: "source",
+    };
+  }
+
+  if (paraguaySeasonOverrides[item.id]) {
+    countries.PY = {
+      ...paraguaySeasonOverrides[item.id],
+      sourceIds: [
+        "paraguay-agrotec-2026-crop-calendar",
+        "paraguay-procosara-fruit-harvest-calendar",
+        "paraguay-asuncion-times-seasonal-fruits-2026",
       ],
       confidence: "source",
     };

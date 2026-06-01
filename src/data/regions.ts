@@ -265,6 +265,21 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "costa-rica-pima-seasonal-pdf-2025",
     ],
   },
+  PY: {
+    labels: {
+      fr: "Paraguay: calendrier national prudent base sur Agrotec 2026, Pro Cosara/CCU et un guide saisonnier local; surtout fruits et grandes cultures, pas precision departementale ni varietale.",
+      en: "Paraguay: cautious national calendar based on Agrotec 2026, Pro Cosara/CCU and a local seasonal-fruit guide; mainly fruit and major crops, not department-level or variety-level precision.",
+      es: "Paraguay: calendario nacional prudente basado en Agrotec 2026, Pro Cosara/CCU y una guia local de frutas estacionales; sobre todo frutas y cultivos principales, no precision departamental ni varietal.",
+      de: "Paraguay: vorsichtiger nationaler Kalender auf Basis von Agrotec 2026, Pro Cosara/CCU und einem lokalen Saisonobst-Leitfaden; vor allem Obst und Hauptkulturen, keine Genauigkeit nach Departamento oder Sorte.",
+      it: "Paraguay: calendario nazionale prudente basato su Agrotec 2026, Pro Cosara/CCU e una guida locale alla frutta stagionale; soprattutto frutta e colture principali, non precisione dipartimentale o varietale.",
+      pt: "Paraguai: calendario nacional prudente baseado na Agrotec 2026, Pro Cosara/CCU e num guia local de frutas sazonais; sobretudo frutas e culturas principais, sem precisao departamental nem varietal.",
+    },
+    sourceIds: [
+      "paraguay-agrotec-2026-crop-calendar",
+      "paraguay-procosara-fruit-harvest-calendar",
+      "paraguay-asuncion-times-seasonal-fruits-2026",
+    ],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

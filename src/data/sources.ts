@@ -347,6 +347,18 @@ export const dataSources = {
     label: "Costa Rica PIMA/CENADA 2025 seasonal price-index PDF",
     url: "https://www.pima.go.cr/wp-content/uploads/2025/07/Calendario-Estacionalidad-para-Frutas-y-Hortalizas-segun-Precios-PIMA-CENADA-para-el-ano-2025.pdf",
   },
+  "paraguay-agrotec-2026-crop-calendar": {
+    label: "Agrotec Paraguay 2026 planting and harvest calendar",
+    url: "https://agrotec.com.py/informagrotec/calendario-de-siembra-paraguay/",
+  },
+  "paraguay-procosara-fruit-harvest-calendar": {
+    label: "Pro Cosara / CCU Paraguay fruit harvest calendar note",
+    url: "https://procosara.org/es/static/files/Revista%20Informativa%20CCU_06_18.pdf",
+  },
+  "paraguay-asuncion-times-seasonal-fruits-2026": {
+    label: "Asuncion Times Paraguay seasonal fruits guide 2026",
+    url: "https://asunciontimes.com/paraguay-news/health-news/seasonal-fruits-in-paraguay-a-full-year-of-flavours/",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

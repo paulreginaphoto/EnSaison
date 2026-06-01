@@ -114,6 +114,21 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Berito Fresh Kenya seasonal availability calendar
   https://www.miresda.com/fruits-vegetables/
 
+- Miresda Cyprus fruit seasonal calendar
+  https://www.miresda.com/wp-content/uploads/2021/01/calendar-fruits.png
+
+- Miresda Cyprus citrus seasonal calendar
+  https://www.miresda.com/wp-content/uploads/2021/01/calendar-citr.png
+
+- Miresda Cyprus vegetable seasonal calendar
+  https://www.miresda.com/wp-content/uploads/2021/01/calendar-veg.png
+
+- Cyprus FAQ fruit season guide
+  https://dev.cyprus-faq.com/en/south/miscellaneous/frukty-na-kipre-chto-i-kogda-pokupat-1/
+
+- Visit Cyprus Flavours of Cyprus food calendar
+  https://www.visitcyprus.com/wp-content/uploads/files/food_and_drink/Flavours_of_Cyprus_6_2015_EN.pdf
+
 - Luxembourg Ministry of Agriculture 2024 regional seasonal calendar
   https://agriculture.public.lu/de/veroeffentlichungen/ernaehrung/saisonkalender.html
 
@@ -393,9 +408,9 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 331 food entries after the Sri Lanka pass;
+- 331 food entries after the Cyprus pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 84 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Nepal, Sri Lanka, Indonesia, Philippines, Thailand, Vietnam, Nigeria, Ghana, Cote d'Ivoire, Benin, Cameroon, Senegal, Togo, Burkina Faso, Mali, Chile, Costa Rica, Paraguay, Dominican Republic, Panama, Guatemala, El Salvador, Ecuador, Israel, South Korea, Malaysia, Taiwan, Hong Kong, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, Morocco, Kenya, India, Brazil, Croatia and Japan;
+- country overrides for 84 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Cyprus, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Nepal, Sri Lanka, Indonesia, Philippines, Thailand, Vietnam, Nigeria, Ghana, Cote d'Ivoire, Benin, Cameroon, Senegal, Togo, Burkina Faso, Mali, Chile, Costa Rica, Paraguay, Dominican Republic, Panama, Guatemala, El Salvador, Ecuador, Israel, South Korea, Malaysia, Taiwan, Hong Kong, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, Morocco, Kenya, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Austria now has source-backed Gesundheit.gv.at national season-calendar overrides for 50 fruit, vegetable and mushroom items already present in the catalogue, while remaining Austrian produce still falls back to indicative European regional data;
 - Belgium now has source-backed Vlaanderen/VLAM month-by-month availability overrides for 45 fruit, vegetable, herb and mushroom items already present in the catalogue, while remaining Belgian produce still falls back to indicative European regional data;
@@ -464,6 +479,7 @@ The app now supports:
 - San Marino now has source-backed Italian CREA proxy overrides for 37 produce items, justified by the European Commission customs-union note; this is a cautious nearby-market proxy, not an independent Sammarinese harvest calendar;
 - Vatican City now has source-backed Rome/Italy-CREA proxy overrides for 37 produce items, justified by official Vatican enclave/supply and Italy customs-cooperation notes; this is a cautious nearby-market proxy, not an independent Vatican harvest calendar;
 - Greece now has source-backed Food For Health month-by-month overrides for 52 fruit, vegetable, herb and mushroom items already present in the catalogue, plus 4 new globally localized fruit entries; this is national nutrition guidance cross-checked with the European Commission Mediterranean profile, not a government agricultural calendar;
+- Cyprus now has source-backed Miresda / Cyprus FAQ / Visit Cyprus overrides for 41 fruit, citrus, vegetable, spice, allium, tuber and herb items already present in the catalogue, replacing the previous fully indicative Mediterranean-only coverage for those items; remaining Cypriot produce still falls back to broad European Mediterranean guidance, and this is practical national guidance rather than district, altitude, greenhouse, variety, farm or import precision;
 - Hungary now has source-backed Novenytar month-by-month overrides for 52 fruit, vegetable, herb, legume and nut items already present in the catalogue; this is a practical Hungarian plant-season table, not a government agricultural calendar or county-level forecast;
 - Germany now has source-backed BZfE seasonal overrides for 40 produce items already present in the catalogue, while remaining German produce still falls back to indicative European regional data;
 - the Netherlands now has source-backed Voedingscentrum seasonal overrides for 54 produce and mushroom items already present in the catalogue, while remaining Dutch produce still falls back to indicative European regional data;

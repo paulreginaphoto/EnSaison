@@ -353,6 +353,23 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["israel-mustip-seasonal-produce-guide"],
   },
+  CY: {
+    labels: {
+      fr: "Chypre: calendriers mensuels Miresda et guides Cyprus FAQ / Visit Cyprus pour produits locaux; signal national pratique, pas precision district, altitude, serre, variete, ferme ni import.",
+      en: "Cyprus: Miresda monthly calendars plus Cyprus FAQ / Visit Cyprus local-produce guides; practical national signal, not district, altitude, greenhouse, variety, farm or import precision.",
+      es: "Chipre: calendarios mensuales de Miresda y guias locales de Cyprus FAQ / Visit Cyprus; senal nacional practica, no precision por distrito, altitud, invernadero, variedad, finca ni importacion.",
+      de: "Zypern: monatliche Miresda-Kalender sowie lokale Cyprus FAQ / Visit Cyprus-Leitfaeden; praktischer nationaler Hinweis, keine Genauigkeit nach Bezirk, Hoehenlage, Gewaechshaus, Sorte, Betrieb oder Import.",
+      it: "Cipro: calendari mensili Miresda e guide locali Cyprus FAQ / Visit Cyprus; segnale nazionale pratico, non precisione per distretto, altitudine, serra, varieta, azienda o import.",
+      pt: "Chipre: calendarios mensais da Miresda e guias locais Cyprus FAQ / Visit Cyprus; sinal nacional pratico, sem precisao por distrito, altitude, estufa, variedade, quinta nem importacao.",
+    },
+    sourceIds: [
+      "cyprus-miresda-fruit-calendar",
+      "cyprus-miresda-citrus-calendar",
+      "cyprus-miresda-vegetable-calendar",
+      "cyprus-faq-fruit-season-guide",
+      "cyprus-visitcyprus-food-calendar",
+    ],
+  },
   KR: {
     labels: {
       fr: "Coree du Sud: guide mensuel ThorKit des aliments de saison coreens; source pratique locale, pas calendrier gouvernemental ni precision par province, variete ou ferme.",

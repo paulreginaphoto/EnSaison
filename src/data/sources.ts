@@ -199,6 +199,26 @@ export const dataSources = {
     label: "Food For Health Greek fruit and vegetable seasonal calendar",
     url: "https://foodforhealth.gr/imerologio-frouton-ke-lachanikon-ti-na-tros-kathe-epochi/",
   },
+  "cyprus-miresda-fruit-calendar": {
+    label: "Miresda Cyprus fruit seasonal calendar",
+    url: "https://www.miresda.com/wp-content/uploads/2021/01/calendar-fruits.png",
+  },
+  "cyprus-miresda-citrus-calendar": {
+    label: "Miresda Cyprus citrus seasonal calendar",
+    url: "https://www.miresda.com/wp-content/uploads/2021/01/calendar-citr.png",
+  },
+  "cyprus-miresda-vegetable-calendar": {
+    label: "Miresda Cyprus vegetable seasonal calendar",
+    url: "https://www.miresda.com/wp-content/uploads/2021/01/calendar-veg.png",
+  },
+  "cyprus-faq-fruit-season-guide": {
+    label: "Cyprus FAQ fruit season guide",
+    url: "https://dev.cyprus-faq.com/en/south/miscellaneous/frukty-na-kipre-chto-i-kogda-pokupat-1/",
+  },
+  "cyprus-visitcyprus-food-calendar": {
+    label: "Visit Cyprus Flavours of Cyprus food calendar",
+    url: "https://www.visitcyprus.com/wp-content/uploads/files/food_and_drink/Flavours_of_Cyprus_6_2015_EN.pdf",
+  },
   "hungary-novenytar-season-table": {
     label: "Novenytar Hungarian fruit and vegetable season table",
     url: "https://novenytar.krp.hu/idenytablazat",

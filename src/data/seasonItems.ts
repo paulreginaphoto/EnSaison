@@ -2718,6 +2718,50 @@ const greeceFoodForHealthSeasonOverrides: Record<string, NonNullable<NonNullable
   tomate: { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
 };
 
+const cyprusSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  banane: { months: [12, 1, 2], nearMonths: [3, 11], seasonLabel: "déc. – févr.", sourceIds: ["cyprus-faq-fruit-season-guide"] },
+  "nèfle": { months: [2, 3, 4, 5, 6], nearMonths: [1, 7], seasonLabel: "févr. – juin", sourceIds: ["cyprus-faq-fruit-season-guide"] },
+  fraise: { months: [2, 3, 4, 5, 9, 10, 11], nearMonths: [1, 6, 8, 12], seasonLabel: "févr. – mai, sept. – nov.", sourceIds: ["cyprus-faq-fruit-season-guide", "cyprus-miresda-fruit-calendar"] },
+  raisin: { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept.", sourceIds: ["cyprus-miresda-fruit-calendar", "cyprus-faq-fruit-season-guide"] },
+  grenade: { months: [7, 8, 9, 10, 11], nearMonths: [6, 12], seasonLabel: "juil. – nov.", sourceIds: ["cyprus-miresda-fruit-calendar", "cyprus-faq-fruit-season-guide"] },
+  mangue: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], seasonLabel: "mai – oct.", sourceIds: ["cyprus-miresda-fruit-calendar"] },
+  peche: { months: [4, 5, 6, 7], nearMonths: [3, 8], seasonLabel: "avr. – juil.", sourceIds: ["cyprus-miresda-fruit-calendar", "cyprus-visitcyprus-food-calendar"] },
+  abricot: { months: [4, 5, 6, 7, 8], nearMonths: [3, 9], seasonLabel: "avr. – août", sourceIds: ["cyprus-miresda-fruit-calendar", "cyprus-visitcyprus-food-calendar"] },
+  nectarine: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août", sourceIds: ["cyprus-faq-fruit-season-guide", "cyprus-visitcyprus-food-calendar"] },
+  cerise: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août", sourceIds: ["cyprus-faq-fruit-season-guide", "cyprus-visitcyprus-food-calendar"] },
+  melon: { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept.", sourceIds: ["cyprus-miresda-fruit-calendar", "cyprus-faq-fruit-season-guide"] },
+  pastèque: { months: [4, 5, 6, 7, 8], nearMonths: [3, 9], seasonLabel: "avr. – août", sourceIds: ["cyprus-miresda-fruit-calendar", "cyprus-faq-fruit-season-guide"] },
+  poire: { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept.", sourceIds: ["cyprus-miresda-fruit-calendar", "cyprus-visitcyprus-food-calendar"] },
+  prune: { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil.", sourceIds: ["cyprus-miresda-fruit-calendar", "cyprus-visitcyprus-food-calendar"] },
+  figue: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept.", sourceIds: ["cyprus-faq-fruit-season-guide", "cyprus-visitcyprus-food-calendar"] },
+  "figue-barbarie": { months: [8], nearMonths: [7, 9], seasonLabel: "août", sourceIds: ["cyprus-faq-fruit-season-guide"] },
+  orange: { months: [11, 12, 1, 2, 3, 4, 5, 6], nearMonths: [7, 10], seasonLabel: "nov. – juin", sourceIds: ["cyprus-miresda-citrus-calendar", "cyprus-faq-fruit-season-guide"] },
+  citron: { months: [11, 12, 1, 2], nearMonths: [3, 10], seasonLabel: "nov. – févr.", sourceIds: ["cyprus-miresda-citrus-calendar", "cyprus-faq-fruit-season-guide"] },
+  "citron-vert": { months: [9, 10, 11, 12, 1, 2, 3, 4], nearMonths: [5, 8], seasonLabel: "sept. – avr.", sourceIds: ["cyprus-miresda-citrus-calendar", "cyprus-faq-fruit-season-guide"] },
+  mandarine: { months: [11, 12, 1, 2, 3, 4], nearMonths: [5, 10], seasonLabel: "nov. – avr.", sourceIds: ["cyprus-miresda-citrus-calendar", "cyprus-faq-fruit-season-guide"] },
+  clementine: { months: [12, 1, 2], nearMonths: [3, 11], seasonLabel: "déc. – févr.", sourceIds: ["cyprus-miresda-citrus-calendar"] },
+  pamplemousse: { months: [11, 12, 1, 2, 3, 4, 5], nearMonths: [6, 10], seasonLabel: "nov. – mai", sourceIds: ["cyprus-faq-fruit-season-guide"] },
+  "haricot-vert": { months: [10, 11, 12, 1, 2, 3, 4], nearMonths: [5, 9], seasonLabel: "oct. – avr.", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  "pois-mange-tout": { months: [12, 1, 2, 3], nearMonths: [4, 11], seasonLabel: "déc. – mars", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  oignon: { months: [1, 2, 3, 4, 5, 6], nearMonths: [7, 12], seasonLabel: "janv. – juin", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  ciboule: { months: [10, 11, 12, 1, 2, 3], nearMonths: [4, 9], seasonLabel: "oct. – mars", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  ail: { months: [1, 2, 3, 4, 5], nearMonths: [6, 12], seasonLabel: "janv. – mai", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  "patate-douce": { months: [8, 9, 10, 11, 12, 1, 2], nearMonths: [3, 7], seasonLabel: "août – févr.", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  poivron: { months: [8, 9, 10, 11, 12, 1, 2, 3, 4], nearMonths: [5, 7], seasonLabel: "août – avr.", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  piment: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [12], seasonLabel: "janv. – nov.", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  brocoli: { months: [10, 11, 12, 1, 2], nearMonths: [3, 9], seasonLabel: "oct. – févr.", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  laitue: { months: [12, 1, 2, 3], nearMonths: [4, 11], seasonLabel: "déc. – mars", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  "chou-blanc": { months: [7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [3, 6], seasonLabel: "juil. – févr.", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  "chou-rouge": { months: [7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [3, 6], seasonLabel: "juil. – févr.", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  gombo: { months: [11, 12, 1, 2, 3, 4, 5, 6, 7], nearMonths: [8, 10], seasonLabel: "nov. – juil.", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  "céleri-branche": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  basilic: { months: [12, 1, 2, 3], nearMonths: [4, 11], seasonLabel: "déc. – mars", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  concombre: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  tomate: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  asperge: { months: [1, 2, 3, 4], nearMonths: [5, 12], seasonLabel: "janv. – avr.", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+  aubergine: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round", sourceIds: ["cyprus-miresda-vegetable-calendar"] },
+};
+
 const croatiaPlodoviSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   abricot: { months: [5, 6, 7, 8] },
   ail: { months: [1, 2, 3, 5, 8, 9] },
@@ -4441,6 +4485,20 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.GR = {
       ...greeceFoodForHealthSeasonOverrides[item.id],
       sourceIds: ["greece-foodforhealth-season-calendar", "ec-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (cyprusSeasonOverrides[item.id]) {
+    countries.CY = {
+      ...cyprusSeasonOverrides[item.id],
+      sourceIds: cyprusSeasonOverrides[item.id]?.sourceIds ?? [
+        "cyprus-miresda-fruit-calendar",
+        "cyprus-miresda-citrus-calendar",
+        "cyprus-miresda-vegetable-calendar",
+        "cyprus-faq-fruit-season-guide",
+        "cyprus-visitcyprus-food-calendar",
+      ],
       confidence: "source",
     };
   }

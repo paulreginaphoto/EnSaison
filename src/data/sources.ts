@@ -87,6 +87,14 @@ export const dataSources = {
     label: "Japan MAFF Tohoku seasonal foods",
     url: "https://www.maff.go.jp/tohoku/monosiritai/syokutaku/tabemono.html",
   },
+  "china-sichuan-health-seasonal-fruits": {
+    label: "Sichuan Health Commission / Health China seasonal fruit guidance",
+    url: "https://wsjkw.sc.gov.cn/scwsjkw/jkys/2018/7/12/453a0088e197484d83cdf077d5edc608.shtml",
+  },
+  "china-shanghai-hongkou-fruit-month-list": {
+    label: "Shanghai Hongkou Government 1-12 month seasonal fruit list",
+    url: "https://www.shhk.gov.cn/xwzx/002008/002008040/20230519/c68fbc31-e8ed-4f35-9144-c4272cf0c6d0.html",
+  },
   "australia-health-produce": {
     label: "Australian Government Healthy Aussie Produce",
     url: "https://www.health.gov.au/our-work/healthy-aussie-produce",

@@ -251,6 +251,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "chile-minagri-mat-january-2025",
     ],
   },
+  CN: {
+    labels: {
+      fr: "Chine: guide national general de fruits de saison, avec saisons lunaires approximees en mois gregoriens; utile pour une lecture rapide, pas precision province, serre, stockage ni import.",
+      en: "China: national-general seasonal fruit guidance, with lunar seasons approximated to Gregorian months; useful for a quick read, not province, greenhouse, storage or import precision.",
+      es: "China: guia nacional general de frutas de temporada, con estaciones lunares aproximadas a meses gregorianos; util para lectura rapida, no precision por provincia, invernadero, almacenamiento ni importacion.",
+      de: "China: allgemeine nationale Saisonobst-Orientierung, mit Mondkalender-Saisons grob auf gregorianische Monate uebertragen; schnelle Orientierung, keine Genauigkeit nach Provinz, Gewaechshaus, Lagerung oder Import.",
+      it: "Cina: guida nazionale generale alla frutta di stagione, con stagioni lunari approssimate ai mesi gregoriani; utile per lettura rapida, non precisione per provincia, serra, conservazione o import.",
+      pt: "China: guia nacional geral de frutas da estacao, com estacoes lunares aproximadas para meses gregorianos; util para leitura rapida, sem precisao por provincia, estufa, armazenamento nem importacao.",
+    },
+    sourceIds: ["china-sichuan-health-seasonal-fruits", "china-shanghai-hongkou-fruit-month-list"],
+  },
   CR: {
     labels: {
       fr: "Costa Rica: calendrier PIMA/CENADA 2025 de saisonnalite selon prix et offre de fruits et legumes; indicateur national de marche, pas precision cantonale ni meteo de recolte.",

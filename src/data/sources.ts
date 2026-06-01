@@ -371,6 +371,14 @@ export const dataSources = {
     label: "Dominican Cooking Dominican fruits guide",
     url: "https://www.dominicancooking.com/dominican-fruits",
   },
+  "panama-ima-mida-sowing-harvest-calendar-2022-2023": {
+    label: "Panama IMA/MIDA sowing and harvest calendar 2022-2023",
+    url: "https://mida.gob.pa/wp-content/uploads/2024/02/Calendario-de-siembra-y-cosecha-2022-2023.pdf",
+  },
+  "panama-mida-planting-harvest-projection-2025-2026": {
+    label: "Panama MIDA planting and harvest projection 2025-2026",
+    url: "https://mida.gob.pa/wp-content/uploads/2025/10/PROYECCION-DE-SIEMBRA-Y-COSECHA-2025-2026.pdf",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

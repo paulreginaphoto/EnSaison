@@ -1248,6 +1248,38 @@ const dominicanRepublicSeasonOverrides: Record<string, NonNullable<NonNullable<S
   avocat: { months: [1, 2, 6, 7, 8, 9, 10, 11, 12], nearMonths: [3, 4, 5], seasonLabel: "juin – févr." },
 };
 
+const panamaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  igname: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  taro: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "pomme-de-terre": { months: [1, 2, 3, 4, 5, 6], nearMonths: [7, 12], seasonLabel: "janv. – juin" },
+  manioc: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  carotte: { months: [1, 2, 3, 4, 5, 6], nearMonths: [7, 12], seasonLabel: "janv. – juin" },
+  riz: { months: [8, 9, 10, 11, 12, 1, 2], nearMonths: [3, 7], seasonLabel: "août – févr." },
+  "haricot-sec": { months: [12, 1, 2, 3, 4], nearMonths: [5, 11], seasonLabel: "déc. – avr." },
+  "maïs-grain": { months: [8, 9, 10, 11, 12, 1], nearMonths: [2, 7], seasonLabel: "août – janv." },
+  sorgho: { months: [1, 2, 3, 4], nearMonths: [5, 12], seasonLabel: "janv. – avr." },
+  avocat: { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept." },
+  fraise: { months: [12, 1, 2, 3, 4], nearMonths: [5, 11], seasonLabel: "déc. – avr." },
+  corossol: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  banane: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  goyave: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "citron-vert": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  citron: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  mandarine: { months: [11, 12, 1, 2, 3, 4], nearMonths: [5, 10], seasonLabel: "nov. – avr." },
+  mangue: { months: [1, 2, 3, 4, 5, 6, 7], nearMonths: [8, 12], seasonLabel: "janv. – juil." },
+  ramboutan: { months: [8, 9, 10, 11, 12], nearMonths: [7, 1], seasonLabel: "août – déc." },
+  "fruit-passion": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  melon: { months: [12, 1, 2, 3, 4], nearMonths: [5, 11], seasonLabel: "déc. – avr." },
+  "pomme-cajou": { months: [2, 3, 4, 5], nearMonths: [1, 6], seasonLabel: "févr. – mai" },
+  orange: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  papaye: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  ananas: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "banane-plantain": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  pastèque: { months: [12, 1, 2, 3, 4], nearMonths: [5, 11], seasonLabel: "déc. – avr." },
+  tamarin: { months: [2, 3, 4, 5], nearMonths: [1, 6], seasonLabel: "févr. – mai" },
+  pamplemousse: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+};
+
 const argentinaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   blette: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [], seasonLabel: "toute l'annee", seasonMode: "year-round" },
   "céleri-branche": { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [], seasonLabel: "mars – nov." },
@@ -3899,6 +3931,17 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
         "dominican-agriculture-contingency-crop-calendar-2023",
         "dominican-sources-tropical-fruit-calendar-2026",
         "dominican-cooking-fruit-guide",
+      ],
+      confidence: "source",
+    };
+  }
+
+  if (panamaSeasonOverrides[item.id]) {
+    countries.PA = {
+      ...panamaSeasonOverrides[item.id],
+      sourceIds: [
+        "panama-ima-mida-sowing-harvest-calendar-2022-2023",
+        "panama-mida-planting-harvest-projection-2025-2026",
       ],
       confidence: "source",
     };

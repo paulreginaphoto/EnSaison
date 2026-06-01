@@ -295,6 +295,20 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "dominican-cooking-fruit-guide",
     ],
   },
+  PA: {
+    labels: {
+      fr: "Panama: calendrier national prudent base sur le calendrier IMA/MIDA 2022-2023 et la projection MIDA 2025-2026; indicateur national de semis/recolte, pas precision province, altitude, variete ou ferme.",
+      en: "Panama: cautious national calendar based on the IMA/MIDA 2022-2023 calendar and MIDA 2025-2026 projection; national sowing/harvest indicator, not province, altitude, variety or farm-level precision.",
+      es: "Panama: calendario nacional prudente basado en el calendario IMA/MIDA 2022-2023 y la proyeccion MIDA 2025-2026; indicador nacional de siembra/cosecha, no precision por provincia, altitud, variedad ni finca.",
+      de: "Panama: vorsichtiger nationaler Kalender auf Basis des IMA/MIDA-Kalenders 2022-2023 und der MIDA-Projektion 2025-2026; nationaler Aussaat-/Erntehinweis, keine Genauigkeit nach Provinz, Hoehenlage, Sorte oder Betrieb.",
+      it: "Panama: calendario nazionale prudente basato sul calendario IMA/MIDA 2022-2023 e sulla proiezione MIDA 2025-2026; indicatore nazionale di semina/raccolta, non precisione per provincia, altitudine, varieta o azienda.",
+      pt: "Panama: calendario nacional prudente baseado no calendario IMA/MIDA 2022-2023 e na projecao MIDA 2025-2026; indicador nacional de sementeira/colheita, sem precisao por provincia, altitude, variedade ou quinta.",
+    },
+    sourceIds: [
+      "panama-ima-mida-sowing-harvest-calendar-2022-2023",
+      "panama-mida-planting-harvest-projection-2025-2026",
+    ],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

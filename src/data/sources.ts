@@ -423,6 +423,14 @@ export const dataSources = {
     label: "Hong Kong Elderly Health Service healthy dishes for different seasons",
     url: "https://www.elderly.gov.hk/english/healthy_ageing/healthy_diet/meal_planning_healthy_recipes/healthy_dishes_for_different_seasons.html",
   },
+  "nepal-florafaunafun-fruit-guide": {
+    label: "Flora Fauna Fun Nepal fruit season table",
+    url: "https://florafaunafun.com/fruits-of-nepal/",
+  },
+  "nepal-nepjol-dharan-market-survey": {
+    label: "Nepalese Journal of Biosciences survey of marketable vegetables and fruits in Dharan",
+    url: "https://www.nepjol.info/index.php/NJBS/article/view/7501",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

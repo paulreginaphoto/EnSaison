@@ -402,6 +402,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "hong-kong-ehs-healthy-dishes-seasons",
     ],
   },
+  NP: {
+    labels: {
+      fr: "Nepal: guide fruitier Nepal par altitude/saison et enquete de marche NepJOL a Dharan; lecture nationale prudente, pas precision district, altitude, variete, ferme ni import.",
+      en: "Nepal: Nepal fruit guide by altitude/season and NepJOL Dharan market survey; cautious national guidance, not district, altitude, variety, farm or import precision.",
+      es: "Nepal: guia de frutas de Nepal por altitud/temporada y encuesta de mercado NepJOL en Dharan; orientacion nacional prudente, no precision por distrito, altitud, variedad, finca ni importacion.",
+      de: "Nepal: Nepal-Obstleitfaden nach Hoehenlage/Saison und NepJOL-Markterhebung in Dharan; vorsichtige nationale Orientierung, keine Genauigkeit nach Distrikt, Hoehenlage, Sorte, Betrieb oder Import.",
+      it: "Nepal: guida dei frutti del Nepal per altitudine/stagione e indagine di mercato NepJOL a Dharan; guida nazionale prudente, non precisione per distretto, altitudine, varieta, azienda o import.",
+      pt: "Nepal: guia de frutas do Nepal por altitude/epoca e inquerito de mercado NepJOL em Dharan; orientacao nacional prudente, sem precisao por distrito, altitude, variedade, quinta ou importacao.",
+    },
+    sourceIds: ["nepal-florafaunafun-fruit-guide", "nepal-nepjol-dharan-market-survey"],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

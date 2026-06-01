@@ -330,6 +330,12 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Hong Kong Elderly Health Service healthy dishes for different seasons
   https://www.elderly.gov.hk/english/healthy_ageing/healthy_diet/meal_planning_healthy_recipes/healthy_dishes_for_different_seasons.html
 
+- Flora Fauna Fun Nepal fruit season table
+  https://florafaunafun.com/fruits-of-nepal/
+
+- Nepalese Journal of Biosciences survey of marketable vegetables and fruits in Dharan
+  https://www.nepjol.info/index.php/NJBS/article/view/7501
+
 - FEWS NET Togo country book and FAO crop-calendar context
   https://help.fews.net/fde/v3/togo-country-book
 
@@ -378,9 +384,9 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 331 food entries after the Hong Kong AFCD/EHS pass;
+- 331 food entries after the Nepal pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 82 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, Vietnam, Nigeria, Ghana, Cote d'Ivoire, Benin, Cameroon, Senegal, Togo, Burkina Faso, Mali, Chile, Costa Rica, Paraguay, Dominican Republic, Panama, Guatemala, El Salvador, Ecuador, Israel, South Korea, Malaysia, Taiwan, Hong Kong, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, Morocco, Kenya, India, Brazil, Croatia and Japan;
+- country overrides for 83 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Nepal, Indonesia, Philippines, Thailand, Vietnam, Nigeria, Ghana, Cote d'Ivoire, Benin, Cameroon, Senegal, Togo, Burkina Faso, Mali, Chile, Costa Rica, Paraguay, Dominican Republic, Panama, Guatemala, El Salvador, Ecuador, Israel, South Korea, Malaysia, Taiwan, Hong Kong, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, Morocco, Kenya, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Austria now has source-backed Gesundheit.gv.at national season-calendar overrides for 50 fruit, vegetable and mushroom items already present in the catalogue, while remaining Austrian produce still falls back to indicative European regional data;
 - Belgium now has source-backed Vlaanderen/VLAM month-by-month availability overrides for 45 fruit, vegetable, herb and mushroom items already present in the catalogue, while remaining Belgian produce still falls back to indicative European regional data;
@@ -434,6 +440,7 @@ The app now supports:
 - Malaysia now has source-backed SAYS practical fruit-season overrides for 14 tropical fruit items already present in the catalogue, mapping listed Malaysian fruit windows for durian, mangosteen, rambutan, langsat, papaya, pineapple, banana, watermelon, starfruit, jackfruit, guava, dragon fruit, pomelo/grapefruit and sapodilla; this is an editorial local guide focused on fruit, not a government calendar or state, variety or farm-level precision;
 - Taiwan now has source-backed AFA/MOA official fruit-production overrides for 19 fruit items already present in the catalogue, mapping the published production months for banana, pineapple, papaya, lychee, longan, mango, grape, guava, sugar apple, pomelo/grapefruit, orange, mandarin, lemon, passion fruit, dragon fruit, avocado, plum, pear and persimmon; this is national fruit-production guidance, not county, altitude, variety or farm-level precision;
 - Hong Kong now has source-backed AFCD/EHS overrides for 25 fruit, vegetable, tuber, nut and seafood items already present in the catalogue, mapping official local all-year, summer and winter-spring vegetable crop lists plus EHS broad seasonal foods for spring, summer, autumn and winter; this is cautious HKSAR guidance, not farm, wet-market, supermarket import or variety-level precision;
+- Nepal now has source-backed Flora Fauna Fun / NepJOL overrides for 56 fruit, vegetable, herb, spice, tuber and mushroom items already present in the catalogue, mapping Nepal fruit seasons by altitude/region plus Dharan market monthly availability and all-year rows; this is cautious national and market guidance, not district, altitude, variety, farm or import precision;
 - Luxembourg now has source-backed Ministry of Agriculture 2024 regional seasonal-calendar overrides for 52 fruit, vegetable and nut items, distinguishing fresh regional produce from stored availability; Damson plum / quetsche was added to the catalogue to match the Luxembourg calendar;
 - Bulgaria now has source-backed BB-Team practical broad-season overrides for 41 common fruit, vegetable and legume items, plus sorrel and nettle were added to match the Bulgarian table; this is a local practical guide, not a government calendar or month-level agricultural forecast;
 - Estonia now has source-backed Gardest 2026 vegetable sowing-and-harvest overrides for 27 vegetable and fruit-vegetable items, using the ready-to-harvest months; this is practical gardening guidance, not a government calendar or retail availability forecast;

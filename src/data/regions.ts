@@ -251,6 +251,20 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "chile-minagri-mat-january-2025",
     ],
   },
+  CR: {
+    labels: {
+      fr: "Costa Rica: calendrier PIMA/CENADA 2025 de saisonnalite selon prix et offre de fruits et legumes; indicateur national de marche, pas precision cantonale ni meteo de recolte.",
+      en: "Costa Rica: PIMA/CENADA 2025 seasonality calendar based on fruit and vegetable prices and supply; national market indicator, not canton-level or harvest-weather precision.",
+      es: "Costa Rica: calendario PIMA/CENADA 2025 de estacionalidad segun precios y oferta de frutas y hortalizas; indicador nacional de mercado, no precision cantonal ni climatica de cosecha.",
+      de: "Costa Rica: PIMA/CENADA-Saisonalitaetskalender 2025 nach Preisen und Angebot von Obst und Gemuese; nationaler Markthinweis, keine Genauigkeit nach Kanton oder Erntewetter.",
+      it: "Costa Rica: calendario PIMA/CENADA 2025 di stagionalita secondo prezzi e offerta di frutta e ortaggi; indicatore nazionale di mercato, non precisione cantonale ne meteo di raccolta.",
+      pt: "Costa Rica: calendario PIMA/CENADA 2025 de sazonalidade segundo precos e oferta de frutas e horticolas; indicador nacional de mercado, sem precisao cantonal nem meteorologica de colheita.",
+    },
+    sourceIds: [
+      "costa-rica-pima-seasonal-index-2025",
+      "costa-rica-pima-seasonal-pdf-2025",
+    ],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

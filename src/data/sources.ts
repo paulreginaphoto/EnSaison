@@ -339,6 +339,14 @@ export const dataSources = {
     label: "Chile Ministry of Agriculture MAT January summer produce price note",
     url: "https://minagri.gob.cl/noticia/choclo-uva-papa-y-tomate-revisa-los-principales-productos-que-bajaron-de-precio-en-la-ultima-semana/",
   },
+  "costa-rica-pima-seasonal-index-2025": {
+    label: "Costa Rica PIMA/CENADA 2025 fruit and vegetable seasonality calendar",
+    url: "https://www.pima.go.cr/calendario-de-estacionalidad-segun-precio-2025/",
+  },
+  "costa-rica-pima-seasonal-pdf-2025": {
+    label: "Costa Rica PIMA/CENADA 2025 seasonal price-index PDF",
+    url: "https://www.pima.go.cr/wp-content/uploads/2025/07/Calendario-Estacionalidad-para-Frutas-y-Hortalizas-segun-Precios-PIMA-CENADA-para-el-ano-2025.pdf",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

@@ -173,6 +173,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["albania-brookeonfoot-seasonal-produce", "albania-worldbank-crop-calendar"],
   },
+  AM: {
+    labels: {
+      fr: "Arménie: calendrier fruitier mensuel The Case et guide Flora Fauna Fun des récoltes fruitières arméniennes; couche fruitière nationale prudente, pas encore couverture légumes, marz, altitude, variété, stockage, ferme, retail ou import.",
+      en: "Armenia: The Case month-by-month fruit calendar and Flora Fauna Fun Armenian fruit-harvest guide; cautious national fruit layer, not yet vegetable, marz, altitude, variety, storage, farm, retail or import precision.",
+      es: "Armenia: calendario mensual de frutas de The Case y guía Flora Fauna Fun de cosechas frutales armenias; capa nacional prudente de fruta, aún sin cobertura de verduras ni precisión por marz, altitud, variedad, almacenamiento, finca, retail o importación.",
+      de: "Armenien: monatlicher Obstkalender von The Case und Flora-Fauna-Fun-Leitfaden zu armenischen Fruchternten; vorsichtige nationale Fruchtschicht, noch keine Gemüse-, Provinz-, Höhen-, Sorten-, Lager-, Hof-, Retail- oder Importpräzision.",
+      it: "Armenia: calendario mensile della frutta The Case e guida Flora Fauna Fun ai raccolti frutticoli armeni; livello nazionale prudente per la frutta, non ancora copertura verdure né precisione per marz, altitudine, varietà, conservazione, azienda, retail o import.",
+      pt: "Arménia: calendário mensal de frutas The Case e guia Flora Fauna Fun das colheitas frutícolas arménias; camada nacional prudente de fruta, ainda sem cobertura de legumes nem precisão por marz, altitude, variedade, armazenamento, quinta, retalho ou importação.",
+    },
+    sourceIds: ["armenia-thecase-fruit-calendar", "armenia-florafaunafun-fruit-guide"],
+  },
   AT: {
     labels: {
       fr: "Autriche: calendrier national du portail public de sante, utile pour les produits regionaux offerts selon les mois.",

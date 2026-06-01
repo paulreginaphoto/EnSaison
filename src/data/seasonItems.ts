@@ -3035,6 +3035,30 @@ const afghanistanSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonI
   "raisin": { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
 };
 
+const armeniaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  "abricot": { months: [6, 7], nearMonths: [5, 8], seasonLabel: "juin – juil." },
+  "cassis": { months: [7], nearMonths: [6, 8], seasonLabel: "juil." },
+  "cerise": { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  "coing": { months: [10], nearMonths: [9, 11], seasonLabel: "oct." },
+  "figue": { months: [8], nearMonths: [7, 9], seasonLabel: "août" },
+  "fraise": { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
+  "framboise": { months: [7], nearMonths: [6, 8], seasonLabel: "juil." },
+  "grenade": { months: [11, 12], nearMonths: [10, 1], seasonLabel: "nov. – déc." },
+  "griotte": { months: [6, 7], nearMonths: [5, 8], seasonLabel: "juin – juil." },
+  "groseille": { months: [7], nearMonths: [6, 8], seasonLabel: "juil." },
+  "kaki": { months: [10, 11], nearMonths: [9, 12], seasonLabel: "oct. – nov." },
+  "melon": { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  "mure": { months: [7], nearMonths: [6, 8], seasonLabel: "juil." },
+  "murier": { months: [6], nearMonths: [5, 7], seasonLabel: "juin" },
+  "nectarine": { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  "pastèque": { months: [8], nearMonths: [7, 9], seasonLabel: "août" },
+  "peche": { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  "poire": { months: [7, 8, 9, 10, 11], nearMonths: [6, 12], seasonLabel: "juil. – nov." },
+  "pomme": { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct." },
+  "prune": { months: [8], nearMonths: [7, 9], seasonLabel: "août" },
+  "raisin": { months: [10], nearMonths: [9, 11], seasonLabel: "oct." },
+};
+
 const bosniaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   "abricot": { months: [6, 7, 8], nearMonths: [5, 9, 10], seasonLabel: "juin – août" },
   "ail": { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
@@ -5086,6 +5110,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.AF = {
       ...afghanistanSeasonOverrides[item.id],
       sourceIds: ["afghanistan-florafaunafun-fruit-guide"],
+      confidence: "source",
+    };
+  }
+
+  if (armeniaSeasonOverrides[item.id]) {
+    countries.AM = {
+      ...armeniaSeasonOverrides[item.id],
+      sourceIds: ["armenia-thecase-fruit-calendar", "armenia-florafaunafun-fruit-guide"],
       confidence: "source",
     };
   }

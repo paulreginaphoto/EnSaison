@@ -39,6 +39,14 @@ export const dataSources = {
     label: "FAO / Afghanistan Ministry of Agriculture home-based fruit and vegetable processing manual",
     url: "https://www.fao.org/4/a1549e/a1549e01.pdf",
   },
+  "armenia-thecase-fruit-calendar": {
+    label: "The Case Armenia month-by-month fruit calendar",
+    url: "https://www.thecase.info/index/sweethome/armenianfruits",
+  },
+  "armenia-florafaunafun-fruit-guide": {
+    label: "Flora Fauna Fun Armenia fruit harvest guide",
+    url: "https://florafaunafun.com/fruits-of-armenia/",
+  },
   "monaco-france-customs-union": {
     label: "France Diplomatie Monaco-France customs union note",
     url: "https://www.diplomatie.gouv.fr/en/information-by-country/monaco/political-and-economic-relations",

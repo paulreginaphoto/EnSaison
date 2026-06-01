@@ -39,7 +39,13 @@ const server = spawn(
     "--port",
     String(port),
   ],
-  { stdio: "pipe" },
+  {
+    env: {
+      ...process.env,
+      VITE_BASE_PATH: normalizedBasePath,
+    },
+    stdio: "pipe",
+  },
 );
 
 const waitForServer = async () => {

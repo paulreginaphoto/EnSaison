@@ -12,6 +12,7 @@ import { Check, ChevronDown, Search } from "lucide-react";
 export type SelectorOption = {
   value: string;
   label: string;
+  prefix?: ReactNode;
 };
 
 type SelectorControlProps = {
@@ -164,7 +165,10 @@ export function SelectorControl({
         {icon}
         <span className="control-copy">
           <span className="control-label">{label}</span>
-          <span className="control-value">{selectedOption?.label}</span>
+          <span className="control-value">
+            {selectedOption?.prefix}
+            <span className="control-value-text">{selectedOption?.label}</span>
+          </span>
         </span>
         <ChevronDown
           aria-hidden="true"
@@ -216,7 +220,10 @@ export function SelectorControl({
                     onClick={() => selectOption(option.value)}
                     onMouseEnter={() => setActiveIndex(index)}
                   >
-                    <span>{option.label}</span>
+                    <span className="control-option-label">
+                      {option.prefix}
+                      <span className="control-option-text">{option.label}</span>
+                    </span>
                     {isSelected ? (
                       <Check aria-hidden="true" className="control-option-check" />
                     ) : null}

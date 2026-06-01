@@ -139,7 +139,11 @@ button {
   }
 
   .control-value {
-    @apply block h-5 min-w-0 truncate text-sm font-semibold leading-5 text-ink;
+    @apply flex h-5 min-w-0 items-center gap-1.5 text-sm font-semibold leading-5 text-ink;
+  }
+
+  .control-value-text {
+    @apply min-w-0 truncate;
   }
 
   .control-chevron {
@@ -192,6 +196,22 @@ button {
 
   .control-option {
     @apply flex min-h-11 w-full items-center justify-between gap-3 rounded-[0.85rem] px-3 text-left text-sm font-semibold text-ink/[0.78] transition hover:bg-[#edf4e8] hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-sage-100;
+  }
+
+  .control-option-label {
+    @apply flex min-w-0 items-center gap-2;
+  }
+
+  .control-option-text {
+    @apply min-w-0 truncate;
+  }
+
+  .country-flag {
+    @apply inline-flex h-4 w-5 shrink-0 items-center justify-center overflow-hidden rounded-[0.2rem] bg-white/80 shadow-[0_0_0_1px_rgba(23,51,39,0.1)];
+  }
+
+  .country-flag-image {
+    @apply h-full w-full object-cover;
   }
 
   .control-option-active {

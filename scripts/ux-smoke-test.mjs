@@ -28,6 +28,8 @@ const normalizedBasePath = basePathWithLeadingSlash.endsWith("/")
   ? basePathWithLeadingSlash
   : `${basePathWithLeadingSlash}/`;
 const baseUrl = `http://127.0.0.1:${port}${normalizedBasePath}`;
+const flagPathForCode = (countryCode) =>
+  `flagcdn.com/w40/${countryCode.toLowerCase()}.png`;
 
 const server = spawn(
   process.execPath,
@@ -112,11 +114,26 @@ try {
 
   const countryControl = page.locator('[data-control-name="country"]');
   assert.match(await countryControl.textContent(), /Suisse/);
+  assert.equal(
+    await countryControl
+      .locator('[data-country-flag="CH"] img')
+      .getAttribute("src"),
+    `https://${flagPathForCode("CH")}`,
+    "country selector should display the selected country flag image",
+  );
   await countryControl.click();
   await assert.doesNotReject(() =>
     page.getByRole("listbox", { name: "Pays" }).waitFor(),
   );
-  await page.getByRole("option", { name: "France", exact: true }).click();
+  const franceOption = page.getByRole("option", { name: "France", exact: true });
+  assert.equal(
+    await franceOption
+      .locator('[data-country-flag="FR"] img')
+      .getAttribute("src"),
+    `https://${flagPathForCode("FR")}`,
+    "country list should display a flag image beside country names",
+  );
+  await franceOption.click();
   await page.waitForURL(/country=FR/);
   assert.match(
     await countryControl.textContent(),

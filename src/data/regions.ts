@@ -353,6 +353,21 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["ecuador-salud-fruit-vegetable-availability"],
   },
+  ET: {
+    labels: {
+      fr: "Ethiopie: definitions FEWS NET Meher/Belg et calendrier saisonnier national pour cultures alimentaires, plus calendrier cafe; guide national prudent, pas precision woreda, altitude, irrigation, variete ni annee de crise.",
+      en: "Ethiopia: FEWS NET Meher/Belg definitions and national seasonal calendar for food crops, plus coffee calendar; cautious national guide, not woreda, altitude, irrigation, variety or crisis-year precision.",
+      es: "Etiopia: definiciones Meher/Belg de FEWS NET y calendario estacional nacional para cultivos alimentarios, mas calendario de cafe; guia nacional prudente, no precision por woreda, altitud, riego, variedad ni ano de crisis.",
+      de: "Aethiopien: FEWS-NET-Meher/Belg-Definitionen und nationaler Saisonkalender fuer Nahrungskulturen plus Kaffee-Kalender; vorsichtige nationale Orientierung, keine Genauigkeit nach Woreda, Hoehenlage, Bewaesserung, Sorte oder Krisenjahr.",
+      it: "Etiopia: definizioni Meher/Belg FEWS NET e calendario stagionale nazionale per colture alimentari, piu calendario caffe; guida nazionale prudente, non precisione per woreda, altitudine, irrigazione, varieta o anno di crisi.",
+      pt: "Etiopia: definicoes Meher/Belg da FEWS NET e calendario sazonal nacional para culturas alimentares, mais calendario do cafe; guia nacional prudente, sem precisao por woreda, altitude, irrigacao, variedade nem ano de crise.",
+    },
+    sourceIds: [
+      "ethiopia-fewsnet-data-book",
+      "ethiopia-fewsnet-seasonal-calendar",
+      "ethiopia-coffee-guide-harvest-calendar",
+    ],
+  },
   IL: {
     labels: {
       fr: "Israel: guide mensuel Mustip des fruits et legumes de saison; source pratique locale, pas calendrier gouvernemental ni precision par district, variete ou ferme.",

@@ -327,6 +327,18 @@ export const dataSources = {
     label: "Casamance Bio Burkina Faso mango harvest note",
     url: "https://www.casamance-bio.com/nos-filieres/le-burkina-faso/",
   },
+  "ethiopia-fewsnet-data-book": {
+    label: "FEWS NET Ethiopia data book and Meher/Belg harvest season definitions",
+    url: "https://devhelp.fews.net/fde/v1/ethiopia-data-book",
+  },
+  "ethiopia-fewsnet-seasonal-calendar": {
+    label: "FEWS NET Ethiopia seasonal calendar",
+    url: "https://fews.net/east-africa/ethiopia/seasonal-calendar/july-2024",
+  },
+  "ethiopia-coffee-guide-harvest-calendar": {
+    label: "Ethiopian Coffee Guide harvest calendar",
+    url: "https://www.ethiopiancoffeeguide.com/guides/harvest-calendar-ethiopia",
+  },
   "mali-fewsnet-seasonal-calendar": {
     label: "FEWS NET Mali seasonal calendar",
     url: "https://fews.net/west-africa/mali/seasonal-calendar/july-2024",

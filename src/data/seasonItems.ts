@@ -3250,6 +3250,26 @@ const kenyaBeritoFreshSeasonOverrides: Record<string, NonNullable<NonNullable<Se
   "fruit-passion": { months: [8, 9, 10, 11, 12], nearMonths: [1, 2, 3, 6, 7], seasonLabel: "août – déc." },
 };
 
+const ethiopiaFewsNetSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  teff: { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  blé: { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  orge: { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  "maïs-doux": { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  sorgho: { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  millet: { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  "haricot-sec": { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  "haricot-rouge": { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  "haricot-noir": { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  "pois-chiche": { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  lentille: { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  fève: { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  arachide: { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  sésame: { months: [9, 10, 11, 12, 1], nearMonths: [2, 8], seasonLabel: "sept. – janv." },
+  "pomme-de-terre": { months: [9, 10, 11, 12, 1, 3, 4, 5, 6, 7, 8], nearMonths: [2], seasonLabel: "sept. – janv., mars – août" },
+  "patate-douce": { months: [9, 10, 11, 12, 1, 3, 4, 5, 6, 7, 8], nearMonths: [2], seasonLabel: "sept. – janv., mars – août" },
+  café: { months: [10, 11, 12, 1], nearMonths: [2, 9], seasonLabel: "oct. – janv.", sourceIds: ["ethiopia-coffee-guide-harvest-calendar"] },
+};
+
 const vietnamGreatfoodsSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   "fruit-passion": { months: [1, 5, 6, 7, 8, 11, 12], nearMonths: [2, 4, 9, 10], seasonLabel: "mai – août, nov. – janv." },
   mangue: { months: [3, 4, 5, 6, 7, 8], nearMonths: [2, 9], seasonLabel: "mars – août" },
@@ -4761,6 +4781,17 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.KE = {
       ...kenyaBeritoFreshSeasonOverrides[item.id],
       sourceIds: ["kenya-berito-fresh-season-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (ethiopiaFewsNetSeasonOverrides[item.id]) {
+    countries.ET = {
+      ...ethiopiaFewsNetSeasonOverrides[item.id],
+      sourceIds: ethiopiaFewsNetSeasonOverrides[item.id]?.sourceIds ?? [
+        "ethiopia-fewsnet-data-book",
+        "ethiopia-fewsnet-seasonal-calendar",
+      ],
       confidence: "source",
     };
   }

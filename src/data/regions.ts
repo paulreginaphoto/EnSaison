@@ -164,14 +164,14 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
   },
   AU: {
     labels: {
-      fr: "Australie: calendrier national indicatif, utile pour une lecture rapide mais pas precis Etat par Etat.",
-      en: "Australia: indicative national calendar, useful for a quick read but not state-by-state precision.",
-      es: "Australia: calendario nacional indicativo, util para una lectura rapida pero no preciso por estado.",
-      de: "Australien: indikativer nationaler Kalender, hilfreich fur einen schnellen Blick, aber nicht bundesstaatengenau.",
-      it: "Australia: calendario nazionale indicativo, utile per una lettura rapida ma non preciso Stato per Stato.",
-      pt: "Australia: calendario nacional indicativo, util para uma leitura rapida, mas sem precisao por estado.",
+      fr: "Australie: table nationale generale Foodtree/Seasonal Food Guide par disponibilite saisonniere; utile pour une lecture rapide, pas precision Etat, region de production, serre ni import.",
+      en: "Australia: Foodtree/Seasonal Food Guide national-general seasonal availability table; useful for a quick read, not state, production-region, greenhouse or import precision.",
+      es: "Australia: tabla nacional general de disponibilidad estacional Foodtree/Seasonal Food Guide; util para lectura rapida, no precision por estado, region productora, invernadero ni importacion.",
+      de: "Australien: allgemeine nationale Foodtree/Seasonal-Food-Guide-Tabelle zur saisonalen Verfuegbarkeit; schnelle Orientierung, keine Genauigkeit nach Bundesstaat, Erzeugungsregion, Gewaechshaus oder Import.",
+      it: "Australia: tabella nazionale generale Foodtree/Seasonal Food Guide sulla disponibilita stagionale; utile per lettura rapida, non precisione per Stato, zona di produzione, serra o import.",
+      pt: "Australia: tabela nacional geral Foodtree/Seasonal Food Guide de disponibilidade sazonal; util para leitura rapida, sem precisao por estado, regiao produtora, estufa nem importacao.",
     },
-    sourceIds: ["australia-health-produce", "seasonal-food-guide-australia"],
+    sourceIds: ["australia-health-produce", "seasonal-food-guide-australia", "australia-foodtree-seasonal-produce"],
   },
   BE: {
     labels: {

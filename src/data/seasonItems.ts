@@ -693,6 +693,58 @@ const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
   },
 };
 
+const australiaFoodtreeSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  abricot: { months: [12, 1, 2], nearMonths: [3, 4, 5, 9, 10, 11], seasonLabel: "déc. – févr." },
+  ananas: { months: [3, 4, 5, 9, 10, 11], nearMonths: [1, 2, 6, 7, 8, 12], seasonLabel: "mars – mai, sept. – nov." },
+  anone: { months: [6, 7, 8], nearMonths: [1, 2, 3, 4, 5, 9, 10, 11, 12], seasonLabel: "juin – août" },
+  artichaut: { months: [6, 7, 8], nearMonths: [3, 4, 5, 9, 10, 11], seasonLabel: "juin – août" },
+  asperge: { months: [9, 10, 11], nearMonths: [1, 2, 3, 4, 5, 6, 7, 8, 12], seasonLabel: "sept. – nov." },
+  aubergine: { months: [12, 1, 2, 3, 4, 5], nearMonths: [6, 7, 8, 9, 10, 11], seasonLabel: "déc. – mai" },
+  avocat: { months: [3, 4, 5, 9, 10, 11], nearMonths: [1, 2, 6, 7, 8, 12], seasonLabel: "mars – mai, sept. – nov." },
+  banane: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [1, 2, 12], seasonLabel: "mars – nov." },
+  betterave: { months: [6, 7, 8], nearMonths: [1, 2, 3, 4, 5, 9, 10, 11, 12], seasonLabel: "juin – août" },
+  brocoli: { months: [6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [3, 4, 5], seasonLabel: "juin – févr." },
+  "céleri-branche": { months: [9, 10, 11, 12, 1, 2], nearMonths: [3, 4, 5, 6, 7, 8], seasonLabel: "sept. – févr." },
+  cerise: { months: [12, 1, 2], nearMonths: [9, 10, 11], seasonLabel: "déc. – févr." },
+  "chou-blanc": { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [1, 2, 12], seasonLabel: "mars – nov." },
+  "chou-bruxelles": { months: [3, 4, 5, 6, 7, 8], nearMonths: [1, 2, 9, 10, 11, 12], seasonLabel: "mars – août" },
+  "chou-fleur": { months: [6, 7, 8, 9, 10, 11], nearMonths: [1, 2, 3, 4, 5, 12], seasonLabel: "juin – nov." },
+  citron: { months: [3, 4, 5, 6, 7, 8], nearMonths: [1, 2, 9, 10, 11, 12], seasonLabel: "mars – août" },
+  "citron-vert": { months: [3, 4, 5], nearMonths: [1, 2, 9, 10, 11, 12], seasonLabel: "mars – mai" },
+  concombre: { months: [9, 10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [6, 7, 8], seasonLabel: "sept. – mai" },
+  courge: { months: [12, 1, 2, 3, 4, 5, 6, 7, 8], nearMonths: [9, 10, 11], seasonLabel: "déc. – août" },
+  courgette: { months: [6, 7, 8, 9, 10, 11], nearMonths: [1, 2, 3, 4, 5, 12], seasonLabel: "juin – nov." },
+  fenouil: { months: [6, 7, 8], nearMonths: [3, 4, 5, 9, 10, 11], seasonLabel: "juin – août" },
+  fraise: { months: [6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [3, 4, 5], seasonLabel: "juin – févr." },
+  framboise: { months: [9, 10, 11, 12, 1, 2, 3, 4, 5], nearMonths: [6, 7, 8], seasonLabel: "sept. – mai" },
+  "haricot-vert": { months: [3, 4, 5, 6, 7, 8], nearMonths: [1, 2, 9, 10, 11, 12], seasonLabel: "mars – août" },
+  kaki: { months: [3, 4, 5], nearMonths: [6, 7, 8], seasonLabel: "mars – mai" },
+  kiwi: { months: [3, 4, 5], nearMonths: [6, 7, 8], seasonLabel: "mars – mai" },
+  litchi: { months: [12, 1, 2], nearMonths: [3, 4, 5, 9, 10, 11], seasonLabel: "déc. – févr." },
+  "maïs-doux": { months: [12, 1, 2], nearMonths: [3, 4, 5, 6, 7, 8, 9, 10, 11], seasonLabel: "déc. – févr." },
+  mandarine: { months: [6, 7, 8], nearMonths: [3, 4, 5, 9, 10, 11], seasonLabel: "juin – août" },
+  mangue: { months: [9, 10, 11, 12, 1, 2], nearMonths: [6, 7, 8], seasonLabel: "sept. – févr." },
+  melon: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  mure: { months: [12, 1, 2], nearMonths: [9, 10, 11], seasonLabel: "déc. – févr." },
+  myrtille: { months: [6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [3, 4, 5], seasonLabel: "juin – févr." },
+  nectarine: { months: [12, 1, 2], nearMonths: [3, 4, 5, 9, 10, 11], seasonLabel: "déc. – févr." },
+  orange: { months: [6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [3, 4, 5], seasonLabel: "juin – févr." },
+  pamplemousse: { months: [6, 7, 8], nearMonths: [1, 2, 3, 4, 5, 9, 10, 11, 12], seasonLabel: "juin – août" },
+  panais: { months: [3, 4, 5, 6, 7, 8], nearMonths: [1, 2, 9, 10, 11, 12], seasonLabel: "mars – août" },
+  papaye: { months: [9, 10, 11, 12, 1, 2], nearMonths: [3, 4, 5, 6, 7, 8], seasonLabel: "sept. – févr." },
+  "patate-douce": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  pastèque: { months: [12, 1, 2, 3, 4, 5, 6, 7, 8], nearMonths: [9, 10, 11], seasonLabel: "déc. – août" },
+  peche: { months: [12, 1, 2], nearMonths: [3, 4, 5, 9, 10, 11], seasonLabel: "déc. – févr." },
+  "petit-pois": { months: [9, 10, 11], nearMonths: [1, 2, 3, 4, 5, 6, 7, 8, 12], seasonLabel: "sept. – nov." },
+  piment: { months: [12, 1, 2, 3, 4, 5], nearMonths: [6, 7, 8, 9, 10, 11], seasonLabel: "déc. – mai" },
+  poire: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [1, 2, 12], seasonLabel: "mars – nov." },
+  poireau: { months: [6, 7, 8, 9, 10, 11], nearMonths: [1, 2, 3, 4, 5, 12], seasonLabel: "juin – nov." },
+  poivron: { months: [12, 1, 2, 3, 4, 5], nearMonths: [6, 7, 8, 9, 10, 11], seasonLabel: "déc. – mai" },
+  pomme: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [1, 2, 12], seasonLabel: "mars – nov." },
+  prune: { months: [12, 1, 2], nearMonths: [3, 4, 5, 9, 10, 11], seasonLabel: "déc. – févr." },
+  raisin: { months: [12, 1, 2, 3, 4, 5], nearMonths: [], seasonLabel: "déc. – mai" },
+};
+
 const canadaFoodlandOntarioSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   abricot: { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
   artichaut: { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
@@ -4950,7 +5002,16 @@ const withCountryOverrides = (item: SeasonItem): SeasonItem => {
     ...item.countries,
     ...countrySeasonOverrides[item.id],
   };
+  const australiaFoodtreeOverride = australiaFoodtreeSeasonOverrides[item.id];
   const canadaFoodlandOntarioOverride = canadaFoodlandOntarioSeasonOverrides[item.id];
+
+  if (australiaFoodtreeOverride) {
+    countries.AU = {
+      ...australiaFoodtreeOverride,
+      sourceIds: ["australia-foodtree-seasonal-produce", "australia-health-produce"],
+      confidence: "source",
+    };
+  }
 
   if (canadaFoodlandOntarioOverride) {
     countries.CA = {

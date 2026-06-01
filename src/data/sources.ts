@@ -91,6 +91,10 @@ export const dataSources = {
     label: "Australian Government Healthy Aussie Produce",
     url: "https://www.health.gov.au/our-work/healthy-aussie-produce",
   },
+  "australia-foodtree-seasonal-produce": {
+    label: "Foodtree Australia general seasonal produce table",
+    url: "https://www.foodtree.com.au/seasonal-produce/",
+  },
   "austria-gesundheit-season-calendar": {
     label: "Austrian public health portal fruit and vegetable season calendar",
     url: "https://www.gesundheit.gv.at/leben/ernaehrung/saisonkalender.html",

@@ -73,6 +73,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Australian Government Healthy Aussie Produce  
   https://www.health.gov.au/our-work/healthy-aussie-produce
 
+- Foodtree Australia general seasonal produce table
+  https://www.foodtree.com.au/seasonal-produce/
+
 - Austrian public health portal fruit and vegetable season calendar
   https://www.gesundheit.gv.at/leben/ernaehrung/saisonkalender.html
 
@@ -487,7 +490,7 @@ The app now supports:
 - Germany now has source-backed BZfE seasonal overrides for 40 produce items already present in the catalogue, while remaining German produce still falls back to indicative European regional data;
 - the Netherlands now has source-backed Voedingscentrum seasonal overrides for 54 produce and mushroom items already present in the catalogue, while remaining Dutch produce still falls back to indicative European regional data;
 - Portugal now has source-backed GPP national production-calendar overrides for 42 fruit, vegetable, nut and olive-oil items already present in the catalogue; this is production-calendar data from the 2016 GPP booklet, not current shop availability;
-- Australia has 16 source-backed produce overrides from the Australian Government's Healthy Aussie Produce guidance and its linked Seasonal Food Guide Australia general calendar; the app now labels this as national-general seasonal guidance, not state-level precision;
+- Australia now has source-backed produce overrides from the Australian Government's Healthy Aussie Produce guidance plus Foodtree's Australia general seasonal produce table, mapping `Peak`/`High` seasons as in-season and `Medium`/`Low` seasons as near-season; this is national-general domestic availability guidance, not state, production-region, greenhouse or import precision;
 - Canada has source-backed Foodland Ontario open-data overrides for 43 fresh-produce items already present in the catalogue; this is Ontario availability guidance, not province-by-province precision for the whole country;
 - Brazil now has 60 CEAGESP-backed source overrides from the 2026 ETSP quantity seasonality table, using green high-volume months as in-season and yellow medium-volume months as near season; this mainly reflects a Sao Paulo wholesale-market signal, not full national state-by-state precision;
 - Spain has source-backed MAPA month-by-month overrides for 46 fruit and vegetable items already present in the catalogue, using higher commercialization as in-season and lower commercialization as soon/near season;

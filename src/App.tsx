@@ -304,7 +304,7 @@ function MainPage() {
 
   const visibleItems = filteredItems.filter(({ status }) => {
     if (selectedView === "now") {
-      return status === "in-season" || status === "soon";
+      return status === "in-season";
     }
     if (selectedView === "variable") return status === "variable";
     if (selectedView === "out") return status === "out";
@@ -351,6 +351,11 @@ function MainPage() {
       ...(selectedCountryDataScope?.sourceIds ?? []),
     ]),
   ).map((sourceId) => dataSources[sourceId]);
+  const showSeasonalProducts = () => {
+    setSelectedCategory(defaultCategory);
+    setSelectedView("now");
+    setSearch("");
+  };
   return (
     <main className="app-page">
       <div className="dashboard-shell">
@@ -386,7 +391,7 @@ function MainPage() {
               </h2>
               <p className="hero-description">{heroIntros[locale]}</p>
               <div className="hero-actions">
-                <a className="hero-cta" href="#season-results">
+                <a className="hero-cta" href="#season-results" onClick={showSeasonalProducts}>
                   <Sprout aria-hidden="true" className="h-5 w-5" />
                   {locale === "fr" ? "Voir les produits de saison" : copy.seasonal}
                   <ArrowRight aria-hidden="true" className="h-5 w-5" />

@@ -87,6 +87,34 @@ try {
   assert.ok(renderedRows > 0, "season rows should render");
   assert.ok(renderedRows < 140, `default screen renders too many rows: ${renderedRows}`);
 
+  await page.getByRole("link", { name: /voir les produits de saison/i }).click();
+  await page.waitForURL((url) => url.searchParams.get("view") === "now");
+  const seasonalStatusChip = page.getByRole("button", {
+    name: /^De saison$/i,
+  });
+  await assert.doesNotReject(() => seasonalStatusChip.waitFor());
+  assert.equal(
+    await seasonalStatusChip.getAttribute("aria-pressed"),
+    "true",
+    "hero CTA should activate the seasonal-only filter",
+  );
+  const showAllSeasonal = page.getByRole("button", { name: /^Voir tout$/i });
+  if (await showAllSeasonal.count()) {
+    await showAllSeasonal.click();
+  }
+  const heroFilteredStatuses = await page
+    .locator("[data-season-row]")
+    .evaluateAll((rows) => rows.map((row) => row.getAttribute("data-status")));
+  assert.ok(heroFilteredStatuses.length > 0, "hero CTA should keep seasonal rows visible");
+  assert.deepEqual(
+    [...new Set(heroFilteredStatuses)],
+    ["in-season"],
+    "hero CTA should display only in-season products",
+  );
+
+  await page.getByRole("button", { name: /tout le calendrier/i }).click();
+  await page.waitForURL((url) => url.searchParams.get("view") !== "now");
+
   const firstSeasonChart = page.locator("[data-season-chart]").first();
   await assert.doesNotReject(() => firstSeasonChart.waitFor());
   assert.equal(
@@ -166,7 +194,7 @@ try {
 
   const statusChipRow = page.locator('.quick-chip-row[aria-label="Statut"]');
   const hoverStatusChip = statusChipRow.getByRole("button", {
-    name: /De saison ou bientôt/i,
+    name: /^De saison$/i,
   });
   await hoverStatusChip.hover();
   await page.waitForTimeout(200);

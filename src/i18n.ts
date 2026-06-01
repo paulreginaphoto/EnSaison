@@ -90,7 +90,7 @@ export const dictionary: Record<Locale, Dictionary> = {
       pantry: "Épicerie",
     },
     seasonViews: {
-      now: "De saison ou bientôt",
+      now: "De saison",
       all: "Tout le calendrier",
       variable: "Variable",
       out: "Hors saison",
@@ -183,7 +183,7 @@ export const dictionary: Record<Locale, Dictionary> = {
       pantry: "Pantry",
     },
     seasonViews: {
-      now: "In or near season",
+      now: "In season",
       all: "Full calendar",
       variable: "Variable",
       out: "Out of season",
@@ -276,7 +276,7 @@ export const dictionary: Record<Locale, Dictionary> = {
       pantry: "Despensa",
     },
     seasonViews: {
-      now: "En temporada o cerca",
+      now: "En temporada",
       all: "Calendario completo",
       variable: "Variable",
       out: "Fuera de temporada",
@@ -369,7 +369,7 @@ export const dictionary: Record<Locale, Dictionary> = {
       pantry: "Vorrat",
     },
     seasonViews: {
-      now: "Saisonal oder bald",
+      now: "Saisonal",
       all: "Ganzer Kalender",
       variable: "Variabel",
       out: "Außer Saison",
@@ -462,7 +462,7 @@ export const dictionary: Record<Locale, Dictionary> = {
       pantry: "Dispensa",
     },
     seasonViews: {
-      now: "Di stagione o vicino",
+      now: "Di stagione",
       all: "Calendario completo",
       variable: "Variabile",
       out: "Fuori stagione",
@@ -555,7 +555,7 @@ export const dictionary: Record<Locale, Dictionary> = {
       pantry: "Despensa",
     },
     seasonViews: {
-      now: "Da época ou perto",
+      now: "Da época",
       all: "Calendário completo",
       variable: "Variável",
       out: "Fora de época",

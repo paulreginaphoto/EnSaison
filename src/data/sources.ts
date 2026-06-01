@@ -463,6 +463,14 @@ export const dataSources = {
     label: "World Bank crop calendar for Albania",
     url: "https://documents1.worldbank.org/curated/en/892611468740389435/pdf/multi-page.pdf",
   },
+  "bosnia-avaz-seasonal-produce-calendar": {
+    label: "Avaz Bosnia and Herzegovina fruit and vegetable seasonal calendar",
+    url: "https://www.avaz.ba/zdravlje/sveznadar/969220/kalendar-voca-i-povrca-kad-koje-dozrijeva-po-mjesecima",
+  },
+  "bosnia-fipa-fruit-vegetable-sector": {
+    label: "FIPA Bosnia and Herzegovina fruit and vegetable maturity calendar",
+    url: "https://www.fipa.gov.ba/publikacije_materijali/brosure/Atractive%20sectors%202022.pdf",
+  },
   "israel-mustip-seasonal-produce-guide": {
     label: "Mustip seasonal fruits and vegetables in Israel by month",
     url: "https://mustip.co.il/seasonal-fruits-and-vegetables-in-israel-by-month/",

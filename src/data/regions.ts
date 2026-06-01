@@ -184,6 +184,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["australia-health-produce", "seasonal-food-guide-australia", "australia-foodtree-seasonal-produce"],
   },
+  BA: {
+    labels: {
+      fr: "Bosnie-Herzegovine: calendrier mensuel Avaz des produits de saison et calendrier de maturite FIPA / Foreign Trade Chamber; signal national pratique, pas precision entite, canton, altitude, serre, variete, ferme, stockage ou import.",
+      en: "Bosnia and Herzegovina: Avaz monthly seasonal-produce calendar plus FIPA / Foreign Trade Chamber maturity calendar; practical national signal, not entity, canton, altitude, greenhouse, variety, farm, storage or import precision.",
+      es: "Bosnia y Herzegovina: calendario mensual de productos de temporada de Avaz y calendario de madurez FIPA / Camara de Comercio Exterior; senal nacional practica, no precision por entidad, canton, altitud, invernadero, variedad, finca, almacenamiento ni importacion.",
+      de: "Bosnien und Herzegowina: Avaz-Monatskalender fuer Saisonprodukte plus FIPA-/Aussenhandelskammer-Reifekalender; praktischer nationaler Hinweis, keine Genauigkeit nach Entitaet, Kanton, Hoehenlage, Gewaechshaus, Sorte, Betrieb, Lagerung oder Import.",
+      it: "Bosnia-Erzegovina: calendario mensile Avaz dei prodotti di stagione e calendario di maturazione FIPA / Camera del Commercio Estero; segnale nazionale pratico, non precisione per entita, cantone, altitudine, serra, varieta, azienda, conservazione o import.",
+      pt: "Bosnia-Herzegovina: calendario mensal Avaz de produtos sazonais e calendario de maturacao FIPA / Camara de Comercio Exterior; sinal nacional pratico, sem precisao por entidade, cantao, altitude, estufa, variedade, quinta, armazenamento nem importacao.",
+    },
+    sourceIds: ["bosnia-avaz-seasonal-produce-calendar", "bosnia-fipa-fruit-vegetable-sector"],
+  },
   BE: {
     labels: {
       fr: "Belgique: calendrier Vlaanderen/VLAM par mois pour fruits et legumes disponibles; utile comme reference belge, pas une prevision meteo ou magasin.",

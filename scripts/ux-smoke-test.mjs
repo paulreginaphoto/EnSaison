@@ -109,6 +109,58 @@ try {
     heroSeasonItemStates.every((item) => ["local", "regional"].includes(item.origin ?? "")),
     "hero should not promote imported products as seasonal hero imagery",
   );
+  const mobileHeroMetrics = await page.locator(".hero-card").evaluate((hero) => {
+    const heroRect = hero.getBoundingClientRect();
+    const artRect = hero.querySelector(".hero-art")?.getBoundingClientRect();
+    const categoryRect = document
+      .querySelector(".category-bento")
+      ?.getBoundingClientRect();
+
+    return {
+      artHeight: artRect?.height ?? 0,
+      categoryTop: categoryRect?.top ?? 0,
+      heroHeight: heroRect.height,
+      viewportHeight: window.innerHeight,
+    };
+  });
+  assert.ok(
+    mobileHeroMetrics.artHeight <= 220,
+    `mobile hero seasonal images should stay compact: ${mobileHeroMetrics.artHeight}px`,
+  );
+  assert.ok(
+    mobileHeroMetrics.categoryTop <= mobileHeroMetrics.viewportHeight * 1.05,
+    `mobile categories should appear without a long hero-image scroll: ${mobileHeroMetrics.categoryTop}px`,
+  );
+
+  const narrowPage = await browser.newPage({
+    viewport: { width: 824, height: 947 },
+    deviceScaleFactor: 1,
+  });
+  await narrowPage.goto(baseUrl, { waitUntil: "networkidle" });
+  await assert.doesNotReject(() =>
+    narrowPage.getByRole("heading", { name: /^Le meilleur de juin$/i }).waitFor(),
+  );
+  const narrowHeroMetrics = await narrowPage.locator(".hero-card").evaluate((hero) => {
+    const artRect = hero.querySelector(".hero-art")?.getBoundingClientRect();
+    const categoryRect = document
+      .querySelector(".category-bento")
+      ?.getBoundingClientRect();
+
+    return {
+      artHeight: artRect?.height ?? 0,
+      categoryTop: categoryRect?.top ?? 0,
+      viewportHeight: window.innerHeight,
+    };
+  });
+  await narrowPage.close();
+  assert.ok(
+    narrowHeroMetrics.artHeight <= 240,
+    `narrow hero seasonal images should stay compact: ${narrowHeroMetrics.artHeight}px`,
+  );
+  assert.ok(
+    narrowHeroMetrics.categoryTop <= narrowHeroMetrics.viewportHeight * 0.95,
+    `narrow categories should be visible in the first viewport: ${narrowHeroMetrics.categoryTop}px`,
+  );
   assert.equal(await page.getByRole("heading", { name: /^hors saison$/i }).count(), 0);
   assert.equal(await page.getByRole("heading", { name: /^variable$/i }).count(), 0);
 

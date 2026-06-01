@@ -295,6 +295,34 @@ export const dataSources = {
     label: "Casamance Bio Burkina Faso mango harvest note",
     url: "https://www.casamance-bio.com/nos-filieres/le-burkina-faso/",
   },
+  "mali-fewsnet-seasonal-calendar": {
+    label: "FEWS NET Mali seasonal calendar",
+    url: "https://fews.net/west-africa/mali/seasonal-calendar/july-2024",
+  },
+  "mali-fewsnet-green-harvest": {
+    label: "FEWS NET Mali green harvest and main harvest update",
+    url: "https://fews.net/west-africa/mali/food-security-outlook-update/september-2018",
+  },
+  "mali-fewsnet-offseason-crops": {
+    label: "FEWS NET Mali off-season market gardening and rice update",
+    url: "https://fews.net/west-africa/mali/food-security-outlook/february-2026",
+  },
+  "mali-bioversity-segou-calendar": {
+    label: "Bioversity International / IER seasonal fruit and vegetable calendar, Segou Mali",
+    url: "https://alliancebioversityciattest.org/publications-data/calendrier-saisonnier-des-fruits-et-legumes-pour-une-alimentation-diversifiee",
+  },
+  "mali-mdpi-orphan-crops": {
+    label: "Agronomy review on Mali orphan crops and seasonal availability calendars",
+    url: "https://www.mdpi.com/2073-4395/10/2/231",
+  },
+  "mali-fao-okra-harvest": {
+    label: "FAO / Access Agriculture okra harvest and storage in Mali",
+    url: "https://www.fao.org/family-farming/detail/fr/c/1602752/",
+  },
+  "mali-maliweb-mango-season": {
+    label: "Maliweb / Mali Tribune mango season in Bamako",
+    url: "https://www.maliweb.net/economie/agriculture/saison-de-la-mangue-entre-saveurs-et-engouement-populaire-3116361.html",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

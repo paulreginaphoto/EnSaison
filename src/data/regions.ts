@@ -216,6 +216,25 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "burkina-casamance-mango",
     ],
   },
+  ML: {
+    labels: {
+      fr: "Mali: calendriers saisonniers FEWS NET, calendriers fruits-legumes Bioversity/IER Segou/Sikasso, notes FAO/Access Agriculture et signaux locaux mangue; guide national prudent, pas precision par region ni par annee de crise.",
+      en: "Mali: FEWS NET seasonal calendars, Bioversity/IER Segou/Sikasso fruit-vegetable calendars, FAO/Access Agriculture notes and local mango-season signals; cautious national guide, not region-level or crisis-year precision.",
+      es: "Mali: calendarios estacionales FEWS NET, calendarios de frutas y verduras Bioversity/IER Segou/Sikasso, notas FAO/Access Agriculture y senales locales de mango; guia nacional prudente, no precision regional ni de ano de crisis.",
+      de: "Mali: FEWS-NET-Saisonkalender, Bioversity/IER-Obst-und-Gemuese-Kalender fuer Segou/Sikasso, FAO/Access-Agriculture-Hinweise und lokale Mango-Saisonsignale; vorsichtige nationale Orientierung, keine Genauigkeit nach Region oder Krisenjahr.",
+      it: "Mali: calendari stagionali FEWS NET, calendari frutta-verdura Bioversity/IER Segou/Sikasso, note FAO/Access Agriculture e segnali locali sulla stagione del mango; guida nazionale prudente, non precisione regionale ne per anni di crisi.",
+      pt: "Mali: calendarios sazonais FEWS NET, calendarios de frutas e legumes Bioversity/IER Segou/Sikasso, notas FAO/Access Agriculture e sinais locais da epoca da manga; guia nacional prudente, sem precisao regional nem de ano de crise.",
+    },
+    sourceIds: [
+      "mali-fewsnet-seasonal-calendar",
+      "mali-fewsnet-green-harvest",
+      "mali-fewsnet-offseason-crops",
+      "mali-bioversity-segou-calendar",
+      "mali-mdpi-orphan-crops",
+      "mali-fao-okra-harvest",
+      "mali-maliweb-mango-season",
+    ],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

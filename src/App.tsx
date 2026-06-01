@@ -235,9 +235,15 @@ function MainPage() {
 
   const filteredItems = useMemo(() => {
     const searchValue = normalizeSearch(search);
-    const allowedCategories = categoryGroups[selectedCategory];
+    const allowEveryCategoryForSearch = Boolean(searchValue) && selectedCategory === "all";
+    const allowedCategories = allowEveryCategoryForSearch
+      ? null
+      : categoryGroups[selectedCategory];
+    const sourceItems = allowEveryCategoryForSearch
+      ? resolvedItems.filter(({ status }) => status !== "variable")
+      : dashboardItems;
 
-    return dashboardItems
+    return sourceItems
       .filter((item) =>
         allowedCategories ? allowedCategories.includes(item.item.category) : true,
       )
@@ -271,7 +277,7 @@ function MainPage() {
           locale,
         );
       });
-  }, [dashboardItems, locale, search, selectedCategory]);
+  }, [dashboardItems, locale, resolvedItems, search, selectedCategory]);
 
   const visibleItems = filteredItems.filter(({ status }) => {
     if (selectedView === "now") {

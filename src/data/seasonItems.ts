@@ -172,6 +172,8 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "fruit-pain", name: "Fruit à pain", names: { en: "Breadfruit", es: "Fruta de pan", de: "Brotfrucht", it: "Frutto dell'albero del pane", pt: "Fruta-pão" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "nigeria-kitchenbutterfly-season-calendar"], confidence: "source" },
   { id: "salak", name: "Salak", names: { en: "Salak", es: "Salak", de: "Salak", it: "Salak", pt: "Salak" }, category: "fruit", icon: "fruit-round", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "thai-fresh-fruit-season-calendar"], confidence: "source" },
   { id: "gombo", name: "Gombo", names: { en: "Okra", es: "Quimbombó", de: "Okra", it: "Gombo", pt: "Quiabo" }, category: "vegetable", icon: "vegetable-stem", months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct.", sourceIds: ["fao-crop-calendar", "india-desagri-vegetable-harvest"], confidence: "indicative" },
+  { id: "amarante-feuille", name: "Feuille d'amarante", names: { en: "Amaranth leaf", es: "Hoja de amaranto", de: "Amaranthblatt", it: "Foglia di amaranto", pt: "Folha de amaranto" }, category: "vegetable", icon: "vegetable-leaf", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "mali-mdpi-orphan-crops"], confidence: "source" },
+  { id: "corete-potagere", name: "Corète potagère", names: { en: "Jute mallow", es: "Yute comestible", de: "Jutemalve", it: "Malva di juta", pt: "Juta comestível" }, category: "vegetable", icon: "vegetable-leaf", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "mali-mdpi-orphan-crops"], confidence: "source" },
   { id: "aloe-vera", name: "Aloe vera", names: { en: "Aloe vera", es: "Aloe vera", de: "Aloe vera", it: "Aloe vera", pt: "Aloe vera" }, category: "vegetable", icon: "vegetable-leaf", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "vietnam-greatfoods-season-calendar"], confidence: "source" },
   { id: "bok-choy", name: "Bok choy", names: { en: "Bok choy", es: "Bok choy", de: "Pak Choi", it: "Bok choy", pt: "Bok choy" }, category: "vegetable", icon: "vegetable-cabbage", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "vietnam-greatfoods-season-calendar"], confidence: "source" },
   { id: "feuilles-moutarde", name: "Feuilles de moutarde", names: { en: "Mustard greens", es: "Hojas de mostaza", de: "Senfblaetter", it: "Foglie di senape", pt: "Folhas de mostarda" }, category: "vegetable", icon: "vegetable-leaf", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "vietnam-greatfoods-season-calendar"], confidence: "source" },
@@ -291,10 +293,12 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "fève", name: "Fève", names: { en: "Fava bean", es: "Haba", de: "Ackerbohne", it: "Fava", pt: "Fava" }, category: "legume", icon: "vegetable-bean", months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil.", sourceIds: ["fao-infoods", "langual", "fao-crop-calendar"], confidence: "indicative" },
   { id: "haricot-borlotti", name: "Haricot borlotti", names: { en: "Borlotti bean", es: "Judía borlotti", de: "Borlottibohne", it: "Fagiolo borlotto", pt: "Feijão borlotti" }, category: "legume", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "turkey-meb-megep-produce-sales-calendar"], confidence: "source" },
   { id: "dolique", name: "Dolique", names: { en: "Cowpea", es: "Caupí", de: "Augenbohne", it: "Fagiolo dall'occhio", pt: "Feijão-frade" }, category: "legume", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "turkey-meb-megep-produce-sales-calendar"], confidence: "source" },
+  { id: "voandzou", name: "Voandzou", names: { en: "Bambara groundnut", es: "Bambara", de: "Bambara-Erdnuss", it: "Fagiolo bambara", pt: "Feijão-bambara" }, category: "legume", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "mali-mdpi-orphan-crops"], confidence: "source" },
   { id: "lupin", name: "Lupin", names: { en: "Lupin", es: "Altramuz", de: "Lupine", it: "Lupino", pt: "Tremoço" }, category: "legume", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "maïs-grain", name: "Maïs grain", names: { en: "Maize", es: "Maíz", de: "Mais", it: "Mais", pt: "Milho" }, category: "grain", icon: "vegetable-stem", months: [8, 9, 10, 11], nearMonths: [7, 12], seasonLabel: "août – nov.", sourceIds: ["fao-crop-calendar", "fao-infoods"], confidence: "indicative" },
   { id: "millet", name: "Millet", names: { en: "Millet", es: "Mijo", de: "Hirse", it: "Miglio", pt: "Milhete" }, category: "grain", icon: "vegetable-stem", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "sorgho", name: "Sorgho", names: { en: "Sorghum", es: "Sorgo", de: "Sorghum", it: "Sorgo", pt: "Sorgo" }, category: "grain", icon: "vegetable-stem", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
+  { id: "fonio", name: "Fonio", names: { en: "Fonio", es: "Fonio", de: "Fonio", it: "Fonio", pt: "Fonio" }, category: "grain", icon: "vegetable-stem", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "mali-mdpi-orphan-crops"], confidence: "source" },
   { id: "sarrasin", name: "Sarrasin", names: { en: "Buckwheat", es: "Trigo sarraceno", de: "Buchweizen", it: "Grano saraceno", pt: "Trigo-sarraceno" }, category: "grain", icon: "vegetable-stem", months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct.", sourceIds: ["fao-infoods", "langual", "fao-crop-calendar"], confidence: "indicative" },
   { id: "épeautre", name: "Épeautre", names: { en: "Spelt", es: "Espelta", de: "Dinkel", it: "Farro", pt: "Espelta" }, category: "grain", icon: "vegetable-stem", months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept.", sourceIds: ["fao-infoods", "langual", "fao-crop-calendar"], confidence: "indicative" },
   { id: "teff", name: "Teff", names: { en: "Teff", es: "Teff", de: "Teff", it: "Teff", pt: "Teff" }, category: "grain", icon: "vegetable-stem", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
@@ -2701,6 +2705,31 @@ const burkinaFasoSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonI
   oseille: { months: [8, 9, 10, 11, 12, 1], nearMonths: [7, 2], seasonLabel: "août – janv." },
 };
 
+const maliSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  mangue: { months: [3, 4, 5, 6, 7], nearMonths: [2, 8], seasonLabel: "mars – juil." },
+  "maïs-grain": { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], seasonLabel: "sept. – janv." },
+  "maïs-doux": { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  fonio: { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], seasonLabel: "sept. – janv." },
+  arachide: { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], seasonLabel: "sept. – janv." },
+  dolique: { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], seasonLabel: "sept. – janv." },
+  voandzou: { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], seasonLabel: "sept. – janv." },
+  millet: { months: [9, 10, 11, 12, 1], nearMonths: [8, 2], seasonLabel: "sept. – janv." },
+  sorgho: { months: [10, 11, 12, 1], nearMonths: [9, 2], seasonLabel: "oct. – janv." },
+  riz: { months: [10, 11, 12, 1, 2, 3, 6], nearMonths: [4, 5, 9], seasonLabel: "oct. – mars, juin" },
+  gombo: { months: [7, 8, 9, 10, 11, 12], nearMonths: [6, 1], seasonLabel: "juil. – déc." },
+  pastèque: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  tomate: { months: [12, 1, 2, 3, 4], nearMonths: [5, 11], seasonLabel: "déc. – avr." },
+  oignon: { months: [12, 1, 2, 3, 4], nearMonths: [5, 11], seasonLabel: "déc. – avr." },
+  "feuille-baobab": { months: [6, 7, 8, 9, 10], nearMonths: [5, 11, 12, 1, 2], seasonLabel: "juin – oct., puis séché" },
+  "amarante-feuille": { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct." },
+  "corete-potagere": { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct." },
+  oseille: { months: [7, 8, 9, 10, 11, 12], nearMonths: [6, 1], seasonLabel: "juil. – déc." },
+  baobab: { months: [1, 2, 3], nearMonths: [12, 4], seasonLabel: "janv. – mars" },
+  néré: { months: [3, 4, 5, 6, 10, 11, 12], nearMonths: [1, 2, 7, 8, 9], seasonLabel: "mars – juin, oct. – déc." },
+  tamarin: { months: [11, 12, 1, 2], nearMonths: [10, 3], seasonLabel: "nov. – févr." },
+  karité: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+};
+
 const togoSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   mangue: { months: [3, 4, 5, 6, 7], nearMonths: [2, 8], seasonLabel: "mars – juil." },
   "pomme-cajou": { months: [2, 3, 4, 5], nearMonths: [1, 6], seasonLabel: "févr. – mai" },
@@ -3906,6 +3935,22 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
         "burkina-cambridge-seasonal-diet",
         "burkina-fao-zitenga-forest-products",
         "burkina-casamance-mango",
+      ],
+      confidence: "source",
+    };
+  }
+
+  if (maliSeasonOverrides[item.id]) {
+    countries.ML = {
+      ...maliSeasonOverrides[item.id],
+      sourceIds: [
+        "mali-fewsnet-seasonal-calendar",
+        "mali-fewsnet-green-harvest",
+        "mali-fewsnet-offseason-crops",
+        "mali-bioversity-segou-calendar",
+        "mali-mdpi-orphan-crops",
+        "mali-fao-okra-harvest",
+        "mali-maliweb-mango-season",
       ],
       confidence: "source",
     };

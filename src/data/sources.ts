@@ -463,6 +463,10 @@ export const dataSources = {
     label: "SSTWAL Farm Jordan harvest calendar",
     url: "https://sstwal-farm.com/harvest-calendar/",
   },
+  "lebanon-idal-production-calendar": {
+    label: "IDAL annual calendar for fruits and vegetables production in Lebanon",
+    url: "https://investinlebanon.gov.lb/Content/uploads/SideBlock/180709040825141~ANNUAL%20CALENDAR%20FRUITS%20AND%20VEGETABLES.pdf",
+  },
   "iran-hina-fruit-export-calendar": {
     label: "Hina Greenery Iranian fruit export harvest calendar",
     url: "https://hinagreenery.com/iranian-fruit-export-calendar-monthly-guide/",

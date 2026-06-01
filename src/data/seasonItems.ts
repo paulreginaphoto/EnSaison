@@ -1613,6 +1613,29 @@ const jordanSstwalSeasonOverrides: Record<string, NonNullable<NonNullable<Season
   "tomate": { months: [1, 6, 7, 8, 11, 12], nearMonths: [2, 5, 9, 10], seasonLabel: "juin – août, nov. – janv." },
 };
 
+const lebanonIdalSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  "ail": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "abricot": { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
+  "banane": { months: [1, 2, 3, 4, 5, 10, 11, 12], nearMonths: [6, 9], seasonLabel: "oct. – mai" },
+  "cerise": { months: [4, 5, 6, 7, 8], nearMonths: [3, 9], seasonLabel: "avr. – août" },
+  "citron": { months: [1, 2, 3, 10, 11, 12], nearMonths: [4, 9], seasonLabel: "oct. – mars" },
+  "clementine": { months: [10, 11, 12], nearMonths: [1, 9], seasonLabel: "oct. – déc." },
+  "concombre": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "laitue": { months: [4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [1, 3], seasonLabel: "avr. – déc." },
+  "melon": { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
+  "oignon": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "orange": { months: [1, 2, 3, 4, 5, 6, 7, 11, 12], nearMonths: [8, 10], seasonLabel: "janv. – juil., nov. – déc." },
+  "pastèque": { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], seasonLabel: "mai – oct." },
+  "peche": { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], seasonLabel: "mai – oct." },
+  "poire": { months: [7, 8, 9, 10, 11, 12], nearMonths: [1, 6], seasonLabel: "juil. – déc." },
+  "poivron": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "pomme": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "pomme-de-terre": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "prune": { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct." },
+  "raisin": { months: [7, 8, 9, 10, 11], nearMonths: [6, 12], seasonLabel: "juil. – nov." },
+  "tomate": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+};
+
 const iranFruitSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   amande: { months: [3, 4], nearMonths: [2, 5], seasonLabel: "mars – avr." },
   abricot: { months: [6, 7], nearMonths: [5, 8], seasonLabel: "juin – juil." },
@@ -4758,6 +4781,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.JO = {
       ...jordanSstwalSeasonOverrides[item.id],
       sourceIds: ["jordan-sstwal-harvest-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (lebanonIdalSeasonOverrides[item.id]) {
+    countries.LB = {
+      ...lebanonIdalSeasonOverrides[item.id],
+      sourceIds: ["lebanon-idal-production-calendar"],
       confidence: "source",
     };
   }

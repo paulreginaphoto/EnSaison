@@ -390,6 +390,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["jordan-sstwal-harvest-calendar"],
   },
+  LB: {
+    labels: {
+      fr: "Liban: calendrier annuel IDAL / Ministry of Agriculture pour la production de fruits et legumes; signal national prudent, pas precision par mouhafazat, altitude, serre, variete, stockage, ferme, marche de detail ou import.",
+      en: "Lebanon: IDAL / Ministry of Agriculture annual fruit and vegetable production calendar; cautious national signal, not governorate, altitude, greenhouse, variety, storage, farm, retail-market or import precision.",
+      es: "Libano: calendario anual IDAL / Ministerio de Agricultura de produccion de frutas y verduras; senal nacional prudente, no precision por gobernacion, altitud, invernadero, variedad, almacenamiento, finca, mercado minorista ni importacion.",
+      de: "Libanon: IDAL-/Landwirtschaftsministerium-Jahreskalender fuer Obst- und Gemueseproduktion; vorsichtiger nationaler Hinweis, keine Genauigkeit nach Gouvernement, Hoehenlage, Gewaechshaus, Sorte, Lagerung, Betrieb, Einzelhandel oder Import.",
+      it: "Libano: calendario annuale IDAL / Ministero dell'Agricoltura per la produzione di frutta e verdura; segnale nazionale prudente, non precisione per governatorato, altitudine, serra, varieta, conservazione, azienda, dettaglio o import.",
+      pt: "Libano: calendario anual IDAL / Ministerio da Agricultura de producao de frutas e legumes; sinal nacional prudente, sem precisao por governacao, altitude, estufa, variedade, armazenamento, quinta, retalho nem importacao.",
+    },
+    sourceIds: ["lebanon-idal-production-calendar"],
+  },
   IR: {
     labels: {
       fr: "Iran: calendriers fruits Hina Greenery et GilaFruit pour recolte/disponibilite export; signal national pratique, pas precision province, stockage, serre, variete ou marche local.",

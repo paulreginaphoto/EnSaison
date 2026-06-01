@@ -366,6 +366,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - SSTWAL Farm Jordan harvest calendar
   https://sstwal-farm.com/harvest-calendar/
 
+- IDAL annual calendar for fruits and vegetables production in Lebanon
+  https://investinlebanon.gov.lb/Content/uploads/SideBlock/180709040825141~ANNUAL%20CALENDAR%20FRUITS%20AND%20VEGETABLES.pdf
+
 - ThorKit monthly seasonal foods guide for Korea
   https://thorkit.kr/guides/seasonal-foods/
 
@@ -509,6 +512,7 @@ The app now supports:
 - Nepal now has source-backed Flora Fauna Fun / NepJOL overrides for 56 fruit, vegetable, herb, spice, tuber and mushroom items already present in the catalogue, mapping Nepal fruit seasons by altitude/region plus Dharan market monthly availability and all-year rows; this is cautious national and market guidance, not district, altitude, variety, farm or import precision;
 - Sri Lanka now has source-backed Sri Lanka Spirit / Experience Travel Group / Purana Ayurveda overrides for 24 fruit, vegetable and tuber items already present in the catalogue, mapping tropical fruit seasons and a practical Sri Lankan vegetable calendar; this is cautious national guidance, not district, altitude, variety, farm, market or import precision;
 - Jordan now has source-backed SSTWAL Farm harvest-calendar overrides for 52 fruit, vegetable, herb and allium items already present in the catalogue, mapping the farm's listed harvest months around Dhlail/Zarqa; this is cautious local Jordanian farm guidance, not an official national calendar or governorate, valley, greenhouse, variety, retail or import precision;
+- Lebanon now has source-backed IDAL / Ministry of Agriculture annual production-calendar overrides for 20 fruit and vegetable items already present in the catalogue, mapping official production months for apple, pear, banana, lemon, orange, clementine, grape, apricot, peach, plum, cherry, melon, watermelon, lettuce, potato, sweet pepper, onion, tomato, cucumber and garlic; this is national production guidance, not governorate, altitude, greenhouse, variety, storage, farm, retail or import precision;
 - Luxembourg now has source-backed Ministry of Agriculture 2024 regional seasonal-calendar overrides for 52 fruit, vegetable and nut items, distinguishing fresh regional produce from stored availability; Damson plum / quetsche was added to the catalogue to match the Luxembourg calendar;
 - Bulgaria now has source-backed BB-Team practical broad-season overrides for 41 common fruit, vegetable and legume items, plus sorrel and nettle were added to match the Bulgarian table; this is a local practical guide, not a government calendar or month-level agricultural forecast;
 - Estonia now has source-backed Gardest 2026 vegetable sowing-and-harvest overrides for 27 vegetable and fruit-vegetable items, using the ready-to-harvest months; this is practical gardening guidance, not a government calendar or retail availability forecast;

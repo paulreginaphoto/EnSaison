@@ -407,6 +407,22 @@ export const dataSources = {
     label: "Taiwan AFA main fruit production seasons and producing areas",
     url: "https://www.afa.gov.tw/cht/index.php?act=download&ids=44428",
   },
+  "hong-kong-afcd-local-vegetables-all-year": {
+    label: "Hong Kong AFCD local common vegetable crops - all year-round crops",
+    url: "https://www.afcd.gov.hk/english/agriculture/agr_useful/agr_useful_local/agr_useful_local_all.html",
+  },
+  "hong-kong-afcd-local-vegetables-summer": {
+    label: "Hong Kong AFCD local common vegetable crops - summer crops",
+    url: "https://www.afcd.gov.hk/english/agriculture/agr_useful/agr_useful_local/agr_useful_local_sum.html",
+  },
+  "hong-kong-afcd-local-vegetables-winter-spring": {
+    label: "Hong Kong AFCD local common vegetable crops - winter-spring crops",
+    url: "https://www.afcd.gov.hk/english/agriculture/agr_useful/agr_useful_local/agr_useful_local_win.html",
+  },
+  "hong-kong-ehs-healthy-dishes-seasons": {
+    label: "Hong Kong Elderly Health Service healthy dishes for different seasons",
+    url: "https://www.elderly.gov.hk/english/healthy_ageing/healthy_diet/meal_planning_healthy_recipes/healthy_dishes_for_different_seasons.html",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

@@ -386,6 +386,22 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["taiwan-afa-main-fruit-seasons"],
   },
+  HK: {
+    labels: {
+      fr: "Hong Kong: sources officielles AFCD/EHS sur les cultures maraicheres locales et aliments saisonniers par saison; guide HKSAR prudent, pas precision ferme, marche ou import.",
+      en: "Hong Kong: official AFCD/EHS sources on local vegetable crops and seasonal foods by season; cautious HKSAR guide, not farm, market or import precision.",
+      es: "Hong Kong: fuentes oficiales AFCD/EHS sobre hortalizas locales y alimentos de temporada por estacion; guia prudente de la RAEHK, no precision por finca, mercado o importacion.",
+      de: "Hongkong: offizielle AFCD/EHS-Quellen zu lokalen Gemuesekulturen und Saisonlebensmitteln nach Jahreszeit; vorsichtiger HKSAR-Leitfaden, keine Genauigkeit nach Betrieb, Markt oder Import.",
+      it: "Hong Kong: fonti ufficiali AFCD/EHS sulle colture orticole locali e sugli alimenti stagionali per stagione; guida prudente HKSAR, non precisione per azienda, mercato o importazione.",
+      pt: "Hong Kong: fontes oficiais AFCD/EHS sobre culturas horticolas locais e alimentos sazonais por estacao; guia prudente da RAEHK, sem precisao por quinta, mercado ou importacao.",
+    },
+    sourceIds: [
+      "hong-kong-afcd-local-vegetables-all-year",
+      "hong-kong-afcd-local-vegetables-summer",
+      "hong-kong-afcd-local-vegetables-winter-spring",
+      "hong-kong-ehs-healthy-dishes-seasons",
+    ],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

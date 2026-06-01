@@ -1500,6 +1500,34 @@ const taiwanAfaFruitSeasonOverrides: Record<string, NonNullable<NonNullable<Seas
   kaki: { months: [8, 9, 10, 11, 12], nearMonths: [7, 1], seasonLabel: "août – déc." },
 };
 
+const hongKongAfcdEhsSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  laitue: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "chou-chinois": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  brocoli: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  asperge: { months: [3, 4, 5], nearMonths: [2, 6], seasonLabel: "mars – mai" },
+  fraise: { months: [3, 4, 5], nearMonths: [2, 6], seasonLabel: "mars – mai" },
+  "haricot-vert": { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  concombre: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  gingembre: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  mangue: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  ananas: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  peche: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  melon: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  pastèque: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  cresson: { months: [1, 2, 3, 4, 5, 12], nearMonths: [6, 11], seasonLabel: "déc. – mai" },
+  "épinard": { months: [1, 2, 3, 4, 5, 12], nearMonths: [6, 11], seasonLabel: "déc. – mai" },
+  chayote: { months: [1, 2, 3, 4, 5, 12], nearMonths: [6, 11], seasonLabel: "déc. – mai" },
+  carotte: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  courge: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  taro: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  châtaigne: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  crabe: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  "radis-blanc": { months: [1, 2, 12], nearMonths: [3, 11], seasonLabel: "déc. – févr." },
+  tomate: { months: [1, 2, 12], nearMonths: [3, 11], seasonLabel: "déc. – févr." },
+  poivron: { months: [1, 2, 12], nearMonths: [3, 11], seasonLabel: "déc. – févr." },
+  huître: { months: [1, 2, 12], nearMonths: [3, 11], seasonLabel: "déc. – févr." },
+};
+
 const argentinaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   blette: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [], seasonLabel: "toute l'annee", seasonMode: "year-round" },
   "céleri-branche": { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [], seasonLabel: "mars – nov." },
@@ -4219,6 +4247,19 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.TW = {
       ...taiwanAfaFruitSeasonOverrides[item.id],
       sourceIds: ["taiwan-afa-main-fruit-seasons"],
+      confidence: "source",
+    };
+  }
+
+  if (hongKongAfcdEhsSeasonOverrides[item.id]) {
+    countries.HK = {
+      ...hongKongAfcdEhsSeasonOverrides[item.id],
+      sourceIds: [
+        "hong-kong-afcd-local-vegetables-all-year",
+        "hong-kong-afcd-local-vegetables-summer",
+        "hong-kong-afcd-local-vegetables-winter-spring",
+        "hong-kong-ehs-healthy-dishes-seasons",
+      ],
       confidence: "source",
     };
   }

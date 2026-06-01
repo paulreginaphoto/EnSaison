@@ -395,6 +395,10 @@ export const dataSources = {
     label: "Mustip seasonal fruits and vegetables in Israel by month",
     url: "https://mustip.co.il/seasonal-fruits-and-vegetables-in-israel-by-month/",
   },
+  "south-korea-thorkit-seasonal-foods-guide": {
+    label: "ThorKit monthly seasonal foods guide for Korea",
+    url: "https://thorkit.kr/guides/seasonal-foods/",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

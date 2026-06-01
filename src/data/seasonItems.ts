@@ -1434,6 +1434,33 @@ const israelMustipSeasonOverrides: Record<string, NonNullable<NonNullable<Season
   "patate-douce": { months: [9, 10, 11, 12], nearMonths: [1, 8], seasonLabel: "sept. – déc." },
 };
 
+const southKoreaThorkitSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  fraise: { months: [5], nearMonths: [4, 6], seasonLabel: "mai" },
+  abricot: { months: [5], nearMonths: [4, 6], seasonLabel: "mai" },
+  oignon: { months: [5], nearMonths: [4, 6], seasonLabel: "mai" },
+  prune: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  myrtille: { months: [6], nearMonths: [5, 7], seasonLabel: "juin" },
+  tomate: { months: [6], nearMonths: [5, 7], seasonLabel: "juin" },
+  pastèque: { months: [6, 7], nearMonths: [5, 8], seasonLabel: "juin – juil." },
+  concombre: { months: [6], nearMonths: [5, 7], seasonLabel: "juin" },
+  courgette: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  aubergine: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  "maïs-doux": { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  melon: { months: [7], nearMonths: [6, 8], seasonLabel: "juil." },
+  peche: { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  raisin: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  figue: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  pomme: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  poire: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  gingembre: { months: [9], nearMonths: [8, 10], seasonLabel: "sept." },
+  igname: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  kaki: { months: [10, 11], nearMonths: [9, 12], seasonLabel: "oct. – nov." },
+  "radis-blanc": { months: [10, 11, 12, 1], nearMonths: [2, 9], seasonLabel: "oct. – janv." },
+  "chou-chinois": { months: [2, 3, 10, 11, 12], nearMonths: [1, 4, 9], seasonLabel: "févr. – mars, oct. – déc." },
+  "épinard": { months: [1, 2, 11, 12], nearMonths: [3, 10], seasonLabel: "nov. – févr." },
+  coing: { months: [11], nearMonths: [10, 12], seasonLabel: "nov." },
+};
+
 const argentinaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   blette: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [], seasonLabel: "toute l'annee", seasonMode: "year-round" },
   "céleri-branche": { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [], seasonLabel: "mars – nov." },
@@ -4129,6 +4156,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.IL = {
       ...israelMustipSeasonOverrides[item.id],
       sourceIds: ["israel-mustip-seasonal-produce-guide"],
+      confidence: "source",
+    };
+  }
+
+  if (southKoreaThorkitSeasonOverrides[item.id]) {
+    countries.KR = {
+      ...southKoreaThorkitSeasonOverrides[item.id],
+      sourceIds: ["south-korea-thorkit-seasonal-foods-guide"],
       confidence: "source",
     };
   }

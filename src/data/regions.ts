@@ -353,6 +353,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["israel-mustip-seasonal-produce-guide"],
   },
+  KR: {
+    labels: {
+      fr: "Coree du Sud: guide mensuel ThorKit des aliments de saison coreens; source pratique locale, pas calendrier gouvernemental ni precision par province, variete ou ferme.",
+      en: "South Korea: ThorKit monthly guide to Korean seasonal foods; practical local source, not a government calendar or province, variety or farm-level precision.",
+      es: "Corea del Sur: guia mensual ThorKit de alimentos coreanos de temporada; fuente local practica, no calendario gubernamental ni precision por provincia, variedad o finca.",
+      de: "Suedkorea: monatlicher ThorKit-Leitfaden fuer koreanische Saisonlebensmittel; praktische lokale Quelle, kein Regierungskalender und keine Genauigkeit nach Provinz, Sorte oder Betrieb.",
+      it: "Corea del Sud: guida mensile ThorKit agli alimenti coreani di stagione; fonte locale pratica, non calendario governativo ne precisione per provincia, varieta o azienda.",
+      pt: "Coreia do Sul: guia mensal ThorKit de alimentos sazonais coreanos; fonte local pratica, nao calendario governamental nem precisao por provincia, variedade ou quinta.",
+    },
+    sourceIds: ["south-korea-thorkit-seasonal-foods-guide"],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

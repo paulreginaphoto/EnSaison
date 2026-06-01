@@ -364,6 +364,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["israel-mustip-seasonal-produce-guide"],
   },
+  IR: {
+    labels: {
+      fr: "Iran: calendriers fruits Hina Greenery et GilaFruit pour recolte/disponibilite export; signal national pratique, pas precision province, stockage, serre, variete ou marche local.",
+      en: "Iran: Hina Greenery and GilaFruit fruit calendars for harvest/export availability; practical national signal, not province, storage, greenhouse, variety or local-market precision.",
+      es: "Iran: calendarios fruticolas Hina Greenery y GilaFruit de cosecha/disponibilidad exportadora; senal nacional practica, no precision por provincia, almacenamiento, invernadero, variedad ni mercado local.",
+      de: "Iran: Hina-Greenery- und GilaFruit-Obstkalender fuer Ernte-/Exportverfuegbarkeit; praktischer nationaler Hinweis, keine Genauigkeit nach Provinz, Lagerung, Gewaechshaus, Sorte oder lokalem Markt.",
+      it: "Iran: calendari frutta Hina Greenery e GilaFruit per raccolta/disponibilita export; segnale nazionale pratico, non precisione per provincia, conservazione, serra, varieta o mercato locale.",
+      pt: "Irao: calendarios de fruta Hina Greenery e GilaFruit para colheita/disponibilidade de exportacao; sinal nacional pratico, sem precisao por provincia, armazenamento, estufa, variedade nem mercado local.",
+    },
+    sourceIds: ["iran-hina-fruit-export-calendar", "iran-gilafruit-product-calendar"],
+  },
   CY: {
     labels: {
       fr: "Chypre: calendriers mensuels Miresda et guides Cyprus FAQ / Visit Cyprus pour produits locaux; signal national pratique, pas precision district, altitude, serre, variete, ferme ni import.",

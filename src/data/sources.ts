@@ -427,6 +427,14 @@ export const dataSources = {
     label: "Mustip seasonal fruits and vegetables in Israel by month",
     url: "https://mustip.co.il/seasonal-fruits-and-vegetables-in-israel-by-month/",
   },
+  "iran-hina-fruit-export-calendar": {
+    label: "Hina Greenery Iranian fruit export harvest calendar",
+    url: "https://hinagreenery.com/iranian-fruit-export-calendar-monthly-guide/",
+  },
+  "iran-gilafruit-product-calendar": {
+    label: "GilaFruit Iranian fruit and vegetable product calendar",
+    url: "https://gilafruit.com/product-calendar/",
+  },
   "south-korea-thorkit-seasonal-foods-guide": {
     label: "ThorKit monthly seasonal foods guide for Korea",
     url: "https://thorkit.kr/guides/seasonal-foods/",

@@ -1558,6 +1558,31 @@ const israelMustipSeasonOverrides: Record<string, NonNullable<NonNullable<Season
   "patate-douce": { months: [9, 10, 11, 12], nearMonths: [1, 8], seasonLabel: "sept. – déc." },
 };
 
+const iranFruitSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  amande: { months: [3, 4], nearMonths: [2, 5], seasonLabel: "mars – avr." },
+  abricot: { months: [6, 7], nearMonths: [5, 8], seasonLabel: "juin – juil." },
+  cerise: { months: [4, 5, 6, 7, 8], nearMonths: [3, 9], seasonLabel: "avr. – août" },
+  citron: { months: [10, 11, 12, 1, 2, 3], nearMonths: [4, 9], seasonLabel: "oct. – mars" },
+  "citron-vert": { months: [10, 11, 12, 1, 2], nearMonths: [3, 9], seasonLabel: "oct. – févr." },
+  datte: { months: [10, 11, 12, 1, 2, 3, 4], nearMonths: [5, 9], seasonLabel: "oct. – avr." },
+  figue: { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août" },
+  fraise: { months: [11, 12, 1, 2, 3, 4, 5, 6], nearMonths: [7, 10], seasonLabel: "nov. – juin" },
+  grenade: { months: [9, 10, 11], nearMonths: [8, 12], seasonLabel: "sept. – nov." },
+  kiwi: { months: [10, 11, 12, 1, 2, 3], nearMonths: [4, 9], seasonLabel: "oct. – mars" },
+  mandarine: { months: [9, 10, 11, 12, 1, 2, 3], nearMonths: [4, 8], seasonLabel: "sept. – mars" },
+  melon: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  murier: { months: [5], nearMonths: [4, 6], seasonLabel: "mai" },
+  nectarine: { months: [6, 7, 8, 9], nearMonths: [5, 10], seasonLabel: "juin – sept." },
+  orange: { months: [10, 11, 12, 1, 2, 3], nearMonths: [4, 9], seasonLabel: "oct. – mars" },
+  pastèque: { months: [3, 4, 5, 6, 7, 8, 9], nearMonths: [2, 10], seasonLabel: "mars – sept." },
+  peche: { months: [6, 7, 8, 9, 10], nearMonths: [5, 11], seasonLabel: "juin – oct." },
+  pistache: { months: [9], nearMonths: [8, 10], seasonLabel: "sept." },
+  poire: { months: [7, 8, 9, 10, 11, 12, 1], nearMonths: [2, 6], seasonLabel: "juil. – janv." },
+  pomme: { months: [7, 8, 9, 10, 11, 12, 1, 2, 3], nearMonths: [4, 6], seasonLabel: "juil. – mars" },
+  prune: { months: [7, 8, 9, 10], nearMonths: [6, 11], seasonLabel: "juil. – oct." },
+  raisin: { months: [7, 8, 9, 10, 11, 12, 1], nearMonths: [2, 6], seasonLabel: "juil. – janv." },
+};
+
 const southKoreaThorkitSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   fraise: { months: [5], nearMonths: [4, 6], seasonLabel: "mai" },
   abricot: { months: [5], nearMonths: [4, 6], seasonLabel: "mai" },
@@ -4510,6 +4535,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.IL = {
       ...israelMustipSeasonOverrides[item.id],
       sourceIds: ["israel-mustip-seasonal-produce-guide"],
+      confidence: "source",
+    };
+  }
+
+  if (iranFruitSeasonOverrides[item.id]) {
+    countries.IR = {
+      ...iranFruitSeasonOverrides[item.id],
+      sourceIds: ["iran-hina-fruit-export-calendar", "iran-gilafruit-product-calendar"],
       confidence: "source",
     };
   }

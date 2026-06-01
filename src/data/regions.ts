@@ -728,6 +728,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["senegal-sengarden-cesag-market-calendar"],
   },
+  DZ: {
+    labels: {
+      fr: "Algerie: calendrier pratique VitamineDZ mois par mois pour fruits et legumes a consommer; guide national prudent, pas precision par wilaya, serre, variete, recolte locale stricte ni import.",
+      en: "Algeria: VitamineDZ practical month-by-month calendar for fruit and vegetables to consume; cautious national guide, not wilaya, greenhouse, variety, strict local-harvest or import precision.",
+      es: "Argelia: calendario practico VitamineDZ mes a mes de frutas y verduras para consumir; guia nacional prudente, no precision por wilaya, invernadero, variedad, cosecha local estricta ni importacion.",
+      de: "Algerien: praktischer monatlicher VitamineDZ-Kalender fuer Obst und Gemuese zum Verzehr; vorsichtige nationale Orientierung, keine Genauigkeit nach Wilaya, Gewaechshaus, Sorte, strenger lokaler Ernte oder Import.",
+      it: "Algeria: calendario pratico VitamineDZ mese per mese per frutta e verdura da consumare; guida nazionale prudente, non precisione per wilaya, serra, varieta, raccolto locale stretto o importazione.",
+      pt: "Argelia: calendario pratico VitamineDZ mes a mes para frutas e legumes a consumir; guia nacional prudente, sem precisao por wilaya, estufa, variedade, colheita local estrita nem importacao.",
+    },
+    sourceIds: ["algeria-vitaminedz-seasonal-produce"],
+  },
   SA: {
     labels: {
       fr: "Arabie saoudite: saisons nationales Saudipedia pour recoltes maraicheres hiver/ete, plus saisons fruitieres AlUla de la RCU; guide prudent, pas precision par region, oasis, serre, variete ni import.",

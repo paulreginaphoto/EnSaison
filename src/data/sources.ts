@@ -355,6 +355,10 @@ export const dataSources = {
     label: "UAE Ministry of Climate Change and Environment local agriculture guide",
     url: "https://www.moccae.gov.ae/assets/download/ad359a4/Local%20Agriculture.pdf.aspx?view=true",
   },
+  "algeria-vitaminedz-seasonal-produce": {
+    label: "VitamineDZ Algeria month-by-month fruit and vegetable calendar",
+    url: "https://www.vitaminedz.com/fr/Algerie/le-calendrier-des-fruits-et-legumes-6346846-Articles-0-28862-1.html",
+  },
   "mali-fewsnet-seasonal-calendar": {
     label: "FEWS NET Mali seasonal calendar",
     url: "https://fews.net/west-africa/mali/seasonal-calendar/july-2024",

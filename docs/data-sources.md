@@ -255,6 +255,18 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Maliweb / Mali Tribune mango season in Bamako
   https://www.maliweb.net/economie/agriculture/saison-de-la-mangue-entre-saveurs-et-engouement-populaire-3116361.html
 
+- ODEPA Mejores Alimentos de Temporada, Chile
+  https://www.odepa.gob.cl/precios/mejores-alimentos-de-temporada
+
+- Chile Ministry of Agriculture autumn-winter fruit and vegetable season launch
+  https://minagri.gob.cl/noticia/ministro-de-agricultura-encabeza-lanzamiento-de-la-temporada-otono-invierno-de-frutas-y-verduras-en-lo-valledor/
+
+- Chile Ministry of Agriculture summer fruit and vegetable availability note
+  https://minagri.gob.cl/noticia/ministerio-de-agricultura-destaca-variedad-y-produccion-de-frutas-y-verduras-en-epoca-de-verano/
+
+- Chile Ministry of Agriculture MAT January summer produce price note
+  https://minagri.gob.cl/noticia/choclo-uva-papa-y-tomate-revisa-los-principales-productos-que-bajaron-de-precio-en-la-ultima-semana/
+
 - FEWS NET Togo country book and FAO crop-calendar context
   https://help.fews.net/fde/v3/togo-country-book
 
@@ -303,9 +315,9 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 329 food entries after the Mali FEWS NET / Bioversity / FAO pass;
+- 329 food entries after the Chile ODEPA / Minagri pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 69 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, Vietnam, Nigeria, Ghana, Cote d'Ivoire, Benin, Cameroon, Senegal, Togo, Burkina Faso, Mali, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, Morocco, Kenya, India, Brazil, Croatia and Japan;
+- country overrides for 70 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, Vietnam, Nigeria, Ghana, Cote d'Ivoire, Benin, Cameroon, Senegal, Togo, Burkina Faso, Mali, Chile, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, Morocco, Kenya, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Austria now has source-backed Gesundheit.gv.at national season-calendar overrides for 50 fruit, vegetable and mushroom items already present in the catalogue, while remaining Austrian produce still falls back to indicative European regional data;
 - Belgium now has source-backed Vlaanderen/VLAM month-by-month availability overrides for 45 fruit, vegetable, herb and mushroom items already present in the catalogue, while remaining Belgian produce still falls back to indicative European regional data;
@@ -346,6 +358,7 @@ The app now supports:
 - Togo now has source-backed Flora Fauna Fun fruit-season overrides plus FEWS NET / FAO Crop Calendar context for 32 fruit, grain, legume and tuber items; cashew apple, baobab fruit, tamarind, jujube, kola nut and safou were added to cover foods explicitly listed in the Togo fruit table, while the FEWS/FAO staple-crop windows are intentionally broad and not region-level precision;
 - Burkina Faso now has source-backed FEWS NET, Cambridge/Public Health Nutrition, FAO/Unasylva and Casamance Bio overrides for 18 fruit, vegetable, grain, legume and seed items; baobab leaf, shea/karite fruit and nere/African locust bean were added to cover foods explicitly documented in the Burkina sources, with rural and Zitenga-specific signals presented as cautious national guidance rather than province-level precision;
 - Mali now has source-backed FEWS NET, Bioversity/IER, MDPI/Agronomy, FAO/Access Agriculture and Maliweb overrides for 23 fruit, vegetable, grain, legume and seed items; fonio, voandzou/Bambara groundnut, amaranth leaf and jute mallow were added to cover foods explicitly documented in the Mali crop-diversity sources, with Segou/Sikasso and crisis-year signals presented as cautious national guidance rather than region-level precision;
+- Chile now has source-backed ODEPA / Minagri overrides for 32 fruit and vegetable items already present in the catalogue, mapping summer MAT signals such as cherries, grapes, stone fruit, watermelon, melon, sweet corn, potato and tomato plus autumn-winter signals such as citrus, kiwi, apple, pear, squash, broccoli, cauliflower, chard and carrot; this is national market guidance, not region-level precision across Chile's long north-south growing zones;
 - Luxembourg now has source-backed Ministry of Agriculture 2024 regional seasonal-calendar overrides for 52 fruit, vegetable and nut items, distinguishing fresh regional produce from stored availability; Damson plum / quetsche was added to the catalogue to match the Luxembourg calendar;
 - Bulgaria now has source-backed BB-Team practical broad-season overrides for 41 common fruit, vegetable and legume items, plus sorrel and nettle were added to match the Bulgarian table; this is a local practical guide, not a government calendar or month-level agricultural forecast;
 - Estonia now has source-backed Gardest 2026 vegetable sowing-and-harvest overrides for 27 vegetable and fruit-vegetable items, using the ready-to-harvest months; this is practical gardening guidance, not a government calendar or retail availability forecast;

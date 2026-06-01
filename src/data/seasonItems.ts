@@ -1121,6 +1121,41 @@ const uruguaySeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem[
   raisin: { months: [1, 2, 3, 12], nearMonths: [4, 11], seasonLabel: "dec. – mars" },
 };
 
+const chileSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  cerise: { months: [11, 12, 1], nearMonths: [10, 2], seasonLabel: "nov. – janv." },
+  raisin: { months: [1, 2, 3, 4], nearMonths: [12, 5], seasonLabel: "janv. – avr." },
+  peche: { months: [12, 1, 2, 3], nearMonths: [11, 4], seasonLabel: "déc. – mars" },
+  nectarine: { months: [12, 1, 2, 3], nearMonths: [11, 4], seasonLabel: "déc. – mars" },
+  prune: { months: [12, 1, 2, 3], nearMonths: [11, 4], seasonLabel: "déc. – mars" },
+  abricot: { months: [11, 12, 1], nearMonths: [10, 2], seasonLabel: "nov. – janv." },
+  melon: { months: [12, 1, 2, 3], nearMonths: [11, 4], seasonLabel: "déc. – mars" },
+  pastèque: { months: [12, 1, 2, 3], nearMonths: [11, 4], seasonLabel: "déc. – mars" },
+  fraise: { months: [10, 11, 12, 1, 2, 3], nearMonths: [9, 4], seasonLabel: "oct. – mars" },
+  myrtille: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
+  pomme: { months: [2, 3, 4, 5, 6, 7, 8], nearMonths: [1, 9, 10, 11, 12], seasonLabel: "févr. – août" },
+  poire: { months: [2, 3, 4, 5, 6], nearMonths: [1, 7, 8], seasonLabel: "févr. – juin" },
+  kiwi: { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept." },
+  orange: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], seasonLabel: "mai – oct." },
+  mandarine: { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
+  citron: { months: [5, 6, 7, 8, 9, 10, 1, 2], nearMonths: [3, 4, 11, 12], seasonLabel: "mai – oct., été ponctuel" },
+  avocat: { months: [5, 6, 7, 8, 9, 10, 11], nearMonths: [4, 12], seasonLabel: "mai – nov." },
+  tomate: { months: [11, 12, 1, 2, 3, 4], nearMonths: [5, 10], seasonLabel: "nov. – avr." },
+  "maïs-doux": { months: [12, 1, 2, 3], nearMonths: [11, 4], seasonLabel: "déc. – mars" },
+  "pomme-de-terre": { months: [12, 1, 2, 3, 4, 5], nearMonths: [6, 11], seasonLabel: "déc. – mai" },
+  laitue: { months: [1, 2, 3, 4, 5, 6, 10, 11, 12], nearMonths: [7, 8, 9], seasonLabel: "printemps – automne" },
+  courge: { months: [4, 5, 6, 7, 8, 9, 10], nearMonths: [3, 11], seasonLabel: "avr. – oct." },
+  brocoli: { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept." },
+  "chou-fleur": { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept." },
+  blette: { months: [4, 5, 6, 7, 8, 9, 10], nearMonths: [3, 11], seasonLabel: "avr. – oct." },
+  carotte: { months: [4, 5, 6, 7, 8, 9, 10], nearMonths: [3, 11], seasonLabel: "avr. – oct." },
+  épinard: { months: [4, 5, 6, 7, 8, 9, 10], nearMonths: [3, 11], seasonLabel: "avr. – oct." },
+  artichaut: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], seasonLabel: "mai – oct." },
+  concombre: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
+  courgette: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
+  poivron: { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
+  "haricot-vert": { months: [11, 12, 1, 2, 3], nearMonths: [10, 4], seasonLabel: "nov. – mars" },
+};
+
 const argentinaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   blette: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [], seasonLabel: "toute l'annee", seasonMode: "year-round" },
   "céleri-branche": { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [], seasonLabel: "mars – nov." },
@@ -3725,6 +3760,19 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.UY = {
       ...uruguaySeasonOverrides[item.id],
       sourceIds: ["uruguay-montevideo-mgap-season-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (chileSeasonOverrides[item.id]) {
+    countries.CL = {
+      ...chileSeasonOverrides[item.id],
+      sourceIds: [
+        "chile-odepa-seasonal-foods",
+        "chile-minagri-winter-season-2026",
+        "chile-minagri-summer-season-2025",
+        "chile-minagri-mat-january-2025",
+      ],
       confidence: "source",
     };
   }

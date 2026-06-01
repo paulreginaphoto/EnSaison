@@ -323,6 +323,22 @@ export const dataSources = {
     label: "Maliweb / Mali Tribune mango season in Bamako",
     url: "https://www.maliweb.net/economie/agriculture/saison-de-la-mangue-entre-saveurs-et-engouement-populaire-3116361.html",
   },
+  "chile-odepa-seasonal-foods": {
+    label: "ODEPA Mejores Alimentos de Temporada, Chile",
+    url: "https://www.odepa.gob.cl/precios/mejores-alimentos-de-temporada",
+  },
+  "chile-minagri-winter-season-2026": {
+    label: "Chile Ministry of Agriculture autumn-winter fruit and vegetable season launch",
+    url: "https://minagri.gob.cl/noticia/ministro-de-agricultura-encabeza-lanzamiento-de-la-temporada-otono-invierno-de-frutas-y-verduras-en-lo-valledor/",
+  },
+  "chile-minagri-summer-season-2025": {
+    label: "Chile Ministry of Agriculture summer fruit and vegetable availability note",
+    url: "https://minagri.gob.cl/noticia/ministerio-de-agricultura-destaca-variedad-y-produccion-de-frutas-y-verduras-en-epoca-de-verano/",
+  },
+  "chile-minagri-mat-january-2025": {
+    label: "Chile Ministry of Agriculture MAT January summer produce price note",
+    url: "https://minagri.gob.cl/noticia/choclo-uva-papa-y-tomate-revisa-los-principales-productos-que-bajaron-de-precio-en-la-ultima-semana/",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

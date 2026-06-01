@@ -235,6 +235,22 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "mali-maliweb-mango-season",
     ],
   },
+  CL: {
+    labels: {
+      fr: "Chili: indicateur ODEPA Mejores Alimentos de Temporada et notes Minagri ete / automne-hiver; guide national de marche, pas precision par region entre Arica, Santiago, Patagonie et zones d'export.",
+      en: "Chile: ODEPA Mejores Alimentos de Temporada indicator and Minagri summer / autumn-winter notes; national market guide, not region-level precision between Arica, Santiago, Patagonia and export zones.",
+      es: "Chile: indicador ODEPA Mejores Alimentos de Temporada y notas Minagri de verano / otoño-invierno; guia nacional de mercado, no precision regional entre Arica, Santiago, Patagonia y zonas exportadoras.",
+      de: "Chile: ODEPA-Indikator Mejores Alimentos de Temporada und Minagri-Hinweise zu Sommer / Herbst-Winter; nationale Marktorientierung, keine Regionalgenauigkeit zwischen Arica, Santiago, Patagonien und Exportzonen.",
+      it: "Cile: indicatore ODEPA Mejores Alimentos de Temporada e note Minagri estate / autunno-inverno; guida nazionale di mercato, non precisione regionale tra Arica, Santiago, Patagonia e zone export.",
+      pt: "Chile: indicador ODEPA Mejores Alimentos de Temporada e notas Minagri de verao / outono-inverno; guia nacional de mercado, sem precisao regional entre Arica, Santiago, Patagonia e zonas exportadoras.",
+    },
+    sourceIds: [
+      "chile-odepa-seasonal-foods",
+      "chile-minagri-winter-season-2026",
+      "chile-minagri-summer-season-2025",
+      "chile-minagri-mat-january-2025",
+    ],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

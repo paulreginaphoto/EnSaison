@@ -535,6 +535,10 @@ export const dataSources = {
     label: "India Department of Agriculture harvesting season of major fruits",
     url: "https://desagri.gov.in/document-report/5-harvesting-season-of-major-fruits/",
   },
+  "india-desagri-crop-calendar": {
+    label: "India Department of Agriculture crop calendar of major crops",
+    url: "https://desagri.gov.in/document-report/4-crop-calendar-of-major-crops/",
+  },
   "india-nhb-litchi": {
     label: "India National Horticulture Board litchi availability note",
     url: "https://www.nhb.gov.in/model-project-reports/Horticulture%20Crops/Litchi/Litchi1.htm",

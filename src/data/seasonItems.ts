@@ -341,6 +341,78 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
 ];
 
 const countrySeasonOverrides: Record<string, SeasonItem["countries"]> = {
+  riz: {
+    IN: {
+      months: [1, 4, 5, 9, 10, 11, 12],
+      nearMonths: [2, 3, 6, 8],
+      seasonLabel: "sept. – janv., avr. – mai",
+      sourceIds: ["india-desagri-crop-calendar"],
+      confidence: "source",
+    },
+  },
+  blé: {
+    IN: {
+      months: [2, 3, 4, 5, 6],
+      nearMonths: [1, 7],
+      seasonLabel: "févr. – juin",
+      sourceIds: ["india-desagri-crop-calendar"],
+      confidence: "source",
+    },
+  },
+  "maïs-grain": {
+    IN: {
+      months: [1, 2, 3, 4, 9, 10, 11, 12],
+      nearMonths: [5, 8],
+      seasonLabel: "janv. – avr., sept. – déc.",
+      sourceIds: ["india-desagri-crop-calendar"],
+      confidence: "source",
+    },
+  },
+  "pois-chiche": {
+    IN: {
+      months: [1, 2, 3, 4, 5],
+      nearMonths: [6, 12],
+      seasonLabel: "janv. – mai",
+      sourceIds: ["india-desagri-crop-calendar"],
+      confidence: "source",
+    },
+  },
+  "haricot-mungo": {
+    IN: {
+      months: [1, 2, 3, 4, 5, 9, 10, 11, 12],
+      nearMonths: [6, 8],
+      seasonLabel: "sept. – mai",
+      sourceIds: ["india-desagri-crop-calendar"],
+      confidence: "source",
+    },
+  },
+  soja: {
+    IN: {
+      months: [9, 10],
+      nearMonths: [8, 11],
+      seasonLabel: "sept. – oct.",
+      sourceIds: ["india-desagri-crop-calendar"],
+      confidence: "source",
+    },
+  },
+  "cacahuète": {
+    IN: {
+      months: [1, 2, 4, 5, 9, 10, 11],
+      nearMonths: [3, 6, 8, 12],
+      seasonLabel: "sept. – nov., janv. – févr., avr. – mai",
+      sourceIds: ["india-desagri-crop-calendar"],
+      confidence: "source",
+    },
+  },
+  sésame: {
+    IN: {
+      months: [1, 2, 3, 5, 6, 9, 10, 11, 12],
+      nearMonths: [4, 7, 8],
+      seasonLabel: "sept. – mars, mai – juin",
+      sourceIds: ["india-desagri-crop-calendar"],
+      confidence: "source",
+    },
+  },
   radis: {
     FR: { months: [3, 4, 5, 6], nearMonths: [2, 7], sourceIds: ["france-agriculture"], confidence: "source" },
     CH: { months: [4, 5, 6, 7, 8, 9, 10], nearMonths: [3, 11], sourceIds: ["swiss-blw-season-table"], confidence: "source" },

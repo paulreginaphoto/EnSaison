@@ -737,6 +737,7 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "india-apeda-produce",
       "india-desagri-vegetable-harvest",
       "india-desagri-fruit-harvest",
+      "india-desagri-crop-calendar",
       "india-nhb-litchi",
     ],
   },

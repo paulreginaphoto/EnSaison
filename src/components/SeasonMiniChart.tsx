@@ -36,17 +36,24 @@ export function SeasonMiniChart({
       {monthOptions.map((month) => {
         const monthStatus = getChartMonthStatus(season, month.value);
         const isCurrent = month.value === selectedMonth;
+        const badgeLabel = month.shortLabel
+          .replace(".", "")
+          .slice(0, 1)
+          .toLocaleUpperCase(locale);
 
         return (
           <span
             aria-hidden="true"
             className="season-month"
             data-current-month={isCurrent ? "true" : "false"}
+            data-month-label={badgeLabel}
             data-season-month
             data-season-state={monthStatus}
             key={month.value}
             title={`${month.label}: ${labels[monthStatus]}`}
-          />
+          >
+            {badgeLabel}
+          </span>
         );
       })}
     </span>

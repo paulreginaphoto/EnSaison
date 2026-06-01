@@ -174,6 +174,41 @@ try {
     heroSeasonItemStates.every((item) => visibleInSeasonIds.includes(item.id)),
     "hero should draw images from the visible in-season result set",
   );
+  const strawberryRow = page.locator('[data-season-row][data-item-id="fraise"]').first();
+  await assert.doesNotReject(() => strawberryRow.waitFor());
+  await assert.doesNotReject(() =>
+    strawberryRow.locator("[data-item-status-badge]", { hasText: /^Pleine saison$/ }).waitFor(),
+  );
+  await assert.doesNotReject(() =>
+    strawberryRow.locator("[data-item-origin-badge]", { hasText: /^Local$/ }).waitFor(),
+  );
+  await assert.doesNotReject(() =>
+    strawberryRow
+      .locator("[data-item-origin-note]", { hasText: /Production locale possible/i })
+      .waitFor(),
+  );
+  const strawberryMonthBadges = strawberryRow.locator("[data-season-month]");
+  assert.equal(
+    await strawberryMonthBadges.count(),
+    12,
+    "item season calendar should expose 12 readable month badges",
+  );
+  assert.match(
+    (await strawberryMonthBadges.nth(5).textContent()) ?? "",
+    /^J$/i,
+    "month badges should show compact month initials",
+  );
+  const strawberryCurrentMonthMetrics = await strawberryMonthBadges
+    .nth(5)
+    .evaluate((month) => {
+      const rect = month.getBoundingClientRect();
+      return { height: rect.height, width: rect.width };
+    });
+  assert.ok(
+    strawberryCurrentMonthMetrics.height >= 24 &&
+      strawberryCurrentMonthMetrics.width >= 16,
+    "current month badge should be large enough to read and tap visually",
+  );
 
   await page.getByRole("link", { name: /voir les produits de juin/i }).click();
   await page.waitForURL((url) => url.searchParams.get("view") === "now");
@@ -307,13 +342,30 @@ try {
   );
 
   const searchBox = page.getByRole("searchbox");
+  await searchBox.fill("ananas");
+  await page.waitForURL(/q=ananas/);
+  const pineappleRow = page.locator("[data-season-row]").filter({
+    has: page.locator(".item-name", { hasText: /^Ananas$/ }),
+  });
+  await assert.doesNotReject(() =>
+    pineappleRow.locator("[data-item-status-badge]", { hasText: /^Disponible$/ }).waitFor(),
+  );
+  await assert.doesNotReject(() =>
+    pineappleRow.locator("[data-item-origin-badge]", { hasText: /^Importé$/ }).waitFor(),
+  );
+  await assert.doesNotReject(() =>
+    pineappleRow
+      .locator("[data-item-origin-note]", { hasText: /importation nécessaire/i })
+      .waitFor(),
+  );
+
   await searchBox.fill("orange");
   await page.waitForURL(/q=orange/);
   const orangeRow = page.locator("[data-season-row]").filter({
     has: page.locator(".item-name", { hasText: /^Orange$/ }),
   });
   await assert.doesNotReject(() =>
-    orangeRow.getByText(/import nécessaire/i).waitFor(),
+    orangeRow.locator("[data-item-origin-note]", { hasText: /importation nécessaire/i }).waitFor(),
   );
 
   await searchBox.fill("pomme");
@@ -322,7 +374,7 @@ try {
     has: page.locator(".item-name", { hasText: /^Pomme$/ }),
   });
   await assert.doesNotReject(() =>
-    appleRow.getByText(/^local$/i).waitFor(),
+    appleRow.locator("[data-item-origin-badge]", { hasText: /^local$/i }).waitFor(),
   );
 
   await page.getByRole("button", { name: /effacer la recherche/i }).click();

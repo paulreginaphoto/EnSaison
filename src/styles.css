@@ -569,7 +569,7 @@ button {
   }
 
   .item-row {
-    @apply relative flex min-h-[6.5rem] items-start gap-3 border-b border-[#eee6d8] bg-transparent px-2 py-3 transition hover:bg-white/[0.55] sm:items-center sm:gap-4;
+    @apply relative flex min-h-[8.5rem] items-start gap-3 border-b border-[#eee6d8] bg-transparent px-2 py-4 transition hover:bg-white/[0.55] sm:gap-4 sm:px-3;
   }
 
   .item-row:last-child {
@@ -577,11 +577,19 @@ button {
   }
 
   .item-row-content {
-    @apply min-w-0 flex-1 pr-9;
+    @apply min-w-0 flex-1;
   }
 
   .item-row-main {
     @apply flex min-w-0 items-start justify-between gap-3;
+  }
+
+  .item-identity {
+    @apply min-w-0 flex-1;
+  }
+
+  .item-row-aside {
+    @apply flex shrink-0 items-center gap-1.5;
   }
 
   .item-name {
@@ -599,32 +607,72 @@ button {
     @apply sr-only;
   }
 
-  .item-season {
-    @apply mt-2 flex flex-wrap items-center gap-1.5 text-xs font-semibold leading-5 text-ink/[0.58] sm:text-sm;
+  .item-badge-line {
+    @apply mt-2 flex flex-wrap items-center gap-2;
   }
 
-  .season-period-label {
-    @apply sr-only;
+  .item-status-badge {
+    @apply inline-flex min-h-8 items-center gap-2 rounded-full px-3 text-sm font-bold leading-none sm:min-h-9 sm:text-base;
+  }
+
+  .item-status-dot {
+    @apply h-2.5 w-2.5 shrink-0 rounded-full bg-current;
+  }
+
+  .item-origin-badge {
+    @apply inline-flex min-h-9 max-w-[7.6rem] items-center justify-center rounded-[0.85rem] border px-3 text-center text-sm font-bold leading-tight shadow-row sm:min-h-10 sm:max-w-none sm:px-4 sm:text-base;
+  }
+
+  .item-origin-note {
+    @apply mt-2 flex items-center gap-2 text-sm font-medium leading-5 text-ink/[0.72] sm:text-base;
+  }
+
+  .item-origin-icon-shell {
+    @apply inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f0efea] text-ink/[0.68];
+  }
+
+  .item-origin-note-icon {
+    @apply h-4 w-4;
+  }
+
+  .origin-note-local .item-origin-icon-shell {
+    @apply bg-[#e5f1df] text-[#4f8745];
+  }
+
+  .origin-note-imported .item-origin-icon-shell {
+    @apply bg-[#f1efea] text-ink/[0.72];
+  }
+
+  .origin-note-regional .item-origin-icon-shell {
+    @apply bg-[#edf1f3] text-[#53666f];
+  }
+
+  .item-season {
+    @apply mt-3 grid gap-2 border-t border-[#eee6d8] pt-3 text-xs font-semibold leading-5 text-ink/[0.58] sm:text-sm;
+  }
+
+  .item-season-heading {
+    @apply flex items-center justify-between gap-3 text-sm font-bold text-ink sm:text-base;
   }
 
   .season-period-value {
-    @apply rounded-lg bg-[#f7f2e8] px-2 py-0.5 text-ink/[0.78];
+    @apply text-right font-bold text-[#4f8745];
   }
 
   .season-chart {
-    @apply grid w-[7.5rem] max-w-full shrink-0 grid-cols-12 items-center gap-0.5 rounded-full border border-[#e9dfcf] bg-[#f7f2e8] px-1.5 py-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)] sm:w-[8.25rem];
+    @apply grid w-full max-w-full grid-cols-12 items-center gap-1;
   }
 
   .season-month {
-    @apply h-1.5 min-w-0 rounded-full bg-[#d8d1c5] opacity-80 transition-[height,opacity,background-color,box-shadow] duration-200;
+    @apply flex aspect-square min-h-6 min-w-0 items-center justify-center rounded-lg bg-[#f0efea] text-[0.68rem] font-bold leading-none text-ink/[0.58] opacity-100 transition-[background-color,box-shadow,color] duration-200 sm:min-h-8 sm:text-sm;
   }
 
   .season-month[data-season-state="soon"] {
-    @apply h-2.5 bg-[#e1aa25] opacity-100;
+    @apply bg-[#f5dc9a] text-[#6d4d08];
   }
 
   .season-month[data-season-state="in-season"] {
-    @apply h-4 bg-[#4f8745] opacity-100 shadow-[0_0_0_1px_rgba(79,135,69,0.14)];
+    @apply bg-[#8fbe76] text-[#173327] shadow-[0_0_0_1px_rgba(79,135,69,0.14)];
   }
 
   .season-month[data-current-month="true"] {
@@ -640,19 +688,35 @@ button {
   }
 
   .origin-local {
-    @apply bg-[#e5f1df] text-[#4f8745];
+    @apply bg-[#e5f1df] text-[#326f35];
   }
 
   .origin-imported {
-    @apply bg-[#fff0dc] text-[#926000];
+    @apply bg-[#f1eadf] text-[#604d39];
   }
 
   .origin-regional {
-    @apply bg-[#edf1f3] text-[#53666f];
+    @apply bg-[#edf1f3] text-[#435a63];
   }
 
   .origin-unknown {
     @apply bg-[#f3eee6] text-ink/[0.62];
+  }
+
+  .item-origin-badge.origin-local {
+    @apply border-[#d5ead0] bg-[#edf7e8] text-[#326f35];
+  }
+
+  .item-origin-badge.origin-imported {
+    @apply border-[#eadfce] bg-[#f5efe5] text-[#604d39];
+  }
+
+  .item-origin-badge.origin-regional {
+    @apply border-[#dce7eb] bg-[#eef4f6] text-[#435a63];
+  }
+
+  .item-origin-badge.origin-unknown {
+    @apply border-[#e2d8ca] bg-[#f5eee4] text-ink/[0.68];
   }
 
   .produce-icon {
@@ -660,7 +724,7 @@ button {
   }
 
   .item-photo {
-    @apply h-16 w-16 shrink-0 rounded-full border border-white/80 object-cover shadow-row;
+    @apply h-16 w-16 shrink-0 rounded-full border border-white/80 object-cover shadow-row sm:h-20 sm:w-20;
   }
 
   .season-badge {
@@ -684,7 +748,7 @@ button {
   }
 
   .details-button {
-    @apply absolute right-2 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-transparent text-ink transition hover:bg-[#edf3e8] hover:text-[#526b4f] focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100;
+    @apply inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-transparent text-ink transition hover:bg-[#edf3e8] hover:text-[#526b4f] focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100;
   }
 
   .details-chevron {

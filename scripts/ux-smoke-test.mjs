@@ -244,17 +244,13 @@ try {
     () => document.querySelector('[data-control-name="language"]')?.textContent?.includes("Français"),
   );
 
-  const fruitTab = page.getByRole("button", { name: "Fruits", exact: true });
+  const fruitTab = page.locator('[data-category-tab="fruit"]');
+  await assert.doesNotReject(() => fruitTab.waitFor());
   await fruitTab.click();
   await page.waitForURL(/category=fruit/);
   await page.reload({ waitUntil: "networkidle" });
-  const reloadedFruitTab = page.getByRole("button", { name: "Fruits", exact: true });
   await assert.doesNotReject(() =>
-    reloadedFruitTab.getAttribute("aria-pressed"),
-  );
-  assert.equal(
-    await reloadedFruitTab.getAttribute("aria-pressed"),
-    "true",
+    page.locator('[data-category-tab="fruit"][aria-pressed="true"]').waitFor(),
   );
 
   await page.getByRole("searchbox").fill("pomme");

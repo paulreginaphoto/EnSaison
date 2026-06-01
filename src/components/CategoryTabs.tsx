@@ -26,6 +26,7 @@ export function CategoryTabs({
         return (
           <button
             className={`quick-chip ${isSelected ? "quick-chip-active" : ""}`}
+            data-category-tab={category}
             key={category}
             type="button"
             aria-pressed={isSelected}

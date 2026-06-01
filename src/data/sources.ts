@@ -431,6 +431,18 @@ export const dataSources = {
     label: "Nepalese Journal of Biosciences survey of marketable vegetables and fruits in Dharan",
     url: "https://www.nepjol.info/index.php/NJBS/article/view/7501",
   },
+  "sri-lanka-spirit-fruit-guide": {
+    label: "Sri Lanka Spirit tropical fruit guide and seasonal fruit calendar",
+    url: "https://www.srilanka-spirit.com/guides/coconut-king-coconut-fruit-guide/",
+  },
+  "sri-lanka-experience-travel-fruit-seasons": {
+    label: "Experience Travel Group fruit seasons in Sri Lanka",
+    url: "https://www.experiencetravelgroup.com/blog/fruit-seasons-sri-lanka",
+  },
+  "sri-lanka-purana-vegetable-calendar": {
+    label: "Purana Ayurveda seasonal vegetable calendar for Sri Lanka",
+    url: "https://puranayurveda.com/blog/posts/sri-lankan-vegetable-guide-seasonal-native-treasures/",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

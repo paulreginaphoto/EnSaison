@@ -1587,6 +1587,33 @@ const nepalSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["c
   "haricot-vert": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round", sourceIds: ["nepal-nepjol-dharan-market-survey"] },
 };
 
+const sriLankaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  banane: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round", sourceIds: ["sri-lanka-spirit-fruit-guide", "sri-lanka-experience-travel-fruit-seasons"] },
+  "noix-coco-jeune": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round", sourceIds: ["sri-lanka-spirit-fruit-guide", "sri-lanka-experience-travel-fruit-seasons"] },
+  papaye: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round", sourceIds: ["sri-lanka-spirit-fruit-guide"] },
+  "fruit-passion": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round", sourceIds: ["sri-lanka-spirit-fruit-guide"] },
+  corossol: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année (pic avr. – sept.)", seasonMode: "year-round", sourceIds: ["sri-lanka-spirit-fruit-guide"] },
+  jacquier: { months: [3, 4, 5, 6, 7, 8, 9], nearMonths: [2, 10], seasonLabel: "mars – sept.", sourceIds: ["sri-lanka-spirit-fruit-guide", "sri-lanka-experience-travel-fruit-seasons"] },
+  mangue: { months: [5, 6, 7, 8], nearMonths: [4, 9], seasonLabel: "mai – août", sourceIds: ["sri-lanka-experience-travel-fruit-seasons"] },
+  mangoustan: { months: [5, 6, 7, 8], nearMonths: [4, 9], seasonLabel: "mai – août", sourceIds: ["sri-lanka-spirit-fruit-guide"] },
+  ramboutan: { months: [5, 6, 7, 8, 9, 10], nearMonths: [4, 11], seasonLabel: "mai – oct.", sourceIds: ["sri-lanka-spirit-fruit-guide", "sri-lanka-experience-travel-fruit-seasons"] },
+  durian: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août", sourceIds: ["sri-lanka-spirit-fruit-guide"] },
+  fraise: { months: [1, 2, 3, 4], nearMonths: [5, 12], seasonLabel: "janv. – avr.", sourceIds: ["sri-lanka-spirit-fruit-guide"] },
+  aubergine: { months: [4, 5, 6, 7, 8], nearMonths: [3, 9], seasonLabel: "avr. – août", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+  gombo: { months: [4, 5, 6, 7, 8, 9], nearMonths: [3, 10], seasonLabel: "avr. – sept.", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+  concombre: { months: [2, 3, 4], nearMonths: [1, 5], seasonLabel: "févr. – avr.", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+  tomate: { months: [3], nearMonths: [2, 4], seasonLabel: "mars", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+  courge: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+  manioc: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+  "épinard": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+  "haricot-vert": { months: [1, 10, 11, 12], nearMonths: [2, 9], seasonLabel: "oct. – janv.", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+  carotte: { months: [1, 10, 11, 12], nearMonths: [2, 9], seasonLabel: "oct. – janv.", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+  poireau: { months: [1, 10, 11, 12], nearMonths: [2, 9], seasonLabel: "oct. – janv.", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+  "chou-blanc": { months: [1, 11, 12], nearMonths: [2, 10], seasonLabel: "nov. – janv.", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+  betterave: { months: [1, 11, 12], nearMonths: [2, 10], seasonLabel: "nov. – janv.", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+  "chou-fleur": { months: [12], nearMonths: [1, 11], seasonLabel: "déc.", sourceIds: ["sri-lanka-purana-vegetable-calendar"] },
+};
+
 const argentinaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   blette: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [], seasonLabel: "toute l'annee", seasonMode: "year-round" },
   "céleri-branche": { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [], seasonLabel: "mars – nov." },
@@ -4329,6 +4356,18 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
       sourceIds: nepalSeasonOverrides[item.id]?.sourceIds ?? [
         "nepal-florafaunafun-fruit-guide",
         "nepal-nepjol-dharan-market-survey",
+      ],
+      confidence: "source",
+    };
+  }
+
+  if (sriLankaSeasonOverrides[item.id]) {
+    countries.LK = {
+      ...sriLankaSeasonOverrides[item.id],
+      sourceIds: sriLankaSeasonOverrides[item.id]?.sourceIds ?? [
+        "sri-lanka-spirit-fruit-guide",
+        "sri-lanka-experience-travel-fruit-seasons",
+        "sri-lanka-purana-vegetable-calendar",
       ],
       confidence: "source",
     };

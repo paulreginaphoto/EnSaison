@@ -413,6 +413,21 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["nepal-florafaunafun-fruit-guide", "nepal-nepjol-dharan-market-survey"],
   },
+  LK: {
+    labels: {
+      fr: "Sri Lanka: guides fruitiers locaux et calendrier maraicher pratique; lecture nationale prudente, pas precision district, altitude, variete, ferme, marche ni import.",
+      en: "Sri Lanka: local fruit guides and practical vegetable calendar; cautious national guidance, not district, altitude, variety, farm, market or import precision.",
+      es: "Sri Lanka: guias locales de frutas y calendario practico de hortalizas; orientacion nacional prudente, no precision por distrito, altitud, variedad, finca, mercado ni importacion.",
+      de: "Sri Lanka: lokale Obstfuehrer und praktischer Gemuesekalender; vorsichtige nationale Orientierung, keine Genauigkeit nach Distrikt, Hoehenlage, Sorte, Betrieb, Markt oder Import.",
+      it: "Sri Lanka: guide locali alla frutta e calendario orticolo pratico; guida nazionale prudente, non precisione per distretto, altitudine, varieta, azienda, mercato o import.",
+      pt: "Sri Lanka: guias locais de fruta e calendario pratico de legumes; orientacao nacional prudente, sem precisao por distrito, altitude, variedade, quinta, mercado nem importacao.",
+    },
+    sourceIds: [
+      "sri-lanka-spirit-fruit-guide",
+      "sri-lanka-experience-travel-fruit-seasons",
+      "sri-lanka-purana-vegetable-calendar",
+    ],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

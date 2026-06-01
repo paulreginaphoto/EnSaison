@@ -93,14 +93,42 @@ const categoryArt: Record<
   },
 };
 
-const heroIntros: Record<Locale, string> = {
-  fr: "Des produits de saison, au bon moment, près de chez vous.",
-  en: "Seasonal produce, at the right moment, close to you.",
-  es: "Productos de temporada, en el momento justo, cerca de ti.",
-  de: "Saisonale Produkte, zum richtigen Zeitpunkt, in deiner Nähe.",
-  it: "Prodotti di stagione, al momento giusto, vicino a te.",
-  pt: "Produtos da época, no momento certo, perto de si.",
-};
+function getHeroTitle(locale: Locale, monthLabel: string) {
+  if (locale === "fr") return `Le meilleur de ${monthLabel}`;
+  if (locale === "es") return `Lo mejor de ${monthLabel}`;
+  if (locale === "de") return `Das Beste im ${monthLabel}`;
+  if (locale === "it") return `Il meglio di ${monthLabel}`;
+  if (locale === "pt") return `O melhor de ${monthLabel}`;
+  return `The best of ${monthLabel}`;
+}
+
+function getHeroDescription(locale: Locale, countryName: string) {
+  if (locale === "fr") {
+    return `Découvrez les fruits, légumes et champignons naturellement de saison en ${countryName}.`;
+  }
+  if (locale === "es") {
+    return `Descubre frutas, verduras y setas naturalmente de temporada en ${countryName}.`;
+  }
+  if (locale === "de") {
+    return `Entdecke Obst, Gemüse und Pilze, die in ${countryName} natürlich Saison haben.`;
+  }
+  if (locale === "it") {
+    return `Scopri frutta, verdure e funghi naturalmente di stagione in ${countryName}.`;
+  }
+  if (locale === "pt") {
+    return `Descubra frutas, legumes e cogumelos naturalmente da época em ${countryName}.`;
+  }
+  return `Discover fruit, vegetables and mushrooms naturally in season in ${countryName}.`;
+}
+
+function getHeroCta(locale: Locale, monthLabel: string) {
+  if (locale === "fr") return `Voir les produits de ${monthLabel}`;
+  if (locale === "es") return `Ver los productos de ${monthLabel}`;
+  if (locale === "de") return `Produkte im ${monthLabel} ansehen`;
+  if (locale === "it") return `Vedi i prodotti di ${monthLabel}`;
+  if (locale === "pt") return `Ver produtos de ${monthLabel}`;
+  return `See ${monthLabel} produce`;
+}
 
 function getSeasonResultTitle(locale: Locale, monthLabel: string) {
   if (locale === "fr") return `Saisonnalité en ${monthLabel}`;
@@ -211,6 +239,9 @@ function MainPage() {
   const selectedCountryDataScope = countryDataScopes[selectedCountry];
   const countryName = getCountryName(selectedCountry, locale);
   const monthLabel = getMonthLabel(selectedMonth, locale);
+  const heroTitle = getHeroTitle(locale, monthLabel);
+  const heroDescription = getHeroDescription(locale, countryName);
+  const heroCta = getHeroCta(locale, monthLabel);
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -387,13 +418,13 @@ function MainPage() {
                 </span>
               </div>
               <h2 className="hero-title" id="dashboard-title">
-                {copy.chooseNow}
+                {heroTitle}
               </h2>
-              <p className="hero-description">{heroIntros[locale]}</p>
+              <p className="hero-description">{heroDescription}</p>
               <div className="hero-actions">
                 <a className="hero-cta" href="#season-results" onClick={showSeasonalProducts}>
                   <Sprout aria-hidden="true" className="h-5 w-5" />
-                  {locale === "fr" ? "Voir les produits de saison" : copy.seasonal}
+                  {heroCta}
                   <ArrowRight aria-hidden="true" className="h-5 w-5" />
                 </a>
               </div>

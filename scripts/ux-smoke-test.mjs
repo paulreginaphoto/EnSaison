@@ -78,7 +78,17 @@ try {
   await page.goto(baseUrl, { waitUntil: "networkidle" });
 
   await assert.doesNotReject(() =>
-    page.getByRole("heading", { name: /quoi choisir/i }).waitFor(),
+    page.getByRole("heading", { name: /^Le meilleur de juin$/i }).waitFor(),
+  );
+  await assert.doesNotReject(() =>
+    page
+      .getByText(
+        "Découvrez les fruits, légumes et champignons naturellement de saison en Suisse.",
+      )
+      .waitFor(),
+  );
+  await assert.doesNotReject(() =>
+    page.getByRole("link", { name: /voir les produits de juin/i }).waitFor(),
   );
   assert.equal(await page.getByRole("heading", { name: /^hors saison$/i }).count(), 0);
   assert.equal(await page.getByRole("heading", { name: /^variable$/i }).count(), 0);
@@ -87,7 +97,7 @@ try {
   assert.ok(renderedRows > 0, "season rows should render");
   assert.ok(renderedRows < 140, `default screen renders too many rows: ${renderedRows}`);
 
-  await page.getByRole("link", { name: /voir les produits de saison/i }).click();
+  await page.getByRole("link", { name: /voir les produits de juin/i }).click();
   await page.waitForURL((url) => url.searchParams.get("view") === "now");
   const seasonalStatusChip = page.getByRole("button", {
     name: /^De saison$/i,
@@ -277,6 +287,13 @@ try {
     /France/,
     "country selector should use a custom popover control",
   );
+  await assert.doesNotReject(() =>
+    page
+      .getByText(
+        "Découvrez les fruits, légumes et champignons naturellement de saison en France.",
+      )
+      .waitFor(),
+  );
 
   const monthControl = page.locator('[data-control-name="month"]');
   assert.match(await monthControl.textContent(), /juin/i);
@@ -291,6 +308,12 @@ try {
     /septembre/i,
     "month selector should update the selected month",
   );
+  await assert.doesNotReject(() =>
+    page.getByRole("heading", { name: /^Le meilleur de septembre$/i }).waitFor(),
+  );
+  await assert.doesNotReject(() =>
+    page.getByRole("link", { name: /voir les produits de septembre/i }).waitFor(),
+  );
 
   const languageControl = page.locator('[data-control-name="language"]');
   assert.match(await languageControl.textContent(), /Français/);
@@ -304,6 +327,19 @@ try {
     await languageControl.textContent(),
     /English/,
     "language selector should update the selected language",
+  );
+  await assert.doesNotReject(() =>
+    page.getByRole("heading", { name: /^The best of September$/i }).waitFor(),
+  );
+  await assert.doesNotReject(() =>
+    page
+      .getByText(
+        "Discover fruit, vegetables and mushrooms naturally in season in France.",
+      )
+      .waitFor(),
+  );
+  await assert.doesNotReject(() =>
+    page.getByRole("link", { name: /see september produce/i }).waitFor(),
   );
 
   await languageControl.click();

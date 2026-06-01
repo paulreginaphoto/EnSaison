@@ -6,12 +6,12 @@ import {
   Sprout,
 } from "lucide-react";
 import fruitImage from "./assets/produce/category-fruits.webp";
-import heroMarketImage from "./assets/produce/hero-market.webp";
 import mushroomImage from "./assets/produce/category-mushrooms.webp";
 import vegetableImage from "./assets/produce/category-vegetables.webp";
 import { CategoryFeatureCard } from "./components/CategoryFeatureCard";
 import { CategoryTabs } from "./components/CategoryTabs";
 import { Header } from "./components/Header";
+import { ProduceIcon } from "./components/ProduceIcon";
 import { SearchBar } from "./components/SearchBar";
 import { SeasonLegend } from "./components/SeasonLegend";
 import { SeasonSection } from "./components/SeasonSection";
@@ -25,6 +25,7 @@ import {
 } from "./data/regions";
 import { dataSources } from "./data/sources";
 import { seasonItems } from "./data/seasonItems";
+import { getItemThumbnail } from "./lib/itemThumbnails";
 import { getItemName, getSeasonStatus, normalizeSearch, resolveSeason } from "./lib/season";
 import { t } from "./i18n";
 import type { CategoryGroup, Locale, SeasonCategory, SeasonView } from "./types";
@@ -286,6 +287,34 @@ function MainPage() {
       ),
     [resolvedItems],
   );
+  const heroSeasonItems = useMemo(
+    () =>
+      dashboardItems
+        .filter(
+          ({ season, status }) =>
+            status === "in-season" &&
+            (season.origin === "local" || season.origin === "regional"),
+        )
+        .sort((left, right) => {
+          const leftPriority =
+            featuredItemOrder.get(left.item.id) ?? Number.POSITIVE_INFINITY;
+          const rightPriority =
+            featuredItemOrder.get(right.item.id) ?? Number.POSITIVE_INFINITY;
+
+          if (leftPriority !== rightPriority) return leftPriority - rightPriority;
+
+          return getItemName(left.item, locale).localeCompare(
+            getItemName(right.item, locale),
+            locale,
+          );
+        })
+        .slice(0, 3)
+        .map((entry) => ({
+          ...entry,
+          thumbnail: getItemThumbnail(entry.item.id),
+        })),
+    [dashboardItems, locale],
+  );
 
   const filteredItems = useMemo(() => {
     const searchValue = normalizeSearch(search);
@@ -431,8 +460,35 @@ function MainPage() {
             </div>
 
             <div className="hero-art" aria-hidden="true">
-              <div className="hero-photo-window">
-                <img src={heroMarketImage} alt="" />
+              <div className="hero-season-window">
+                {heroSeasonItems.map(({ item, season, status, thumbnail }, index) => (
+                  <figure
+                    className={`hero-season-tile ${
+                      index === 0 ? "hero-season-tile-feature" : ""
+                    }`}
+                    data-hero-season-item
+                    data-hero-season-rank={index + 1}
+                    data-item-id={item.id}
+                    data-origin={season.origin}
+                    data-status={status}
+                    key={item.id}
+                  >
+                    {thumbnail ? (
+                      <img
+                        alt=""
+                        loading={index === 0 ? "eager" : "lazy"}
+                        src={thumbnail}
+                      />
+                    ) : (
+                      <span className="hero-season-icon-shell">
+                        <ProduceIcon category={item.category} icon={item.icon} />
+                      </span>
+                    )}
+                    <figcaption className="hero-season-label">
+                      {getItemName(item, locale)}
+                    </figcaption>
+                  </figure>
+                ))}
               </div>
             </div>
           </article>

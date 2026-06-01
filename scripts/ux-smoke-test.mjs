@@ -90,12 +90,38 @@ try {
   await assert.doesNotReject(() =>
     page.getByRole("link", { name: /voir les produits de juin/i }).waitFor(),
   );
+  const heroSeasonItems = page.locator("[data-hero-season-item]");
+  await assert.doesNotReject(() => heroSeasonItems.first().waitFor());
+  const heroSeasonItemStates = await heroSeasonItems.evaluateAll((items) =>
+    items.map((item) => ({
+      id: item.getAttribute("data-item-id"),
+      origin: item.getAttribute("data-origin"),
+      status: item.getAttribute("data-status"),
+    })),
+  );
+  assert.ok(heroSeasonItemStates.length >= 3, "hero should show several seasonal product images");
+  assert.deepEqual(
+    [...new Set(heroSeasonItemStates.map((item) => item.status))],
+    ["in-season"],
+    "hero should only show products that are in season for the selected month and country",
+  );
+  assert.ok(
+    heroSeasonItemStates.every((item) => ["local", "regional"].includes(item.origin ?? "")),
+    "hero should not promote imported products as seasonal hero imagery",
+  );
   assert.equal(await page.getByRole("heading", { name: /^hors saison$/i }).count(), 0);
   assert.equal(await page.getByRole("heading", { name: /^variable$/i }).count(), 0);
 
   const renderedRows = await page.locator("[data-season-row]").count();
   assert.ok(renderedRows > 0, "season rows should render");
   assert.ok(renderedRows < 140, `default screen renders too many rows: ${renderedRows}`);
+  const visibleInSeasonIds = await page
+    .locator('[data-season-row][data-status="in-season"]')
+    .evaluateAll((rows) => rows.map((row) => row.getAttribute("data-item-id")));
+  assert.ok(
+    heroSeasonItemStates.every((item) => visibleInSeasonIds.includes(item.id)),
+    "hero should draw images from the visible in-season result set",
+  );
 
   await page.getByRole("link", { name: /voir les produits de juin/i }).click();
   await page.waitForURL((url) => url.searchParams.get("view") === "now");
@@ -313,6 +339,28 @@ try {
   );
   await assert.doesNotReject(() =>
     page.getByRole("link", { name: /voir les produits de septembre/i }).waitFor(),
+  );
+  const septemberHeroSeasonItemStates = await heroSeasonItems.evaluateAll((items) =>
+    items.map((item) => ({
+      id: item.getAttribute("data-item-id"),
+      origin: item.getAttribute("data-origin"),
+      status: item.getAttribute("data-status"),
+    })),
+  );
+  assert.ok(
+    septemberHeroSeasonItemStates.length >= 3,
+    "hero should keep several seasonal images when country and month change",
+  );
+  assert.deepEqual(
+    [...new Set(septemberHeroSeasonItemStates.map((item) => item.status))],
+    ["in-season"],
+    "changed country/month hero should only show in-season products",
+  );
+  assert.ok(
+    septemberHeroSeasonItemStates.every((item) =>
+      ["local", "regional"].includes(item.origin ?? ""),
+    ),
+    "changed country/month hero should not promote imported products",
   );
 
   const languageControl = page.locator('[data-control-name="language"]');

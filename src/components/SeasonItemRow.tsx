@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { getItemName } from "../lib/season";
+import { getItemThumbnail } from "../lib/itemThumbnails";
 import type { SeasonItem, SeasonStatus } from "../types";
 import type { ResolvedSeason } from "../lib/season";
 import type { Locale, SeasonCategory, SupplyOrigin } from "../types";
@@ -35,22 +36,6 @@ const statusClasses: Record<SeasonStatus, string> = {
   variable: "badge-variable",
 };
 
-const itemThumbnailModules = import.meta.glob<string>(
-  "../assets/produce/items/*.webp",
-  {
-    eager: true,
-    import: "default",
-    query: "?url",
-  },
-);
-
-const itemThumbnails: Record<string, string> = Object.fromEntries(
-  Object.entries(itemThumbnailModules).map(([path, src]) => [
-    decodeURIComponent(path.split("/").pop()?.replace(/\.webp$/, "") ?? ""),
-    src,
-  ]),
-);
-
 export function SeasonItemRow({
   item,
   status,
@@ -62,15 +47,23 @@ export function SeasonItemRow({
   const [isOpen, setIsOpen] = useState(false);
   const sourceCount = season.sourceIds.length;
   const detailsLabel = isOpen ? labels.hideDetails : labels.details;
+  const thumbnail = getItemThumbnail(item.id);
 
   return (
-    <li className="item-row" data-category={item.category} data-season-row data-status={status}>
-      {itemThumbnails[item.id] ? (
+    <li
+      className="item-row"
+      data-category={item.category}
+      data-item-id={item.id}
+      data-origin={season.origin}
+      data-season-row
+      data-status={status}
+    >
+      {thumbnail ? (
         <img
           alt=""
           className="item-photo"
           loading="lazy"
-          src={itemThumbnails[item.id]}
+          src={thumbnail}
         />
       ) : (
         <ProduceIcon category={item.category} icon={item.icon} />

@@ -324,25 +324,49 @@ button {
     @apply relative z-0 min-h-[17rem] overflow-hidden sm:min-h-[22rem] lg:mt-0 lg:min-h-[25rem];
   }
 
-  .hero-photo-window {
-    @apply relative h-full min-h-[17rem] overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.78)] sm:min-h-[22rem] lg:min-h-[25rem];
+  .hero-season-window {
+    @apply relative grid h-full min-h-[17rem] grid-cols-2 gap-3 overflow-hidden bg-[#edf4e8] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.78)] sm:min-h-[22rem] lg:min-h-[25rem];
     border-radius: 1.35rem;
   }
 
   @media (min-width: 1024px) {
-    .hero-photo-window {
+    .hero-season-window {
       border-radius: 6.2rem 1.35rem 1.35rem 6.2rem;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      grid-template-rows: repeat(2, minmax(0, 1fr));
     }
   }
 
-  .hero-photo-window > img {
-    @apply absolute inset-0 h-full w-full object-cover;
-    object-position: 57% 56%;
+  .hero-season-tile {
+    @apply relative min-h-0 overflow-hidden rounded-[1.05rem] bg-white shadow-row;
   }
 
-  .hero-photo-window::after {
+  .hero-season-tile-feature {
+    @apply col-span-2 min-h-[10rem] lg:col-span-1 lg:row-span-2 lg:min-h-0;
+  }
+
+  .hero-season-tile > img {
+    @apply h-full w-full object-cover;
+    object-position: 50% 58%;
+  }
+
+  .hero-season-icon-shell {
+    @apply flex h-full w-full items-center justify-center bg-[#f7f2e8];
+  }
+
+  .hero-season-icon-shell .produce-icon {
+    @apply h-24 w-24;
+  }
+
+  .hero-season-label {
+    @apply absolute bottom-3 left-3 z-10 rounded-full bg-white/[0.86] px-3 py-1 text-sm font-bold text-[#12442d] shadow-row backdrop-blur-md;
+  }
+
+  .hero-season-window::after {
     @apply absolute inset-0 pointer-events-none content-[''];
-    background: linear-gradient(90deg, rgba(255, 248, 235, 0.18), rgba(255, 248, 235, 0));
+    background:
+      linear-gradient(90deg, rgba(255, 248, 235, 0.18), rgba(255, 248, 235, 0)),
+      linear-gradient(180deg, rgba(23, 51, 39, 0), rgba(23, 51, 39, 0.04));
   }
 
   .side-bento {

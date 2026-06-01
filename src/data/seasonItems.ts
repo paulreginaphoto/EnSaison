@@ -1461,6 +1461,23 @@ const southKoreaThorkitSeasonOverrides: Record<string, NonNullable<NonNullable<S
   coing: { months: [11], nearMonths: [10, 12], seasonLabel: "nov." },
 };
 
+const malaysiaSaysFruitSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  durian: { months: [6, 7, 8, 11, 12, 1], nearMonths: [2, 5, 9, 10], seasonLabel: "juin – août, nov. – janv." },
+  mangoustan: { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  ramboutan: { months: [6, 7, 8, 12], nearMonths: [1, 5, 9, 11], seasonLabel: "juin – août, déc." },
+  langsat: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  papaye: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  ananas: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année (pic mars – juil.)", seasonMode: "year-round" },
+  banane: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  pastèque: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année (pic mars – mai)", seasonMode: "year-round" },
+  carambola: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année (pic sept. – févr.)", seasonMode: "year-round" },
+  jacquier: { months: [5, 6, 7, 12], nearMonths: [1, 4, 8, 11], seasonLabel: "mai – juil., déc." },
+  goyave: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  pitaya: { months: [5, 6, 7, 8, 9, 10, 11], nearMonths: [4, 12], seasonLabel: "mai – nov." },
+  pamplemousse: { months: [8, 9, 10, 11, 12, 1], nearMonths: [2, 7], seasonLabel: "août – janv." },
+  sapotille: { months: [3, 4, 5, 8, 9, 10], nearMonths: [2, 6, 7, 11], seasonLabel: "mars – mai, août – oct." },
+};
+
 const argentinaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   blette: { months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2], nearMonths: [], seasonLabel: "toute l'annee", seasonMode: "year-round" },
   "céleri-branche": { months: [3, 4, 5, 6, 7, 8, 9, 10, 11], nearMonths: [], seasonLabel: "mars – nov." },
@@ -4164,6 +4181,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.KR = {
       ...southKoreaThorkitSeasonOverrides[item.id],
       sourceIds: ["south-korea-thorkit-seasonal-foods-guide"],
+      confidence: "source",
+    };
+  }
+
+  if (malaysiaSaysFruitSeasonOverrides[item.id]) {
+    countries.MY = {
+      ...malaysiaSaysFruitSeasonOverrides[item.id],
+      sourceIds: ["malaysia-says-fruit-season-guide"],
       confidence: "source",
     };
   }

@@ -312,6 +312,9 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - ThorKit monthly seasonal foods guide for Korea
   https://thorkit.kr/guides/seasonal-foods/
 
+- SAYS Malaysian fruit season guide
+  https://says.com/my/lifestyle/malaysian-fruit-season-guide
+
 - FEWS NET Togo country book and FAO crop-calendar context
   https://help.fews.net/fde/v3/togo-country-book
 
@@ -360,9 +363,9 @@ The app now supports:
 - all ISO-3166 country codes in the selector;
 - 6 UI languages: French, English, Spanish, German, Italian and Portuguese;
 - 25 food categories: alliums, beverages, condiments, dairy, eggs, fats/oils, fish, fruits, insects, herbs, legumes, meat, grains, mushrooms, nuts, poultry, prepared foods, seafood, seaweed, seeds, snacks, spices, sweeteners, tubers and vegetables;
-- 331 food entries after the South Korea ThorKit pass;
+- 331 food entries after the Malaysia SAYS fruit pass;
 - confidence labels per item: sourced, modeled, indicative or taxonomy-only.
-- country overrides for 79 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, Vietnam, Nigeria, Ghana, Cote d'Ivoire, Benin, Cameroon, Senegal, Togo, Burkina Faso, Mali, Chile, Costa Rica, Paraguay, Dominican Republic, Panama, Guatemala, El Salvador, Ecuador, Israel, South Korea, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, Morocco, Kenya, India, Brazil, Croatia and Japan;
+- country overrides for 80 countries, including France, Switzerland, United Kingdom, Italy, Germany, Netherlands, Spain, Mexico, United States, Canada, Australia, New Zealand, Pakistan, Bangladesh, Indonesia, Philippines, Thailand, Vietnam, Nigeria, Ghana, Cote d'Ivoire, Benin, Cameroon, Senegal, Togo, Burkina Faso, Mali, Chile, Costa Rica, Paraguay, Dominican Republic, Panama, Guatemala, El Salvador, Ecuador, Israel, South Korea, Malaysia, South Africa, Turkey, Uruguay, Argentina, Peru, Colombia, Tunisia, Egypt, Morocco, Kenya, India, Brazil, Croatia and Japan;
 - 34 European countries now have 58 regional produce overrides backed by EUFIC and European Commission references, marked as indicative rather than fully local;
 - Austria now has source-backed Gesundheit.gv.at national season-calendar overrides for 50 fruit, vegetable and mushroom items already present in the catalogue, while remaining Austrian produce still falls back to indicative European regional data;
 - Belgium now has source-backed Vlaanderen/VLAM month-by-month availability overrides for 45 fruit, vegetable, herb and mushroom items already present in the catalogue, while remaining Belgian produce still falls back to indicative European regional data;
@@ -413,6 +416,7 @@ The app now supports:
 - Ecuador now has source-backed Ministry of Public Health annual availability overrides for 21 fruit and vegetable items already present in the catalogue, mapping the table's green "disponible de temporada" cells as in-season and yellow "disponible ocasionalmente" cells as near-season for apple, pear, peach, grape, strawberry, plum/claudia, orange, mandarin, capuli/cherry, mango, banana, pineapple, papaya, melon, watermelon, blackberry, carrot, lettuce, tomato, cabbage and broccoli; this is national market/availability guidance, not province, altitude, variety or farm-level precision;
 - Israel now has source-backed Mustip practical month-by-month overrides for 49 fruit, vegetable, herb and tuber items already present in the catalogue, mapping listed monthly produce as in-season and immediate adjacent windows as near-season for citrus, avocado, pomegranate, strawberry, guava, loquat, lychee, stone fruit, melon, grape, fig, apple, pear, mango, starfruit, brassicas, roots, lettuce, chard, asparagus, artichoke, beans, corn, peas, basil, cucumber, tomato, squash and sweet potato; this is a local practical guide, not a government calendar or district, variety or farm-level precision;
 - South Korea now has source-backed ThorKit practical month-by-month overrides for 24 fruit, vegetable, spice and tuber items already present in the catalogue, mapping listed Korean seasonal foods as in-season and immediate adjacent windows as near-season for strawberry, apricot, onion, plum, blueberry, tomato, watermelon, cucumber, summer squash, eggplant, sweet corn, melon, peach, grape, fig, apple, pear, ginger, yam, persimmon, white radish, Chinese cabbage, spinach and quince; this is a local practical guide, not a government calendar or province, variety or farm-level precision;
+- Malaysia now has source-backed SAYS practical fruit-season overrides for 14 tropical fruit items already present in the catalogue, mapping listed Malaysian fruit windows for durian, mangosteen, rambutan, langsat, papaya, pineapple, banana, watermelon, starfruit, jackfruit, guava, dragon fruit, pomelo/grapefruit and sapodilla; this is an editorial local guide focused on fruit, not a government calendar or state, variety or farm-level precision;
 - Luxembourg now has source-backed Ministry of Agriculture 2024 regional seasonal-calendar overrides for 52 fruit, vegetable and nut items, distinguishing fresh regional produce from stored availability; Damson plum / quetsche was added to the catalogue to match the Luxembourg calendar;
 - Bulgaria now has source-backed BB-Team practical broad-season overrides for 41 common fruit, vegetable and legume items, plus sorrel and nettle were added to match the Bulgarian table; this is a local practical guide, not a government calendar or month-level agricultural forecast;
 - Estonia now has source-backed Gardest 2026 vegetable sowing-and-harvest overrides for 27 vegetable and fruit-vegetable items, using the ready-to-harvest months; this is practical gardening guidance, not a government calendar or retail availability forecast;

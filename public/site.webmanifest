@@ -1,0 +1,30 @@
+{
+  "name": "DeSaison",
+  "short_name": "DeSaison",
+  "description": "DeSaison aide a voir rapidement les aliments de saison selon le pays ou le profil climatique choisi.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#fff9ed",
+  "theme_color": "#fff9ed",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "maskable-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

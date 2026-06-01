@@ -1,25 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="DeSaison">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 192" role="img" aria-label="DeSaison">
   <defs>
-    <linearGradient id="orange" x1="54" x2="196" y1="73" y2="153" gradientUnits="userSpaceOnUse">
+    <linearGradient id="orange" x1="34" x2="142" y1="58" y2="119" gradientUnits="userSpaceOnUse">
       <stop stop-color="#ffb536"/>
       <stop offset="1" stop-color="#fb9714"/>
     </linearGradient>
-    <linearGradient id="leafLight" x1="33" x2="119" y1="129" y2="229" gradientUnits="userSpaceOnUse">
+    <linearGradient id="leafLight" x1="18" x2="97" y1="107" y2="183" gradientUnits="userSpaceOnUse">
       <stop stop-color="#75ad3a"/>
       <stop offset="1" stop-color="#315f1c"/>
     </linearGradient>
-    <linearGradient id="leafDark" x1="122" x2="231" y1="123" y2="231" gradientUnits="userSpaceOnUse">
+    <linearGradient id="leafDark" x1="92" x2="178" y1="103" y2="183" gradientUnits="userSpaceOnUse">
       <stop stop-color="#5a982e"/>
       <stop offset="1" stop-color="#1d5b19"/>
     </linearGradient>
-    <linearGradient id="leafTop" x1="56" x2="202" y1="20" y2="89" gradientUnits="userSpaceOnUse">
+    <linearGradient id="leafTop" x1="38" x2="156" y1="18" y2="73" gradientUnits="userSpaceOnUse">
       <stop stop-color="#2d741f"/>
       <stop offset="1" stop-color="#1d5a19"/>
     </linearGradient>
+    <linearGradient id="word" x1="216" x2="740" y1="46" y2="143" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#235f1e"/>
+      <stop offset=".48" stop-color="#6ca733"/>
+      <stop offset="1" stop-color="#4b8d2a"/>
+    </linearGradient>
   </defs>
-  <rect width="256" height="256" rx="58" fill="#fff9ed"/>
-  <rect x="8" y="8" width="240" height="240" rx="52" fill="none" stroke="#e9ddc9" stroke-width="4"/>
-  <g transform="translate(26 18) scale(.8)">
+  <g transform="translate(7 7) scale(.7)">
     <path d="M107 64C82 65 59 51 57 25c31-5 57 12 67 40-5 1-11 0-17-1Z" fill="url(#leafTop)"/>
     <path d="M137 66c7-31 35-48 82-40 1 40-29 69-81 72-2-12-2-22-1-32Z" fill="url(#leafTop)"/>
     <path d="M130 72c11-28 37-42 77-43-33 16-54 34-65 58" fill="none" stroke="#fff9ed" stroke-linecap="round" stroke-width="9"/>
@@ -31,4 +34,5 @@
     <ellipse cx="151" cy="123" rx="9" ry="15" fill="#286f22"/>
     <path d="M102 148c15 17 37 17 52 0" fill="none" stroke="#286f22" stroke-linecap="round" stroke-width="9"/>
   </g>
+  <text x="211" y="125" fill="url(#word)" font-family="'Arial Rounded MT Bold', 'Nunito Sans', 'Avenir Next', 'Trebuchet MS', system-ui, sans-serif" font-size="96" font-weight="900" letter-spacing="0">DeSaison</text>
 </svg>

@@ -399,6 +399,10 @@ export const dataSources = {
     label: "ThorKit monthly seasonal foods guide for Korea",
     url: "https://thorkit.kr/guides/seasonal-foods/",
   },
+  "malaysia-says-fruit-season-guide": {
+    label: "SAYS Malaysian fruit season guide",
+    url: "https://says.com/my/lifestyle/malaysian-fruit-season-guide",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

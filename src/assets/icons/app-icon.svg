@@ -1,8 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="DeSaison">
-  <rect width="96" height="96" rx="26" fill="#fbf7ee"/>
-  <circle cx="48" cy="50" r="29" fill="#dce9d7"/>
-  <path d="M31 53c0-16 12-25 25-22 11 3 18 13 15 25-4 15-18 24-31 18-6-3-9-10-9-21Z" fill="#c46f5f"/>
-  <path d="M43 32c2-10 9-16 20-15 0 12-7 18-20 18Z" fill="#7f9b77"/>
-  <circle cx="58" cy="52" r="8" fill="#f0b66f" opacity=".72"/>
-  <path d="M35 72c13 9 33 4 41-12" fill="none" stroke="#526b4f" stroke-width="4" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="DeSaison">
+  <defs>
+    <linearGradient id="orange" x1="54" x2="196" y1="73" y2="153" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffb536"/>
+      <stop offset="1" stop-color="#fb9714"/>
+    </linearGradient>
+    <linearGradient id="leafLight" x1="33" x2="119" y1="129" y2="229" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#75ad3a"/>
+      <stop offset="1" stop-color="#315f1c"/>
+    </linearGradient>
+    <linearGradient id="leafDark" x1="122" x2="231" y1="123" y2="231" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5a982e"/>
+      <stop offset="1" stop-color="#1d5b19"/>
+    </linearGradient>
+    <linearGradient id="leafTop" x1="56" x2="202" y1="20" y2="89" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2d741f"/>
+      <stop offset="1" stop-color="#1d5a19"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="58" fill="#fff9ed"/>
+  <rect x="8" y="8" width="240" height="240" rx="52" fill="none" stroke="#e9ddc9" stroke-width="4"/>
+  <g transform="translate(26 18) scale(.8)">
+    <path d="M107 64C82 65 59 51 57 25c31-5 57 12 67 40-5 1-11 0-17-1Z" fill="url(#leafTop)"/>
+    <path d="M137 66c7-31 35-48 82-40 1 40-29 69-81 72-2-12-2-22-1-32Z" fill="url(#leafTop)"/>
+    <path d="M130 72c11-28 37-42 77-43-33 16-54 34-65 58" fill="none" stroke="#fff9ed" stroke-linecap="round" stroke-width="9"/>
+    <path d="M48 132c0-42 36-75 81-75s80 33 80 75v13c-53 9-108 9-161 0v-13Z" fill="url(#orange)"/>
+    <path d="M50 145c29-1 56 9 78 29-18 27-47 46-87 54-25-19-40-47-41-86 17 2 34 3 50 3Z" fill="url(#leafLight)"/>
+    <path d="M206 145c-29-1-56 9-78 29 18 27 48 46 87 54 25-19 40-47 41-86-17 2-34 3-50 3Z" fill="url(#leafDark)"/>
+    <path d="M4 142c44 5 84 22 124 57 40-35 80-52 124-57" fill="none" stroke="#fff9ed" stroke-linecap="round" stroke-width="15"/>
+    <ellipse cx="91" cy="123" rx="9" ry="15" fill="#286f22"/>
+    <ellipse cx="151" cy="123" rx="9" ry="15" fill="#286f22"/>
+    <path d="M102 148c15 17 37 17 52 0" fill="none" stroke="#286f22" stroke-linecap="round" stroke-width="9"/>
+  </g>
 </svg>

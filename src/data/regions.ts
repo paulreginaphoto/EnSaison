@@ -364,6 +364,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["south-korea-thorkit-seasonal-foods-guide"],
   },
+  MY: {
+    labels: {
+      fr: "Malaisie: guide SAYS des saisons de fruits malaisiens; source editoriale pratique surtout fruitiere, pas calendrier gouvernemental ni precision par Etat, variete ou ferme.",
+      en: "Malaysia: SAYS guide to Malaysian fruit seasons; practical editorial source focused on fruit, not a government calendar or state, variety or farm-level precision.",
+      es: "Malasia: guia SAYS de temporadas de frutas malasias; fuente editorial practica centrada en fruta, no calendario gubernamental ni precision por estado, variedad o finca.",
+      de: "Malaysia: SAYS-Leitfaden zu malaysischen Obstsaisons; praktische redaktionelle Quelle mit Fokus auf Obst, kein Regierungskalender und keine Genauigkeit nach Bundesstaat, Sorte oder Betrieb.",
+      it: "Malesia: guida SAYS alle stagioni della frutta malese; fonte editoriale pratica centrata sulla frutta, non calendario governativo ne precisione per Stato, varieta o azienda.",
+      pt: "Malasia: guia SAYS das epocas de frutas malaias; fonte editorial pratica focada em fruta, nao calendario governamental nem precisao por estado, variedade ou quinta.",
+    },
+    sourceIds: ["malaysia-says-fruit-season-guide"],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

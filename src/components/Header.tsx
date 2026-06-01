@@ -1,4 +1,4 @@
-import appIcon from "../assets/icons/app-icon.svg";
+import appLogo from "../assets/icons/app-logo.svg";
 import type { Locale } from "../types";
 import { LanguageSelector } from "./LanguageSelector";
 import { LocationSelector } from "./LocationSelector";
@@ -32,10 +32,8 @@ export function Header({
   return (
     <header className="site-header">
       <a href={homeHref} className="brand-lockup" aria-label="DeSaison">
-        <img src={appIcon} alt="" className="brand-mark" />
-        <div>
-          <h1 className="brand-title">DeSaison</h1>
-        </div>
+        <img src={appLogo} alt="" className="brand-logo" />
+        <h1 className="sr-only">DeSaison</h1>
       </a>
 
       <div className="header-controls">

@@ -81,11 +81,11 @@ button {
   }
 
   .brand-lockup {
-    @apply inline-flex w-fit items-center gap-3 rounded-full pr-4 transition hover:-translate-y-0.5 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100;
+    @apply inline-flex w-fit max-w-full items-center rounded-full pr-2 transition hover:-translate-y-0.5 focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100;
   }
 
-  .brand-mark {
-    @apply h-12 w-12 drop-shadow-sm sm:h-14 sm:w-14;
+  .brand-logo {
+    @apply h-14 w-auto max-w-[13.75rem] drop-shadow-sm sm:h-16 sm:max-w-[17.5rem];
   }
 
   .brand-title,
@@ -102,15 +102,27 @@ button {
   }
 
   .header-controls {
-    @apply grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto sm:items-center sm:justify-end;
+    @apply relative z-40 grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto sm:items-center sm:justify-end;
+  }
+
+  .control-root {
+    @apply relative min-w-0 sm:min-w-[10.5rem];
+  }
+
+  .control-root-location {
+    @apply col-span-2 sm:min-w-[13.5rem];
+  }
+
+  .control-root-location .control-popover {
+    @apply sm:min-w-[22rem];
   }
 
   .control-shell {
-    @apply relative flex min-h-14 min-w-0 items-center gap-2 rounded-[1.15rem] border border-white/80 bg-white/[0.9] py-2 pl-3 pr-9 shadow-row backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-white focus-within:ring-4 focus-within:ring-sage-100 sm:min-w-[10.5rem] sm:rounded-full sm:py-1.5 sm:pl-3.5;
+    @apply relative flex min-h-14 w-full min-w-0 items-center gap-2 rounded-[1.15rem] border border-white/90 bg-white/[0.94] py-2 pl-3 pr-9 text-left shadow-row backdrop-blur-md transition hover:-translate-y-0.5 hover:border-[#cadbc1] hover:bg-white focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:rounded-full sm:py-1.5 sm:pl-3.5;
   }
 
-  .control-shell-location {
-    @apply col-span-2 sm:min-w-[13.5rem];
+  .control-shell[data-state="open"] {
+    @apply -translate-y-0.5 border-[#b9d3b2] bg-[#fffdf8] shadow-[0_14px_36px_rgba(23,51,39,0.13)];
   }
 
   .control-icon {
@@ -126,21 +138,113 @@ button {
     letter-spacing: 0;
   }
 
-  .control-select {
-    @apply h-5 min-w-0 w-full cursor-pointer truncate appearance-none bg-transparent text-sm font-semibold leading-5 text-ink outline-none disabled:cursor-default;
-  }
-
-  .control-select option {
-    @apply normal-case text-ink;
+  .control-value {
+    @apply block h-5 min-w-0 truncate text-sm font-semibold leading-5 text-ink;
   }
 
   .control-chevron {
     @apply pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/[0.42] transition;
   }
 
+  .control-chevron-open {
+    @apply rotate-180 text-[#12442d];
+  }
+
   .control-shell:hover .control-chevron,
   .control-shell:focus-within .control-chevron {
     @apply text-[#12442d];
+  }
+
+  .control-popover {
+    @apply absolute top-[calc(100%+0.45rem)] z-50 min-w-[min(18rem,calc(100vw-1.5rem))] overflow-hidden rounded-[1.15rem] border border-[#cfdec8] bg-[#fffdf8] p-1.5 shadow-[0_24px_70px_rgba(23,51,39,0.24),0_2px_0_rgba(255,255,255,0.95)_inset];
+    animation: control-popover-in 140ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .control-popover-start {
+    @apply left-0;
+  }
+
+  .control-popover-end {
+    @apply right-0;
+  }
+
+  .control-popover-stretch {
+    @apply left-0 right-0;
+  }
+
+  .control-search-shell {
+    @apply mb-1.5 flex h-11 items-center gap-2 rounded-[0.85rem] border border-[#ebe4d4] bg-[#f6f1e6] px-3 shadow-[0_1px_0_rgba(255,255,255,0.9)_inset];
+  }
+
+  .control-search-icon {
+    @apply h-4 w-4 shrink-0 text-sage-700/75;
+  }
+
+  .control-search-input {
+    @apply h-full min-w-0 flex-1 bg-transparent text-sm font-semibold text-ink outline-none placeholder:text-ink/[0.35];
+  }
+
+  .control-options {
+    @apply max-h-72 overflow-y-auto py-1 pr-1;
+    scrollbar-color: rgba(23, 51, 39, 0.28) transparent;
+    scrollbar-width: thin;
+  }
+
+  .control-option {
+    @apply flex min-h-11 w-full items-center justify-between gap-3 rounded-[0.85rem] px-3 text-left text-sm font-semibold text-ink/[0.78] transition hover:bg-[#edf4e8] hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-sage-100;
+  }
+
+  .control-option-active {
+    @apply bg-[#f3eadb] text-ink;
+  }
+
+  .control-option[aria-selected="true"] {
+    @apply bg-[#12442d] text-white shadow-[0_10px_24px_rgba(18,68,45,0.18)] hover:bg-[#12442d] hover:text-white;
+  }
+
+  .control-option-check {
+    @apply h-4 w-4 shrink-0;
+  }
+
+  .control-empty {
+    @apply px-3 py-4 text-sm font-semibold text-ink/[0.44];
+  }
+
+  @keyframes control-popover-in {
+    from {
+      transform: translateY(-0.25rem) scale(0.98);
+    }
+
+    to {
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @media (max-width: 639px) {
+    .control-popover {
+      @apply fixed bottom-3 left-3 right-3 top-auto max-h-[min(28rem,calc(100dvh-1.5rem))] rounded-[1.35rem] border-[#c8d8c0] p-2 shadow-[0_24px_80px_rgba(23,51,39,0.34),0_2px_0_rgba(255,255,255,0.95)_inset];
+      animation-name: control-sheet-in;
+    }
+
+    .control-popover-start,
+    .control-popover-end,
+    .control-popover-stretch {
+      @apply left-3 right-3;
+    }
+
+    .control-options {
+      @apply max-h-[min(21rem,calc(100dvh-8.5rem))];
+    }
+  }
+
+  @keyframes control-sheet-in {
+    from {
+      transform: translateY(0.7rem) scale(0.98);
+    }
+
+    to {
+      transform: translateY(0) scale(1);
+    }
   }
 
   .hero-bento {

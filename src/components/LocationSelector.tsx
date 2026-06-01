@@ -1,7 +1,8 @@
-import { ChevronDown, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { useMemo } from "react";
 import { countryOptions, getCountryName } from "../data/regions";
 import type { Locale } from "../types";
+import { SelectorControl } from "./SelectorControl";
 
 type LocationSelectorProps = {
   locale: Locale;
@@ -27,25 +28,21 @@ export function LocationSelector({
     [locale],
   );
   return (
-    <label className="control-shell control-shell-location">
-      <MapPin aria-hidden="true" className="control-icon" />
-      <span className="control-copy">
-        <span className="control-label">{label}</span>
-        <select
-          aria-label={label}
-          className="control-select"
-          name="country"
-          value={selectedCountry}
-          onChange={(event) => onCountryChange(event.target.value)}
-        >
-          {sortedCountries.map((country) => (
-            <option key={country.code} value={country.code}>
-              {country.name}
-            </option>
-          ))}
-        </select>
-      </span>
-      <ChevronDown aria-hidden="true" className="control-chevron" />
-    </label>
+    <SelectorControl
+      align="stretch"
+      className="control-root-location"
+      emptyLabel="Aucun pays trouvé"
+      icon={<MapPin aria-hidden="true" className="control-icon" />}
+      label={label}
+      name="country"
+      options={sortedCountries.map((country) => ({
+        label: country.name,
+        value: country.code,
+      }))}
+      searchable
+      searchLabel="Rechercher un pays"
+      value={selectedCountry}
+      onChange={onCountryChange}
+    />
   );
 }

@@ -104,37 +104,53 @@ try {
     );
   }
 
-  const countrySelect = page.getByLabel("Pays");
-  await countrySelect.selectOption("FR");
+  const countryControl = page.locator('[data-control-name="country"]');
+  assert.match(await countryControl.textContent(), /Suisse/);
+  await countryControl.click();
+  await assert.doesNotReject(() =>
+    page.getByRole("listbox", { name: "Pays" }).waitFor(),
+  );
+  await page.getByRole("option", { name: "France", exact: true }).click();
   await page.waitForURL(/country=FR/);
   assert.match(
-    await countrySelect.locator("option:checked").textContent(),
+    await countryControl.textContent(),
     /France/,
-    "country selector should behave like a native selectable control",
+    "country selector should use a custom popover control",
   );
 
-  const monthSelect = page.getByLabel("Mois");
-  await monthSelect.selectOption("9");
+  const monthControl = page.locator('[data-control-name="month"]');
+  assert.match(await monthControl.textContent(), /juin/i);
+  await monthControl.click();
+  await assert.doesNotReject(() =>
+    page.getByRole("listbox", { name: "Mois" }).waitFor(),
+  );
+  await page.getByRole("option", { name: "septembre", exact: true }).click();
   await page.waitForURL(/month=9/);
   assert.match(
-    await monthSelect.locator("option:checked").textContent(),
+    await monthControl.textContent(),
     /septembre/i,
     "month selector should update the selected month",
   );
 
-  const languageSelect = page.locator('select[name="language"]');
-  await languageSelect.selectOption("en");
+  const languageControl = page.locator('[data-control-name="language"]');
+  assert.match(await languageControl.textContent(), /Français/);
+  await languageControl.click();
+  await assert.doesNotReject(() =>
+    page.getByRole("listbox", { name: "Langue" }).waitFor(),
+  );
+  await page.getByRole("option", { name: "English", exact: true }).click();
   await page.waitForURL(/lang=en/);
   assert.match(
-    await languageSelect.locator("option:checked").textContent(),
+    await languageControl.textContent(),
     /English/,
     "language selector should update the selected language",
   );
 
-  await languageSelect.selectOption("fr");
+  await languageControl.click();
+  await page.getByRole("option", { name: "Français", exact: true }).click();
   await page.waitForURL((url) => url.searchParams.get("lang") !== "en");
   await page.waitForFunction(
-    () => document.querySelector('select[name="language"]')?.value === "fr",
+    () => document.querySelector('[data-control-name="language"]')?.textContent?.includes("Français"),
   );
 
   const fruitTab = page.getByRole("button", { name: "Fruits", exact: true });

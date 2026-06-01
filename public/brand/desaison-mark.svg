@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="DeSaison">
+  <defs>
+    <linearGradient id="orange" x1="54" x2="196" y1="73" y2="153" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffb536"/>
+      <stop offset="1" stop-color="#fb9714"/>
+    </linearGradient>
+    <linearGradient id="leafLight" x1="33" x2="119" y1="129" y2="229" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#75ad3a"/>
+      <stop offset="1" stop-color="#315f1c"/>
+    </linearGradient>
+    <linearGradient id="leafDark" x1="122" x2="231" y1="123" y2="231" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5a982e"/>
+      <stop offset="1" stop-color="#1d5b19"/>
+    </linearGradient>
+    <linearGradient id="leafTop" x1="56" x2="202" y1="20" y2="89" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2d741f"/>
+      <stop offset="1" stop-color="#1d5a19"/>
+    </linearGradient>
+  </defs>
+  <path d="M107 64C82 65 59 51 57 25c31-5 57 12 67 40-5 1-11 0-17-1Z" fill="url(#leafTop)"/>
+  <path d="M137 66c7-31 35-48 82-40 1 40-29 69-81 72-2-12-2-22-1-32Z" fill="url(#leafTop)"/>
+  <path d="M130 72c11-28 37-42 77-43-33 16-54 34-65 58" fill="none" stroke="#fff9ed" stroke-linecap="round" stroke-width="9"/>
+  <path d="M48 132c0-42 36-75 81-75s80 33 80 75v13c-53 9-108 9-161 0v-13Z" fill="url(#orange)"/>
+  <path d="M50 145c29-1 56 9 78 29-18 27-47 46-87 54-25-19-40-47-41-86 17 2 34 3 50 3Z" fill="url(#leafLight)"/>
+  <path d="M206 145c-29-1-56 9-78 29 18 27 48 46 87 54 25-19 40-47 41-86-17 2-34 3-50 3Z" fill="url(#leafDark)"/>
+  <path d="M4 142c44 5 84 22 124 57 40-35 80-52 124-57" fill="none" stroke="#fff9ed" stroke-linecap="round" stroke-width="15"/>
+  <ellipse cx="91" cy="123" rx="9" ry="15" fill="#286f22"/>
+  <ellipse cx="151" cy="123" rx="9" ry="15" fill="#286f22"/>
+  <path d="M102 148c15 17 37 17 52 0" fill="none" stroke="#286f22" stroke-linecap="round" stroke-width="9"/>
+</svg>

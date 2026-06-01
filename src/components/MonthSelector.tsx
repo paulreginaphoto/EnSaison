@@ -1,6 +1,7 @@
-import { CalendarDays, ChevronDown } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 import { getMonthsForLocale } from "../data/months";
 import type { Locale } from "../types";
+import { SelectorControl } from "./SelectorControl";
 
 type MonthSelectorProps = {
   locale: Locale;
@@ -16,25 +17,16 @@ export function MonthSelector({
   label,
 }: MonthSelectorProps) {
   return (
-    <label className="control-shell">
-      <CalendarDays aria-hidden="true" className="control-icon" />
-      <span className="control-copy">
-        <span className="control-label">{label}</span>
-        <select
-          aria-label={label}
-          className="control-select"
-          name="month"
-          value={selectedMonth}
-          onChange={(event) => onMonthChange(Number(event.target.value))}
-        >
-          {getMonthsForLocale(locale).map((month) => (
-            <option key={month.value} value={month.value}>
-              {month.label}
-            </option>
-          ))}
-        </select>
-      </span>
-      <ChevronDown aria-hidden="true" className="control-chevron" />
-    </label>
+    <SelectorControl
+      icon={<CalendarDays aria-hidden="true" className="control-icon" />}
+      label={label}
+      name="month"
+      options={getMonthsForLocale(locale).map((month) => ({
+        label: month.label,
+        value: String(month.value),
+      }))}
+      value={String(selectedMonth)}
+      onChange={(value) => onMonthChange(Number(value))}
+    />
   );
 }

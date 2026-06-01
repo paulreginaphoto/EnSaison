@@ -22,8 +22,10 @@ export default {
       },
       fontFamily: {
         sans: [
+          "Fredoka",
           "Avenir Next",
           "Nunito Sans",
+          "Segoe UI Rounded",
           "Segoe UI",
           "system-ui",
           "sans-serif",

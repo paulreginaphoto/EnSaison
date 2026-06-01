@@ -1,4 +1,4 @@
-import appLogo from "../assets/icons/app-logo.svg";
+import appLogo from "../assets/icons/app-logo.png";
 import type { Locale } from "../types";
 import { LanguageSelector } from "./LanguageSelector";
 import { LocationSelector } from "./LocationSelector";

@@ -6,8 +6,10 @@
   color: #173327;
   background: #f8f5ec;
   font-family:
+    "Fredoka",
     "Avenir Next",
     "Nunito Sans",
+    "Segoe UI Rounded",
     "Segoe UI",
     system-ui,
     sans-serif;
@@ -77,7 +79,7 @@ button {
   }
 
   .site-header {
-    @apply flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between;
+    @apply flex min-w-0 flex-col gap-4 lg:flex-row lg:items-center lg:justify-between;
   }
 
   .brand-lockup {
@@ -85,7 +87,7 @@ button {
   }
 
   .brand-logo {
-    @apply h-14 w-auto max-w-[13.75rem] drop-shadow-sm sm:h-16 sm:max-w-[17.5rem];
+    @apply h-14 w-auto max-w-[15rem] drop-shadow-sm sm:h-16 sm:max-w-[19rem];
   }
 
   .brand-title,
@@ -93,7 +95,13 @@ button {
   .category-card-title,
   .section-heading h2,
   .about-title {
-    font-family: Georgia, Cambria, "Times New Roman", serif;
+    font-family:
+      "Fredoka",
+      "Arial Rounded MT Bold",
+      "Avenir Next",
+      "Nunito Sans",
+      system-ui,
+      sans-serif;
     letter-spacing: 0;
   }
 
@@ -102,15 +110,15 @@ button {
   }
 
   .header-controls {
-    @apply relative z-40 grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto sm:items-center sm:justify-end;
+    @apply relative z-40 grid w-full min-w-0 grid-cols-2 gap-2 sm:grid-cols-3 lg:flex lg:w-auto lg:items-center lg:justify-end;
   }
 
   .control-root {
-    @apply relative min-w-0 sm:min-w-[10.5rem];
+    @apply relative min-w-0 lg:min-w-[10.5rem];
   }
 
   .control-root-location {
-    @apply col-span-2 sm:min-w-[13.5rem];
+    @apply col-span-2 min-w-0 sm:col-span-1 lg:min-w-[13.5rem];
   }
 
   .control-root-location .control-popover {
@@ -118,7 +126,7 @@ button {
   }
 
   .control-shell {
-    @apply relative flex min-h-14 w-full min-w-0 items-center gap-2 rounded-[1.15rem] border border-white/90 bg-white/[0.94] py-2 pl-3 pr-9 text-left shadow-row backdrop-blur-md transition hover:-translate-y-0.5 hover:border-[#cadbc1] hover:bg-white focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:rounded-full sm:py-1.5 sm:pl-3.5;
+    @apply relative flex min-h-14 w-full min-w-0 items-center gap-2 rounded-[1.15rem] border border-white/90 bg-white/[0.94] py-2 pl-3 pr-9 text-left shadow-row backdrop-blur-md transition hover:-translate-y-0.5 hover:border-[#cadbc1] hover:bg-white focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:rounded-full sm:py-1.5 sm:pl-3 lg:pl-3.5;
   }
 
   .control-shell[data-state="open"] {
@@ -272,18 +280,18 @@ button {
   }
 
   .hero-card {
-    @apply relative grid min-h-[37rem] overflow-hidden rounded-[2rem] bg-white p-5 shadow-soft sm:min-h-[29rem] sm:grid-cols-[minmax(0,0.78fr)_minmax(18rem,0.82fr)] sm:p-7;
+    @apply relative grid min-h-0 gap-5 overflow-hidden rounded-[2rem] bg-white p-5 shadow-soft sm:p-7 lg:min-h-[29rem] lg:grid-cols-[minmax(0,0.78fr)_minmax(18rem,0.82fr)] lg:gap-0;
     background:
       linear-gradient(125deg, rgba(255, 253, 246, 0.98), rgba(242, 239, 224, 0.96) 54%, rgba(227, 238, 216, 0.92)),
       #fffaf1;
   }
 
   .hero-copy {
-    @apply relative z-10 flex min-w-0 flex-col justify-between gap-6 sm:py-6;
+    @apply relative z-10 flex min-w-0 flex-col justify-center gap-5 lg:justify-between lg:py-6;
   }
 
   .hero-meta-row {
-    @apply hidden flex-wrap gap-2 sm:flex;
+    @apply flex flex-wrap gap-2;
   }
 
   .hero-meta-row span {
@@ -291,12 +299,16 @@ button {
   }
 
   .hero-title {
-    @apply max-w-[9ch] text-5xl font-semibold leading-[0.98] text-[#12442d] sm:text-6xl;
+    @apply max-w-full font-bold leading-[0.98] text-[#12442d];
+    max-width: min(100%, 11ch);
+    font-size: clamp(2.75rem, 7vw, 3.9rem);
+    overflow-wrap: break-word;
+    hyphens: auto;
     text-wrap: balance;
   }
 
   .hero-description {
-    @apply max-w-xs text-2xl font-medium leading-[1.45] text-ink/[0.62] sm:text-3xl;
+    @apply max-w-[34rem] text-2xl font-medium leading-[1.35] text-ink/[0.62] lg:max-w-xs lg:text-3xl lg:leading-[1.45];
     text-wrap: pretty;
   }
 
@@ -305,16 +317,22 @@ button {
   }
 
   .hero-cta {
-    @apply inline-flex min-h-16 w-fit max-w-full items-center gap-3 rounded-full bg-[#12442d] px-4 py-2 text-base font-bold leading-6 text-white shadow-[0_16px_35px_rgba(18,68,45,0.25)] transition hover:-translate-y-0.5 hover:bg-[#173327] focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:px-6;
+    @apply inline-flex min-h-16 w-fit max-w-full items-center justify-center gap-3 rounded-full bg-[#12442d] px-4 py-2 text-center text-base font-bold leading-6 text-white shadow-[0_16px_35px_rgba(18,68,45,0.25)] transition hover:-translate-y-0.5 hover:bg-[#173327] focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100 active:translate-y-0 sm:px-6;
   }
 
   .hero-art {
-    @apply relative z-0 mt-2 min-h-[18rem] overflow-hidden sm:mt-0 sm:min-h-[25rem];
+    @apply relative z-0 min-h-[17rem] overflow-hidden sm:min-h-[22rem] lg:mt-0 lg:min-h-[25rem];
   }
 
   .hero-photo-window {
-    @apply relative h-full min-h-[18rem] overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.78)] sm:min-h-[25rem];
-    border-radius: 6.2rem 1.35rem 1.35rem 6.2rem;
+    @apply relative h-full min-h-[17rem] overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.78)] sm:min-h-[22rem] lg:min-h-[25rem];
+    border-radius: 1.35rem;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-photo-window {
+      border-radius: 6.2rem 1.35rem 1.35rem 6.2rem;
+    }
   }
 
   .hero-photo-window > img {
@@ -405,7 +423,7 @@ button {
   }
 
   .category-card-title {
-    @apply block max-w-full truncate text-[0.95rem] font-semibold leading-none text-[#12442d] sm:text-3xl;
+    @apply block max-w-full truncate text-[0.95rem] font-bold leading-none text-[#12442d] sm:text-3xl;
   }
 
   .category-card-count {
@@ -478,7 +496,7 @@ button {
   }
 
   .quick-chip-row {
-    @apply no-scrollbar flex gap-2 overflow-x-auto pb-1;
+    @apply no-scrollbar flex gap-2 overflow-x-auto pb-1 pt-2;
   }
 
   .quick-chip {
@@ -498,7 +516,7 @@ button {
   }
 
   .section-heading h2 {
-    @apply text-2xl font-semibold leading-tight text-[#12442d] sm:text-3xl;
+    @apply text-2xl font-bold leading-tight text-[#12442d] sm:text-3xl;
     text-wrap: balance;
   }
 
@@ -533,8 +551,14 @@ button {
   }
 
   .item-name {
-    @apply truncate text-xl font-semibold leading-tight text-ink sm:text-2xl;
-    font-family: Georgia, Cambria, "Times New Roman", serif;
+    @apply truncate text-xl font-bold leading-tight text-ink sm:text-2xl;
+    font-family:
+      "Fredoka",
+      "Arial Rounded MT Bold",
+      "Avenir Next",
+      "Nunito Sans",
+      system-ui,
+      sans-serif;
   }
 
   .item-category {
@@ -674,7 +698,7 @@ button {
   }
 
   .about-title {
-    @apply text-3xl font-semibold leading-none text-[#12442d];
+    @apply text-3xl font-bold leading-none text-[#12442d];
   }
 
   .no-scrollbar {

@@ -294,6 +294,7 @@ const worldwideFoodTaxonomyItems: SeasonItem[] = [
   { id: "fève", name: "Fève", names: { en: "Fava bean", es: "Haba", de: "Ackerbohne", it: "Fava", pt: "Fava" }, category: "legume", icon: "vegetable-bean", months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil.", sourceIds: ["fao-infoods", "langual", "fao-crop-calendar"], confidence: "indicative" },
   { id: "haricot-borlotti", name: "Haricot borlotti", names: { en: "Borlotti bean", es: "Judía borlotti", de: "Borlottibohne", it: "Fagiolo borlotto", pt: "Feijão borlotti" }, category: "legume", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "turkey-meb-megep-produce-sales-calendar"], confidence: "source" },
   { id: "dolique", name: "Dolique", names: { en: "Cowpea", es: "Caupí", de: "Augenbohne", it: "Fagiolo dall'occhio", pt: "Feijão-frade" }, category: "legume", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "turkey-meb-megep-produce-sales-calendar"], confidence: "source" },
+  { id: "pois-cajan", name: "Pois cajan", names: { en: "Pigeon pea", es: "Guandul", de: "Straucherbse", it: "Pisello del Congo", pt: "Feijao-guandu" }, category: "legume", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "dominican-agriculture-contingency-crop-calendar-2023"], confidence: "source" },
   { id: "voandzou", name: "Voandzou", names: { en: "Bambara groundnut", es: "Bambara", de: "Bambara-Erdnuss", it: "Fagiolo bambara", pt: "Feijão-bambara" }, category: "legume", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual", "mali-mdpi-orphan-crops"], confidence: "source" },
   { id: "lupin", name: "Lupin", names: { en: "Lupin", es: "Altramuz", de: "Lupine", it: "Lupino", pt: "Tremoço" }, category: "legume", icon: "vegetable-bean", months: [], seasonLabel: "variable selon pays", seasonMode: "variable", sourceIds: ["fao-infoods", "langual"], confidence: "taxonomy" },
   { id: "maïs-grain", name: "Maïs grain", names: { en: "Maize", es: "Maíz", de: "Mais", it: "Mais", pt: "Milho" }, category: "grain", icon: "vegetable-stem", months: [8, 9, 10, 11], nearMonths: [7, 12], seasonLabel: "août – nov.", sourceIds: ["fao-crop-calendar", "fao-infoods"], confidence: "indicative" },
@@ -1218,6 +1219,33 @@ const paraguaySeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem
   fraise: { months: [9, 10, 11], nearMonths: [4, 5, 6, 8, 12], seasonLabel: "sept. – nov." },
   "maïs-grain": { months: [12, 1, 2], nearMonths: [11, 3], seasonLabel: "déc. – févr." },
   blé: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+};
+
+const dominicanRepublicSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  riz: { months: [12, 1, 2, 3, 4, 5], nearMonths: [6, 11], seasonLabel: "déc. – mai" },
+  "maïs-grain": { months: [6, 7, 9, 10], nearMonths: [5, 8, 11], seasonLabel: "juin – juil., sept. – oct." },
+  sorgho: { months: [2, 3, 4], nearMonths: [1, 5], seasonLabel: "févr. – avr." },
+  cacahuète: { months: [1, 2, 3, 4, 5, 6], nearMonths: [7, 12], seasonLabel: "janv. – juin" },
+  "haricot-rouge": { months: [3, 4], nearMonths: [2, 5], seasonLabel: "mars – avr." },
+  "haricot-sec": { months: [3, 4], nearMonths: [2, 5], seasonLabel: "mars – avr." },
+  "pois-cajan": { months: [12, 1, 2, 3, 4, 5, 6], nearMonths: [7, 11], seasonLabel: "déc. – juin" },
+  "patate-douce": { months: [3, 4, 10, 11], nearMonths: [2, 5, 9, 12], seasonLabel: "mars – avr., oct. – nov." },
+  igname: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "pomme-de-terre": { months: [12, 1, 2, 3, 4, 5, 6], nearMonths: [7, 11], seasonLabel: "déc. – juin" },
+  taro: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  manioc: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  piment: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  ail: { months: [2, 3, 4], nearMonths: [1, 5], seasonLabel: "févr. – avr." },
+  courge: { months: [12, 1, 2, 3], nearMonths: [4, 11], seasonLabel: "déc. – mars" },
+  aubergine: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  oignon: { months: [2, 3, 4, 5], nearMonths: [1, 6], seasonLabel: "févr. – mai" },
+  concombre: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  "chou-blanc": { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  tomate: { months: [1, 2, 3, 4, 5], nearMonths: [6, 12], seasonLabel: "janv. – mai" },
+  carotte: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  laitue: { months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], nearMonths: [], seasonLabel: "toute l'année", seasonMode: "year-round" },
+  mangue: { months: [3, 4, 5, 6, 7, 8, 9], nearMonths: [2, 10], seasonLabel: "mars – sept." },
+  avocat: { months: [1, 2, 6, 7, 8, 9, 10, 11, 12], nearMonths: [3, 4, 5], seasonLabel: "juin – févr." },
 };
 
 const argentinaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
@@ -3859,6 +3887,18 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
         "paraguay-agrotec-2026-crop-calendar",
         "paraguay-procosara-fruit-harvest-calendar",
         "paraguay-asuncion-times-seasonal-fruits-2026",
+      ],
+      confidence: "source",
+    };
+  }
+
+  if (dominicanRepublicSeasonOverrides[item.id]) {
+    countries.DO = {
+      ...dominicanRepublicSeasonOverrides[item.id],
+      sourceIds: [
+        "dominican-agriculture-contingency-crop-calendar-2023",
+        "dominican-sources-tropical-fruit-calendar-2026",
+        "dominican-cooking-fruit-guide",
       ],
       confidence: "source",
     };

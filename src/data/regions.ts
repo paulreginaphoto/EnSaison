@@ -280,6 +280,21 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "paraguay-asuncion-times-seasonal-fruits-2026",
     ],
   },
+  DO: {
+    labels: {
+      fr: "Republique dominicaine: calendrier national prudent base sur le Ministerio de Agricultura et des guides locaux/export pour fruits tropicaux; indicateur national, pas precision province, variete ou ferme.",
+      en: "Dominican Republic: cautious national calendar based on the Ministry of Agriculture and local/export guides for tropical fruit; national indicator, not province, variety or farm-level precision.",
+      es: "Republica Dominicana: calendario nacional prudente basado en el Ministerio de Agricultura y guias locales/exportadoras de frutas tropicales; indicador nacional, no precision provincial, varietal ni de finca.",
+      de: "Dominikanische Republik: vorsichtiger nationaler Kalender auf Basis des Landwirtschaftsministeriums und lokaler/exportorientierter Leitfaeden fuer Tropenfruechte; nationaler Hinweis, keine Genauigkeit nach Provinz, Sorte oder Betrieb.",
+      it: "Repubblica Dominicana: calendario nazionale prudente basato sul Ministero dell'Agricoltura e guide locali/export per frutta tropicale; indicatore nazionale, non precisione per provincia, varieta o azienda.",
+      pt: "Republica Dominicana: calendario nacional prudente baseado no Ministerio da Agricultura e em guias locais/exportadoras de frutas tropicais; indicador nacional, sem precisao provincial, varietal ou de quinta.",
+    },
+    sourceIds: [
+      "dominican-agriculture-contingency-crop-calendar-2023",
+      "dominican-sources-tropical-fruit-calendar-2026",
+      "dominican-cooking-fruit-guide",
+    ],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

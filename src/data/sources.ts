@@ -359,6 +359,18 @@ export const dataSources = {
     label: "Asuncion Times Paraguay seasonal fruits guide 2026",
     url: "https://asunciontimes.com/paraguay-news/health-news/seasonal-fruits-in-paraguay-a-full-year-of-flavours/",
   },
+  "dominican-agriculture-contingency-crop-calendar-2023": {
+    label: "Dominican Republic Ministry of Agriculture 2023 crop calendar",
+    url: "https://agricultura.gob.do/wp-content/uploads/2023/10/Plan-de-Contingencia-Sector-Agropecuario-2023.pdf",
+  },
+  "dominican-sources-tropical-fruit-calendar-2026": {
+    label: "DominicanSources tropical fruit and vegetable season calendar 2026",
+    url: "https://dominicansources.com/blog/how-to-source-tropical-fruits-dominican-republic",
+  },
+  "dominican-cooking-fruit-guide": {
+    label: "Dominican Cooking Dominican fruits guide",
+    url: "https://www.dominicancooking.com/dominican-fruits",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

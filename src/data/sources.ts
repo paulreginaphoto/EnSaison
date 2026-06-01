@@ -391,6 +391,10 @@ export const dataSources = {
     label: "Ecuador Ministry of Public Health fruit and vegetable availability table",
     url: "https://www.salud.gob.ec/wp-content/uploads/2013/11/GUIA-DE-ALIM-DOCENTES-web-07-07-2017.pdf",
   },
+  "israel-mustip-seasonal-produce-guide": {
+    label: "Mustip seasonal fruits and vegetables in Israel by month",
+    url: "https://mustip.co.il/seasonal-fruits-and-vegetables-in-israel-by-month/",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

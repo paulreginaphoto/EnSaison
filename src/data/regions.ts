@@ -342,6 +342,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["ecuador-salud-fruit-vegetable-availability"],
   },
+  IL: {
+    labels: {
+      fr: "Israel: guide mensuel Mustip des fruits et legumes de saison; source pratique locale, pas calendrier gouvernemental ni precision par district, variete ou ferme.",
+      en: "Israel: Mustip monthly guide to seasonal fruits and vegetables; practical local source, not a government calendar or district, variety or farm-level precision.",
+      es: "Israel: guia mensual Mustip de frutas y verduras de temporada; fuente local practica, no calendario gubernamental ni precision por distrito, variedad o finca.",
+      de: "Israel: monatlicher Mustip-Leitfaden fuer saisonales Obst und Gemuese; praktische lokale Quelle, kein Regierungskalender und keine Genauigkeit nach Bezirk, Sorte oder Betrieb.",
+      it: "Israele: guida mensile Mustip di frutta e verdura di stagione; fonte locale pratica, non calendario governativo ne precisione per distretto, varieta o azienda.",
+      pt: "Israel: guia mensal Mustip de frutas e legumes sazonais; fonte local pratica, nao calendario governamental nem precisao por distrito, variedade ou quinta.",
+    },
+    sourceIds: ["israel-mustip-seasonal-produce-guide"],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",

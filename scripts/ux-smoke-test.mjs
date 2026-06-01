@@ -149,6 +149,32 @@ try {
   );
   assert.equal(fruitCategoryCopyMetrics.textAlign, "left");
 
+  const statusChipRow = page.locator('.quick-chip-row[aria-label="Statut"]');
+  const hoverStatusChip = statusChipRow.getByRole("button", {
+    name: /De saison ou bientôt/i,
+  });
+  await hoverStatusChip.hover();
+  await page.waitForTimeout(200);
+  const statusHoverMetrics = await hoverStatusChip.evaluate((chip) => {
+    const row = chip.closest(".quick-chip-row");
+    const rowRect = row?.getBoundingClientRect();
+    const chipRect = chip.getBoundingClientRect();
+    const rowStyle = row ? getComputedStyle(row) : null;
+
+    return {
+      paddingTop: rowStyle ? Number.parseFloat(rowStyle.paddingTop) : 0,
+      topInset: rowRect ? chipRect.top - rowRect.top : -1,
+    };
+  });
+  assert.ok(
+    statusHoverMetrics.paddingTop >= 4,
+    "status chip row should reserve top padding for hover motion",
+  );
+  assert.ok(
+    statusHoverMetrics.topInset >= 0,
+    `hovered status chip should not be cropped above the row (${statusHoverMetrics.topInset}px)`,
+  );
+
   const searchBox = page.getByRole("searchbox");
   await searchBox.fill("orange");
   await page.waitForURL(/q=orange/);

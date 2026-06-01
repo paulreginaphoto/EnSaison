@@ -3290,6 +3290,42 @@ const saudiSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["c
   grenade: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct.", sourceIds: ["saudi-rcu-alula-fruit-seasons"] },
 };
 
+const uaeMoccaeSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  roquette: { months: [3, 4, 10, 11, 12, 1], nearMonths: [2, 5, 9], seasonLabel: "mars – avr., oct. – janv." },
+  radis: { months: [12, 1, 2], nearMonths: [11, 3], seasonLabel: "déc. – févr." },
+  navet: { months: [12, 1, 2], nearMonths: [11, 3], seasonLabel: "déc. – févr." },
+  "chou-fleur": { months: [12, 1, 2, 3], nearMonths: [11, 4], seasonLabel: "déc. – mars" },
+  "chou-blanc": { months: [12, 1, 2, 3], nearMonths: [11, 4], seasonLabel: "déc. – mars" },
+  "petit-pois": { months: [12, 1, 2, 3], nearMonths: [11, 4], seasonLabel: "déc. – mars" },
+  dolique: { months: [11, 12, 1], nearMonths: [10, 2], seasonLabel: "nov. – janv." },
+  "haricot-vert": { months: [11, 12, 1], nearMonths: [10, 2], seasonLabel: "nov. – janv." },
+  fève: { months: [12, 1], nearMonths: [11, 2], seasonLabel: "déc. – janv." },
+  courge: { months: [9, 10, 3, 4, 5], nearMonths: [2, 6, 8, 11], seasonLabel: "sept. – oct., mars – mai" },
+  courgette: { months: [4, 5, 10, 11, 12], nearMonths: [3, 6, 9], seasonLabel: "avr. – mai, oct. – déc." },
+  concombre: { months: [4, 5, 10, 11], nearMonths: [3, 6, 9, 12], seasonLabel: "avr. – mai, oct. – nov." },
+  melon: { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
+  pastèque: { months: [6, 7], nearMonths: [5, 8], seasonLabel: "juin – juil." },
+  "pomme-de-terre": { months: [1, 2, 3], nearMonths: [12, 4], seasonLabel: "janv. – mars" },
+  poivron: { months: [11, 12, 1], nearMonths: [10, 2], seasonLabel: "nov. – janv." },
+  aubergine: { months: [11, 12, 1, 2], nearMonths: [10, 3], seasonLabel: "nov. – févr." },
+  tomate: { months: [12, 1, 2], nearMonths: [11, 3], seasonLabel: "déc. – févr." },
+  laitue: { months: [12, 1, 2], nearMonths: [11, 3], seasonLabel: "déc. – févr." },
+  gombo: { months: [5, 6], nearMonths: [4, 7], seasonLabel: "mai – juin" },
+  fraise: { months: [2, 3, 4, 5, 6], nearMonths: [1, 7], seasonLabel: "févr. – juin" },
+  "maïs-doux": { months: [2, 3, 4, 5, 6], nearMonths: [1, 7, 12], seasonLabel: "févr. – juin" },
+  "céleri-branche": { months: [2, 3, 4, 5], nearMonths: [1, 6], seasonLabel: "févr. – mai" },
+  coriandre: { months: [12, 1], nearMonths: [11, 2], seasonLabel: "déc. – janv." },
+  persil: { months: [12, 1], nearMonths: [11, 2], seasonLabel: "déc. – janv." },
+  carotte: { months: [1, 2, 3], nearMonths: [12, 4], seasonLabel: "janv. – mars" },
+  blette: { months: [12, 1, 2, 3], nearMonths: [11, 4], seasonLabel: "déc. – mars" },
+  épinard: { months: [12, 1, 2], nearMonths: [11, 3], seasonLabel: "déc. – févr." },
+  betterave: { months: [12, 1, 2], nearMonths: [11, 3], seasonLabel: "déc. – févr." },
+  poireau: { months: [10, 11, 12], nearMonths: [9, 1], seasonLabel: "oct. – déc." },
+  ail: { months: [5], nearMonths: [4, 6], seasonLabel: "mai" },
+  oignon: { months: [12, 1, 2, 3, 4, 5], nearMonths: [11, 6], seasonLabel: "déc. – mai" },
+  "corete-potagere": { months: [4, 5], nearMonths: [3, 6], seasonLabel: "avr. – mai" },
+};
+
 const vietnamGreatfoodsSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   "fruit-passion": { months: [1, 5, 6, 7, 8, 11, 12], nearMonths: [2, 4, 9, 10], seasonLabel: "mai – août, nov. – janv." },
   mangue: { months: [3, 4, 5, 6, 7, 8], nearMonths: [2, 9], seasonLabel: "mars – août" },
@@ -4819,6 +4855,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
   if (saudiSeasonOverrides[item.id]) {
     countries.SA = {
       ...saudiSeasonOverrides[item.id],
+      confidence: "source",
+    };
+  }
+
+  if (uaeMoccaeSeasonOverrides[item.id]) {
+    countries.AE = {
+      ...uaeMoccaeSeasonOverrides[item.id],
+      sourceIds: ["uae-moccae-planting-calendar", "uae-moccae-local-agriculture-guide"],
       confidence: "source",
     };
   }

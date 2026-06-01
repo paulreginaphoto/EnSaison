@@ -739,6 +739,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["saudi-saudipedia-seasonal-agriculture", "saudi-rcu-alula-fruit-seasons"],
   },
+  AE: {
+    labels: {
+      fr: "Emirats arabes unis: calendrier officiel MOCCAE de plantation et delais de recolte converti en fenetres de recolte prudentes; surtout cultures de saison fraiche, pas precision par emirat, serre, ferme, variete ni import.",
+      en: "United Arab Emirates: official MOCCAE planting calendar and harvest intervals converted into cautious harvest windows; mostly cool-season crops, not emirate, greenhouse, farm, variety or import precision.",
+      es: "Emiratos Arabes Unidos: calendario oficial MOCCAE de siembra y plazos de cosecha convertidos en ventanas prudentes de cosecha; sobre todo cultivos de temporada fresca, no precision por emirato, invernadero, finca, variedad ni importacion.",
+      de: "Vereinigte Arabische Emirate: offizieller MOCCAE-Pflanzkalender und Erntefristen in vorsichtige Erntefenster uebersetzt; vor allem Kuehlsaison-Kulturen, keine Genauigkeit nach Emirat, Gewaechshaus, Betrieb, Sorte oder Import.",
+      it: "Emirati Arabi Uniti: calendario ufficiale MOCCAE di semina e tempi di raccolta convertiti in finestre prudenti di raccolta; soprattutto colture di stagione fresca, non precisione per emirato, serra, azienda, varieta o importazione.",
+      pt: "Emirados Arabes Unidos: calendario oficial MOCCAE de plantio e prazos de colheita convertidos em janelas prudentes de colheita; sobretudo culturas de epoca fresca, sem precisao por emirado, estufa, quinta, variedade nem importacao.",
+    },
+    sourceIds: ["uae-moccae-planting-calendar", "uae-moccae-local-agriculture-guide"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

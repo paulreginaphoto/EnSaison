@@ -347,6 +347,14 @@ export const dataSources = {
     label: "Royal Commission for AlUla fruit production seasons",
     url: "https://www.rcu.gov.sa/en/strategic-initiatives/alula-agriculture",
   },
+  "uae-moccae-planting-calendar": {
+    label: "UAE Ministry of Climate Change and Environment planting and harvest calendar",
+    url: "https://moccae.gov.ae/assets/download/56f7a89b/agriculture_calender_page_en.pdf.aspx",
+  },
+  "uae-moccae-local-agriculture-guide": {
+    label: "UAE Ministry of Climate Change and Environment local agriculture guide",
+    url: "https://www.moccae.gov.ae/assets/download/ad359a4/Local%20Agriculture.pdf.aspx?view=true",
+  },
   "mali-fewsnet-seasonal-calendar": {
     label: "FEWS NET Mali seasonal calendar",
     url: "https://fews.net/west-africa/mali/seasonal-calendar/july-2024",

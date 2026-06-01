@@ -1,9 +1,5 @@
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
-import asparagusThumb from "../assets/produce/thumb-asperges.webp";
-import orangeThumb from "../assets/produce/thumb-oranges.webp";
-import radishThumb from "../assets/produce/thumb-radis.webp";
-import strawberryThumb from "../assets/produce/thumb-fraises.webp";
 import { getItemName } from "../lib/season";
 import type { SeasonItem, SeasonStatus } from "../types";
 import type { ResolvedSeason } from "../lib/season";
@@ -35,12 +31,21 @@ const statusClasses: Record<SeasonStatus, string> = {
   variable: "badge-variable",
 };
 
-const itemThumbnails: Record<string, string> = {
-  asperge: asparagusThumb,
-  fraise: strawberryThumb,
-  orange: orangeThumb,
-  radis: radishThumb,
-};
+const itemThumbnailModules = import.meta.glob<string>(
+  "../assets/produce/items/*.webp",
+  {
+    eager: true,
+    import: "default",
+    query: "?url",
+  },
+);
+
+const itemThumbnails: Record<string, string> = Object.fromEntries(
+  Object.entries(itemThumbnailModules).map(([path, src]) => [
+    decodeURIComponent(path.split("/").pop()?.replace(/\.webp$/, "") ?? ""),
+    src,
+  ]),
+);
 
 export function SeasonItemRow({
   item,

@@ -1,12 +1,44 @@
 import assert from "node:assert/strict";
+import { createServer } from "node:net";
 import { spawn } from "node:child_process";
+import { readFile } from "node:fs/promises";
 import { chromium } from "playwright";
 
-const baseUrl = "http://127.0.0.1:4173/";
+const getFreePort = () =>
+  new Promise((resolve, reject) => {
+    const server = createServer();
+    server.unref();
+    server.on("error", reject);
+    server.listen(0, "127.0.0.1", () => {
+      const address = server.address();
+      server.close(() => {
+        resolve(typeof address === "object" && address ? address.port : 4173);
+      });
+    });
+  });
+
+const port = await getFreePort();
+const distIndex = await readFile("dist/index.html", "utf8").catch(() => "");
+const distBasePath = distIndex.match(/(?:src|href)="(\/[^"]*?)assets\//)?.[1];
+const rawBasePath = process.env.VITE_BASE_PATH || distBasePath || "/";
+const basePathWithLeadingSlash = rawBasePath.startsWith("/")
+  ? rawBasePath
+  : `/${rawBasePath}`;
+const normalizedBasePath = basePathWithLeadingSlash.endsWith("/")
+  ? basePathWithLeadingSlash
+  : `${basePathWithLeadingSlash}/`;
+const baseUrl = `http://127.0.0.1:${port}${normalizedBasePath}`;
 
 const server = spawn(
   process.execPath,
-  ["node_modules/vite/bin/vite.js", "preview", "--host", "127.0.0.1", "--port", "4173"],
+  [
+    "node_modules/vite/bin/vite.js",
+    "preview",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    String(port),
+  ],
   { stdio: "pipe" },
 );
 

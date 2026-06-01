@@ -14,6 +14,7 @@ type SectionItem = {
 
 type SeasonSectionProps = {
   title: string;
+  subtitle: string;
   items: SectionItem[];
   locale: Locale;
   emptyLabel: string;
@@ -40,6 +41,7 @@ const sectionActions: Record<Locale, { showAll: string; showLess: string }> = {
 
 export function SeasonSection({
   title,
+  subtitle,
   items,
   locale,
   emptyLabel,
@@ -49,14 +51,16 @@ export function SeasonSection({
   const canExpand = items.length > 4;
   const visibleItems = isExpanded ? items : items.slice(0, 4);
   const actions = sectionActions[locale];
+  const headingId = "season-results-title";
 
   return (
-    <section className="section-shell" aria-labelledby={`${title}-title`}>
+    <section className="section-shell" aria-labelledby={headingId}>
       <div className="section-heading">
-        <h2 id={`${title}-title`}>
-          {title}
-        </h2>
-        <span>{items.length}</span>
+        <div className="min-w-0">
+          <h2 id={headingId}>{title}</h2>
+          <p>{subtitle}</p>
+        </div>
+        <span className="section-count">{items.length}</span>
       </div>
 
       {items.length > 0 ? (

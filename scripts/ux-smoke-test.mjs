@@ -72,13 +72,53 @@ try {
   await assert.doesNotReject(() =>
     page.getByRole("heading", { name: /quoi choisir/i }).waitFor(),
   );
-
   assert.equal(await page.getByRole("heading", { name: /^hors saison$/i }).count(), 0);
   assert.equal(await page.getByRole("heading", { name: /^variable$/i }).count(), 0);
 
   const renderedRows = await page.locator("[data-season-row]").count();
   assert.ok(renderedRows > 0, "season rows should render");
   assert.ok(renderedRows < 140, `default screen renders too many rows: ${renderedRows}`);
+
+  for (const label of ["Pays", "Mois", "Langue"]) {
+    assert.equal(
+      await page.locator(".control-label", { hasText: label }).count(),
+      1,
+      `${label} control should expose a visible label`,
+    );
+  }
+
+  const countrySelect = page.getByLabel("Pays");
+  await countrySelect.selectOption("FR");
+  await page.waitForURL(/country=FR/);
+  assert.match(
+    await countrySelect.locator("option:checked").textContent(),
+    /France/,
+    "country selector should behave like a native selectable control",
+  );
+
+  const monthSelect = page.getByLabel("Mois");
+  await monthSelect.selectOption("9");
+  await page.waitForURL(/month=9/);
+  assert.match(
+    await monthSelect.locator("option:checked").textContent(),
+    /septembre/i,
+    "month selector should update the selected month",
+  );
+
+  const languageSelect = page.locator('select[name="language"]');
+  await languageSelect.selectOption("en");
+  await page.waitForURL(/lang=en/);
+  assert.match(
+    await languageSelect.locator("option:checked").textContent(),
+    /English/,
+    "language selector should update the selected language",
+  );
+
+  await languageSelect.selectOption("fr");
+  await page.waitForURL((url) => url.searchParams.get("lang") !== "en");
+  await page.waitForFunction(
+    () => document.querySelector('select[name="language"]')?.value === "fr",
+  );
 
   const fruitTab = page.getByRole("button", { name: "Fruits", exact: true });
   await fruitTab.click();
@@ -99,7 +139,7 @@ try {
   assert.ok(!new URL(page.url()).searchParams.has("q"));
 
   await page.getByRole("button", { name: /sources/i }).first().click();
-  await assert.doesNotReject(() => page.getByText(/niveau/i).first().waitFor());
+  await assert.doesNotReject(() => page.getByText(/niveau|donnée/i).first().waitFor());
 
   const height = await page.evaluate(() => document.documentElement.scrollHeight);
   assert.ok(height < 18000, `mobile page is too tall: ${height}`);

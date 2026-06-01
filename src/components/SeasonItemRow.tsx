@@ -56,6 +56,7 @@ export function SeasonItemRow({
 }: SeasonItemRowProps) {
   const [isOpen, setIsOpen] = useState(false);
   const sourceCount = season.sourceIds.length;
+  const detailsLabel = isOpen ? labels.hideDetails : labels.details;
 
   return (
     <li className="item-row" data-category={item.category} data-season-row data-status={status}>
@@ -84,13 +85,15 @@ export function SeasonItemRow({
           </span>
         </div>
         <p className="item-season">
-          <span>{season.seasonLabel}</span>
-          <span>· {labels.confidence[season.confidence]}</span>
+          <span className="season-period-label">{labels.seasonPeriod}</span>
+          <span className="season-period-value">{season.seasonLabel}</span>
+          <span className="season-confidence">{labels.confidence[season.confidence]}</span>
         </p>
         <button
-          aria-label={`${labels.details} (${sourceCount})`}
+          aria-label={`${detailsLabel} (${sourceCount})`}
           aria-expanded={isOpen}
           className="details-button"
+          title={detailsLabel}
           type="button"
           onClick={() => setIsOpen((value) => !value)}
         >

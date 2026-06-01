@@ -107,6 +107,34 @@ const heroIntros: Record<Locale, string> = {
   pt: "Produtos da época, no momento certo, perto de si.",
 };
 
+function getSeasonResultTitle(locale: Locale, monthLabel: string) {
+  if (locale === "fr") return `Saisonnalité en ${monthLabel}`;
+  if (locale === "es") return `Temporada en ${monthLabel}`;
+  if (locale === "de") return `Saisonalität im ${monthLabel}`;
+  if (locale === "it") return `Stagionalità in ${monthLabel}`;
+  if (locale === "pt") return `Sazonalidade em ${monthLabel}`;
+  return `Seasonality in ${monthLabel}`;
+}
+
+function getSeasonResultSubtitle(locale: Locale, countryName: string, viewTitle: string) {
+  if (locale === "fr") {
+    return `${countryName} · ${viewTitle} · statut du mois choisi et période habituelle pour chaque aliment.`;
+  }
+  if (locale === "es") {
+    return `${countryName} · ${viewTitle} · estado del mes elegido y temporada habitual de cada alimento.`;
+  }
+  if (locale === "de") {
+    return `${countryName} · ${viewTitle} · Status des gewählten Monats und übliche Saison je Lebensmittel.`;
+  }
+  if (locale === "it") {
+    return `${countryName} · ${viewTitle} · stato del mese scelto e stagione abituale per ogni alimento.`;
+  }
+  if (locale === "pt") {
+    return `${countryName} · ${viewTitle} · estado do mês escolhido e época habitual de cada alimento.`;
+  }
+  return `${countryName} · ${viewTitle} · selected-month status and usual season for each food.`;
+}
+
 const featuredItemOrder = new Map(
   ["fraise", "asperge", "radis", "orange"].map((itemId, index) => [itemId, index]),
 );
@@ -295,6 +323,8 @@ function MainPage() {
         : selectedView === "out"
           ? copy.outSeason
           : copy.all;
+  const seasonResultTitle = getSeasonResultTitle(locale, monthLabel);
+  const seasonResultSubtitle = getSeasonResultSubtitle(locale, countryName, viewTitle);
   const statusViews: SeasonView[] = ["now", "all", "out"];
   const categorySummaries = featureCategories.map((category) => {
     const allowedCategories = categoryGroups[category] ?? [];
@@ -441,7 +471,8 @@ function MainPage() {
             items={visibleItems}
             labels={itemLabels}
             locale={locale}
-            title={viewTitle}
+            subtitle={seasonResultSubtitle}
+            title={seasonResultTitle}
           />
         </div>
 

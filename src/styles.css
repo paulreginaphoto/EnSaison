@@ -102,15 +102,45 @@ button {
   }
 
   .header-controls {
-    @apply grid w-full grid-cols-[minmax(0,1fr)_minmax(0,0.86fr)_minmax(0,1.08fr)] gap-2 sm:flex sm:w-auto sm:items-center sm:justify-end;
+    @apply grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto sm:items-center sm:justify-end;
   }
 
   .control-shell {
-    @apply flex h-12 min-w-0 items-center gap-2 rounded-full border border-white/75 bg-white/[0.82] px-2.5 shadow-row backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-white focus-within:ring-4 focus-within:ring-sage-100 sm:min-w-[9.8rem] sm:px-3;
+    @apply relative flex min-h-14 min-w-0 items-center gap-2 rounded-[1.15rem] border border-white/80 bg-white/[0.9] py-2 pl-3 pr-9 shadow-row backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-white focus-within:ring-4 focus-within:ring-sage-100 sm:min-w-[10.5rem] sm:rounded-full sm:py-1.5 sm:pl-3.5;
+  }
+
+  .control-shell-location {
+    @apply col-span-2 sm:min-w-[13.5rem];
+  }
+
+  .control-icon {
+    @apply h-4 w-4 shrink-0 text-sage-700;
+  }
+
+  .control-copy {
+    @apply flex min-w-0 flex-1 flex-col justify-center gap-0.5;
+  }
+
+  .control-label {
+    @apply block text-[0.65rem] font-bold uppercase leading-none text-ink/[0.42];
+    letter-spacing: 0;
   }
 
   .control-select {
-    @apply min-w-0 flex-1 appearance-none bg-transparent text-sm font-semibold capitalize text-ink outline-none disabled:cursor-default;
+    @apply h-5 min-w-0 w-full cursor-pointer truncate appearance-none bg-transparent text-sm font-semibold leading-5 text-ink outline-none disabled:cursor-default;
+  }
+
+  .control-select option {
+    @apply normal-case text-ink;
+  }
+
+  .control-chevron {
+    @apply pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/[0.42] transition;
+  }
+
+  .control-shell:hover .control-chevron,
+  .control-shell:focus-within .control-chevron {
+    @apply text-[#12442d];
   }
 
   .hero-bento {
@@ -332,19 +362,25 @@ button {
   }
 
   .section-shell {
-    @apply min-w-0 rounded-[1.7rem] bg-white/[0.9] p-3.5 shadow-soft backdrop-blur-md sm:p-5;
+    @apply min-w-0 rounded-[1.7rem] bg-white/[0.92] p-3.5 shadow-soft backdrop-blur-md sm:p-5;
   }
 
   .section-heading {
-    @apply sr-only;
+    @apply mb-3 flex items-start justify-between gap-3 rounded-[1.15rem] bg-[#f7f2e8] px-4 py-3 sm:mb-4 sm:px-5 sm:py-4;
   }
 
   .section-heading h2 {
-    @apply text-3xl font-semibold leading-none text-[#12442d];
+    @apply text-2xl font-semibold leading-tight text-[#12442d] sm:text-3xl;
+    text-wrap: balance;
   }
 
-  .section-heading span {
-    @apply rounded-full bg-[#eef3e8] px-3 py-1 text-sm font-bold text-ink/[0.52];
+  .section-heading p {
+    @apply mt-1 max-w-2xl text-sm font-semibold leading-5 text-ink/[0.58] sm:text-base sm:leading-6;
+    text-wrap: pretty;
+  }
+
+  .section-count {
+    @apply inline-flex min-h-9 min-w-9 shrink-0 items-center justify-center rounded-full bg-[#e6eedf] px-3 text-sm font-bold text-ink/[0.62] sm:min-h-10 sm:min-w-10 sm:text-base;
     font-variant-numeric: tabular-nums;
   }
 
@@ -353,7 +389,7 @@ button {
   }
 
   .item-row {
-    @apply relative flex min-h-[6.5rem] items-center gap-3 border-b border-[#eee6d8] bg-transparent px-2 py-3 transition hover:bg-white/[0.55] sm:gap-4;
+    @apply relative flex min-h-[6.5rem] items-start gap-3 border-b border-[#eee6d8] bg-transparent px-2 py-3 transition hover:bg-white/[0.55] sm:items-center sm:gap-4;
   }
 
   .item-row:last-child {
@@ -365,7 +401,7 @@ button {
   }
 
   .item-row-main {
-    @apply flex min-w-0 items-center justify-between gap-3;
+    @apply flex min-w-0 items-start justify-between gap-3;
   }
 
   .item-name {
@@ -378,7 +414,19 @@ button {
   }
 
   .item-season {
-    @apply mt-2 hidden flex-wrap gap-x-2 gap-y-1 text-sm font-semibold text-ink/[0.48] sm:flex;
+    @apply mt-2 flex flex-wrap items-center gap-1.5 text-xs font-semibold leading-5 text-ink/[0.58] sm:text-sm;
+  }
+
+  .season-period-label {
+    @apply text-ink/[0.52];
+  }
+
+  .season-period-value {
+    @apply rounded-lg bg-[#f7f2e8] px-2 py-0.5 text-ink/[0.78];
+  }
+
+  .season-confidence {
+    @apply rounded-lg bg-[#eef3e8] px-2 py-0.5 text-[#526b4f];
   }
 
   .produce-icon {
@@ -390,7 +438,7 @@ button {
   }
 
   .season-badge {
-    @apply inline-flex min-h-9 items-center justify-center rounded-full px-3 text-sm font-semibold leading-none sm:min-h-10 sm:px-4 sm:text-base;
+    @apply inline-flex min-h-9 items-center justify-center rounded-full px-3 text-center text-sm font-semibold leading-tight sm:min-h-10 sm:px-4 sm:text-base;
   }
 
   .badge-in-season {
@@ -410,7 +458,7 @@ button {
   }
 
   .details-button {
-    @apply absolute right-2 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-transparent text-ink transition hover:bg-[#edf3e8] hover:text-[#526b4f] focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100;
+    @apply absolute right-2 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-transparent text-ink transition hover:bg-[#edf3e8] hover:text-[#526b4f] focus:outline-none focus-visible:ring-4 focus-visible:ring-sage-100;
   }
 
   .details-chevron {

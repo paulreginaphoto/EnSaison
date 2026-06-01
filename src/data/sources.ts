@@ -31,6 +31,14 @@ export const dataSources = {
     label: "French Ministry of Agriculture seasonal products",
     url: "https://agriculture.gouv.fr/produits-de-saison",
   },
+  "afghanistan-florafaunafun-fruit-guide": {
+    label: "Flora Fauna Fun Afghanistan fruit season table",
+    url: "https://florafaunafun.com/fruits-of-afghanistan/",
+  },
+  "afghanistan-fao-fruit-vegetable-processing": {
+    label: "FAO / Afghanistan Ministry of Agriculture home-based fruit and vegetable processing manual",
+    url: "https://www.fao.org/4/a1549e/a1549e01.pdf",
+  },
   "monaco-france-customs-union": {
     label: "France Diplomatie Monaco-France customs union note",
     url: "https://www.diplomatie.gouv.fr/en/information-by-country/monaco/political-and-economic-relations",

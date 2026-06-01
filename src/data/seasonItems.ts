@@ -3011,6 +3011,30 @@ const albaniaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem[
   "tomate": { months: [5, 6, 7, 8, 9], nearMonths: [4, 10], seasonLabel: "mai – sept." },
 };
 
+const afghanistanSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  "abricot": { months: [5, 6, 7], nearMonths: [4, 8], seasonLabel: "mai – juil." },
+  "amande": { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept." },
+  "cerise": { months: [5, 6], nearMonths: [4, 7], seasonLabel: "mai – juin" },
+  "citron": { months: [11, 12, 1, 2, 3], nearMonths: [4, 10], seasonLabel: "nov. – mars" },
+  "coing": { months: [10, 11], nearMonths: [9, 12], seasonLabel: "oct. – nov." },
+  "datte": { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
+  "figue": { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  "grenade": { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  "jujube": { months: [10, 11], nearMonths: [9, 12], seasonLabel: "oct. – nov." },
+  "mangue": { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  "melon": { months: [6, 7, 8, 9], nearMonths: [5, 10], seasonLabel: "juin – sept." },
+  "murier": { months: [5, 6], nearMonths: [4, 7], seasonLabel: "mai – juin" },
+  "noix": { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  "orange": { months: [11, 12, 1, 2, 3], nearMonths: [4, 10], seasonLabel: "nov. – mars" },
+  "pastèque": { months: [6, 7, 8, 9], nearMonths: [5, 10], seasonLabel: "juin – sept." },
+  "peche": { months: [6, 7, 8], nearMonths: [5, 9], seasonLabel: "juin – août" },
+  "pistache": { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct." },
+  "poire": { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
+  "pomme": { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
+  "prune": { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
+  "raisin": { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "août – oct." },
+};
+
 const bosniaSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   "abricot": { months: [6, 7, 8], nearMonths: [5, 9, 10], seasonLabel: "juin – août" },
   "ail": { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "juil. – sept." },
@@ -5054,6 +5078,14 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
     countries.AL = {
       ...albaniaSeasonOverrides[item.id],
       sourceIds: ["albania-brookeonfoot-seasonal-produce", "albania-worldbank-crop-calendar"],
+      confidence: "source",
+    };
+  }
+
+  if (afghanistanSeasonOverrides[item.id]) {
+    countries.AF = {
+      ...afghanistanSeasonOverrides[item.id],
+      sourceIds: ["afghanistan-florafaunafun-fruit-guide"],
       confidence: "source",
     };
   }

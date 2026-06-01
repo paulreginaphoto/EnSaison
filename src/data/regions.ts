@@ -151,6 +151,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
       "eu-andorra-customs-union",
     ],
   },
+  AF: {
+    labels: {
+      fr: "Afghanistan: table Flora Fauna Fun des saisons de fruits, avec contexte FAO/Ministere afghan de l'Agriculture sur les recoltes et la conservation; couche fruitiere nationale prudente, pas encore couverture legumes, province, altitude, variete, stockage, ferme, retail ou import.",
+      en: "Afghanistan: Flora Fauna Fun fruit-season table, with FAO/Afghan Ministry of Agriculture context on harvests and preservation; cautious national fruit layer, not yet vegetable, province, altitude, variety, storage, farm, retail or import precision.",
+      es: "Afganistan: tabla de temporadas de frutas de Flora Fauna Fun, con contexto FAO/Ministerio afgano de Agricultura sobre cosechas y conservacion; capa nacional prudente de fruta, aun sin cobertura de verduras ni precision por provincia, altitud, variedad, almacenamiento, finca, retail o importacion.",
+      de: "Afghanistan: Flora-Fauna-Fun-Tabelle zu Fruchtsaisons, mit FAO-/afghanischem Landwirtschaftsministerium-Kontext zu Ernten und Verarbeitung; vorsichtige nationale Fruchtschicht, noch keine Gemuese-, Provinz-, Hoehen-, Sorten-, Lager-, Hof-, Retail- oder Importpraezision.",
+      it: "Afghanistan: tabella Flora Fauna Fun delle stagioni della frutta, con contesto FAO/Ministero afghano dell'Agricoltura su raccolti e conservazione; livello nazionale prudente per la frutta, non ancora copertura verdure ne precisione per provincia, altitudine, varieta, conservazione, azienda, retail o import.",
+      pt: "Afeganistao: tabela Flora Fauna Fun de epocas de fruta, com contexto FAO/Ministerio afegao da Agricultura sobre colheitas e conservacao; camada nacional prudente de fruta, ainda sem cobertura de legumes nem precisao por provincia, altitude, variedade, armazenamento, quinta, retalho ou importacao.",
+    },
+    sourceIds: ["afghanistan-florafaunafun-fruit-guide", "afghanistan-fao-fruit-vegetable-processing"],
+  },
   AL: {
     labels: {
       fr: "Albanie: guide local de produits de saison et calendrier agricole World Bank; signal national pratique surtout base sur marches de Tirana et grandes saisons, pas precision prefecture, altitude, serre, variete, ferme, stockage ou import.",

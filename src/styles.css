@@ -401,7 +401,7 @@ button {
   }
 
   .category-card-copy {
-    @apply relative z-20 mt-auto flex w-full min-w-0 flex-col items-start rounded-2xl border border-white/75 bg-[#fffdf8]/[0.92] px-2.5 py-2 text-left shadow-[0_14px_34px_rgba(23,51,39,0.14),0_1px_0_rgba(255,255,255,0.9)_inset] backdrop-blur-md sm:rounded-[1.15rem] sm:px-3.5 sm:py-3;
+    @apply relative z-20 mt-auto flex w-full min-w-0 flex-col items-start rounded-2xl border border-white/80 bg-[#fffdf8]/[0.95] px-2.5 py-2 text-left shadow-[0_14px_34px_rgba(23,51,39,0.14),0_1px_0_rgba(255,255,255,0.9)_inset] backdrop-blur-md sm:rounded-[1.15rem] sm:px-3.5 sm:py-3;
   }
 
   .category-card-title {
@@ -409,7 +409,7 @@ button {
   }
 
   .category-card-count {
-    @apply mt-1 block max-w-full text-[0.67rem] font-bold leading-4 text-ink/[0.62] sm:mt-1.5 sm:text-sm sm:leading-5;
+    @apply mt-1 block max-w-full text-[0.72rem] font-bold leading-4 text-ink/[0.7] sm:mt-1.5 sm:text-sm sm:leading-5;
   }
 
   .category-card-icon {

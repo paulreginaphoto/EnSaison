@@ -339,6 +339,14 @@ export const dataSources = {
     label: "Ethiopian Coffee Guide harvest calendar",
     url: "https://www.ethiopiancoffeeguide.com/guides/harvest-calendar-ethiopia",
   },
+  "saudi-saudipedia-seasonal-agriculture": {
+    label: "Saudipedia seasonal agriculture in Saudi Arabia",
+    url: "https://saudipedia.com/en/seasonal-agriculture-in-saudi-arabia",
+  },
+  "saudi-rcu-alula-fruit-seasons": {
+    label: "Royal Commission for AlUla fruit production seasons",
+    url: "https://www.rcu.gov.sa/en/strategic-initiatives/alula-agriculture",
+  },
   "mali-fewsnet-seasonal-calendar": {
     label: "FEWS NET Mali seasonal calendar",
     url: "https://fews.net/west-africa/mali/seasonal-calendar/july-2024",

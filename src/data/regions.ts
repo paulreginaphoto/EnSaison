@@ -728,6 +728,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["senegal-sengarden-cesag-market-calendar"],
   },
+  SA: {
+    labels: {
+      fr: "Arabie saoudite: saisons nationales Saudipedia pour recoltes maraicheres hiver/ete, plus saisons fruitieres AlUla de la RCU; guide prudent, pas precision par region, oasis, serre, variete ni import.",
+      en: "Saudi Arabia: Saudipedia national winter/summer vegetable harvest seasons plus RCU AlUla fruit production seasons; cautious guide, not region, oasis, greenhouse, variety or import precision.",
+      es: "Arabia Saudita: temporadas nacionales Saudipedia de cosechas horticolas invierno/verano, mas temporadas frutales de AlUla de la RCU; guia prudente, no precision por region, oasis, invernadero, variedad ni importacion.",
+      de: "Saudi-Arabien: nationale Saudipedia-Winter-/Sommer-Erntezeiten fuer Gemuese plus RCU-AlUla-Obstsaisons; vorsichtige Orientierung, keine Genauigkeit nach Region, Oase, Gewaechshaus, Sorte oder Import.",
+      it: "Arabia Saudita: stagioni nazionali Saudipedia per raccolti orticoli invernali/estivi, piu stagioni frutticole AlUla della RCU; guida prudente, non precisione per regione, oasi, serra, varieta o importazione.",
+      pt: "Arabia Saudita: epocas nacionais Saudipedia de colheitas horticolas de inverno/verao, mais epocas fruticolas de AlUla da RCU; guia prudente, sem precisao por regiao, oasis, estufa, variedade nem importacao.",
+    },
+    sourceIds: ["saudi-saudipedia-seasonal-agriculture", "saudi-rcu-alula-fruit-seasons"],
+  },
   GR: {
     labels: {
       fr: "Grece: calendrier mensuel Food For Health pour fruits et legumes courants, recoupe avec le profil mediterraneen de la Commission europeenne; guide nutritionnel national, pas calendrier agricole gouvernemental.",

@@ -3270,6 +3270,26 @@ const ethiopiaFewsNetSeasonOverrides: Record<string, NonNullable<NonNullable<Sea
   café: { months: [10, 11, 12, 1], nearMonths: [2, 9], seasonLabel: "oct. – janv.", sourceIds: ["ethiopia-coffee-guide-harvest-calendar"] },
 };
 
+const saudiSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
+  oignon: { months: [3], nearMonths: [2, 4], seasonLabel: "récolte mars", sourceIds: ["saudi-saudipedia-seasonal-agriculture"] },
+  ail: { months: [3], nearMonths: [2, 4], seasonLabel: "récolte mars", sourceIds: ["saudi-saudipedia-seasonal-agriculture"] },
+  carotte: { months: [3], nearMonths: [2, 4], seasonLabel: "récolte mars", sourceIds: ["saudi-saudipedia-seasonal-agriculture"] },
+  "petit-pois": { months: [3], nearMonths: [2, 4], seasonLabel: "récolte mars", sourceIds: ["saudi-saudipedia-seasonal-agriculture"] },
+  "chou-fleur": { months: [3], nearMonths: [2, 4], seasonLabel: "récolte mars", sourceIds: ["saudi-saudipedia-seasonal-agriculture"] },
+  pastèque: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept.", sourceIds: ["saudi-saudipedia-seasonal-agriculture"] },
+  melon: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept.", sourceIds: ["saudi-saudipedia-seasonal-agriculture"] },
+  tomate: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept.", sourceIds: ["saudi-saudipedia-seasonal-agriculture"] },
+  concombre: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept.", sourceIds: ["saudi-saudipedia-seasonal-agriculture"] },
+  aubergine: { months: [8, 9], nearMonths: [7, 10], seasonLabel: "août – sept.", sourceIds: ["saudi-saudipedia-seasonal-agriculture"] },
+  datte: { months: [8, 9, 10], nearMonths: [7, 11], seasonLabel: "15 août – 30 oct.", sourceIds: ["saudi-rcu-alula-fruit-seasons"] },
+  orange: { months: [12, 1, 2, 3], nearMonths: [4, 11], seasonLabel: "déc. – mars", sourceIds: ["saudi-rcu-alula-fruit-seasons"] },
+  citron: { months: [12, 1, 2, 3], nearMonths: [4, 11], seasonLabel: "déc. – mars", sourceIds: ["saudi-rcu-alula-fruit-seasons"] },
+  mangue: { months: [7, 8, 9], nearMonths: [6, 10], seasonLabel: "fin juil. – sept.", sourceIds: ["saudi-rcu-alula-fruit-seasons"] },
+  figue: { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août", sourceIds: ["saudi-rcu-alula-fruit-seasons"] },
+  raisin: { months: [7, 8], nearMonths: [6, 9], seasonLabel: "juil. – août", sourceIds: ["saudi-rcu-alula-fruit-seasons"] },
+  grenade: { months: [9, 10], nearMonths: [8, 11], seasonLabel: "sept. – oct.", sourceIds: ["saudi-rcu-alula-fruit-seasons"] },
+};
+
 const vietnamGreatfoodsSeasonOverrides: Record<string, NonNullable<NonNullable<SeasonItem["countries"]>[string]>> = {
   "fruit-passion": { months: [1, 5, 6, 7, 8, 11, 12], nearMonths: [2, 4, 9, 10], seasonLabel: "mai – août, nov. – janv." },
   mangue: { months: [3, 4, 5, 6, 7, 8], nearMonths: [2, 9], seasonLabel: "mars – août" },
@@ -4792,6 +4812,13 @@ const getSourceCountryOverrides = (item: SeasonItem): SeasonItem["countries"] =>
         "ethiopia-fewsnet-data-book",
         "ethiopia-fewsnet-seasonal-calendar",
       ],
+      confidence: "source",
+    };
+  }
+
+  if (saudiSeasonOverrides[item.id]) {
+    countries.SA = {
+      ...saudiSeasonOverrides[item.id],
       confidence: "source",
     };
   }

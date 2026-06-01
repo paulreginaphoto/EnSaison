@@ -91,6 +91,12 @@ DeSaison must avoid pretending that a broad climate estimate is a precise local 
 - Ethiopian Coffee Guide harvest calendar
   https://www.ethiopiancoffeeguide.com/guides/harvest-calendar-ethiopia
 
+- Saudipedia seasonal agriculture in Saudi Arabia
+  https://saudipedia.com/en/seasonal-agriculture-in-saudi-arabia
+
+- Royal Commission for AlUla fruit production seasons
+  https://www.rcu.gov.sa/en/strategic-initiatives/alula-agriculture
+
 - Australian Government Healthy Aussie Produce  
   https://www.health.gov.au/our-work/healthy-aussie-produce
 
@@ -514,6 +520,7 @@ The app now supports:
 - China now has an initial source-backed national-general fruit layer from Sichuan Health Commission / Health China and Shanghai Hongkou public seasonal fruit guidance, with lunar-season buckets approximated into Gregorian months; this is not province, greenhouse, storage or import precision;
 - Iran now has an initial source-backed fruit layer from Hina Greenery and GilaFruit harvest/export availability calendars; this is a national practical market signal, not province, greenhouse, storage, variety or local-market precision;
 - Ethiopia now has an initial FEWS NET-backed staples layer using national Meher/Belg harvest definitions plus a coffee harvest calendar; this is a national cautious guide, not woreda, altitude, irrigation, variety or crisis-year precision;
+- Saudi Arabia now has an initial source-backed layer from Saudipedia national winter/summer vegetable harvest windows plus Royal Commission for AlUla fruit production seasons; this is a cautious national/regional guide, not precision by region, oasis, greenhouse, variety or import channel;
 - Australia now has source-backed produce overrides from the Australian Government's Healthy Aussie Produce guidance plus Foodtree's Australia general seasonal produce table, mapping `Peak`/`High` seasons as in-season and `Medium`/`Low` seasons as near-season; this is national-general domestic availability guidance, not state, production-region, greenhouse or import precision;
 - Canada has source-backed Foodland Ontario open-data overrides for 43 fresh-produce items already present in the catalogue; this is Ontario availability guidance, not province-by-province precision for the whole country;
 - Brazil now has 60 CEAGESP-backed source overrides from the 2026 ETSP quantity seasonality table, using green high-volume months as in-season and yellow medium-volume months as near season; this mainly reflects a Sao Paulo wholesale-market signal, not full national state-by-state precision;

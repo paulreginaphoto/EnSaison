@@ -387,6 +387,10 @@ export const dataSources = {
     label: "El Salvador MAG / CEPAL sowing and harvest calendar for vegetables",
     url: "https://repositorio.cepal.org/bitstream/handle/11362/26227/CEPALmex74-15_es.pdf",
   },
+  "ecuador-salud-fruit-vegetable-availability": {
+    label: "Ecuador Ministry of Public Health fruit and vegetable availability table",
+    url: "https://www.salud.gob.ec/wp-content/uploads/2013/11/GUIA-DE-ALIM-DOCENTES-web-07-07-2017.pdf",
+  },
   "togo-fewsnet-country-book": {
     label: "FEWS NET Togo country book and FAO crop-calendar context",
     url: "https://help.fews.net/fde/v3/togo-country-book",

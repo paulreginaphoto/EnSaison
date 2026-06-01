@@ -331,6 +331,17 @@ export const countryDataScopes: Partial<Record<string, CountryDataScope>> = {
     },
     sourceIds: ["el-salvador-cepal-mag-vegetable-calendar"],
   },
+  EC: {
+    labels: {
+      fr: "Equateur: calendrier national prudent base sur la table du Ministere de la Sante de disponibilite annuelle fruits et legumes; vert = saison, jaune = occasionnel, pas precision province, altitude, variete ou ferme.",
+      en: "Ecuador: cautious national calendar based on the Ministry of Public Health annual fruit and vegetable availability table; green = seasonal, yellow = occasional, not province, altitude, variety or farm-level precision.",
+      es: "Ecuador: calendario nacional prudente basado en la tabla del Ministerio de Salud Publica de disponibilidad anual de frutas y verduras; verde = temporada, amarillo = ocasional, no precision por provincia, altitud, variedad ni finca.",
+      de: "Ecuador: vorsichtiger nationaler Kalender auf Basis der Jahresverfuegbarkeitstabelle des Gesundheitsministeriums fuer Obst und Gemuese; gruen = Saison, gelb = gelegentlich, keine Genauigkeit nach Provinz, Hoehenlage, Sorte oder Betrieb.",
+      it: "Ecuador: calendario nazionale prudente basato sulla tabella del Ministero della Salute sulla disponibilita annuale di frutta e verdura; verde = stagione, giallo = occasionale, non precisione per provincia, altitudine, varieta o azienda.",
+      pt: "Equador: calendario nacional prudente baseado na tabela do Ministerio da Saude de disponibilidade anual de frutas e legumes; verde = epoca, amarelo = ocasional, sem precisao por provincia, altitude, variedade ou quinta.",
+    },
+    sourceIds: ["ecuador-salud-fruit-vegetable-availability"],
+  },
   ID: {
     labels: {
       fr: "Indonesie: tableau World Bank/Indonesia de disponibilite locale des fruits et legumes; utile comme signal national pratique, pas une precision ile par ile ni varietale.",
